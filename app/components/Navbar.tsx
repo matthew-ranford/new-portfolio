@@ -1,7 +1,12 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import { SiGithub, SiInstagram, SiLinkedin } from 'react-icons/si'
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false)
+
   const socials = [
     {
       link: 'https://www.linkedin.com/in/matthew-ranford-23b759261/',
@@ -27,6 +32,9 @@ export default function Navbar() {
     { href: '#', text: 'Resume' },
   ]
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
   return (
     <>
       <nav className="flex justify-between items-center py-5">
@@ -50,6 +58,17 @@ export default function Navbar() {
             )
           })}
         </div>
+        <button
+          className={`hamburger hamburger--emphatic ${
+            isOpen ? 'is-active' : ''
+          }`}
+          type="button"
+          onClick={toggleMenu}
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
       </nav>
     </>
   )
