@@ -35,11 +35,16 @@ export default function Navbar() {
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
+
   return (
     <>
       <nav className="flex justify-between items-center py-5">
         <h1>Matthew 👨🏾‍💻</h1>
-        <div className="flex gap-5">
+
+        {/* Conditionally render the navLinks based on isOpen */}
+        <ul
+          className={`md:flex md:items-center gap-5 ${isOpen ? '' : 'hidden'}`}
+        >
           {navLinks.map((link, index) => (
             <Link href={link.href} key={index}>
               <li style={{ listStyle: 'none' }} className="hover:scale-125">
@@ -47,8 +52,11 @@ export default function Navbar() {
               </li>
             </Link>
           ))}
-        </div>
-        <div className="flex gap-5">
+        </ul>
+
+        <div
+          className={`md:flex md:items-center gap-5 ${isOpen ? '' : 'hidden'}`}
+        >
           {socials.map((social, index) => {
             const Icon = social.icon
             return (
@@ -58,17 +66,19 @@ export default function Navbar() {
             )
           })}
         </div>
-        <button
-          className={`hamburger hamburger--emphatic ${
-            isOpen ? 'is-active' : ''
-          }`}
-          type="button"
-          onClick={toggleMenu}
-        >
-          <span className="hamburger-box">
-            <span className="hamburger-inner"></span>
-          </span>
-        </button>
+        <span className="md:hidden justify-between items-center">
+          <button
+            className={`hamburger hamburger--emphatic ${
+              isOpen ? 'is-active' : ''
+            }`}
+            type="button"
+            onClick={toggleMenu}
+          >
+            <span className="hamburger-box">
+              <span className="hamburger-inner"></span>
+            </span>
+          </button>
+        </span>
       </nav>
     </>
   )
