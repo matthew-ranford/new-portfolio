@@ -3,9 +3,21 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { animate, stagger } from 'framer-motion'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+
+  const sequence = [
+    ['li', { opacity: [0, 1], x: [-20, 0] }, { delay: stagger(0.1) }],
+    [
+      {
+        duration: () => {
+          setIsOpen(!isOpen)
+        },
+      },
+    ],
+  ]
 
   const socials = [
     {
@@ -56,7 +68,7 @@ export default function Navbar() {
                 isOpen ? 'is-active' : ''
               }`}
               type="button"
-              onClick={toggleMenu}
+              onClick={() => setIsOpen(toggleMenu, animate(sequence))}
             >
               <span className="hamburger-box">
                 <span className="hamburger-inner"></span>
