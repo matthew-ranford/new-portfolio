@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const sequence = [
-    ['li', { opacity: [0, 1], x: [-20, 0] }, { delay: stagger(0.1) }],
+    ['li', { opacity: [0, 1], y: [-50, 0] }, { delay: stagger(0.1) }],
     [
       {
         duration: () => {
@@ -50,7 +50,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="md:flex md:justify-between md:items-center py-5 ps-2 pe-2 bg-green-900 rounded-lg">
+      <nav className="md:flex md:justify-between md:items-center navbar-container">
         <div className="flex justify-between items-center">
           <span className="text-xl flex items-center">
             <Image
