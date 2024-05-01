@@ -50,7 +50,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="md:flex md:justify-between md:items-center navbar-container">
+      <nav className="md:flex md:justify-between md:items-center navbar-container text-black">
         <div className="flex justify-between items-center">
           <span className="text-xl flex items-center">
             <Image
@@ -85,7 +85,7 @@ export default function Navbar() {
             <Link href={link.href} key={index}>
               <li
                 style={{ listStyle: 'none' }}
-                className="my-4 md:my-0 hover:text-cyan-600 hover:scale-105"
+                className="my-4 md:my-0 hover:text-yellow-500 hover:scale-105"
               >
                 {link.text}
               </li>

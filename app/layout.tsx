@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
+import { anton } from '@/fonts'
 import '../node_modules/hamburgers/dist/hamburgers.css'
 import { ThemeProvider } from '@/components/theme-provider'
-
-const inter = Inter({ subsets: ['latin'] }) //Change font if i want to
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={anton.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system" //Can change to dark etc.
