@@ -1,6 +1,41 @@
+'use client'
+
 import Image from 'next/image'
 
+import {
+  TypewriterEffect,
+  TypewriterEffectSmooth,
+} from '@/components/ui/typewriter-effect'
+
 export default function Hero() {
+  const firstHeader = [
+    {
+      text: 'Hey',
+    },
+    {
+      text: 'there!',
+    },
+  ]
+
+  const secondHeader = [
+    {
+      text: 'Welcome',
+    },
+    {
+      text: 'to',
+    },
+    {
+      text: 'my',
+    },
+    {
+      text: 'portfolio',
+    },
+    // Doesn't like the emoji and won't render
+    // {
+    //   text: '👋🏽',
+    // },
+  ]
+
   return (
     <>
       <div className="relative">
@@ -11,17 +46,17 @@ export default function Hero() {
           alt="Photo of me in Canada with sunset in the background"
           // className="opacity-90"
         />
-        <section className="absolute inset-0 md:max-w-full mx-6 lg:mx-14 2xl:mx-36 pt-10 lg:pt-2 2xl:pt-56 mt-52 2xl:mt-60 ">
+        <section className="absolute inset-0 md:max-w-full mx-6 lg:mx-14 2xl:mx-36 pt-14 lg:pt-0 2xl:pt-56 mt-52 2xl:mt-60 ">
           <div className="flex lg:flex-row">
-            <div className="space-y-6 2xl:space-y-12 text-left">
-              <h1 className="text-4xl lg:text-5xl 2xl:text-7xl font-bold text-white md:text-stone-900">
-                Hey there!
-                <div className="text-5xl lg:text-7xl 2xl:text-9xl pt-6 2xl:pt-10 sm:text-left px-4 text-yellow-600">
+            <div className="space-y-4 2xl:space-y-6 text-left">
+              <h1>
+                <TypewriterEffectSmooth words={firstHeader} />
+                <div className="text-5xl lg:text-7xl 2xl:text-9xl 2xl:pt-6 sm:text-left px-4 font-bold text-yellow-600">
                   {"I'm Matt."}
                 </div>
               </h1>
-              <h2 className="max-w-7xl md:w-auto px-8 text-4xl lg:text-5xl 2xl:text-7xl font-bold text-white md:text-stone-950">
-                Welcome to my portfolio👋🏽
+              <h2>
+                <TypewriterEffect words={secondHeader} />
               </h2>
               <p className="max-w-2xl 2xl:max-w-5xl text-lg text-white md:text-stone-950 pb-4">
                 {
