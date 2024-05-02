@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import { ultra } from '@/fonts'
+import { ultra, anton } from '@/fonts'
 
 import {
   TypewriterEffect,
@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/typewriter-effect'
 import { Highlight } from '@/components/ui/hero-highlight'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
+import { MovingBorderButton } from '@/components/ui/moving-border'
 
 export default function Hero() {
   // TypeWriterEffectSmooth
@@ -69,6 +70,26 @@ export default function Hero() {
                 <div>
                   <TextGenerateEffect words={words} />
                 </div>
+                <div className="text-center lg:text-left mx-0 sm:mx-10">
+                  <div className={anton.className}>
+                    <div className="flex space-x-4 justify-center md:justify-normal sm:space-x-8">
+                      <MovingBorderButton
+                        href="#"
+                        borderRadius="0.5rem"
+                        className="text-lg sm:text-xl text-black relative flex h-[50px] w-40 items-center justify-center overflow-hidden shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-pink-500 before:duration-1000 before:ease-out hover:from-pink-500 hover:to-fuchsia-800 hover:before:h-56 hover:before:w-56"
+                      >
+                        <span className="relative z-10">My Projects ⬇️</span>
+                      </MovingBorderButton>
+                      <MovingBorderButton
+                        href="#"
+                        borderRadius="0.5rem"
+                        className="text-lg sm:text-xl text-black relative flex h-[50px] w-40 items-center justify-center overflow-hidden shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-fuchsia-800 before:duration-1000 before:ease-out hover:from-pink-500 hover:to-fuchsia-800 hover:before:h-56 hover:before:w-56"
+                      >
+                        <span className="relative z-10">Contact Me ⬇️</span>
+                      </MovingBorderButton>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -77,3 +98,6 @@ export default function Hero() {
     </>
   )
 }
+
+// Might need to look at how the button border is running and the colours
+// Add links for buttons
