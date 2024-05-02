@@ -78,7 +78,6 @@
 /* Have NAVBAR sitting on top of hero image */
 .navbar-container {
   position: absolute;
-  padding: 1.5rem;
   padding-inline-start: 2.5rem;
   padding-inline-end: 2.5rem;
   top: 0;

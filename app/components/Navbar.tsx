@@ -50,7 +50,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="md:flex md:justify-between md:items-center navbar-container text-black">
+      <nav className="md:flex md:justify-between md:items-center navbar-container p-0 sm:p-4 text-black bg-transparent backdrop-filter backdrop-blur-lg">
         <div className="flex justify-between items-center">
           <span className="text-xl flex items-center">
             <Image

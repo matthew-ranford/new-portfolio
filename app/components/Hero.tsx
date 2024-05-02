@@ -12,6 +12,7 @@ import { Highlight } from '@/components/ui/hero-highlight'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 
 export default function Hero() {
+  // TypeWriterEffectSmooth
   const firstHeader = [
     {
       text: 'Hey',
@@ -21,6 +22,7 @@ export default function Hero() {
     },
   ]
 
+  // TypeWriterEffect
   const secondHeader = [
     {
       text: 'Welcome',
@@ -36,6 +38,7 @@ export default function Hero() {
     },
   ]
 
+  // TextGenerateEffect
   const words =
     "A full-stack developer hailing from the vibrant city of Wellington, New Zealand. My passion lies in crafting captivating front-end experiences, ensuring that every user interacts seamlessly with the interface. Let's build something amazing together!"
 
