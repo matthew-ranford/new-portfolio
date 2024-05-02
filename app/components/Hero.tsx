@@ -53,13 +53,13 @@ export default function Hero() {
           // className="opacity-90"
         />
         <div className={ultra.className}>
-          <section className="absolute inset-0 md:max-w-full mx-6 lg:mx-14 2xl:mx-36 pt-14 lg:pt-0 2xl:pt-56 mt-52 2xl:mt-60">
+          <section className="absolute inset-0 md:max-w-full mx-6 lg:mx-14 2xl:mx-36 pt-16 lg:pt-0 2xl:pt-56 mt-52 2xl:mt-60">
             <div className="flex lg:flex-row">
               <div className="space-y-4 2xl:space-y-6 text-left">
                 <h1>
                   <TypewriterEffectSmooth words={firstHeader} />
 
-                  <div className="text-5xl lg:text-7xl 2xl:text-9xl pt-2 2xl:pt-6 sm:text-left px-4 font-bold text-yellow-600">
+                  <div className="text-4xl sm:text-5xl lg:text-7xl 2xl:text-9xl pt-2 2xl:pt-6 sm:text-left px-2 font-bold text-yellow-600">
                     <Highlight>{"I'm Matt."}</Highlight>
                   </div>
                 </h1>
