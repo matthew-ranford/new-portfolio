@@ -7,6 +7,8 @@ import {
   TypewriterEffectSmooth,
 } from '@/components/ui/typewriter-effect'
 
+import { Highlight, HeroHighlight } from '@/components/ui/hero-highlight'
+
 export default function Hero() {
   const firstHeader = [
     {
@@ -51,8 +53,9 @@ export default function Hero() {
             <div className="space-y-4 2xl:space-y-6 text-left">
               <h1>
                 <TypewriterEffectSmooth words={firstHeader} />
-                <div className="text-5xl lg:text-7xl 2xl:text-9xl 2xl:pt-6 sm:text-left px-4 font-bold text-yellow-600">
-                  {"I'm Matt."}
+
+                <div className="text-5xl lg:text-7xl 2xl:text-9xl pt-2 2xl:pt-6 sm:text-left px-4 font-bold text-yellow-600">
+                  <Highlight>{"I'm Matt."}</Highlight>
                 </div>
               </h1>
               <h2>
