@@ -48,8 +48,8 @@ export default function Hero() {
       <div className="relative">
         <Image
           src="/portfolio-hero.jpg"
-          width={2732}
-          height={1536}
+          width="2732"
+          height="1536"
           alt="Photo of me in Canada with sunset in the background"
           // className="opacity-90"
         />
