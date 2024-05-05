@@ -45,11 +45,12 @@ export default function Hero() {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative h-dvh">
         <Image
-          src="/portfolio-hero.jpg"
+          src="/test-hero.jpg"
           width="2732"
           height="1536"
+          priority={true}
           alt="Photo of me in Canada with sunset in the background"
           // className="opacity-90"
         />
@@ -101,3 +102,4 @@ export default function Hero() {
 
 // Might need to look at how the button border is running and the colours
 // Add links for buttons
+// Testing h-dvh for container

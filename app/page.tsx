@@ -7,8 +7,10 @@ export default function page() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <About />
+      <div className="bg-zinc-950 dark:bg-zinc-900">
+        <Hero />
+        <About />
+      </div>
     </>
   )
 }
