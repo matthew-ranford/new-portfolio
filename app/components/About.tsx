@@ -13,13 +13,17 @@ import {
 
 // LayoutGrid
 const FrameOne = () => {
+  // Might put link in here from the canada site on was on for my photo
+
   return (
     <div>
-      <p className="font-bold text-4xl text-white">House in the woods</p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A serene and tranquil retreat, this house in the woods offers a peaceful
-        escape from the hustle and bustle of city life.
+      <p className=" text-4xl text-white">Invermere BC, Canada.</p>
+      <p className="font-normal text-base my-4 max-w-xl text-neutral-400">
+        Ice Skating & Ice Hockey on the longest skating trail in the world at
+        Lake Windermere.
+      </p>
+      <p className="font-normal text-base my-4 max-w-lg text-neutral-400">
+        I lived here for about two years.
       </p>
     </div>
   )
@@ -231,11 +235,8 @@ export default function About() {
             </div>
           </div>
         </div>
-
-        <div className="flex lg:flex-row">
-          <div className="h-screen py-2 pt-10 w-full">
-            <LayoutGrid cards={cards} />
-          </div>
+        <div className="h-screen  w-full">
+          <LayoutGrid cards={cards} />
         </div>
       </section>
     </>

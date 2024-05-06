@@ -25,8 +25,10 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
     setSelected(null)
   }
 
+  // Maybe look at changing the grid-cols to 2 for mobile
+
   return (
-    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-4 relative">
+    <div className="w-full h-full p-6 grid grid-cols-1 md:grid-cols-4 2xl:grid-cols-3  max-w-7xl mx-auto gap-4 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, '')}>
           <motion.div
@@ -35,7 +37,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               card.className,
               'relative overflow-hidden',
               selected?.id === card.id
-                ? 'rounded-lg absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col'
+                ? 'rounded-xl absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col'
                 : lastSelected?.id === card.id
                 ? 'z-40 bg-white rounded-xl h-full w-full cursor-pointer'
                 : 'bg-white rounded-xl h-full w-full cursor-pointer'
@@ -50,7 +52,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
       <motion.div
         onClick={handleOutsideClick}
         className={cn(
-          'absolute h-full w-full left-0 top-0 bg-white opacity-0 z-10 cursor-pointer',
+          'absolute h-full w-full left-0 top-0 bg-white opacity-0 z-10 rounded-xl cursor-pointer',
           selected?.id ? 'pointer-events-auto' : 'pointer-events-none'
         )}
         animate={{ opacity: selected?.id ? 0.3 : 0 }}
