@@ -11,6 +11,7 @@ import {
   FcLandscape,
 } from 'react-icons/fc'
 
+// LayoutGrid
 const FrameOne = () => {
   return (
     <div>
@@ -37,6 +38,7 @@ const FrameTwo = () => {
     </div>
   )
 }
+
 const FrameThree = () => {
   return (
     <div>
@@ -49,6 +51,7 @@ const FrameThree = () => {
     </div>
   )
 }
+
 const FrameFour = () => {
   return (
     <div>
@@ -62,6 +65,59 @@ const FrameFour = () => {
   )
 }
 
+const FrameFive = () => {
+  return (
+    <div>
+      <p className="font-bold text-4xl text-white">Rivers are serene</p>
+      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+        A house by the river is a place of peace and tranquility. It&apos;s the
+        perfect place to relax, unwind, and enjoy life.
+      </p>
+    </div>
+  )
+}
+
+const FrameSix = () => {
+  return (
+    <div>
+      <p className="font-bold text-4xl text-white">Rivers are serene</p>
+      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+        A house by the river is a place of peace and tranquility. It&apos;s the
+        perfect place to relax, unwind, and enjoy life.
+      </p>
+    </div>
+  )
+}
+
+const FrameSeven = () => {
+  return (
+    <div>
+      <p className="font-bold text-4xl text-white">Rivers are serene</p>
+      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+        A house by the river is a place of peace and tranquility. It&apos;s the
+        perfect place to relax, unwind, and enjoy life.
+      </p>
+    </div>
+  )
+}
+
+const FrameEight = () => {
+  return (
+    <div>
+      <p className="font-bold text-4xl text-white">Rivers are serene</p>
+      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+        A house by the river is a place of peace and tranquility. It&apos;s the
+        perfect place to relax, unwind, and enjoy life.
+      </p>
+    </div>
+  )
+}
+
+// LayoutGrid
 const cards = [
   {
     id: 1,
@@ -87,8 +143,33 @@ const cards = [
     className: 'md:col-span-2',
     thumbnail: '/about-image-4.jpg',
   },
+  {
+    id: 5,
+    content: <FrameFive />,
+    className: 'md:col-span-2',
+    thumbnail: '/about-image-5.jpg',
+  },
+  {
+    id: 6,
+    content: <FrameSix />,
+    className: 'col-span-1',
+    thumbnail: '/about-image-6.jpg',
+  },
+  {
+    id: 7,
+    content: <FrameSeven />,
+    className: 'md:col-span-2',
+    thumbnail: '/about-image-7.jpg',
+  },
+  {
+    id: 8,
+    content: <FrameEight />,
+    className: 'col-span-1',
+    thumbnail: '/about-image-8.jpg',
+  },
 ]
 
+// HoverEffect
 const skills = [
   {
     text: 'Reading',
@@ -160,3 +241,6 @@ export default function About() {
     </>
   )
 }
+
+// Hydration error due to p tag being nested within p tag - need to fix
+// Put all images into sub-folders for categories
