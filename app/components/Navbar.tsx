@@ -3,21 +3,15 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { animate, stagger } from 'framer-motion'
+
+// Image
+import logo from '../../public/portfolio-logo.png'
+
+// Light & Dark mode toggle
+import { ModeToggle } from './LightDarkToggle'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-
-  const sequence = [
-    ['li', { opacity: [0, 1], y: [-50, 0] }, { delay: stagger(0.1) }],
-    [
-      {
-        duration: () => {
-          setIsOpen(!isOpen)
-        },
-      },
-    ],
-  ]
 
   const socials = [
     {
@@ -50,25 +44,36 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="md:flex md:justify-between md:items-center navbar-container p-0 sm:p-4 text-black bg-transparent backdrop-filter backdrop-blur-lg">
-        <div className="flex justify-between items-center">
-          <span className="text-xl flex items-center">
-            <Image
-              src="/portfolio-logo.png"
-              className="h-20 w-auto"
-              width={500}
-              height={500}
-              alt=""
-            />
-            Matthew 👨🏾‍💻
-          </span>
-          <span className="md:hidden justify-between items-center">
+      <nav
+        className={`md:flex md:justify-between md:items-center navbar-container p-0 sm:p-4 text-black  ${
+          isOpen
+            ? 'navbar-open navbar-full-height animate-slideIn'
+            : 'navbar-closed animate-slideOut'
+        }`}
+      >
+        <div className="flex justify-between items-center ps-4 md:ps-10">
+          <Link href="/">
+            <span className="text-xl flex items-center">
+              <Image
+                src={logo}
+                className="h-20 w-auto"
+                width={500}
+                height={500}
+                alt="Logo"
+              />
+              Matthew 👨🏾‍💻
+            </span>
+          </Link>
+          <span className="md:hidden justify-between items-center pe-4">
             <button
-              className={`hamburger hamburger--emphatic ${
+              className={`hamburger hamburger--collapse ${
                 isOpen ? 'is-active' : ''
               }`}
+              aria-label="button"
+              aria-controls="navbar-dropdown-menu"
+              aria-expanded={isOpen}
               type="button"
-              onClick={() => setIsOpen(toggleMenu, animate(sequence))}
+              onClick={toggleMenu}
             >
               <span className="hamburger-box">
                 <span className="hamburger-inner"></span>
@@ -77,23 +82,25 @@ export default function Navbar() {
           </span>
         </div>
         <ul
-          className={`md:flex md:items-center text-center gap-5 text-xl pt-5 md:pt-0 ${
-            isOpen ? '' : 'hidden'
+          id="navbar-dropdown-menu"
+          className={`md:flex md:items-center text-center gap-5 text-3xl md:text-xl pt-10 md:pt-0 ${
+            isOpen ? 'animate-slideIn' : 'hidden'
           }`}
         >
           {navLinks.map((link, index) => (
             <Link href={link.href} key={index}>
               <li
                 style={{ listStyle: 'none' }}
-                className="my-4 md:my-0 hover:text-yellow-500 hover:scale-105"
+                className="my-8 md:my-0 hover:text-yellow-500 hover:scale-105 nav-link"
               >
                 {link.text}
               </li>
             </Link>
           ))}
+          <ModeToggle />
         </ul>
         <div
-          className={`md:flex md:flex-row md:items-center pt-5 md:pt-0 ${
+          className={`md:flex md:flex-row md:items-center pt-10 md:pt-0 md:pe-10 ${
             isOpen ? '' : 'hidden'
           }`}
         >

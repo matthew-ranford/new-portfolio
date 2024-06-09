@@ -6,6 +6,7 @@ import {
   Bungee,
   Ultra,
   League_Spartan,
+  Bricolage_Grotesque,
 } from 'next/font/google'
 
 export const inter = Inter({ subsets: ['latin'] })
@@ -24,6 +25,11 @@ export const ultra = Ultra({ subsets: ['latin'], weight: ['400'] })
 export const anton = Anton({ subsets: ['latin'], weight: ['400'] })
 
 export const leagueSpartan = League_Spartan({
+  subsets: ['latin'],
+  weight: ['800'],
+})
+
+export const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ['latin'],
   weight: ['800'],
 })

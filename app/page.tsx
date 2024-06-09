@@ -7,7 +7,7 @@ export default function page() {
   return (
     <>
       <Navbar />
-      <div className="bg-zinc-950 dark:bg-zinc-900">
+      <div className="">
         <Hero />
         <About />
       </div>

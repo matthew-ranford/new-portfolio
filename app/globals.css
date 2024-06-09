@@ -84,10 +84,58 @@
 /* Have NAVBAR sitting on top of hero image */
 .navbar-container {
   position: absolute;
-  padding-inline-start: 2.5rem;
-  padding-inline-end: 2.5rem;
+  /* padding-inline-start: 2.5rem;
+  padding-inline-end: 2.5rem; */
   top: 0;
   left: 0;
   right: 0;
   z-index: 2;
+}
+
+/* Underline when hover over link */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  visibility: hidden;
+  transition: 0.6s ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 600px) {
+  .nav-link:hover::before {
+    width: 30%;
+  }
+}
+
+/* Background colour & transition for responsive navbar */
+@media (max-width: 1023px) {
+  .navbar-container {
+    transition: background-color 1.2s ease-in-out;
+  }
+
+  .navbar-open {
+    background-color: #b9b9b9;
+  }
+
+  .navbar-closed {
+    background-color: transparent;
+  }
+
+  .navbar-full-height {
+    height: 100vh;
+  }
 }
