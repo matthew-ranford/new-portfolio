@@ -7,7 +7,8 @@ export default function page() {
   return (
     <>
       <Navbar />
-      <div className="">
+      {/* Hide bottom scrollbar */}
+      <div className="overflow-hidden">
         <Hero />
         <About />
       </div>
