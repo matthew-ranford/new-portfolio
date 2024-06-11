@@ -43,8 +43,8 @@ export default function Hero() {
   // ]
 
   // TextGenerateEffect
-  const words =
-    "A full-stack developer hailing from the vibrant city of Wellington, New Zealand. My passion lies in crafting captivating front-end experiences, ensuring that every user interacts seamlessly with the interface. Let's build something amazing together!"
+  // const words =
+  //   "A full-stack developer hailing from the vibrant city of Wellington, New Zealand. My passion lies in crafting captivating front-end experiences, ensuring that every user interacts seamlessly with the interface. Let's build something amazing together!"
 
   return (
     <>

@@ -6,10 +6,16 @@ import Link from 'next/link'
 // Light & Dark mode toggle
 import { ModeToggle } from './LightDarkToggle'
 
+// TypeScript
+interface NavLink {
+  href: string
+  text: string
+}
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { href: '#about', text: 'About' },
     { href: '#projects', text: 'Projects' },
     { href: '#contact', text: 'Contact' },
@@ -18,6 +24,10 @@ export default function Navbar() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
+  }
+
+  const closeNavbarOnThemeChange = () => {
+    setIsOpen(false)
   }
 
   return (
@@ -63,7 +73,7 @@ export default function Navbar() {
               </li>
             </Link>
           ))}
-          <ModeToggle />
+          <ModeToggle closeNavbar={closeNavbarOnThemeChange} />
         </ul>
       </nav>
     </>
