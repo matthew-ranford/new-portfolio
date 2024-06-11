@@ -35,10 +35,16 @@ export function ModeToggle({ closeNavbar }: ModeToggleProps) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => handleThemeChange('light')}>
+        <DropdownMenuItem
+          onClick={() => handleThemeChange('light')}
+          className="cursor-pointer"
+        >
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => handleThemeChange('dark')}>
+        <DropdownMenuItem
+          onClick={() => handleThemeChange('dark')}
+          className="cursor-pointer"
+        >
           Dark
         </DropdownMenuItem>
         {/* <DropdownMenuItem onClick={() => setTheme('system')}>
