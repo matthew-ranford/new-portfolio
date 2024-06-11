@@ -18,26 +18,29 @@ export default function Hero() {
     {
       text: 'MATTHEW',
     },
+  ]
+
+  const secondHeader = [
     {
       text: 'RANFORD',
     },
   ]
 
   // TypeWriterEffect
-  const secondHeader = [
-    {
-      text: 'Welcome',
-    },
-    {
-      text: 'to',
-    },
-    {
-      text: 'my',
-    },
-    {
-      text: 'portfolio',
-    },
-  ]
+  // const secondHeader = [
+  //   {
+  //     text: 'Welcome',
+  //   },
+  //   {
+  //     text: 'to',
+  //   },
+  //   {
+  //     text: 'my',
+  //   },
+  //   {
+  //     text: 'portfolio',
+  //   },
+  // ]
 
   // TextGenerateEffect
   const words =
@@ -45,7 +48,17 @@ export default function Hero() {
 
   return (
     <>
-      <main className="relative h-screen w-screen">
+      <h1 className="ps-4 sm:ps-6 lg:ps-8">
+        <TypewriterEffectSmooth words={firstHeader} />
+      </h1>
+      <h1 className="ps-4 sm:ps-6 lg:ps-8">
+        <TypewriterEffectSmooth words={secondHeader} delay={1} />
+      </h1>
+
+      <h1 className="text-[9rem] lg:ps-8 lg:pe-6 font-bold pt-20">
+        FULL-STACK DEVELOPER
+      </h1>
+      {/* <main className="relative h-screen w-screen">
         <Image
           src="/test-hero.jpg"
           width="2732"
@@ -54,22 +67,23 @@ export default function Hero() {
           alt="Photo of me in Canada with sunset in the background"
           className="hero-image"
         />
-        <section className="absolute pt-20 sm:pt-32 md:pt-36 lg:pt-24 2xl:pt-40 px-2 md:px-8 2xl:px-10">
-          <div className="space-y-4 2xl:space-y-6 text-left">
-            <h1 className="ps-4 sm:ps-6 lg:ps-8">
-              <TypewriterEffectSmooth words={firstHeader} />
-            </h1>
 
-            {/* <div className="text-4xl sm:text-5xl lg:text-7xl 2xl:text-9xl pt-2 2xl:pt-6 sm:text-left px-2 font-bold text-yellow-600">
+        <section className="absolute pt-20 sm:pt-32 md:pt-36 lg:pt-24 2xl:pt-40 px-2 md:px-8 2xl:px-10">
+          <div className="space-y-4 2xl:space-y-6 text-left"> */}
+      {/* <h1 className="ps-4 sm:ps-6 lg:ps-8">
+              <TypewriterEffectSmooth words={firstHeader} />
+            </h1> */}
+
+      {/* <div className="text-4xl sm:text-5xl lg:text-7xl 2xl:text-9xl pt-2 2xl:pt-6 sm:text-left px-2 font-bold text-yellow-600">
               <Highlight>{"I'm Matt."}</Highlight>
             </div> */}
-            {/* <h2>
+      {/* <h2>
               <TypewriterEffect words={secondHeader} />
             </h2> */}
-            {/* <div>
+      {/* <div>
               <TextGenerateEffect words={words} />
             </div> */}
-            {/* <div className="text-center lg:text-left mx-0 sm:mx-10">
+      {/* <div className="text-center lg:text-left mx-0 sm:mx-10">
               <div className={anton.className}>
                 <div className="flex space-x-4 justify-center md:justify-normal sm:space-x-8">
                   <MovingBorderButton
@@ -89,9 +103,9 @@ export default function Hero() {
                 </div>
               </div>
             </div> */}
-          </div>
-        </section>
-      </main>
+      {/* </div> */}
+      {/* </section> */}
+      {/* </main> */}
     </>
   )
 }

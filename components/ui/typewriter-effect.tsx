@@ -101,6 +101,7 @@ export const TypewriterEffectSmooth = ({
   words,
   className,
   cursorClassName,
+  delay = 0,
 }: {
   words: {
     text: string
@@ -108,6 +109,7 @@ export const TypewriterEffectSmooth = ({
   }[]
   className?: string
   cursorClassName?: string
+  delay?: number
 }) => {
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
@@ -126,7 +128,7 @@ export const TypewriterEffectSmooth = ({
                 <span
                   key={`char-${index}`}
                   className={cn(
-                    `dark:text-stone-900 text-stone-900`,
+                    `dark:text-zinc-300 text-sky-950`,
                     word.className
                   )}
                 >
@@ -154,7 +156,7 @@ export const TypewriterEffectSmooth = ({
         transition={{
           duration: 1,
           ease: 'linear',
-          delay: 0.2,
+          delay: delay,
         }}
       >
         <div

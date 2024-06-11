@@ -2,34 +2,12 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
-
-// Image
-import logo from '../../public/portfolio-logo.png'
 
 // Light & Dark mode toggle
 import { ModeToggle } from './LightDarkToggle'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-
-  const socials = [
-    {
-      link: 'https://www.linkedin.com/in/matthew-ranford-23b759261/',
-      label: 'LinkedIn',
-      icon: '/linkedin-icon.png',
-    },
-    {
-      link: 'https://github.com/matthew-ranford',
-      label: 'GitHub',
-      icon: '/github-icon.png',
-    },
-    {
-      link: 'https://www.instagram.com/mattranny/',
-      label: 'Instagram',
-      icon: '/instagram-icon.png',
-    },
-  ]
 
   const navLinks = [
     { href: '#about', text: 'About' },
@@ -45,26 +23,14 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`md:flex md:justify-between md:items-center navbar-container p-0 sm:p-4 text-black  ${
+        className={`lg:flex lg:justify-between navbar-container p-0 sm:p-4 text-stone-900 ${
           isOpen
             ? 'navbar-open navbar-full-height animate-slideIn'
             : 'navbar-closed animate-slideOut'
         }`}
       >
-        <div className="flex justify-between items-center ps-4 md:ps-10">
-          <Link href="/">
-            <span className="text-xl flex items-center">
-              <Image
-                src={logo}
-                className="h-20 w-auto"
-                width={500}
-                height={500}
-                alt="Logo"
-              />
-              Matthew 👨🏾‍💻
-            </span>
-          </Link>
-          <span className="md:hidden justify-between items-center pe-4">
+        <div className="flex justify-end">
+          <span className="lg:hidden pt-2 md:pt-0 pe-2 sm:pe-4">
             <button
               className={`hamburger hamburger--collapse ${
                 isOpen ? 'is-active' : ''
@@ -83,7 +49,7 @@ export default function Navbar() {
         </div>
         <ul
           id="navbar-dropdown-menu"
-          className={`md:flex md:items-center text-center gap-5 text-3xl md:text-xl pt-10 md:pt-0 ${
+          className={`lg:flex ps-2 gap-5 text-7xl lg:text-xl lg:pt-0 ${
             isOpen ? 'animate-slideIn' : 'hidden'
           }`}
         >
@@ -91,7 +57,7 @@ export default function Navbar() {
             <Link href={link.href} key={index}>
               <li
                 style={{ listStyle: 'none' }}
-                className="my-8 md:my-0 hover:text-yellow-500 hover:scale-105 nav-link"
+                className="dark:text-white my-6 lg:my-0 nav-link"
               >
                 {link.text}
               </li>
@@ -99,7 +65,32 @@ export default function Navbar() {
           ))}
           <ModeToggle />
         </ul>
-        <div
+      </nav>
+    </>
+  )
+}
+
+// TODO: Put this in a Footer component
+
+// const socials = [
+//   {
+//     link: 'https://www.linkedin.com/in/matthew-ranford-23b759261/',
+//     label: 'LinkedIn',
+//     icon: '/linkedin-icon.png',
+//   },
+//   {
+//     link: 'https://github.com/matthew-ranford',
+//     label: 'GitHub',
+//     icon: '/github-icon.png',
+//   },
+//   {
+//     link: 'https://www.instagram.com/mattranny/',
+//     label: 'Instagram',
+//     icon: '/instagram-icon.png',
+//   },
+// ]
+
+/* <div
           className={`md:flex md:flex-row md:items-center pt-10 md:pt-0 md:pe-10 ${
             isOpen ? '' : 'hidden'
           }`}
@@ -119,8 +110,4 @@ export default function Navbar() {
               )
             })}
           </div>
-        </div>
-      </nav>
-    </>
-  )
-}
+        </div> */

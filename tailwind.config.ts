@@ -75,13 +75,13 @@ const config = {
           to: { height: '0' },
         },
         slideIn: {
-          '0%': { transform: 'translateX(-20%)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' },
+          '0%': { transform: 'translateY(20%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         slideOut: {
-          '0%': { transform: 'translateX(-20%)' },
+          '0%': { transform: 'translateY(10%)' },
           '100%': {
-            transform: 'translateX(0)',
+            transform: 'translateY(0)',
           },
         },
       },

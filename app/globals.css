@@ -37,6 +37,7 @@
 
   .dark {
     --background: 240 10% 3.9%;
+    /* --background: 1500 50% 30%; might look at a colour like this */
     --foreground: 0 0% 98%;
 
     --card: 240 10% 3.9%;
@@ -112,7 +113,7 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #000000;
+  background-color: #d97706;
   visibility: hidden;
   transition: 0.6s ease-in-out;
 }
@@ -122,9 +123,10 @@
   visibility: visible;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1023px) {
   .nav-link:hover::before {
-    width: 30%;
+    width: 35%;
+    left: 0;
   }
 }
 
