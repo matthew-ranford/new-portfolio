@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`lg:flex lg:justify-between navbar-container p-0 sm:p-4 text-stone-900 ${
+        className={`lg:flex lg:justify-between navbar-container p-0 sm:p-4 lg:pe-10 text-stone-900 ${
           isOpen
             ? 'navbar-open navbar-full-height animate-slideIn'
             : 'navbar-closed animate-slideOut'

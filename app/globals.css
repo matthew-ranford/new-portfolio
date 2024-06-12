@@ -82,13 +82,6 @@
   }
 }
 
-.hero-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* Have NAVBAR sitting on top of hero image */
 .navbar-container {
   position: absolute;
@@ -137,7 +130,7 @@
   }
 
   .navbar-open {
-    background-color: #5e5e5e;
+    background-color: #397c79;
   }
 
   .navbar-closed {
@@ -146,5 +139,25 @@
 
   .navbar-full-height {
     height: 100vh;
+  }
+}
+
+/* Hero section image*/
+.hero-image {
+  position: absolute;
+  width: 65%;
+  height: auto;
+  object-fit: cover;
+  top: 5%;
+  left: 30%;
+  opacity: 0.7;
+}
+
+/* Responsiveness for image */
+@media (max-width: 600px) {
+  .hero-image {
+    width: 100%;
+    top: 50%;
+    left: 0;
   }
 }

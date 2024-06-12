@@ -12,17 +12,23 @@ export const TextGenerateEffect = ({
 }) => {
   const [scope, animate] = useAnimate()
   let wordsArray = words.split(' ')
+
   useEffect(() => {
-    animate(
-      'span',
-      {
-        opacity: 1,
-      },
-      {
-        duration: 1,
-        delay: stagger(0.2),
-      }
-    )
+    // Adding a delay before starting the animation
+    const delayStart = setTimeout(() => {
+      animate(
+        'span',
+        {
+          opacity: 1,
+        },
+        {
+          duration: 1,
+          delay: stagger(0.2),
+        }
+      )
+    }, 3000)
+
+    return () => clearTimeout(delayStart)
   }, [scope.current])
 
   const renderWords = () => {
@@ -41,8 +47,8 @@ export const TextGenerateEffect = ({
 
   return (
     <div className={cn('', className)}>
-      <div className="mt-4">
-        <div className=" max-w-2xl 2xl:max-w-5xl text-lg text-gray-500 md:text-stone-950 pb-4 pt-4 leading-snug tracking-wide">
+      <div className="mt-10">
+        <div className=" max-w-2xl 2xl:max-w-5xl text-lg  dark:text-zinc-200 text-stone-900 pt-4 leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>
