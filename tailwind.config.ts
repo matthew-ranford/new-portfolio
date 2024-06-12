@@ -93,6 +93,8 @@ const config = {
       },
       screens: {
         '3xl': { min: '2000px' },
+        smallest: { min: '350px', max: '374px' },
+        smaller: { min: '389px', max: '449px' },
         'to-sm': { min: '450px', max: '639px' },
       },
     },
