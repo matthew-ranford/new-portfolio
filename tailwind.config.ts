@@ -91,6 +91,9 @@ const config = {
         slideIn: 'slideIn 1.2s forwards',
         slideOut: 'slideOut 1.2s forwards',
       },
+      screens: {
+        '3xl': { min: '2000px' },
+      },
     },
   },
   plugins: [

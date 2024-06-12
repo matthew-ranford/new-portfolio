@@ -2,22 +2,18 @@
 
 import Image from 'next/image'
 
-import { ultra, anton, bricolageGrotesque } from '@/fonts'
-
-import {
-  TypewriterEffect,
-  TypewriterEffectSmooth,
-} from '@/components/ui/typewriter-effect'
+import { TypewriterEffect } from '@/components/ui/typewriter-effect'
 import { Highlight } from '@/components/ui/hero-highlight'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { MovingBorderButton } from '@/components/ui/moving-border'
 
 export default function Hero() {
-  // TypeWriterEffectSmooth
-  const firstHeader = [
+  // TypeWriterEffect
+  const mainHeader = [
     {
       text: 'MATTHEW',
     },
+    { text: 'RANFORD' },
   ]
 
   const secondHeader = [
@@ -26,38 +22,20 @@ export default function Hero() {
     },
   ]
 
-  // TypeWriterEffect
-  // const secondHeader = [
-  //   {
-  //     text: 'Welcome',
-  //   },
-  //   {
-  //     text: 'to',
-  //   },
-  //   {
-  //     text: 'my',
-  //   },
-  //   {
-  //     text: 'portfolio',
-  //   },
-  // ]
-
   // TextGenerateEffect
   // const words =
   //   "A full-stack developer hailing from the vibrant city of Wellington, New Zealand. My passion lies in crafting captivating front-end experiences, ensuring that every user interacts seamlessly with the interface. Let's build something amazing together!"
 
   return (
     <>
-      <h1 className="ps-4 sm:ps-6 lg:ps-8">
-        <TypewriterEffectSmooth words={firstHeader} />
-      </h1>
-      <h1 className="ps-4 sm:ps-6 lg:ps-8">
-        <TypewriterEffectSmooth words={secondHeader} delay={1} />
+      <h1 className="ps-4 sm:ps-6 lg:ps-8 pt-4 sm:pt-8 md:pt-6 lg:pt-4 xl:pt-3">
+        <TypewriterEffect words={mainHeader} />
       </h1>
 
       <h1 className="text-[9rem] lg:ps-8 lg:pe-6 font-bold pt-20">
         FULL-STACK DEVELOPER
       </h1>
+
       {/* <main className="relative h-screen w-screen">
         <Image
           src="/test-hero.jpg"
