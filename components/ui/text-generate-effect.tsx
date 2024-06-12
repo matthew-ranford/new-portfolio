@@ -35,9 +35,10 @@ export const TextGenerateEffect = ({
     return (
       <motion.div ref={scope}>
         {wordsArray.map((word, idx) => {
+          const isEmoji = /\p{Emoji}/u.test(word)
           return (
             <motion.span key={word + idx} className="opacity-0">
-              {word}{' '}
+              {isEmoji ? <span className="text-3xl mr-4">{word}</span> : word}{' '}
             </motion.span>
           )
         })}
@@ -47,8 +48,8 @@ export const TextGenerateEffect = ({
 
   return (
     <div className={cn('', className)}>
-      <div className="mt-10">
-        <div className=" max-w-2xl 2xl:max-w-5xl text-lg  dark:text-zinc-200 text-stone-900 pt-4 leading-snug tracking-wide">
+      <div className="">
+        <div className="text-lg dark:text-zinc-200 text-stone-900 leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>

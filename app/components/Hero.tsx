@@ -16,9 +16,14 @@ export default function Hero() {
     { text: 'RANFORD' },
   ]
 
-  TextGenerateEffect
-  const words =
-    "My passion lies in crafting captivating front-end experiences, ensuring that every user interacts seamlessly with the interface. Let's build something amazing together!"
+  // TextGenerateEffect
+  // const words =
+  //   "My passion lies in crafting captivating front-end experiences, ensuring that every user interacts seamlessly with the interface. Let's build something amazing together!"
+
+  const firstLine = '🌎 Wellington, New Zealand'
+  const secondLine = '💼 How can i be of service?'
+  const thirdLine = '☕ Coffee? On me!'
+  const fourthLine = '💡 Lets build something mazing together!'
 
   return (
     <>
@@ -26,8 +31,11 @@ export default function Hero() {
         <h1 className="ps-4 sm:ps-6 lg:ps-8 pt-4 sm:pt-8 md:pt-6 lg:pt-4 xl:pt-3">
           <TypewriterEffect words={mainHeader} />
         </h1>
-        <div className="ps-4 sm:ps-6 lg:ps-8">
-          <TextGenerateEffect words={words} />
+        <div className="ps-4 sm:ps-6 lg:ps-8 pt-4">
+          <TextGenerateEffect words={firstLine} />
+          <TextGenerateEffect words={secondLine} />
+          <TextGenerateEffect words={thirdLine} />
+          <TextGenerateEffect words={fourthLine} />
         </div>
         <Image
           src="/hero-image-test.png"
@@ -36,7 +44,7 @@ export default function Hero() {
           alt=""
           className="hero-image"
         />
-        <div className="absolute p-2 top-[65%] left-[71.5%] space-x-2">
+        <div className="absolute p-2 top-[67.5%] left-[71.5%] space-x-2">
           <MovingBorderButton href="#" className="border border-white">
             Recent Work!
           </MovingBorderButton>
@@ -45,7 +53,7 @@ export default function Hero() {
           </MovingBorderButton>
         </div>
 
-        <h2 className="text-7xl to-sm:text-6xl sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[12rem] 3xl:text-[18rem] text-center sm:text-left ps-4 sm:ps-6 lg:ps-8 pt-96 to-sm:pt-96 sm:pt-80 md:pt-72 xl:pt-20 2xl:pt-96 3xl:pt-[38rem] font-bold dark:text-amber-600 text-stone-900">
+        <h2 className="text-7xl to-sm:text-6xl sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[12rem] 3xl:text-[18rem] text-center sm:text-left ps-4 sm:ps-6 lg:ps-8 pt-96 to-sm:pt-96 sm:pt-80 md:pt-72 xl:pt-6 2xl:pt-96 3xl:pt-[38rem] font-bold dark:text-amber-600 text-stone-900">
           FULL-STACK DEVELOPER
         </h2>
       </main>

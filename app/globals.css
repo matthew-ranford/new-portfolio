@@ -153,6 +153,17 @@
   opacity: 0.7;
 }
 
+/* FULL IMAGE TEST */
+/* .hero-image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  top: 0;
+  left: 25%;
+  opacity: 0.7;
+} */
+
 /* Responsiveness for image */
 @media (max-width: 600px) {
   .hero-image {
