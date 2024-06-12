@@ -47,7 +47,7 @@ export function MovingBorderButton({
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              'h-20 w-20 opacity-[0.8] bg-gradient-to-r from-fuchsia-300 to-pink-500 dark:from-pink-500 dark:to-fuchsia-800',
+              'h-20 w-20 opacity-[0.8] bg-gradient-to-r dark:from-amber-600 dark:to-pink-700 from-pink-700 to-teal-400',
               borderClassName
             )}
           />
@@ -56,7 +56,7 @@ export function MovingBorderButton({
 
       <div
         className={cn(
-          'relative  bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-fuchsia-800 hover:text-yellow-600 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased',
+          'relative dark:bg-gradient-to-r dark:from-zinc-200 dark:to-zinc-400 bg-gradient-to-r from-teal-400 to-teal-700  hover:text-stone-900 dark:hover:text-amber-600 backdrop-blur-xl dark:text-stone-900 text-zinc-200 flex items-center justify-center w-full h-full text-sm antialiased',
           className
         )}
         style={{
