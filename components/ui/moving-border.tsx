@@ -56,7 +56,7 @@ export function MovingBorderButton({
 
       <div
         className={cn(
-          'relative dark:bg-gradient-to-r dark:from-zinc-200 dark:to-zinc-400 bg-gradient-to-r from-teal-400 to-teal-700  hover:text-stone-900 dark:hover:text-amber-600 backdrop-blur-xl dark:text-stone-900 text-zinc-200 flex items-center justify-center w-full h-full text-sm antialiased',
+          'relative dark:bg-gradient-to-r dark:from-orange-200 dark:to-orange-300 bg-gradient-to-r from-cyan-600 to-cyan-700  hover:text-stone-900 dark:hover:text-amber-600 backdrop-blur-xl dark:text-stone-900 text-zinc-200 flex items-center justify-center w-full h-full text-sm antialiased',
           className
         )}
         style={{
