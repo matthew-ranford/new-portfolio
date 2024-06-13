@@ -165,10 +165,10 @@
 } */
 
 /* Responsiveness for image */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .hero-image {
     width: 100%;
-    top: 17%;
+    top: 10%;
     left: 0;
   }
 }
