@@ -92,7 +92,9 @@ const config = {
         slideOut: 'slideOut 1.2s forwards',
       },
       screens: {
-        '3xl': { min: '2000px' },
+        '5xl': { min: '2401px', max: '3000px' },
+        '4xl': { min: '2001px', max: '2400px' },
+        '3xl': { min: '1800px', max: '2000px' },
         smallest: { min: '350px', max: '374px' },
         smaller: { min: '389px', max: '449px' },
         'to-sm': { min: '450px', max: '500px' },
