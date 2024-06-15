@@ -29,7 +29,7 @@ export default function Hero() {
         <h1 className="ps-4 sm:ps-6 lg:ps-8 pt-4 sm:pt-8 md:pt-6 lg:pt-4 xl:pt-3">
           <TypewriterEffect words={mainHeader} />
         </h1>
-        <div className="ps-2 sm:ps-6 lg:ps-8 smallest:pt-48 smaller:pt-56 to-sm:pt-48 small:pt-64 smallAgain:pt-64 smallerAgain:pt-72 sm:pt-80 md:pt-20 xl:pt-6 4xl:pt-20 5xl:pt-32 pt-44 4xl:space-y-2 5xl:space-y-3">
+        <div className="ps-2 sm:ps-6 lg:ps-8 pe-2 smallest:pt-48 smaller:pt-56 to-sm:pt-48 small:pt-64 smallAgain:pt-64 smallerAgain:pt-72 sm:pt-80 md:pt-20 xl:pt-6 4xl:pt-20 5xl:pt-32 pt-44 4xl:space-y-2 5xl:space-y-3">
           <TextGenerateEffect
             words={firstLine}
             delay={3000}
@@ -76,7 +76,7 @@ export default function Hero() {
             </MovingBorderButton>
           </div>
         </motion.div>
-        <h2 className="text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] text-right to-sm:text-left sm:text-left ps-4 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 pt-12 to-sm:pt-10 sm:pt-20 md:pt-20 xl:pt-6 2xl:pt-12 3xl:pt-24 4xl:pt-24 5xl:pt-56 font-bold dark:text-amber-600 text-stone-900">
+        <h2 className="text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] text-right to-sm:text-left sm:text-left ps-4 sm:ps-4 lg:ps-8 pe-4 sm:pe-0 pt-12 to-sm:pt-10 sm:pt-20 md:pt-20 xl:pt-6 2xl:pt-12 3xl:pt-24 4xl:pt-24 5xl:pt-56 font-bold dark:text-amber-600 text-stone-900">
           <Highlight>FULL-STACK DEVELOPER</Highlight>
         </h2>
       </main>

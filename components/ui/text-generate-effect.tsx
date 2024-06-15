@@ -41,7 +41,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span key={word + idx} className="opacity-0">
               {isEmoji ? (
-                <span className="text-3xl 4xl:text-5xl 5xl:text-7xl smallest:mr-0 mr-2 sm:mr-4">
+                <span className="text-3xl 4xl:text-5xl 5xl:text-7xl mr-0 smallest:mr-0 sm:mr-4">
                   {word}
                 </span>
               ) : (

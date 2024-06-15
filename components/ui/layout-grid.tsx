@@ -28,7 +28,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   // Maybe look at changing the grid-cols to 2 for mobile
 
   return (
-    <div className="w-full h-full p-6 grid grid-cols-1 md:grid-cols-4 2xl:grid-cols-3  max-w-7xl mx-auto gap-4 relative">
+    <div className="w-full h-full p-6 grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-3  max-w-7xl mx-auto gap-4 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, '')}>
           <motion.div
