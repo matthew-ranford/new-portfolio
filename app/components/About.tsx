@@ -323,7 +323,7 @@ export default function About() {
       <section className="md:max-w-full pt-4">
         {/* mx-6 lg:mx-14 2xl:mx-36 pt-20 mt-44 2xl:mt-60 */}
         <div className="space-y-4 2xl:space-y-6">
-          <h1 className="text-left text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] 6xl:text-[18rem] to-sm:text-center sm:text-center lg:text-center ps-4 sm:ps-24 lg:ps-20 pe-4 sm:pe-2 pt-12 to-sm:pt-16 small:pt-16 smallAgain:pt-16 smallerAgain:pt-16 sm:pt-24 md:pt-24 lg:pt-36 xl:pt-44 2xl:pt-52 3xl:pt-60 4xl:pt-72 5xl:pt-80 6xl:pt-80 font-bold dark:text-amber-600 text-stone-900">
+          <h1 className="text-left text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] 6xl:text-[18rem] to-sm:text-center sm:text-center lg:text-center ps-4 sm:ps-24 lg:ps-20 pe-4 sm:pe-2 pt-12 to-sm:pt-16 small:pt-16 smallAgain:pt-16 smallerAgain:pt-16 sm:pt-24 md:pt-24 lg:pt-36 xl:pt-44 2xl:pt-52 3xl:pt-60 4xl:pt-72 5xl:pt-80 6xl:pt-80 font-bold dark:text-zinc-200 text-stone-900">
             Who I Am <span>?</span>
           </h1>
           <p

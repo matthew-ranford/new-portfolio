@@ -67,7 +67,7 @@ export default function Hero() {
             alt=""
             className="hero-image"
           />
-          <div className="absolute p-2 smallest:top-[35%] smallest:left-[20%] smaller:top-[38%] smaller:left-[28%] to-sm:top-[50%] to-sm:left-[36%] small:top-[45%] small:left-[40%] smallAgain:top-[48%] smallAgain:left-[45%] smallerAgain:top-[50%] smallerAgain:left-[49%] sm:top-[48%] sm:left-[40%] md:top-[45%] md:left-[50%] lg:top-[60%] lg:left-[60%] xl:top-[68%] xl:left-[72%] 2xl:top-[70%] 2xl:left-[76%] 3xl:top-[74%] 3xl:left-[63%] 4xl:top-[75%] 4xl:left-[63%] 5xl:top-[68%] 5xl:left-[63%] 6xl:top-[70%] 6xl:left-[60%] top-[35%] left-[23%] space-x-2 rotate-6">
+          <div className="absolute p-2 smallest:top-[35%] smallest:left-[20%] smaller:top-[38%] smaller:left-[28%] to-sm:top-[50%] to-sm:left-[36%] small:top-[45%] small:left-[40%] smallAgain:top-[48%] smallAgain:left-[45%] smallerAgain:top-[50%] smallerAgain:left-[49%] sm:top-[48%] sm:left-[40%] md:top-[45%] md:left-[50%] lg:top-[60%] lg:left-[60%] xl:top-[74%] xl:left-[58%] 2xl:top-[70%] 2xl:left-[76%] 3xl:top-[74%] 3xl:left-[63%] 4xl:top-[75%] 4xl:left-[63%] 5xl:top-[68%] 5xl:left-[63%] 6xl:top-[70%] 6xl:left-[60%] top-[35%] left-[23%] space-x-2 rotate-6">
             <MovingBorderButton href="#" className="">
               Recent Work!
             </MovingBorderButton>
@@ -76,7 +76,7 @@ export default function Hero() {
             </MovingBorderButton>
           </div>
         </motion.div>
-        <h2 className="text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17rem] 6xl:text-[18rem] text-right to-sm:text-left sm:text-left ps-4 sm:ps-4 lg:ps-8 pe-4 sm:pe-0 pt-12 to-sm:pt-10 sm:pt-20 md:pt-20 xl:pt-6 2xl:pt-12 3xl:pt-24 4xl:pt-24 5xl:pt-52 6xl:pt-28 font-bold dark:text-amber-600 text-stone-900">
+        <h2 className="text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17rem] 6xl:text-[18rem] text-right to-sm:text-left sm:text-left ps-4 sm:ps-4 lg:ps-8 pe-4 sm:pe-0 pt-12 to-sm:pt-10 sm:pt-20 md:pt-20 xl:pt-6 2xl:pt-12 3xl:pt-24 4xl:pt-24 5xl:pt-52 6xl:pt-28 font-bold dark:text-zinc-200 text-stone-900">
           <Highlight>FULL-STACK DEVELOPER</Highlight>
         </h2>
       </main>
