@@ -24,14 +24,14 @@ export const HoverEffect = ({
         return (
           <div
             key={idx}
-            className="relative group  block p-2 h-full w-full"
+            className="relative group block p-2 h-full w-full"
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
             <AnimatePresence>
               {hoveredIndex === idx && (
                 <motion.span
-                  className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-lg"
+                  className="absolute inset-0 h-full w-full dark:bg-orange-300 bg-cyan-700 block rounded-lg"
                   layoutId="hoverBackground"
                   initial={{ opacity: 0 }}
                   animate={{
@@ -45,10 +45,10 @@ export const HoverEffect = ({
                 />
               )}
             </AnimatePresence>
-            <div className="rounded-md w-full p-4 overflow-hidden bg-black group-hover:ring-2 ring-yellow-600 relative z-20 transition-all duration-500">
+            <div className="rounded-md w-full p-4 overflow-hidden  group-hover:ring-2 dark:ring-stone-900 ring-zinc-200 dark:hover:text-stone-900 hover:text-zinc-200 relative z-20 transition-all duration-500">
               <div className="py-4 z-50 relative space-y-5">
                 <Icons className="w-8 h-8 mx-auto" />
-                <p className="text-2xl text-center text-gray-300">
+                <p className="text-2xl text-center dark:text-zinc-200 dark:group-hover:text-stone-900 group-hover:text-zinc-200 text-stone-900">
                   {item.text}
                 </p>
               </div>
