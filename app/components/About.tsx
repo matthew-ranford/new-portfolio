@@ -1,5 +1,6 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
+import Image from 'next/image'
 import { LayoutGrid } from '@/components/ui/layout-grid'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
 import {
@@ -13,9 +14,11 @@ import {
 import {
   SiBootstrap,
   SiCanva,
+  SiCrowdsource,
   // SiCss3,
   SiExpress,
   SiFramer,
+  SiJabber,
   SiKakaotalk,
   // SiGit,
   // SiGithub,
@@ -23,17 +26,15 @@ import {
   // SiJavascript,
   // SiKnexdotjs,
   SiNextdotjs,
+  SiPayhip,
   // SiNodedotjs,
   SiReact,
   SiSqlite,
   SiTailwindcss,
+  SiTeamspeak,
   SiTypescript,
+  SiVeepee,
 } from 'react-icons/si'
-
-import Image from 'next/image'
-// import { LuFlower2 } from 'react-icons/lu'
-// import { GiConversation, GiTeamIdea } from 'react-icons/gi'
-// import { RiMentalHealthLine, RiTeamLine } from 'react-icons/ri'
 
 // LayoutGrid
 const FrameOne = () => {
@@ -292,14 +293,14 @@ const techSkills = [
   },
 ]
 
-// const humanSkills = [
-//   { text: 'Empathy', icon: LuFlower2 },
-//   { text: 'Well-being', icon: RiMentalHealthLine },
-//   { text: 'Teamwork', icon: GiTeamIdea },
-//   { text: 'Communication', icon: SiKakaotalk },
-//   { text: 'Collaboration', icon: RiTeamLine },
-//   { text: 'Feedback', icon: GiConversation },
-// ]
+const humanSkills = [
+  { text: 'Empathy', icon: SiPayhip },
+  { text: 'Well-being', icon: SiVeepee },
+  { text: 'Teamwork', icon: SiTeamspeak },
+  { text: 'Communication', icon: SiKakaotalk },
+  { text: 'Collaboration', icon: SiJabber },
+  { text: 'Feedback', icon: SiCrowdsource },
+]
 
 export default function About() {
   return (
@@ -322,17 +323,17 @@ export default function About() {
       <section className="md:max-w-full pt-4">
         {/* mx-6 lg:mx-14 2xl:mx-36 pt-20 mt-44 2xl:mt-60 */}
         <div className="space-y-4 2xl:space-y-6">
-          <h1 className="text-left text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] to-sm:text-center sm:text-right lg:text-center ps-4 sm:ps-6 lg:ps-20 pe-4 sm:pe-2  pt-12 to-sm:pt-16 small:pt-16 smallAgain:pt-16 smallerAgain:pt-16 sm:pt-24 md:pt-24 lg:pt-36 xl:pt-44 2xl:pt-12 3xl:pt-24 4xl:pt-24 5xl:pt-56 font-bold dark:text-amber-600 text-stone-900">
+          <h1 className="text-left text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] 6xl:text-[18rem] to-sm:text-center sm:text-center lg:text-center ps-4 sm:ps-24 lg:ps-20 pe-4 sm:pe-2 pt-12 to-sm:pt-16 small:pt-16 smallAgain:pt-16 smallerAgain:pt-16 sm:pt-24 md:pt-24 lg:pt-36 xl:pt-44 2xl:pt-52 3xl:pt-60 4xl:pt-72 5xl:pt-80 6xl:pt-80 font-bold dark:text-amber-600 text-stone-900">
             Who I Am <span>?</span>
           </h1>
           <p
             id="about"
-            className="dark:text-orange-300 text-cyan-700 text-right smallerAgain:text-center  sm:text-right lg:text-center ps-5 sm:ps-6 lg:ps-20 pe-12 smaller:pe-4 small:pe-4 smallAgain:pe-4 smallerAgain:pe-40 sm:pe-4 xl:ml-10 text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl pt-4 pb-[10.5rem]"
+            className="dark:text-orange-300 text-cyan-700 text-right smallerAgain:text-right sm:text-right md:text-center lg:text-center ps-5 sm:ps-6 md:ps-0 lg:ps-20 pe-12 smaller:pe-4 small:pe-4 smallAgain:pe-4 smallerAgain:pe-4 sm:pe-16 md:pe-0 xl:ml-10 text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl pt-4 pb-16 xl:pb-[10.5rem] 2xl:pb-16"
           >
             A little bit about me
           </p>
 
-          <div className="dark:text-zinc-200 text-stone-900 flex items-center justify-center space-y-10 md:space-y-0 flex-wrap pt-24 smaller:pt-32 to-sm:pt-36 small:pt-36 smallAgain:pt-40 smallerAgain:pt-48 sm:pt-48 md:pt-20 lg:pt-28 xl:pt-0 2xl:pt-32 ps-4 sm:ps-6 lg:ps-8 pe-4 small:pe-3 sm:pe-2">
+          <div className="dark:text-zinc-200 text-stone-900 flex items-center justify-center space-y-10 md:space-y-0 flex-wrap pt-0 smaller:pt-6 to-sm:pt-14 small:pt-14 smallAgain:pt-16 smallerAgain:pt-24 sm:pt-20 md:pt-4 lg:pt-6 xl:pt-0 2xl:pt-0 ps-4 sm:ps-6 lg:ps-8 pe-4 small:pe-3 sm:pe-4">
             <p className="max-w-2xl 2xl:max-w-4xl text-xl sm:text-2xl lg:text-3xl first-letter:text-7xl first-letter:float-start text-left md:text-right 2xl:text-left px-0 md:px-4 2xl:px-10">
               I&apos;m a Full-Stack Developer who recently completed a 17-week
               intensive boot camp learning full-stack software development at
@@ -365,7 +366,7 @@ export default function About() {
               <h2 className="text-right md:text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0">
                 Human skills
               </h2>
-              {/* <HoverEffect items={humanSkills} /> */}
+              <HoverEffect items={humanSkills} />
             </div>
           </div>
         </div>
