@@ -10,30 +10,30 @@ import {
   FcIdea,
   FcLandscape,
 } from 'react-icons/fc'
-import {
-  SiBootstrap,
-  SiCanva,
-  // SiCss3,
-  SiExpress,
-  SiFramer,
-  SiKakaotalk,
-  // SiGit,
-  // SiGithub,
-  // SiHtml5,
-  // SiJavascript,
-  // SiKnexdotjs,
-  SiNextdotjs,
-  // SiNodedotjs,
-  SiReact,
-  SiSqlite,
-  SiTailwindcss,
-  SiTypescript,
-} from 'react-icons/si'
+// import {
+//   SiBootstrap,
+//   SiCanva,
+//   // SiCss3,
+//   SiExpress,
+//   SiFramer,
+//   SiKakaotalk,
+//   // SiGit,
+//   // SiGithub,
+//   // SiHtml5,
+//   // SiJavascript,
+//   // SiKnexdotjs,
+//   SiNextdotjs,
+//   // SiNodedotjs,
+//   SiReact,
+//   SiSqlite,
+//   SiTailwindcss,
+//   SiTypescript,
+// } from 'react-icons/si'
 
 import Image from 'next/image'
-import { LuFlower2 } from 'react-icons/lu'
-import { GiConversation, GiTeamIdea } from 'react-icons/gi'
-import { RiMentalHealthLine, RiTeamLine } from 'react-icons/ri'
+// import { LuFlower2 } from 'react-icons/lu'
+// import { GiConversation, GiTeamIdea } from 'react-icons/gi'
+// import { RiMentalHealthLine, RiTeamLine } from 'react-icons/ri'
 
 // LayoutGrid
 const FrameOne = () => {
@@ -41,7 +41,7 @@ const FrameOne = () => {
 
   return (
     <div>
-      <p className=" text-4xl text-white">Invermere BC, Canada.</p>
+      <p className="text-4xl text-white">Invermere BC, Canada.</p>
       <p className="font-normal text-base my-4 max-w-xl text-neutral-400">
         Ice Skating & Ice Hockey on the longest skating trail in the world at
         Lake Windermere.
@@ -225,81 +225,81 @@ const hobbies = [
   },
 ]
 
-const techSkills = [
-  // {
-  //   text: 'HTML',
-  //   icon: SiHtml5,
-  // },
-  // {
-  //   text: 'CSS',
-  //   icon: SiCss3,
-  // },
-  // {
-  //   text: 'JavaScript',
-  //   icon: SiJavascript,
-  // },
-  {
-    text: 'React',
-    icon: SiReact,
-  },
-  {
-    text: 'Next.js',
-    icon: SiNextdotjs,
-  },
-  {
-    text: 'Tailwind',
-    icon: SiTailwindcss,
-  },
-  {
-    text: 'TypeScript',
-    icon: SiTypescript,
-  },
-  // {
-  //   text: 'Node',
-  //   icon: SiNodedotjs,
-  // },
-  // {
-  //   text: 'Git',
-  //   icon: SiGit,
-  // },
-  // {
-  //   text: 'GitHub',
-  //   icon: SiGithub,
-  // },
-  {
-    text: 'Express',
-    icon: SiExpress,
-  },
-  // {
-  //   text: 'Knex',
-  //   icon: SiKnexdotjs,
-  // },
-  {
-    text: 'SQLite3',
-    icon: SiSqlite,
-  },
-  {
-    text: 'Framer-motion',
-    icon: SiFramer,
-  },
-  {
-    text: 'Bootstrap',
-    icon: SiBootstrap,
-  },
-  {
-    text: 'Canva',
-    icon: SiCanva,
-  },
-]
+// const techSkills = [
+//   // {
+//   //   text: 'HTML',
+//   //   icon: SiHtml5,
+//   // },
+//   // {
+//   //   text: 'CSS',
+//   //   icon: SiCss3,
+//   // },
+//   // {
+//   //   text: 'JavaScript',
+//   //   icon: SiJavascript,
+//   // },
+//   {
+//     text: 'React',
+//     icon: SiReact,
+//   },
+//   {
+//     text: 'Next.js',
+//     icon: SiNextdotjs,
+//   },
+//   {
+//     text: 'Tailwind',
+//     icon: SiTailwindcss,
+//   },
+//   {
+//     text: 'TypeScript',
+//     icon: SiTypescript,
+//   },
+//   // {
+//   //   text: 'Node',
+//   //   icon: SiNodedotjs,
+//   // },
+//   // {
+//   //   text: 'Git',
+//   //   icon: SiGit,
+//   // },
+//   // {
+//   //   text: 'GitHub',
+//   //   icon: SiGithub,
+//   // },
+//   {
+//     text: 'Express',
+//     icon: SiExpress,
+//   },
+//   // {
+//   //   text: 'Knex',
+//   //   icon: SiKnexdotjs,
+//   // },
+//   {
+//     text: 'SQLite3',
+//     icon: SiSqlite,
+//   },
+//   {
+//     text: 'Framer-motion',
+//     icon: SiFramer,
+//   },
+//   {
+//     text: 'Bootstrap',
+//     icon: SiBootstrap,
+//   },
+//   {
+//     text: 'Canva',
+//     icon: SiCanva,
+//   },
+// ]
 
-const humanSkills = [
-  { text: 'Empathy', icon: LuFlower2 },
-  { text: 'Well-being', icon: RiMentalHealthLine },
-  { text: 'Teamwork', icon: GiTeamIdea },
-  { text: 'Communication', icon: SiKakaotalk },
-  { text: 'Collaboration', icon: RiTeamLine },
-  { text: 'Feedback', icon: GiConversation },
-]
+// const humanSkills = [
+//   { text: 'Empathy', icon: LuFlower2 },
+//   { text: 'Well-being', icon: RiMentalHealthLine },
+//   { text: 'Teamwork', icon: GiTeamIdea },
+//   { text: 'Communication', icon: SiKakaotalk },
+//   { text: 'Collaboration', icon: RiTeamLine },
+//   { text: 'Feedback', icon: GiConversation },
+// ]
 
 export default function About() {
   return (
@@ -358,11 +358,11 @@ export default function About() {
               <h2 className="text-right md:text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0">
                 Experience with
               </h2>
-              <HoverEffect items={techSkills} />
+              {/* <HoverEffect items={techSkills} /> */}
               <h2 className="text-right md:text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0">
                 Human skills
               </h2>
-              <HoverEffect items={humanSkills} />
+              {/* <HoverEffect items={humanSkills} /> */}
             </div>
           </div>
         </div>
