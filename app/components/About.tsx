@@ -316,7 +316,7 @@ export default function About() {
         width="2732"
         height="1536"
         alt=""
-        className="about-image pt-28 xl:pt-48"
+        className="about-image pt-28 xl:pt-72"
         // pt-20
       />
       <section id="about" className="md:max-w-full pt-4">
@@ -325,7 +325,7 @@ export default function About() {
           <h1 className="text-left text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] to-sm:text-center sm:text-right lg:text-center ps-4 sm:ps-6 lg:ps-20 pe-4 sm:pe-2  pt-12 to-sm:pt-16 small:pt-16 smallAgain:pt-16 smallerAgain:pt-16 sm:pt-24 md:pt-24 lg:pt-36 xl:pt-44 2xl:pt-12 3xl:pt-24 4xl:pt-24 5xl:pt-56 font-bold dark:text-amber-600 text-stone-900">
             Who I Am <span>?</span>
           </h1>
-          <p className="dark:text-orange-300 text-cyan-700 text-right smallerAgain:text-center  sm:text-right lg:text-center ps-5 sm:ps-6 lg:ps-20 pe-12 smaller:pe-4 small:pe-4 smallAgain:pe-4 smallerAgain:pe-40 sm:pe-4 xl:ml-10 text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl pt-4">
+          <p className="dark:text-orange-300 text-cyan-700 text-right smallerAgain:text-center  sm:text-right lg:text-center ps-5 sm:ps-6 lg:ps-20 pe-12 smaller:pe-4 small:pe-4 smallAgain:pe-4 smallerAgain:pe-40 sm:pe-4 xl:ml-10 text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl pt-4 pb-[10.5rem]">
             A little bit about me
           </p>
 
@@ -354,7 +354,7 @@ export default function About() {
               </p>
             </p>
 
-            <div className="max-w-2xl 2xl:max-w-3xl small:pt-4 smallAgain:pt-4 smallerAgain:pt-4 sm:pt-4 md:pt-8 lg:pt-20 xl:pt-10 pb-0 md:pb-10">
+            <div className="max-w-2xl 2xl:max-w-3xl small:pt-4 smallAgain:pt-4 smallerAgain:pt-4 sm:pt-4 md:pt-8 lg:pt-20 xl:pt-0 pb-0 md:pb-10">
               <h2 className="text-right md:text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0">
                 Experience with
               </h2>
