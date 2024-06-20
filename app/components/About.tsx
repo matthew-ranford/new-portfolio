@@ -202,13 +202,13 @@ const cards = [
   {
     id: 7,
     content: <FrameSeven />,
-    className: 'md:col-span-2',
+    className: 'md:col-span-1',
     thumbnail: '/about-image-7.jpg',
   },
   {
     id: 8,
     content: <FrameEight />,
-    className: 'col-span-1',
+    className: 'md:col-span-2',
     thumbnail: '/about-image-8.jpg',
   },
 ]

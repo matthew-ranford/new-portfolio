@@ -59,12 +59,16 @@ export default function Navbar() {
         </div>
         <ul
           id="navbar-dropdown-menu"
-          className={`lg:flex ps-2 gap-5 text-7xl lg:text-xl lg:pt-0 ${
+          className={`lg:flex ps-2 gap-5 text-7xl lg:text-xl 6xl:text-3xl lg:pt-0 ${
             isOpen ? 'animate-slideIn' : 'hidden'
           }`}
         >
           {navLinks.map((link, index) => (
-            <Link href={link.href} key={index}>
+            <Link
+              href={link.href}
+              key={index}
+              onClick={() => setIsOpen(!isOpen)}
+            >
               <li
                 style={{ listStyle: 'none' }}
                 className="dark:text-white my-6 lg:my-0 nav-link"
