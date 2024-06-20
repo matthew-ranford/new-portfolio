@@ -38,16 +38,16 @@ import {
 
 // LayoutGrid
 const FrameOne = () => {
-  // Might put link in here from the canada site on was on for my photo
-
   return (
     <div>
-      <p className="text-4xl text-white">Invermere BC, Canada.</p>
-      <p className="font-normal text-base my-4 max-w-xl text-neutral-400">
+      <p className="text-4xl dark:text-orange-300 text-cyan-700">
+        Invermere, BC, Canada.
+      </p>
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
         Ice Skating & Ice Hockey on the longest skating trail in the world at
         Lake Windermere.
       </p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-400">
+      <p className="font-normal text-base my-4 max-w-lg text-zinc-200">
         I lived here for about two years.
       </p>
     </div>
@@ -57,12 +57,11 @@ const FrameOne = () => {
 const FrameTwo = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">House above the clouds</p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Perched high above the world, this house offers breathtaking views and a
-        unique living experience. It&apos;s a place where the sky meets home,
-        and tranquility is a way of life.
+      <p className="text-4xl dark:text-orange-300 text-cyan-700">
+        Lower Bugaboo Falls, Spillimacheen, Canada.
+      </p>
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+        Hiking, exploring, sightseeing, & waterfalls.
       </p>
     </div>
   )
@@ -71,11 +70,11 @@ const FrameTwo = () => {
 const FrameThree = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Greens all over</p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house surrounded by greenery and nature&apos;s beauty. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+      <p className="text-4xl dark:text-orange-300 text-cyan-700">
+        Welsh Lakes, East Kootenay, Canada.
+      </p>
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+        More hiking, exploring, sightseeing, & unreal views.
       </p>
     </div>
   )
@@ -84,11 +83,15 @@ const FrameThree = () => {
 const FrameFour = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Rivers are serene</p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+      <p className="text-4xl dark:text-orange-300 text-cyan-700">
+        Lethbridge, AB, Canada.
+      </p>
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+        Worked as a groundskeeper to maintain University grounds & snow-removal
+        through winter, -40° was a regular..
+      </p>
+      <p className="font-normal text-base my-4 max-w-lg text-zinc-200">
+        Lethbridge University.
       </p>
     </div>
   )
@@ -97,11 +100,12 @@ const FrameFour = () => {
 const FrameFive = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Rivers are serene</p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+      <p className="text-4xl dark:text-orange-300 text-cyan-700">
+        Chiang Mai, Thailand.
+      </p>
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+        Visting an elephant sanctuary with some friends, where we were able to
+        bath and feed the elephants!
       </p>
     </div>
   )
@@ -110,11 +114,15 @@ const FrameFive = () => {
 const FrameSix = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Rivers are serene</p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+      <p className="text-4xl dark:text-orange-300 text-cyan-700">
+        Wellington, NZ.
+      </p>
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+        I spent about five years at Immigration New Zealand. I finished as a
+        Senior Immigration Officer.
+      </p>
+      <p className="font-normal text-base my-4 max-w-lg text-zinc-200">
+        My last goodbye.
       </p>
     </div>
   )
@@ -123,11 +131,14 @@ const FrameSix = () => {
 const FrameSeven = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Rivers are serene</p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+      <p className="text-4xl dark:text-orange-300 text-cyan-700">
+        Chiang Mai, Thailand.
+      </p>
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+        Cooking class with some friends.. along with our mentor for the day.
+      </p>
+      <p className="font-normal text-base my-4 max-w-lg text-zinc-200">
+        Wasn&apos;t sure where the camera was.
       </p>
     </div>
   )
@@ -136,11 +147,15 @@ const FrameSeven = () => {
 const FrameEight = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Rivers are serene</p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+      <p className="text-4xl dark:text-orange-300 text-cyan-700">
+        Fairmont, BC, Canada.
+      </p>
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+        Dislocated my shoulder the first month living in Canada, working on
+        Panorama Mountain Resort.
+      </p>
+      <p className="font-normal text-base my-4 max-w-lg text-zinc-200">
+        Columbia Lake.
       </p>
     </div>
   )
@@ -296,10 +311,10 @@ const techSkills = [
 const humanSkills = [
   { text: 'Empathy', icon: SiPayhip },
   { text: 'Well-being', icon: SiVeepee },
-  { text: 'Teamwork', icon: SiTeamspeak },
+  { text: 'Teamwork', icon: SiCrowdsource },
   { text: 'Communication', icon: SiKakaotalk },
   { text: 'Collaboration', icon: SiJabber },
-  { text: 'Feedback', icon: SiCrowdsource },
+  { text: 'Feedback', icon: SiTeamspeak },
 ]
 
 export default function About() {
@@ -321,20 +336,18 @@ export default function About() {
         // pt-20
       />
       <section className="md:max-w-full pt-4">
-        {/* mx-6 lg:mx-14 2xl:mx-36 pt-20 mt-44 2xl:mt-60 */}
         <div className="space-y-4 2xl:space-y-6">
           <h1 className="text-left text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] 6xl:text-[18rem] to-sm:text-center sm:text-center lg:text-center ps-4 sm:ps-24 lg:ps-20 pe-4 sm:pe-2 pt-12 to-sm:pt-16 small:pt-16 smallAgain:pt-16 smallerAgain:pt-16 sm:pt-24 md:pt-24 lg:pt-36 xl:pt-44 2xl:pt-52 3xl:pt-60 4xl:pt-72 5xl:pt-80 6xl:pt-80 font-bold dark:text-zinc-200 text-stone-900">
             Who I Am <span>?</span>
           </h1>
           <p
             id="about"
-            className="dark:text-orange-300 text-cyan-700 text-right smallerAgain:text-right sm:text-right md:text-center lg:text-center ps-5 sm:ps-6 md:ps-0 lg:ps-20 pe-12 smaller:pe-4 small:pe-4 smallAgain:pe-4 smallerAgain:pe-4 sm:pe-16 md:pe-0 xl:ml-10 text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl pt-4 pb-16 xl:pb-[10.5rem] 2xl:pb-16"
+            className="dark:text-orange-300 text-cyan-700 text-right smallerAgain:text-right sm:text-right md:text-center lg:text-center ps-5 sm:ps-6 md:ps-0 lg:ps-20 pe-12 smaller:pe-4 small:pe-4 smallAgain:pe-4 smallerAgain:pe-4 sm:pe-16 md:pe-0 xl:ml-10 text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl pt-4 pb-16 xl:pb-32 2xl:pb-16"
           >
             A little bit about me
           </p>
-
           <div className="dark:text-zinc-200 text-stone-900 flex items-center justify-center space-y-10 md:space-y-0 flex-wrap pt-0 smaller:pt-6 to-sm:pt-14 small:pt-14 smallAgain:pt-16 smallerAgain:pt-24 sm:pt-20 md:pt-4 lg:pt-6 xl:pt-0 2xl:pt-0 ps-4 sm:ps-6 lg:ps-8 pe-4 small:pe-3 sm:pe-4">
-            <p className="max-w-2xl 2xl:max-w-4xl text-xl sm:text-2xl lg:text-3xl first-letter:text-7xl first-letter:float-start text-left md:text-right 2xl:text-left px-0 md:px-4 2xl:px-10">
+            <span className="max-w-2xl 2xl:max-w-4xl text-xl sm:text-2xl lg:text-3xl first-letter:text-7xl first-letter:float-start text-left md:text-right 2xl:text-left px-0 md:px-4 2xl:px-10">
               I&apos;m a Full-Stack Developer who recently completed a 17-week
               intensive boot camp learning full-stack software development at
               Dev Academy in December 2023.
@@ -356,10 +369,10 @@ export default function About() {
                 diving into the unknown. I still have a lot to learn, & I&apos;m
                 excited to see where a career in tech takes me!
               </p>
-            </p>
+            </span>
 
             <div className="max-w-2xl 2xl:max-w-3xl small:pt-4 smallAgain:pt-4 smallerAgain:pt-4 sm:pt-4 md:pt-8 lg:pt-20 xl:pt-0 pb-0 md:pb-10">
-              <h2 className="text-right md:text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0">
+              <h2 className="text-left md:text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-2 sm:ps-2 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-12">
                 Experience with
               </h2>
               <HoverEffect items={techSkills} />
@@ -371,14 +384,14 @@ export default function About() {
           </div>
         </div>
         <div className="h-screen w-full pb-20">
-          <h2 className="text-left md:text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-12">
-            A couple of highlights
+          <h2 className="text-left md:text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-6 pb-8">
+            A couple of highlights ...
           </h2>
           <LayoutGrid cards={cards} />
         </div>
-        <div className="max-w-2xl 2xl:max-w-3xl small:pt-4 smallAgain:pt-4 smallerAgain:pt-4 sm:pt-4 md:pt-8 lg:pt-20 xl:pt-20 pb-0 md:pb-10 mx-auto ps-4 pe-4">
+        <div className="max-w-2xl 2xl:max-w-3xl small:pt-4 smallAgain:pt-4 smallerAgain:pt-4 sm:pt-4 md:pt-8 lg:pt-20 xl:pt-32 pb-0 md:pb-10 mx-auto ps-4 pe-4">
           <h2 className="text-right md:text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0">
-            & some of my hobbies
+            & some of my hobbies ..
           </h2>
           <HoverEffect items={hobbies} />
         </div>
