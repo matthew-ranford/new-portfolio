@@ -400,5 +400,4 @@ export default function About() {
   )
 }
 
-// Hydration error due to p tag being nested within p tag - need to fix
 // Put all images into sub-folders for categories
