@@ -25,7 +25,7 @@ export default function Hero() {
 
   return (
     <>
-      <main className="relative">
+      <main id="home" className="relative">
         <h1 className="ps-4 sm:ps-6 lg:ps-8 pt-4 sm:pt-8 md:pt-6 lg:pt-4 xl:pt-3">
           <TypewriterEffect words={mainHeader} />
         </h1>

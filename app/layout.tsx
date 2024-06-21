@@ -5,6 +5,10 @@ import './globals.css'
 // Navbar toggle
 import '../node_modules/hamburgers/dist/hamburgers.css'
 
+// Components
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+
 import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
@@ -27,7 +31,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
