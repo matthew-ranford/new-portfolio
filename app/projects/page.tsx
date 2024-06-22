@@ -91,6 +91,27 @@ export default function page() {
     },
   ]
 
+  const projectsBeforeDev = [
+    {
+      title: 'Complete Building Solutions',
+      description: '',
+      tech: [SiHtml5, SiCss3, SiJavascript],
+      link: 'https://matthew-ranford.github.io/complete-building-solutions-website-concept/',
+      sourceCode: '',
+      cover: '/cover-seven.png',
+      // background: 'bg-amber-500',
+    },
+    {
+      title: 'Portfolio',
+      description: '',
+      tech: [SiHtml5, SiCss3],
+      link: 'https://matthew-ranford.github.io/freecodecamp-personal-portfolio-webpage/',
+      sourceCode: '',
+      cover: '/cover-eight.png',
+      // background: 'bg-amber-500',
+    },
+  ]
+
   return (
     <>
       <div className="py-10 p-5 sm:p-0">
@@ -173,6 +194,41 @@ export default function page() {
         <h1 className="pt-32 text-center text-7xl">
           Life before Dev Academy...
         </h1>
+        <h2 className="pt-4 text-center text-2xl text-amber-600">
+          My self guided learning journey starts..
+        </h2>
+
+        <div className="pt-6 grid grid-cols-1 lg:grid-cols-2 gap-7 px-10">
+          {projectsBeforeDev.map((project, index) => {
+            return (
+              <Link href={project.link} key={index} target="_blank">
+                <div className={cn('p-5 rounded-2xl', project.background)}>
+                  <DirectionAwareHover
+                    imageUrl={project.cover}
+                    className="w-full space-y-5 cursor-pointer"
+                  >
+                    <div className="space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-sm p-2">
+                      <h1 className="text-2xl text-amber-600">
+                        {project.title}
+                      </h1>
+                      <p className="text-lg">{project.description}</p>
+                      <Link href={project.sourceCode} target="_blank">
+                        <p className="pt-2 pb-2 text-zinc-400 hover:text-amber-600">
+                          Source Code ↗️
+                        </p>
+                      </Link>
+                      <div className="flex items-center gap-5">
+                        {project.tech.map((Icon, index) => {
+                          return <Icon key={index} className="w-8 h-8" />
+                        })}
+                      </div>
+                    </div>
+                  </DirectionAwareHover>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
       </div>
     </>
   )
