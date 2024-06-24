@@ -7,6 +7,7 @@ import { Highlight } from '@/components/ui/hero-highlight'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { MovingBorderButton } from '@/components/ui/moving-border'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export default function Hero() {
   // TypeWriterEffect
@@ -68,9 +69,9 @@ export default function Hero() {
             className="hero-image"
           />
           <div className="absolute p-2 smallest:top-[35%] smallest:left-[20%] smaller:top-[38%] smaller:left-[28%] to-sm:top-[50%] to-sm:left-[36%] small:top-[45%] small:left-[40%] smallAgain:top-[48%] smallAgain:left-[45%] smallerAgain:top-[50%] smallerAgain:left-[49%] sm:top-[48%] sm:left-[40%] md:top-[45%] md:left-[50%] lg:top-[60%] lg:left-[60%] xl:top-[74%] xl:left-[58%] 2xl:top-[70%] 2xl:left-[76%] 3xl:top-[74%] 3xl:left-[63%] 4xl:top-[75%] 4xl:left-[63%] 5xl:top-[68%] 5xl:left-[63%] 6xl:top-[71%] 6xl:left-[60%] top-[35%] left-[23%] space-x-2 rotate-6">
-            <MovingBorderButton href="#" className="">
-              Recent Work!
-            </MovingBorderButton>
+            <Link href="projects">
+              <MovingBorderButton>Recent Work!</MovingBorderButton>
+            </Link>
             <MovingBorderButton href="#" className="">
               Lets Work Together!
             </MovingBorderButton>
