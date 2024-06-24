@@ -59,7 +59,7 @@ export default function Navbar() {
         </div>
         <ul
           id="navbar-dropdown-menu"
-          className={`lg:flex ps-2 gap-5 text-7xl lg:text-xl 6xl:text-3xl lg:pt-0 ${
+          className={`lg:flex ps-2 gap-5 text-7xl lg:text-3xl 6xl:text-5xl lg:pt-0 ${
             isOpen ? 'animate-slideIn' : 'hidden'
           }`}
         >
