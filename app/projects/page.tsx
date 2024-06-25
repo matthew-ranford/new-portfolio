@@ -13,6 +13,7 @@ import {
 import { cn } from '@/lib/utils'
 import { DirectionAwareHover } from '@/components/ui/direction-aware-hover'
 import Link from 'next/link'
+import MainHeaderNav from '../components/MainHeaderNav'
 
 export default function page() {
   const projectsAfterDev = [
@@ -117,8 +118,9 @@ export default function page() {
 
   return (
     <>
-      <div className="py-10 p-5 sm:p-0">
-        <h1 className="pt-32 lg:pt-52 ps-4 pe-4 sm:ps-0 sm:pe-0 text-center text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] 6xl:text-[18rem]">
+      <div className="py-10 p-5 sm:p-0 bg-zinc-300 dark:bg-stone-800">
+        <MainHeaderNav />
+        <h1 className="pt-32 lg:pt-10 ps-4 pe-4 sm:ps-0 sm:pe-0 text-center text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] 6xl:text-[18rem]">
           Life after Dev Academy...
         </h1>
         <h2 className="pt-6 pb-10 sm:pb-0 text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700">

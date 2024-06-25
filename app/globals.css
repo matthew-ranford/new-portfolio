@@ -173,15 +173,6 @@
   }
 }
 
-.divider {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  /* opacity: 0.7; */
-  /* top: 95%; */
-}
-
 .about-image {
   position: absolute;
   width: 65%;

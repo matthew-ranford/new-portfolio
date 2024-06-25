@@ -1,13 +1,11 @@
 import Hero from './components/Hero'
-import About from './components/About'
 
 export default function page() {
   return (
     <>
       {/* Hide bottom scrollbar */}
-      <div className="overflow-hidden">
+      <div className="overflow-hidden bg-zinc-300 dark:bg-stone-800">
         <Hero />
-        <About />
       </div>
     </>
   )
