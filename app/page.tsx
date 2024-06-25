@@ -4,9 +4,11 @@ export default function page() {
   return (
     <>
       {/* Hide bottom scrollbar */}
-      <div className="overflow-hidden bg-zinc-300 dark:bg-stone-800">
+      <div className="overflow-hidden">
         <Hero />
       </div>
     </>
   )
 }
+
+// bg-zinc-300 dark:bg-stone-800
