@@ -12,36 +12,9 @@ import { handlee } from '@/fonts'
 
 export default function Hero() {
   // TextGenerateEffect
-  //   const firstLine = '🌎 Wellington, New Zealand'
-  //   const secondLine = '💼 How can i be of service?'
-  //   const thirdLine = '☕ Coffee? On me!'
-  //   const fourthLine = '💡 Lets build something amazing together!'
-
   const firstLine = 'A Full-Stack Developer, who has found he is'
-
   const secondLine =
     'Extremely passionate about Front-End, Accessibility, & trying to optimize his applications for the best practices & performance.'
-
-  //   <TextGenerateEffect
-  //   words={firstLine}
-  //   delay={3000}
-  //   className="hover:scale-95"
-  // />
-  // <TextGenerateEffect
-  //   words={secondLine}
-  //   delay={3800}
-  //   className="hover:scale-95"
-  // />
-  // <TextGenerateEffect
-  //   words={thirdLine}
-  //   delay={4600}
-  //   className="hover:scale-95"
-  // />
-  // <TextGenerateEffect
-  //   words={fourthLine}
-  //   delay={5200}
-  //   className="hover:scale-95"
-  // />
 
   return (
     <>
@@ -66,8 +39,8 @@ export default function Hero() {
             alt=""
             className="hero-image"
           />
-          <div className="absolute p-2 top-[22%] sm:top-[30%] md:top-[40%] lg:top-[58%] xl:top-[62%] 2xl:top-[55%] 3xl:top-[59%] 4xl:top-[60.8%] 5xl:top-[65%] 6xl:top-[58%] left-[5%] smallest:left-[2%] sm:left-[2%] md:left-[10%] lg:left-[60%] xl:left-[65%] 5xl:left-[70%] space-x-2 sm:rotate-6">
-            <div className={handlee.className}>
+          <div className={handlee.className}>
+            <div className="absolute p-2 top-[22%] sm:top-[30%] md:top-[40%] lg:top-[58%] xl:top-[62%] 2xl:top-[55%] 3xl:top-[59%] 4xl:top-[60.8%] 5xl:top-[65%] 6xl:top-[58%] left-[5%] smallest:left-[2%] sm:left-[2%] md:left-[10%] lg:left-[60%] xl:left-[65%] 5xl:left-[70%] space-x-2 sm:rotate-6">
               <Link href="projects">
                 <MovingBorderButton className="font-bold">
                   Recent Work!

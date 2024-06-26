@@ -35,16 +35,15 @@ import {
   SiTypescript,
   SiVeepee,
 } from 'react-icons/si'
-import { TypewriterEffect } from '@/components/ui/typewriter-effect'
 import MainHeaderNav from '../components/MainHeaderNav'
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
+import Footer from '../components/Footer'
 
-// TypeWriterEffect
-// const mainHeader = [
-//   {
-//     text: 'MATTHEW',
-//   },
-//   { text: 'RANFORD' },
-// ]
+// TextGenerateEffect
+const firstLine = '🌎 Wellington, New Zealand'
+const secondLine = '💼 How can i be of service?'
+const thirdLine = '☕ Coffee? On me!'
+const fourthLine = '💡 Lets get creative together!'
 
 // LayoutGrid
 const FrameOne = () => {
@@ -330,7 +329,7 @@ const humanSkills = [
 export default function About() {
   return (
     <>
-      <section className="md:max-w-full bg-zinc-300 dark:bg-stone-800">
+      <section className="md:max-w-full">
         <MainHeaderNav />
         <Image
           src="/about-image-test.png"
@@ -338,20 +337,50 @@ export default function About() {
           height="1536"
           alt=""
           className="about-image "
-          // pt-20
         />
+
+        {/* h1 */}
+        {/* text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] 6xl:text-[18rem] to-sm:text-center sm:text-center lg:text-right ps-4 sm:ps-24 lg:ps-20 pe-4 sm:pe-2 xl:pe-10 pt-12 to-sm:pt-16 small:pt-16 smallAgain:pt-16 smallerAgain:pt-16 sm:pt-24 md:pt-24 lg:pt-36 xl:pt-4 2xl:pt-52 3xl:pt-60 4xl:pt-72 5xl:pt-80 6xl:pt-80  */}
+
+        {/* h2 */}
+        {/* dark:text-orange-300 text-cyan-700 text-right smallerAgain:text-right sm:text-right md:text-center lg:text-right ps-5 sm:ps-6 md:ps-0 lg:ps-20 pe-12 smaller:pe-4 small:pe-4 smallAgain:pe-4 smallerAgain:pe-4 sm:pe-16 md:pe-0 xl:pe-12 text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl pt-4 pb-8 2xl:pb-16 */}
+
+        <div className="xl:pe-12 pe-4 sm:pe-8 pt-4 lg:pt-20 xl:pt-0 xl:-mt-24 space-y-2">
+          <TextGenerateEffect
+            words={firstLine}
+            delay={3000}
+            className="text-right"
+          />
+          <TextGenerateEffect
+            words={secondLine}
+            delay={3800}
+            className="text-right"
+          />
+          <TextGenerateEffect
+            words={thirdLine}
+            delay={4600}
+            className="text-right"
+          />
+          <TextGenerateEffect
+            words={fourthLine}
+            delay={5200}
+            className="text-right"
+          />
+        </div>
+
         <div className="space-y-4 2xl:space-y-6">
-          <h1 className="text-left text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] 6xl:text-[18rem] to-sm:text-center sm:text-center lg:text-right ps-4 sm:ps-24 lg:ps-20 pe-4 sm:pe-2 xl:pe-10 pt-12 to-sm:pt-16 small:pt-16 smallAgain:pt-16 smallerAgain:pt-16 sm:pt-24 md:pt-24 lg:pt-36 xl:pt-4 2xl:pt-52 3xl:pt-60 4xl:pt-72 5xl:pt-80 6xl:pt-80 font-bold dark:text-zinc-200 text-stone-900">
+          <h1 className="text-center text-7xl lg:text-8xl xl:text-[9.3rem] pt-12 lg:pt-20 xl:pt-16 font-bold dark:text-zinc-200 text-stone-900">
             Who I Am <span>?</span>
           </h1>
-          <p
+          <h2
             id="about"
-            className="dark:text-orange-300 text-cyan-700 text-right smallerAgain:text-right sm:text-right md:text-center lg:text-right ps-5 sm:ps-6 md:ps-0 lg:ps-20 pe-12 smaller:pe-4 small:pe-4 smallAgain:pe-4 smallerAgain:pe-4 sm:pe-16 md:pe-0 xl:pe-12 text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl pt-4 pb-8 2xl:pb-16"
+            className="text-center text-3xl dark:text-orange-300 text-cyan-700"
           >
             A little bit about me
-          </p>
-          <div className="dark:text-zinc-200 text-stone-900 flex items-center justify-center space-y-10 md:space-y-0 flex-wrap pt-0 smaller:pt-6 to-sm:pt-14 small:pt-14 smallAgain:pt-16 smallerAgain:pt-24 sm:pt-20 md:pt-4 lg:pt-6 xl:pt-0 2xl:pt-0 ps-4 sm:ps-6 lg:ps-8 pe-4 small:pe-3 sm:pe-4">
-            <span className="max-w-2xl 2xl:max-w-4xl text-xl sm:text-2xl lg:text-3xl first-letter:text-7xl first-letter:float-start text-left md:text-right 2xl:text-left px-0 md:px-4 2xl:px-10">
+          </h2>
+
+          <div className="dark:text-zinc-200 text-stone-900 flex items-center justify-center space-y-10 md:space-y-0 flex-wrap pt-4 smaller:pt-6 to-sm:pt-6 sm:pt-6 md:pt-4 lg:pt-6 xl:pt-0 2xl:pt-0 ps-4 sm:ps-6 lg:ps-8 pe-4 small:pe-3 sm:pe-4">
+            <span className="max-w-2xl 2xl:max-w-4xl text-2xl sm:text-2xl lg:text-3xl first-letter:text-7xl first-letter:float-start text-left md:text-right 2xl:text-left px-0 md:px-4 2xl:px-10">
               I&apos;m a Full-Stack Developer who recently completed a 17-week
               intensive boot camp learning full-stack software development at
               Dev Academy in December 2023.
@@ -376,11 +405,11 @@ export default function About() {
             </span>
 
             <div className="max-w-2xl 2xl:max-w-3xl small:pt-4 smallAgain:pt-4 smallerAgain:pt-4 sm:pt-4 md:pt-8 lg:pt-20 xl:pt-0 pb-0 md:pb-10">
-              <h2 className="text-left md:text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-2 sm:ps-2 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-12">
+              <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-2 sm:ps-2 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-2 sm:pt-2 md:pt-0 xl:pt-12">
                 Experience with
               </h2>
               <HoverEffect items={techSkills} />
-              <h2 className="text-right md:text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0">
+              <h2 className="text-right md:text-center text-3xl  lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0">
                 Human skills
               </h2>
               <HoverEffect items={humanSkills} />
@@ -388,17 +417,18 @@ export default function About() {
           </div>
         </div>
         <div className="h-screen w-full pb-20">
-          <h2 className="text-left md:text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-6 pb-8">
+          <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-6 pb-8">
             A couple of highlights ...
           </h2>
           <LayoutGrid cards={cards} />
         </div>
-        <div className="max-w-2xl 2xl:max-w-3xl small:pt-4 smallAgain:pt-4 smallerAgain:pt-4 sm:pt-4 md:pt-8 lg:pt-20 xl:pt-32 pb-0 md:pb-10 mx-auto ps-4 pe-4">
-          <h2 className="text-right md:text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0">
+        <div className="max-w-2xl 2xl:max-w-3xl small:pt-8 smallAgain:pt-8 smallerAgain:pt-10 sm:pt-8 lg:pt-20 xl:pt-32 pb-0 md:pb-10 mx-auto ps-4 pe-4">
+          <h2 className="text-right md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0">
             & some of my hobbies ..
           </h2>
           <HoverEffect items={hobbies} />
         </div>
+        <Footer />
       </section>
     </>
   )
