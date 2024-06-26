@@ -38,6 +38,7 @@ import {
 import MainHeaderNav from '../components/MainHeaderNav'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import Footer from '../components/Footer'
+import { handlee } from '@/fonts'
 
 // TextGenerateEffect
 const firstLine = '🌎 Wellington, New Zealand'
@@ -370,9 +371,8 @@ export default function About() {
             id="about"
             className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-4 dark:text-orange-300 text-cyan-700"
           >
-            A little bit about me..
+            <div className={handlee.className}>A little bit about me..</div>
           </h2>
-
           <div className="dark:text-zinc-200 text-stone-900 flex items-center justify-center space-y-10 md:space-y-0 flex-wrap pt-4 smaller:pt-6 to-sm:pt-6 sm:pt-6 md:pt-4 lg:pt-6 xl:pt-0 2xl:pt-6 3xl:pt-14 4xl:pt-10 5xl:pt-32 6xl:pt-16 ps-4 sm:ps-6 lg:ps-8 pe-4 small:pe-3 sm:pe-4">
             <span className="max-w-2xl 2xl:max-w-4xl text-2xl sm:text-2xl lg:text-3xl 2xl:text-4xl first-letter:text-7xl first-letter:float-start text-left md:text-right 2xl:text-left px-0 md:px-4 2xl:px-10">
               I&apos;m a Full-Stack Developer who recently completed a 17-week
@@ -399,11 +399,11 @@ export default function About() {
 
             <div className="max-w-2xl 2xl:max-w-3xl small:pt-4 smallAgain:pt-4 smallerAgain:pt-4 sm:pt-4 md:pt-8 lg:pt-20 xl:pt-0 pb-0 md:pb-10">
               <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-2 sm:ps-2 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-2 sm:pt-2 md:pt-0 xl:pt-12">
-                Experience with
+                <div className={handlee.className}>Experience with</div>
               </h2>
               <HoverEffect items={techSkills} />
               <h2 className="text-right md:text-center text-3xl  lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0 2xl:pt-4">
-                Human skills
+                <div className={handlee.className}>Human skills</div>
               </h2>
               <HoverEffect items={humanSkills} />
             </div>
@@ -411,13 +411,13 @@ export default function About() {
         </div>
         <div className="h-screen w-full pb-20">
           <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-6 pb-14">
-            A couple of highlights ...
+            <div className={handlee.className}>A couple of highlights ...</div>
           </h2>
           <LayoutGrid cards={cards} />
         </div>
         <div className="max-w-2xl 2xl:max-w-3xl small:pt-8 smallAgain:pt-8 smallerAgain:pt-10 sm:pt-8 lg:pt-20 xl:pt-32 pb-0 md:pb-10 mx-auto ps-4 pe-4">
           <h2 className="text-right md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0 pt-4 xl:pt-0">
-            & some of my hobbies ..
+            <div className={handlee.className}>& some of my hobbies ..</div>
           </h2>
           <HoverEffect items={hobbies} />
         </div>
