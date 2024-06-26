@@ -37,7 +37,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               card.className,
               'relative overflow-hidden',
               selected?.id === card.id
-                ? 'rounded-xl absolute inset-0 h-1/2 md:h-2/3 2xl:h-1/2 w-full md:w-1/2 2xl:w-2/3 m-auto z-50 flex justify-center items-center flex-wrap flex-col'
+                ? 'rounded-xl absolute inset-0 h-1/2 md:h-2/3 2xl:h-5/6 5xl:h-3/4 6xl:h-3/4 w-full md:w-1/2 2xl:w-2/3 5xl:w-11/12 6xl:w-11/12 m-auto z-50 flex justify-center items-center flex-wrap flex-col'
                 : lastSelected?.id === card.id
                 ? 'z-40 rounded-xl h-full w-full cursor-pointer'
                 : 'rounded-xl h-full w-full cursor-pointer'

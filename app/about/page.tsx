@@ -339,13 +339,7 @@ export default function About() {
           className="about-image "
         />
 
-        {/* h1 */}
-        {/* text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] 6xl:text-[18rem] to-sm:text-center sm:text-center lg:text-right ps-4 sm:ps-24 lg:ps-20 pe-4 sm:pe-2 xl:pe-10 pt-12 to-sm:pt-16 small:pt-16 smallAgain:pt-16 smallerAgain:pt-16 sm:pt-24 md:pt-24 lg:pt-36 xl:pt-4 2xl:pt-52 3xl:pt-60 4xl:pt-72 5xl:pt-80 6xl:pt-80  */}
-
-        {/* h2 */}
-        {/* dark:text-orange-300 text-cyan-700 text-right smallerAgain:text-right sm:text-right md:text-center lg:text-right ps-5 sm:ps-6 md:ps-0 lg:ps-20 pe-12 smaller:pe-4 small:pe-4 smallAgain:pe-4 smallerAgain:pe-4 sm:pe-16 md:pe-0 xl:pe-12 text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl pt-4 pb-8 2xl:pb-16 */}
-
-        <div className="xl:pe-12 pe-4 sm:pe-8 pt-4 lg:pt-20 xl:pt-0 xl:-mt-24 space-y-2">
+        <div className="xl:pe-12 pe-4 sm:pe-8 pt-4 lg:pt-20 xl:pt-0 xl:-mt-24 2xl:-mt-28 space-y-2">
           <TextGenerateEffect
             words={firstLine}
             delay={3000}
@@ -369,18 +363,18 @@ export default function About() {
         </div>
 
         <div className="space-y-4 2xl:space-y-6">
-          <h1 className="text-center text-7xl lg:text-8xl xl:text-[9.3rem] pt-12 lg:pt-20 xl:pt-16 font-bold dark:text-zinc-200 text-stone-900">
+          <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-16 2xl:pt-28 3xl:pt-44 4xl:pt-52 5xl:pt-52 6xl:pt-56 font-bold dark:text-zinc-200 text-stone-900">
             Who I Am <span>?</span>
           </h1>
           <h2
             id="about"
-            className="text-center text-3xl dark:text-orange-300 text-cyan-700"
+            className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-4 dark:text-orange-300 text-cyan-700"
           >
-            A little bit about me
+            A little bit about me..
           </h2>
 
-          <div className="dark:text-zinc-200 text-stone-900 flex items-center justify-center space-y-10 md:space-y-0 flex-wrap pt-4 smaller:pt-6 to-sm:pt-6 sm:pt-6 md:pt-4 lg:pt-6 xl:pt-0 2xl:pt-0 ps-4 sm:ps-6 lg:ps-8 pe-4 small:pe-3 sm:pe-4">
-            <span className="max-w-2xl 2xl:max-w-4xl text-2xl sm:text-2xl lg:text-3xl first-letter:text-7xl first-letter:float-start text-left md:text-right 2xl:text-left px-0 md:px-4 2xl:px-10">
+          <div className="dark:text-zinc-200 text-stone-900 flex items-center justify-center space-y-10 md:space-y-0 flex-wrap pt-4 smaller:pt-6 to-sm:pt-6 sm:pt-6 md:pt-4 lg:pt-6 xl:pt-0 2xl:pt-6 3xl:pt-14 4xl:pt-10 5xl:pt-32 6xl:pt-16 ps-4 sm:ps-6 lg:ps-8 pe-4 small:pe-3 sm:pe-4">
+            <span className="max-w-2xl 2xl:max-w-4xl text-2xl sm:text-2xl lg:text-3xl 2xl:text-4xl first-letter:text-7xl first-letter:float-start text-left md:text-right 2xl:text-left px-0 md:px-4 2xl:px-10">
               I&apos;m a Full-Stack Developer who recently completed a 17-week
               intensive boot camp learning full-stack software development at
               Dev Academy in December 2023.
@@ -392,13 +386,12 @@ export default function About() {
                 anything I want to when starting with a blank canvas.
               </p>
               <p className="py-2 mt-4">
-                It&apos;s exciting, and frustrating, and have found a much joy
-                in the process of trying to be creative with a lot of
-                problem-solving!
+                It&apos;s exciting, frustrating, but have found much joy in the
+                process of trying to be creative with a lot of problem-solving!
               </p>
               <p className="py-2 mt-4">
                 I&apos;ve tried various roles in my life, none of them have
-                stuck so this was one of the biggest challenges of my life,
+                stuck, so this was one of the biggest challenges of my life,
                 diving into the unknown. I still have a lot to learn, & I&apos;m
                 excited to see where a career in tech takes me!
               </p>
@@ -409,7 +402,7 @@ export default function About() {
                 Experience with
               </h2>
               <HoverEffect items={techSkills} />
-              <h2 className="text-right md:text-center text-3xl  lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0">
+              <h2 className="text-right md:text-center text-3xl  lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0 2xl:pt-4">
                 Human skills
               </h2>
               <HoverEffect items={humanSkills} />
@@ -417,13 +410,13 @@ export default function About() {
           </div>
         </div>
         <div className="h-screen w-full pb-20">
-          <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-6 pb-8">
+          <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-6 pb-14">
             A couple of highlights ...
           </h2>
           <LayoutGrid cards={cards} />
         </div>
         <div className="max-w-2xl 2xl:max-w-3xl small:pt-8 smallAgain:pt-8 smallerAgain:pt-10 sm:pt-8 lg:pt-20 xl:pt-32 pb-0 md:pb-10 mx-auto ps-4 pe-4">
-          <h2 className="text-right md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0">
+          <h2 className="text-right md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0 pt-4 xl:pt-0">
             & some of my hobbies ..
           </h2>
           <HoverEffect items={hobbies} />
