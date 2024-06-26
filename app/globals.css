@@ -118,7 +118,7 @@
 
 @media (max-width: 1023px) {
   .nav-link:hover::before {
-    width: 35%;
+    width: 20%;
     left: 0;
   }
 }
@@ -130,7 +130,7 @@
   }
 
   .navbar-open {
-    background-color: #397c79;
+    background-color: #867979;
   }
 
   .navbar-closed {

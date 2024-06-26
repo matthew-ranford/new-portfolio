@@ -65,7 +65,7 @@ export const amatic = Amatic_SC({
 
 export const passion = Passion_One({
   subsets: ['latin'],
-  weight: ['900'],
+  weight: ['400'],
   display: 'swap',
   adjustFontFallback: false,
 })
