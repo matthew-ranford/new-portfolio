@@ -31,9 +31,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          {children}
-          {/* <Footer /> */}
+          <div className="dark:bg-background bg-background">
+            <Navbar />
+            {children}
+            {/* <Footer /> */}
+          </div>
         </ThemeProvider>
       </body>
     </html>
