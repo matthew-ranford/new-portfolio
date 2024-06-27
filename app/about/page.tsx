@@ -51,13 +51,13 @@ const FrameOne = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-700">
-        Invermere, BC, Canada.
+        <div className={handlee.className}>Invermere, BC, Canada.</div>
       </p>
-      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200 ">
         Ice Skating & Ice Hockey on the longest skating trail in the world at
         Lake Windermere.
       </p>
-      <p className="font-normal text-base my-4 max-w-lg text-zinc-200">
+      <p className="font-normal text-base my-4 max-w-lg text-zinc-200 ">
         I lived here for about two years.
       </p>
     </div>
@@ -68,9 +68,11 @@ const FrameTwo = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-700">
-        Lower Bugaboo Falls, Spillimacheen, Canada.
+        <div className={handlee.className}>
+          Lower Bugaboo Falls, Spillimacheen, Canada.
+        </div>
       </p>
-      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200 ">
         Hiking, exploring, sightseeing, & waterfalls.
       </p>
     </div>
@@ -81,9 +83,11 @@ const FrameThree = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-700">
-        Welsh Lakes, East Kootenay, Canada.
+        <div className={handlee.className}>
+          Welsh Lakes, East Kootenay, Canada.
+        </div>
       </p>
-      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200 ">
         More hiking, exploring, sightseeing, & unreal views.
       </p>
     </div>
@@ -94,13 +98,13 @@ const FrameFour = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-700">
-        Lethbridge, AB, Canada.
+        <div className={handlee.className}>Lethbridge, AB, Canada.</div>
       </p>
-      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200 ">
         Worked as a groundskeeper to maintain University grounds & snow-removal
         through winter, -40° was a regular..
       </p>
-      <p className="font-normal text-base my-4 max-w-lg text-zinc-200">
+      <p className="font-normal text-base my-4 max-w-lg text-zinc-200 ">
         Lethbridge University.
       </p>
     </div>
@@ -111,9 +115,9 @@ const FrameFive = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-700">
-        Chiang Mai, Thailand.
+        <div className={handlee.className}>Chiang Mai, Thailand.</div>
       </p>
-      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200 ">
         Visting an elephant sanctuary with some friends, where we were able to
         bath and feed the elephants!
       </p>
@@ -125,13 +129,13 @@ const FrameSix = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-700">
-        Wellington, NZ.
+        <div className={handlee.className}>Wellington, NZ.</div>
       </p>
-      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200 ">
         I spent about five years at Immigration New Zealand. I finished as a
         Senior Immigration Officer.
       </p>
-      <p className="font-normal text-base my-4 max-w-lg text-zinc-200">
+      <p className="font-normal text-base my-4 max-w-lg text-zinc-200 ">
         My last goodbye.
       </p>
     </div>
@@ -142,12 +146,12 @@ const FrameSeven = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-700">
-        Chiang Mai, Thailand.
+        <div className={handlee.className}>Chiang Mai, Thailand.</div>
       </p>
-      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200 ">
         Cooking class with some friends.. along with our mentor for the day.
       </p>
-      <p className="font-normal text-base my-4 max-w-lg text-zinc-200">
+      <p className="font-normal text-base my-4 max-w-lg text-zinc-200 ">
         Wasn&apos;t sure where the camera was.
       </p>
     </div>
@@ -158,13 +162,13 @@ const FrameEight = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-700">
-        Fairmont, BC, Canada.
+        <div className={handlee.className}>Fairmont, BC, Canada.</div>
       </p>
-      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200 ">
         Dislocated my shoulder the first month living in Canada, working on
         Panorama Mountain Resort.
       </p>
-      <p className="font-normal text-base my-4 max-w-lg text-zinc-200">
+      <p className="font-normal text-base my-4 max-w-lg text-zinc-200 ">
         Columbia Lake.
       </p>
     </div>

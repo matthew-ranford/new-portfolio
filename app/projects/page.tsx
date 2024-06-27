@@ -12,8 +12,12 @@ import {
 } from 'react-icons/si'
 import { cn } from '@/lib/utils'
 import { DirectionAwareHover } from '@/components/ui/direction-aware-hover'
-import Link from 'next/link'
 import MainHeaderNav from '../components/MainHeaderNav'
+
+import Link from 'next/link'
+import Image from 'next/image'
+import { handlee } from '@/fonts'
+import Footer from '../components/Footer'
 
 export default function page() {
   const projectsAfterDev = [
@@ -44,7 +48,6 @@ export default function page() {
       tech: [SiReact, SiBootstrap, SiFramer, SiTypescript],
       link: 'https://matthew-ranford.github.io/fresh-and-faded/',
       sourceCode: '',
-
       cover: '/cover-three.png',
       // background: 'bg-green-500',
     },
@@ -118,15 +121,24 @@ export default function page() {
 
   return (
     <>
-      <div className="py-10 p-5 sm:p-0 bg-zinc-300 dark:bg-stone-800">
-        <MainHeaderNav />
-        <h1 className="pt-32 lg:pt-10 ps-4 pe-4 sm:ps-0 sm:pe-0 text-center text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] 6xl:text-[18rem]">
+      <MainHeaderNav />
+      <section className="py-10 p-5 sm:p-0">
+        <Image
+          src="/projects-image-test.png"
+          width="2732"
+          height="1536"
+          alt=""
+          className="projects-image "
+        />
+        <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-24 2xl:pt-80 3xl:pt-72 4xl:pt-64 5xl:pt-72 6xl:pt-60 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
           Life after Dev Academy...
         </h1>
-        <h2 className="pt-6 pb-10 sm:pb-0 text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700">
-          My self guided learning journey continues..
+        <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 dark:text-orange-300 text-cyan-700">
+          <div className={handlee.className}>
+            My self guided learning journey continues..
+          </div>
         </h2>
-        <div className="pt-6 grid grid-cols-1 lg:grid-cols-2 gap-5 px-2 md:px-10 2xl:px-32">
+        <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-5 px-2 md:px-10 2xl:px-32">
           {projectsAfterDev.map((project, index) => {
             return (
               <Link href={project.link} key={index} target="_blank">
@@ -138,14 +150,14 @@ export default function page() {
                     className="w-full space-y-5 cursor-pointer"
                   >
                     <div className="space-y-2 md:space-y-5 2xl:space-y-8 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
-                      <h1 className="text-lg md:text-2xl 2xl:text-4xl text-amber-600">
-                        {project.title}
+                      <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
+                        <div className={handlee.className}>{project.title}</div>
                       </h1>
                       <p className="text-sm md:text-lg 2xl:text-2xl">
                         {project.description}
                       </p>
                       <Link href={project.sourceCode} target="_blank">
-                        <p className="pt-2 text-sm md:text-lg text-zinc-400 hover:text-amber-600">
+                        <p className="pt-2 text-sm md:text-lg text-zinc-400 dark:hover:text-orange-300 hover:text-cyan-700">
                           Source Code ↗️
                         </p>
                       </Link>
@@ -166,17 +178,19 @@ export default function page() {
             )
           })}
         </div>
-        <h1 className="pt-20 text-center text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] 6xl:text-[18rem]">
+        <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-20 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
           Dev Academy...
         </h1>
-        <h2 className="pt-6 text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700">
-          My first time studying starts..
+        <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 dark:text-orange-300 text-cyan-700">
+          <div className={handlee.className}>
+            My first time studying starts..
+          </div>
         </h2>
-        <h3 className="pt-4 text-center text-sm dark:text-orange-800 text-cyan-800">
+        <h3 className="pt-4 text-center text-xs 2xl:text-sm dark:text-orange-800 text-cyan-800">
           (More projects were completed within this time & the source code is
           available on github..)
         </h3>
-        <div className="pt-6 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
+        <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
           {projectsDevAcademy.map((project, index) => {
             return (
               <Link href={project.link} key={index} target="_blank">
@@ -188,14 +202,14 @@ export default function page() {
                     className="w-full space-y-5 cursor-pointer"
                   >
                     <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
-                      <h1 className="text-lg md:text-2xl 2xl:text-4xl text-amber-600">
-                        {project.title}
+                      <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
+                        <div className={handlee.className}>{project.title}</div>
                       </h1>
                       <p className="text-sm md:text-lg 2xl:text-2xl">
                         {project.description}
                       </p>
                       <Link href={project.sourceCode} target="_blank">
-                        <p className="pt-2 text-sm md:text-lg text-zinc-400 hover:text-amber-600">
+                        <p className="pt-2 text-sm md:text-lg text-zinc-400 dark:hover:text-orange-300 hover:text-cyan-700">
                           Source Code ↗️
                         </p>
                       </Link>
@@ -216,14 +230,15 @@ export default function page() {
             )
           })}
         </div>
-        <h1 className="pt-32 text-center text-7xl to-sm:text-[3.3rem] sm:text-7xl md:text-[5.5rem] lg:text-8xl xl:text-[9.3rem] 2xl:text-[11rem] 3xl:text-[13rem] 4xl:text-[14rem] 5xl:text-[17.5rem] 6xl:text-[18rem]">
+        <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-20 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
           Life before Dev Academy...
         </h1>
-        <h2 className="pt-6 text-center text-2xl sm:text-2xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700">
-          My self guided learning journey starts..
+        <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 dark:text-orange-300 text-cyan-700">
+          <div className={handlee.className}>
+            My self guided learning journey starts..
+          </div>
         </h2>
-
-        <div className="pt-6 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
+        <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
           {projectsBeforeDev.map((project, index) => {
             return (
               <Link href={project.link} key={index} target="_blank">
@@ -235,14 +250,14 @@ export default function page() {
                     className="w-full space-y-5 cursor-pointer"
                   >
                     <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
-                      <h1 className="text-lg md:text-2xl 2xl:text-4xl text-amber-600">
-                        {project.title}
+                      <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
+                        <div className={handlee.className}>{project.title}</div>
                       </h1>
                       <p className="text-sm md:text-lg 2xl:text-2xl">
                         {project.description}
                       </p>
                       <Link href={project.sourceCode} target="_blank">
-                        <p className="pt-2 text-sm md:text-lg text-zinc-400 hover:text-amber-600">
+                        <p className="pt-2 text-sm md:text-lg text-zinc-400 dark:hover:text-orange-300 hover:text-cyan-700">
                           Source Code ↗️
                         </p>
                       </Link>
@@ -263,7 +278,8 @@ export default function page() {
             )
           })}
         </div>
-      </div>
+        <Footer />
+      </section>
     </>
   )
 }

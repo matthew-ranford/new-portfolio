@@ -162,7 +162,8 @@
   }
 }
 
-.about-image {
+.about-image,
+.projects-image {
   position: absolute;
   width: 100%;
   height: auto;
@@ -174,7 +175,8 @@
 }
 
 @media (max-width: 767px) {
-  .about-image {
+  .about-image,
+  .projects-image {
     width: 100%;
     /* top: auto; */
   }

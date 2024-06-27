@@ -32,15 +32,17 @@ export const DirectionAwareHover = ({
     const direction = getDirection(event, ref.current)
     console.log('direction', direction)
     switch (direction) {
-      case 0:
-        setDirection('top')
-        break
-      case 1:
-        setDirection('right')
-        break
-      case 2:
-        setDirection('bottom')
-        break
+      ////////// ONLY USE LEFT DIRECTION FOR NOW ////////////
+
+      // case 0:
+      //   setDirection('top')
+      //   break
+      // case 1:
+      //   setDirection('right')
+      //   break
+      // case 2:
+      //   setDirection('bottom')
+      //   break
       case 3:
         setDirection('left')
         break
@@ -77,12 +79,12 @@ export const DirectionAwareHover = ({
           whileHover={direction}
           exit="exit"
         >
-          <motion.div className="group-hover/card:block hidden absolute inset-0 w-full h-full dark:bg-stone-900/40 bg-zinc-200/40 z-10 transition duration-500" />
+          <motion.div className="group-hover/card:block hidden absolute inset-0 w-full h-full z-10 transition duration-500" />
           <motion.div
             variants={variants}
-            className="h-full w-full relative bg-zinc-500/50 dark:bg-zinc-900/50"
+            className="h-full w-full relative"
             transition={{
-              duration: 0.2,
+              duration: 0.5,
               ease: 'easeOut',
             }}
           >
@@ -100,7 +102,7 @@ export const DirectionAwareHover = ({
           <motion.div
             variants={textVariants}
             transition={{
-              duration: 0.5,
+              duration: 1,
               ease: 'easeOut',
             }}
             className={cn(
