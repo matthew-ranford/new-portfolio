@@ -1,8 +1,16 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { handlee } from '@/fonts'
+
+// Components
+import MainHeaderNav from '../components/MainHeaderNav'
+import Footer from '../components/Footer'
 import { LayoutGrid } from '@/components/ui/layout-grid'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
+
 import {
   FcReading,
   FcGlobe,
@@ -35,11 +43,6 @@ import {
   SiTypescript,
   SiVeepee,
 } from 'react-icons/si'
-import MainHeaderNav from '../components/MainHeaderNav'
-import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
-import Footer from '../components/Footer'
-import { handlee } from '@/fonts'
-import Link from 'next/link'
 
 // TextGenerateEffect
 const firstLine = 'Wellington, New Zealand 🌎 '
@@ -436,5 +439,3 @@ export default function About() {
     </>
   )
 }
-
-// Put all images into sub-folders for categories
