@@ -118,7 +118,7 @@
 
 @media (max-width: 1023px) {
   .nav-link:hover::before {
-    width: 20%;
+    width: 10%;
     left: 0;
   }
 }
@@ -137,6 +137,12 @@
     background-color: transparent;
   }
 
+  .navbar-full-height {
+    height: auto;
+  }
+}
+
+@media (max-width: 450px) {
   .navbar-full-height {
     height: 100vh;
   }

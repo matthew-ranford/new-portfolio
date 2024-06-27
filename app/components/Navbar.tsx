@@ -14,6 +14,7 @@ import {
   spicyRice,
   titan,
 } from '@/fonts'
+import MainHeaderNav from './MainHeaderNav'
 
 // TypeScript
 interface NavLink {
@@ -49,6 +50,13 @@ export default function Navbar() {
               : 'navbar-closed animate-slideOut'
           }`}
         >
+          <div
+            className={`lg:hidden absolute top-0 left-0 ${
+              isOpen ? 'block' : 'hidden'
+            }`}
+          >
+            <MainHeaderNav />
+          </div>
           <div className="flex justify-end">
             <span className="lg:hidden pt-2 md:pt-0 pe-2 sm:pe-4">
               <button
@@ -67,9 +75,10 @@ export default function Navbar() {
               </button>
             </span>
           </div>
+
           <ul
             id="navbar-dropdown-menu"
-            className={`lg:flex ps-2 gap-5 text-6xl lg:text-xl xl:text-3xl 6xl:text-5xl lg:pt-0 ${
+            className={`lg:flex ps-2 gap-5 text-7xl lg:text-2xl xl:text-3xl 6xl:text-5xl pt-28 sm:pt-44 lg:pt-0 ${
               isOpen ? 'animate-slideIn' : 'hidden'
             }`}
           >
