@@ -11,6 +11,7 @@ import { LayoutGrid } from '@/components/ui/layout-grid'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 
+// Icons
 import {
   FcReading,
   FcGlobe,

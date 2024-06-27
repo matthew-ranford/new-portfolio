@@ -1,3 +1,13 @@
+import Link from 'next/link'
+import Image from 'next/image'
+import { handlee } from '@/fonts'
+
+// Components
+import MainHeaderNav from '../components/MainHeaderNav'
+import Footer from '../components/Footer'
+import { DirectionAwareHover } from '@/components/ui/direction-aware-hover'
+
+// Icons
 import {
   SiBootstrap,
   SiCss3,
@@ -11,106 +21,98 @@ import {
   SiTypescript,
 } from 'react-icons/si'
 
-import { DirectionAwareHover } from '@/components/ui/direction-aware-hover'
-import MainHeaderNav from '../components/MainHeaderNav'
+// DirectionAwareHover
+const projectsAfterDev = [
+  {
+    title: 'McLauchlan Electrical',
+    description:
+      'Testing out NextJS on a wesbite revamp, using Acernity UI, Tailwind, & Framer-motion - in progress, awaiting further information.',
+    tech: [SiNextdotjs, SiTailwindcss, SiFramer, SiTypescript],
+    link: 'https://matthew-ranford.github.io/mclauchlan-electrical/',
+    sourceCode: 'https://github.com/matthew-ranford/mclauchlan-electrical',
+    cover: '/cover-one.png',
+  },
+  {
+    title: 'Attention To Detail - Painting services',
+    description:
+      'Trying to improve my ReactJS skills on a wesbite revamp, using Bootstrap, Tailwind, & Framer-motion - now live! My first ever live website for a friend.',
+    tech: [SiReact, SiBootstrap, SiTailwindcss, SiFramer, SiTypescript],
+    link: 'https://atd-decorators.co.nz/',
+    sourceCode: '',
+    cover: '/cover-two.png',
+  },
+  {
+    title: 'Fresh & Faded Barbershop',
+    description:
+      'Trying to improve my ReactJS skills straight out of Dev Academy on a first-time website, using Bootstrap, & Framer-motion - not complete; never received further information, photos etc.',
+    tech: [SiReact, SiBootstrap, SiFramer, SiTypescript],
+    link: 'https://matthew-ranford.github.io/fresh-and-faded/',
+    sourceCode: '',
+    cover: '/cover-three.png',
+  },
+  {
+    title: 'Item Tracker',
+    description:
+      "Trying to improve my Full-Stack skills straight out of Dev Academy, an item tracking application to see who you've lent your items to - not complete; need to go back & start again to regain my skills along with using the new skills i've learnt.",
+    tech: [
+      SiReact,
+      SiBootstrap,
+      SiTailwindcss,
+      SiFramer,
+      SiSqlite,
+      SiTypescript,
+    ],
+    link: 'https://github.com/matthew-ranford/item-tracker/tree/date-picker',
+    sourceCode: '',
+    cover: '/cover-four.png',
+  },
+]
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { handlee } from '@/fonts'
-import Footer from '../components/Footer'
+const projectsDevAcademy = [
+  {
+    title: 'Friend Booking',
+    description:
+      'Final group project at Dev Academy, a friend booking application where you can view when you/your friends are available for a catch up - I spent a big role trying to make the app responsive.',
+    tech: [SiReact, SiSqlite, SiCss3, SiTypescript],
+    link: 'https://github.com/matthew-ranford/friend-booking',
+    sourceCode: 'https://github.com/matthew-ranford/friend-booking',
+    cover: '/cover-five.png',
+  },
+  {
+    title: 'Foundations Blog',
+    description:
+      'Start of my learning Journey at Dev Academy, starting with the basics of HTML, CSS, & JavaScript.',
+    tech: [SiHtml5, SiCss3, SiJavascript],
+    link: 'https://matthew-ranford.github.io/',
+    sourceCode: 'https://github.com/matthew-ranford/matthew-ranford.github.io',
+    cover: '/cover-six.png',
+  },
+]
+
+const projectsBeforeDev = [
+  {
+    title: 'Complete Building Solutions',
+    description:
+      'Trying to improve my skills before study, completing one of my first design concepts for a family members business.',
+    tech: [SiHtml5, SiCss3, SiJavascript],
+    link: 'https://matthew-ranford.github.io/complete-building-solutions-website-concept/',
+    sourceCode:
+      'https://github.com/matthew-ranford/complete-building-solutions-website-concept',
+    cover: '/cover-seven.png',
+  },
+  {
+    title: 'Free Code Camp Portfolio',
+    description:
+      'One of my first ever projects completed through FreeCodeCamp.',
+    tech: [SiHtml5, SiCss3],
+    link: 'https://matthew-ranford.github.io/freecodecamp-personal-portfolio-webpage/',
+    sourceCode:
+      'https://github.com/matthew-ranford/freecodecamp-personal-portfolio-webpage',
+    cover: '/cover-eight.png',
+  },
+]
 
 export default function page() {
-  const projectsAfterDev = [
-    {
-      title: 'McLauchlan Electrical',
-      description:
-        'Testing out NextJS on a wesbite revamp, using Acernity UI, Tailwind, & Framer-motion - in progress, awaiting further information.',
-      tech: [SiNextdotjs, SiTailwindcss, SiFramer, SiTypescript],
-      link: 'https://matthew-ranford.github.io/mclauchlan-electrical/',
-      sourceCode: 'https://github.com/matthew-ranford/mclauchlan-electrical',
-      cover: '/cover-one.png',
-    },
-    {
-      title: 'Attention To Detail - Painting services',
-      description:
-        'Trying to improve my ReactJS skills on a wesbite revamp, using Bootstrap, Tailwind, & Framer-motion - now live! My first ever live website for a friend.',
-      tech: [SiReact, SiBootstrap, SiTailwindcss, SiFramer, SiTypescript],
-      link: 'https://atd-decorators.co.nz/',
-      sourceCode: '',
-      cover: '/cover-two.png',
-    },
-    {
-      title: 'Fresh & Faded Barbershop',
-      description:
-        'Trying to improve my ReactJS skills straight out of Dev Academy on a first-time website, using Bootstrap, & Framer-motion - not complete; never received further information, photos etc.',
-      tech: [SiReact, SiBootstrap, SiFramer, SiTypescript],
-      link: 'https://matthew-ranford.github.io/fresh-and-faded/',
-      sourceCode: '',
-      cover: '/cover-three.png',
-    },
-    {
-      title: 'Item Tracker',
-      description:
-        "Trying to improve my Full-Stack skills straight out of Dev Academy, an item tracking application to see who you've lent your items to - not complete; need to go back & start again to regain my skills along with using the new skills i've learnt.",
-      tech: [
-        SiReact,
-        SiBootstrap,
-        SiTailwindcss,
-        SiFramer,
-        SiSqlite,
-        SiTypescript,
-      ],
-      link: 'https://github.com/matthew-ranford/item-tracker/tree/date-picker',
-      sourceCode: '',
-      cover: '/cover-four.png',
-    },
-  ]
-
-  const projectsDevAcademy = [
-    {
-      title: 'Friend Booking',
-      description:
-        'Final group project at Dev Academy, a friend booking application where you can view when you/your friends are available for a catch up - I spent a big role trying to make the app responsive.',
-      tech: [SiReact, SiSqlite, SiCss3, SiTypescript],
-      link: 'https://github.com/matthew-ranford/friend-booking',
-      sourceCode: 'https://github.com/matthew-ranford/friend-booking',
-      cover: '/cover-five.png',
-    },
-    {
-      title: 'Foundations Blog',
-      description:
-        'Start of my learning Journey at Dev Academy, starting with the basics of HTML, CSS, & JavaScript.',
-      tech: [SiHtml5, SiCss3, SiJavascript],
-      link: 'https://matthew-ranford.github.io/',
-      sourceCode:
-        'https://github.com/matthew-ranford/matthew-ranford.github.io',
-      cover: '/cover-six.png',
-    },
-  ]
-
-  const projectsBeforeDev = [
-    {
-      title: 'Complete Building Solutions',
-      description:
-        'Trying to improve my skills before study, completing one of my first design concepts for a family members business.',
-      tech: [SiHtml5, SiCss3, SiJavascript],
-      link: 'https://matthew-ranford.github.io/complete-building-solutions-website-concept/',
-      sourceCode:
-        'https://github.com/matthew-ranford/complete-building-solutions-website-concept',
-      cover: '/cover-seven.png',
-    },
-    {
-      title: 'Free Code Camp Portfolio',
-      description:
-        'One of my first ever projects completed through FreeCodeCamp.',
-      tech: [SiHtml5, SiCss3],
-      link: 'https://matthew-ranford.github.io/freecodecamp-personal-portfolio-webpage/',
-      sourceCode:
-        'https://github.com/matthew-ranford/freecodecamp-personal-portfolio-webpage',
-      cover: '/cover-eight.png',
-    },
-  ]
-
   return (
     <>
       <MainHeaderNav />
