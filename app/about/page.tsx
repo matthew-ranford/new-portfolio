@@ -429,6 +429,9 @@ export default function About() {
           <HoverEffect items={hobbies} />
         </div>
         <Footer />
+        <Link href="/about">
+          <div className="text-center text-5xl pt-4 pb-4">🔝</div>
+        </Link>
       </section>
     </>
   )

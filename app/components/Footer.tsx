@@ -48,7 +48,6 @@ export default function Footer() {
           )
         })}
       </div>
-      <h2 className="text-center text-5xl pt-4 pb-4">🔝</h2>
     </>
   )
 }
