@@ -2,20 +2,21 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import MainHeaderNav from './MainHeaderNav'
 import { handlee } from '@/fonts'
+import { motion } from 'framer-motion'
 
+// Components
+import MainHeaderNav from './MainHeaderNav'
 import { Highlight } from '@/components/ui/hero-highlight'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { MovingBorderButton } from '@/components/ui/moving-border'
-import { motion } from 'framer-motion'
+
+// TextGenerateEffect
+const firstLine = 'Based in Wellington, New Zealand'
+const secondLine =
+  "I'm an extremely passionate Developer, with a strong interest in Front-End, Accessibility, & trying to optimize applications for the best practices & performance."
 
 export default function Hero() {
-  // TextGenerateEffect
-  const firstLine = 'Based in Wellington, New Zealand'
-  const secondLine =
-    "I'm an extremely passionate Developer, with a strong interest in Front-End, Accessibility, & trying to optimize applications for the best practices & performance."
-
   return (
     <>
       <main id="home" className="relative overflow-hidden">
