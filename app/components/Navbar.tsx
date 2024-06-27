@@ -20,6 +20,7 @@ import MainHeaderNav from './MainHeaderNav'
 interface NavLink {
   href: string
   text: string
+  target?: string
 }
 
 export default function Navbar() {
@@ -29,7 +30,7 @@ export default function Navbar() {
     { href: '/', text: 'Home' },
     { href: 'about', text: 'About' },
     { href: 'projects', text: 'Projects' },
-    { href: '#', text: 'Resume' },
+    { href: '/matt-software-dev-cv.pdf', text: 'Résumé', target: '_blank' },
   ]
 
   const toggleMenu = () => {
@@ -86,11 +87,12 @@ export default function Navbar() {
               <Link
                 href={link.href}
                 key={index}
+                target={link.target ? link.target : undefined}
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <li
                   style={{ listStyle: 'none' }}
-                  className="dark:text-white my-6 lg:my-0 nav-link"
+                  className="dark:text-zinc-200 text-stone-900 my-6 lg:my-0 nav-link"
                 >
                   {link.text}
                 </li>
