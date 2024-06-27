@@ -1,19 +1,13 @@
 'use client'
 
 import { useState } from 'react'
+import { handlee } from '@/fonts'
 import Link from 'next/link'
 
 // Light & Dark mode toggle
 import { ModeToggle } from './LightDarkToggle'
-import {
-  alfaSlabOne,
-  amatic,
-  handlee,
-  passion,
-  shadows,
-  spicyRice,
-  titan,
-} from '@/fonts'
+
+// Page title
 import MainHeaderNav from './MainHeaderNav'
 
 // TypeScript
