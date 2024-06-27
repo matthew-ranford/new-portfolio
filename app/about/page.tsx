@@ -39,12 +39,13 @@ import MainHeaderNav from '../components/MainHeaderNav'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import Footer from '../components/Footer'
 import { handlee } from '@/fonts'
+import Link from 'next/link'
 
 // TextGenerateEffect
-const firstLine = '🌎 Wellington, New Zealand'
-const secondLine = '💼 How can i be of service?'
-const thirdLine = '☕ Coffee? On me!'
-const fourthLine = '💡 Lets get creative together!'
+const firstLine = 'Wellington, New Zealand 🌎 '
+const secondLine = 'Coffee? On me! ☕'
+const thirdLine = 'Looking for work 💼 '
+const fourthLine = 'Contact me 📧 '
 
 // LayoutGrid
 const FrameOne = () => {
@@ -360,11 +361,13 @@ export default function About() {
             delay={4600}
             className="text-right"
           />
-          <TextGenerateEffect
-            words={fourthLine}
-            delay={5200}
-            className="text-right"
-          />
+          <Link href="mailto:matt.ranford16@gmail.com" className="relative">
+            <TextGenerateEffect
+              words={fourthLine}
+              delay={5200}
+              className="text-right pt-2"
+            />
+          </Link>
         </div>
 
         <div className="space-y-4 2xl:space-y-6">

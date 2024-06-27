@@ -4,6 +4,11 @@ import Link from 'next/link'
 export default function Footer() {
   const socials = [
     {
+      link: 'mailto:matt.ranford16@gmail.com',
+      label: 'Email',
+      icon: '/gmail-icon.png',
+    },
+    {
       link: 'https://www.linkedin.com/in/matthew-ranford-23b759261/',
       label: 'LinkedIn',
       icon: '/linkedin-icon.png',
@@ -27,7 +32,7 @@ export default function Footer() {
             <Link href={social.link} key={index} aria-label={social.label}>
               <Image
                 src={social.icon}
-                className="w-7 h-7 my-4 md:my-0 hover:scale-125"
+                className="w-8 h-8 my-4 md:my-0 hover:scale-125"
                 width={48}
                 height={48}
                 alt=""
@@ -36,7 +41,7 @@ export default function Footer() {
           )
         })}
       </div>
-      <h2 className="text-center text-2xl pt-4 pb-4">Back to top</h2>
+      <h2 className="text-center text-5xl pt-4 pb-4">🔝</h2>
     </>
   )
 }
