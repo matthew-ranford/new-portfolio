@@ -1,8 +1,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+//TypeScript
+interface Socials {
+  link: string
+  label: string
+  icon: string
+}
+
 export default function Footer() {
-  const socials = [
+  const socials: Socials[] = [
     {
       link: 'mailto:matt.ranford16@gmail.com',
       label: 'Email',
