@@ -265,6 +265,9 @@ export default function page() {
           })}
         </div>
         <Footer />
+        <Link href="/projects">
+          <div className="text-center text-5xl pt-4 pb-4">🔝</div>
+        </Link>
       </section>
     </>
   )
