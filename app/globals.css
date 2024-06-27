@@ -115,7 +115,7 @@
 
 @media (max-width: 1023px) {
   .nav-link:hover::before {
-    width: 10%;
+    width: 20%;
     left: 0;
   }
 }

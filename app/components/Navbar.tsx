@@ -21,6 +21,7 @@ interface NavLink {
   href: string
   text: string
   target?: string
+  className?: string
 }
 
 export default function Navbar() {
@@ -31,6 +32,12 @@ export default function Navbar() {
     { href: 'about', text: 'About' },
     { href: 'projects', text: 'Projects' },
     { href: '/matt-software-dev-cv.pdf', text: 'Résumé', target: '_blank' },
+    {
+      href: 'mailto:matt.ranford16@gmail.com',
+      text: 'Contact',
+      className:
+        'lg:border-4 dark:border-orange-300 border-cyan-700 lg:px-3 lg:py-1',
+    },
   ]
 
   const toggleMenu = () => {
@@ -79,7 +86,7 @@ export default function Navbar() {
 
           <ul
             id="navbar-dropdown-menu"
-            className={`lg:flex ps-2 gap-5 text-7xl lg:text-2xl xl:text-3xl 6xl:text-5xl pt-28 sm:pt-44 lg:pt-0 ${
+            className={`lg:flex ps-2 gap-5 text-6xl lg:text-2xl xl:text-3xl 6xl:text-5xl pt-24 sm:pt-44 lg:pt-0 ${
               isOpen ? 'animate-slideIn' : 'hidden'
             }`}
           >
@@ -88,6 +95,7 @@ export default function Navbar() {
                 href={link.href}
                 key={index}
                 target={link.target ? link.target : undefined}
+                className={link.className || ''}
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <li
@@ -98,7 +106,9 @@ export default function Navbar() {
                 </li>
               </Link>
             ))}
-            <ModeToggle closeNavbar={closeNavbarOnThemeChange} />
+            <div className="py-1">
+              <ModeToggle closeNavbar={closeNavbarOnThemeChange} />
+            </div>
           </ul>
         </nav>
       </div>
