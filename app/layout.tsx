@@ -7,7 +7,6 @@ import '../node_modules/hamburgers/dist/hamburgers.css'
 
 // Components
 import Navbar from './components/Navbar'
-import Footer from './components/Footer'
 
 import { ThemeProvider } from '@/components/theme-provider'
 
@@ -24,6 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="shortcut icon" type="image/x-icon" href="/logo.png" />
+      </head>
       <body className={anton.className}>
         <ThemeProvider
           attribute="class"
@@ -34,7 +36,6 @@ export default function RootLayout({
           <div className="dark:bg-background bg-background">
             <Navbar />
             {children}
-            {/* <Footer /> */}
           </div>
         </ThemeProvider>
       </body>
