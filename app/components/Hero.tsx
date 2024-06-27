@@ -46,9 +46,11 @@ export default function Hero() {
                   Recent Work!
                 </MovingBorderButton>
               </Link>
-              <MovingBorderButton className="font-bold">
-                Lets Work Together!
-              </MovingBorderButton>
+              <Link href="mailto:matt.ranford16@gmail.com">
+                <MovingBorderButton className="font-bold">
+                  Lets Work Together!
+                </MovingBorderButton>
+              </Link>
             </div>
           </div>
         </motion.div>
@@ -59,5 +61,3 @@ export default function Hero() {
     </>
   )
 }
-
-// Add links for buttons
