@@ -18,7 +18,7 @@ export default function Hero() {
 
   return (
     <>
-      <main id="home" className="relative">
+      <main id="home" className="relative overflow-hidden">
         <MainHeaderNav />
         <div className="ps-6 xl:ps-8 pe-4 space-y-4 xl:space-y-10 2xl:space-y-8 5xl:space-y-24 6xl:space-y-32 pt-36 sm:pt-44 md:pt-56 lg:pt-20 xl:pt-8 2xl:pt-24 3xl:pt-36 4xl:pt-48 5xl:pt-40 6xl:pt-24 max-w-3xl lg:max-w-2xl xl:max-w-3xl 5xl:max-w-4xl 6xl:max-w-7xl">
           <TextGenerateEffect words={firstLine} delay={3000} />
