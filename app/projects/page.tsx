@@ -10,7 +10,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si'
-import { cn } from '@/lib/utils'
+
 import { DirectionAwareHover } from '@/components/ui/direction-aware-hover'
 import MainHeaderNav from '../components/MainHeaderNav'
 
@@ -29,7 +29,6 @@ export default function page() {
       link: 'https://matthew-ranford.github.io/mclauchlan-electrical/',
       sourceCode: 'https://github.com/matthew-ranford/mclauchlan-electrical',
       cover: '/cover-one.png',
-      // background: 'bg-red-500',
     },
     {
       title: 'Attention To Detail - Painting services',
@@ -39,7 +38,6 @@ export default function page() {
       link: 'https://atd-decorators.co.nz/',
       sourceCode: '',
       cover: '/cover-two.png',
-      // background: 'bg-indigo-500',
     },
     {
       title: 'Fresh & Faded Barbershop',
@@ -49,7 +47,6 @@ export default function page() {
       link: 'https://matthew-ranford.github.io/fresh-and-faded/',
       sourceCode: '',
       cover: '/cover-three.png',
-      // background: 'bg-green-500',
     },
     {
       title: 'Item Tracker',
@@ -66,7 +63,6 @@ export default function page() {
       link: 'https://github.com/matthew-ranford/item-tracker/tree/date-picker',
       sourceCode: '',
       cover: '/cover-four.png',
-      // background: 'bg-fuchsia-500',
     },
   ]
 
@@ -79,7 +75,6 @@ export default function page() {
       link: 'https://github.com/matthew-ranford/friend-booking',
       sourceCode: 'https://github.com/matthew-ranford/friend-booking',
       cover: '/cover-five.png',
-      // background: 'bg-amber-500',
     },
     {
       title: 'Foundations Blog',
@@ -90,7 +85,6 @@ export default function page() {
       sourceCode:
         'https://github.com/matthew-ranford/matthew-ranford.github.io',
       cover: '/cover-six.png',
-      // background: 'bg-amber-500',
     },
   ]
 
@@ -104,7 +98,6 @@ export default function page() {
       sourceCode:
         'https://github.com/matthew-ranford/complete-building-solutions-website-concept',
       cover: '/cover-seven.png',
-      // background: 'bg-amber-500',
     },
     {
       title: 'Free Code Camp Portfolio',
@@ -115,7 +108,6 @@ export default function page() {
       sourceCode:
         'https://github.com/matthew-ranford/freecodecamp-personal-portfolio-webpage',
       cover: '/cover-eight.png',
-      // background: 'bg-amber-500',
     },
   ]
 
@@ -142,9 +134,7 @@ export default function page() {
           {projectsAfterDev.map((project, index) => {
             return (
               <Link href={project.link} key={index} target="_blank">
-                <div
-                  className={cn('p-1 md:p-5 rounded-2xl', project.background)}
-                >
+                <div className="p-1 md:p-5 rounded-2xl">
                   <DirectionAwareHover
                     imageUrl={project.cover}
                     className="w-full space-y-5 cursor-pointer"
@@ -194,9 +184,7 @@ export default function page() {
           {projectsDevAcademy.map((project, index) => {
             return (
               <Link href={project.link} key={index} target="_blank">
-                <div
-                  className={cn('p-1 md:p-5 rounded-2xl', project.background)}
-                >
+                <div className="p-1 md:p-5 rounded-2xl">
                   <DirectionAwareHover
                     imageUrl={project.cover}
                     className="w-full space-y-5 cursor-pointer"
@@ -242,9 +230,7 @@ export default function page() {
           {projectsBeforeDev.map((project, index) => {
             return (
               <Link href={project.link} key={index} target="_blank">
-                <div
-                  className={cn('p-1 md:p-5 rounded-2xl', project.background)}
-                >
+                <div className="p-1 md:p-5 rounded-2xl">
                   <DirectionAwareHover
                     imageUrl={project.cover}
                     className="w-full space-y-5 cursor-pointer"
