@@ -353,18 +353,18 @@ export default function About() {
           />
           <TextGenerateEffect
             words={secondLine}
-            delay={3800}
+            delay={4200}
             className="text-right"
           />
           <TextGenerateEffect
             words={thirdLine}
-            delay={4600}
+            delay={4700}
             className="text-right"
           />
           <Link href="mailto:matt.ranford16@gmail.com" className="relative">
             <TextGenerateEffect
               words={fourthLine}
-              delay={5200}
+              delay={5500}
               className="text-right pt-2"
             />
           </Link>
