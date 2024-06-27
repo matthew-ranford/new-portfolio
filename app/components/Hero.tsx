@@ -12,15 +12,15 @@ import { handlee } from '@/fonts'
 
 export default function Hero() {
   // TextGenerateEffect
-  const firstLine = "Based in Wellington, New Zealand, I'm an"
+  const firstLine = 'Based in Wellington, New Zealand'
   const secondLine =
-    'Extremely passionate Developer, with a strong interest in Front-End, Accessibility, & trying to optimize applications for the best practices & performance.'
+    "I'm an extremely passionate Developer, with a strong interest in Front-End, Accessibility, & trying to optimize applications for the best practices & performance."
 
   return (
     <>
       <main id="home" className="relative">
         <MainHeaderNav />
-        <div className="ps-6 xl:ps-8 pe-4 space-y-4 xl:space-y-10 2xl:space-y-8 5xl:space-y-24 6xl:space-y-32 pt-28 sm:pt-44 md:pt-56 lg:pt-20 xl:pt-8 2xl:pt-24 3xl:pt-36 4xl:pt-48 5xl:pt-40 6xl:pt-24 max-w-3xl lg:max-w-2xl xl:max-w-3xl 5xl:max-w-4xl 6xl:max-w-7xl">
+        <div className="ps-6 xl:ps-8 pe-4 space-y-4 xl:space-y-10 2xl:space-y-8 5xl:space-y-24 6xl:space-y-32 pt-36 sm:pt-44 md:pt-56 lg:pt-20 xl:pt-8 2xl:pt-24 3xl:pt-36 4xl:pt-48 5xl:pt-40 6xl:pt-24 max-w-3xl lg:max-w-2xl xl:max-w-3xl 5xl:max-w-4xl 6xl:max-w-7xl">
           <TextGenerateEffect words={firstLine} delay={3000} />
           <TextGenerateEffect words={secondLine} delay={4400} />
         </div>
@@ -52,7 +52,7 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
-        <h2 className="ps-2 md:ps-6 pe-2 pt-10 2xl:pt-28 4xl:pt-16 5xl:pt-40 6xl:pt-36 text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] text-center md:text-left dark:text-zinc-200 text-stone-900 font-bold">
+        <h2 className="ps-2 md:ps-6 pe-2 pt-10 2xl:pt-28 4xl:pt-16 5xl:pt-40 6xl:pt-36 text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] text-center md:text-left dark:text-orange-300 text-cyan-700 font-bold">
           <Highlight>FULL-STACK DEVELOPER</Highlight>
         </h2>
       </main>

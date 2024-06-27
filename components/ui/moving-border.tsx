@@ -47,7 +47,7 @@ export function MovingBorderButton({
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              'h-10 w-10 bg-gradient-to-r from-sky-600 to-cyan-700 ',
+              'h-10 w-10 bg-gradient-to-r dark:from-sky-600 dark:to-cyan-700 from-amber-600 to-orange-700 ',
               borderClassName
             )}
           />
