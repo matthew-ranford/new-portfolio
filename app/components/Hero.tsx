@@ -1,14 +1,14 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
+import MainHeaderNav from './MainHeaderNav'
+import { handlee } from '@/fonts'
 
 import { Highlight } from '@/components/ui/hero-highlight'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { MovingBorderButton } from '@/components/ui/moving-border'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
-import MainHeaderNav from './MainHeaderNav'
-import { handlee } from '@/fonts'
 
 export default function Hero() {
   // TextGenerateEffect
