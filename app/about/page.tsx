@@ -11,6 +11,9 @@ import { LayoutGrid } from '@/components/ui/layout-grid'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 
+// Main page image
+import aboutImage from '../../public/images/about-image.png'
+
 // Icons
 import {
   FcReading,
@@ -360,11 +363,11 @@ export default function About() {
       <section className="md:max-w-full">
         <MainHeaderNav />
         <Image
-          src="/about-image-test.png"
+          src={aboutImage}
           width="2732"
           height="1536"
-          alt=""
-          className="about-image "
+          alt="Main page image of Matt"
+          className="about-image"
         />
 
         <div className="xl:pe-12 pe-4 sm:pe-8 pt-4 lg:pt-20 xl:pt-0 xl:-mt-24 2xl:-mt-28 space-y-2">
