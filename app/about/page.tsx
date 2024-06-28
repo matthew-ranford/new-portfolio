@@ -180,55 +180,73 @@ const FrameEight = () => {
   )
 }
 
+// LayoutGrid Images
+import aboutImage1 from '../../public/images/about-images/about-image-1.jpg'
+import aboutImage2 from '../../public/images/about-images/about-image-2.jpg'
+import aboutImage3 from '../../public/images/about-images/about-image-3.jpg'
+import aboutImage4 from '../../public/images/about-images/about-image-4.jpg'
+import aboutImage5 from '../../public/images/about-images/about-image-5.jpg'
+import aboutImage6 from '../../public/images/about-images/about-image-6.jpg'
+import aboutImage7 from '../../public/images/about-images/about-image-7.jpg'
+import aboutImage8 from '../../public/images/about-images/about-image-8.jpg'
+
 // LayoutGrid
 const cards = [
   {
     id: 1,
     content: <FrameOne />,
     className: 'md:col-span-2',
-    thumbnail: '/about-image-1.jpg',
+    thumbnail: aboutImage1,
+    alt: 'Image overlooking ice and mountains',
   },
   {
     id: 2,
     content: <FrameTwo />,
     className: 'col-span-1',
-    thumbnail: '/about-image-2.jpg',
+    thumbnail: aboutImage2,
+    alt: 'Image overlooking a waterfall',
   },
   {
     id: 3,
     content: <FrameThree />,
     className: 'col-span-1',
-    thumbnail: '/about-image-3.jpg',
+    thumbnail: aboutImage3,
+    alt: 'Image overlooking a lake',
   },
   {
     id: 4,
     content: <FrameFour />,
     className: 'md:col-span-2',
-    thumbnail: '/about-image-4.jpg',
+    thumbnail: aboutImage4,
+    alt: 'Image with the sunset in the background',
   },
   {
     id: 5,
     content: <FrameFive />,
     className: 'md:col-span-2',
-    thumbnail: '/about-image-5.jpg',
+    thumbnail: aboutImage5,
+    alt: 'Image with friends with the elephants',
   },
   {
     id: 6,
     content: <FrameSix />,
     className: 'col-span-1',
-    thumbnail: '/about-image-6.jpg',
+    thumbnail: aboutImage6,
+    alt: 'Image with work mates on my last day',
   },
   {
     id: 7,
     content: <FrameSeven />,
     className: 'md:col-span-1',
-    thumbnail: '/about-image-7.jpg',
+    thumbnail: aboutImage7,
+    alt: 'Image with friends at a cooking class',
   },
   {
     id: 8,
     content: <FrameEight />,
     className: 'md:col-span-2',
-    thumbnail: '/about-image-8.jpg',
+    thumbnail: aboutImage8,
+    alt: 'Image overlooking a snow covered lake',
   },
 ]
 
