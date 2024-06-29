@@ -7,6 +7,9 @@ import MainHeaderNav from '../components/MainHeaderNav'
 import Footer from '../components/Footer'
 import { DirectionAwareHover } from '@/components/ui/direction-aware-hover'
 
+// Main page image
+import projectsImage from '../../public/images/projects-image.png'
+
 // Icons
 import {
   SiBootstrap,
@@ -21,34 +24,50 @@ import {
   SiTypescript,
 } from 'react-icons/si'
 
+// DirectionAwareHoverImages
+import coverOne from '../../public/images/project-images/cover-one.png'
+import coverTwo from '../../public/images/project-images/cover-two.png'
+import coverThree from '../../public/images/project-images/cover-three.png'
+import coverFour from '../../public/images/project-images/cover-four.png'
+import coverFive from '../../public/images/project-images/cover-five.png'
+import coverSix from '../../public/images/project-images/cover-six.png'
+import coverSeven from '../../public/images/project-images/cover-seven.png'
+import coverEight from '../../public/images/project-images/cover-eight.png'
+
 // DirectionAwareHover
 const projectsAfterDev = [
   {
     title: 'McLauchlan Electrical',
+    secondTitle: '(Click the laptop for a live version)',
     description:
       'Testing out NextJS on a wesbite revamp, using Acernity UI, Tailwind, & Framer-motion - in progress, awaiting further information.',
     tech: [SiNextdotjs, SiTailwindcss, SiFramer, SiTypescript],
     link: 'https://matthew-ranford.github.io/mclauchlan-electrical/',
     sourceCode: 'https://github.com/matthew-ranford/mclauchlan-electrical',
-    cover: '/cover-one.png',
+    cover: coverOne,
+    alt: 'First project cover',
   },
   {
     title: 'Attention To Detail - Painting services',
+    secondTitle: '(Click the laptop for a live version)',
     description:
       'Trying to improve my ReactJS skills on a wesbite revamp, using Bootstrap, Tailwind, & Framer-motion - now live! My first ever live website for a friend.',
     tech: [SiReact, SiBootstrap, SiTailwindcss, SiFramer, SiTypescript],
     link: 'https://atd-decorators.co.nz/',
-    sourceCode: '',
-    cover: '/cover-two.png',
+    sourceCode: 'https://github.com/matthew-ranford/attention-to-detail',
+    cover: coverTwo,
+    alt: 'Second project cover',
   },
   {
     title: 'Fresh & Faded Barbershop',
+    secondTitle: '(Click the laptop for a live version)',
     description:
       'Trying to improve my ReactJS skills straight out of Dev Academy on a first-time website, using Bootstrap, & Framer-motion - not complete; never received further information, photos etc.',
     tech: [SiReact, SiBootstrap, SiFramer, SiTypescript],
     link: 'https://matthew-ranford.github.io/fresh-and-faded/',
-    sourceCode: '',
-    cover: '/cover-three.png',
+    sourceCode: 'https://github.com/matthew-ranford/fresh-and-faded',
+    cover: coverThree,
+    alt: 'Third project cover',
   },
   {
     title: 'Item Tracker',
@@ -63,8 +82,10 @@ const projectsAfterDev = [
       SiTypescript,
     ],
     link: 'https://github.com/matthew-ranford/item-tracker/tree/date-picker',
-    sourceCode: '',
-    cover: '/cover-four.png',
+    sourceCode:
+      'https://github.com/matthew-ranford/item-tracker/tree/date-picker',
+    cover: coverFour,
+    alt: 'Fourth project cover',
   },
 ]
 
@@ -76,39 +97,46 @@ const projectsDevAcademy = [
     tech: [SiReact, SiSqlite, SiCss3, SiTypescript],
     link: 'https://github.com/matthew-ranford/friend-booking',
     sourceCode: 'https://github.com/matthew-ranford/friend-booking',
-    cover: '/cover-five.png',
+    cover: coverFive,
+    alt: 'Fifth project cover',
   },
   {
     title: 'Foundations Blog',
+    secondTitle: '(Click the laptop for a live version)',
     description:
       'Start of my learning Journey at Dev Academy, starting with the basics of HTML, CSS, & JavaScript.',
     tech: [SiHtml5, SiCss3, SiJavascript],
     link: 'https://matthew-ranford.github.io/',
     sourceCode: 'https://github.com/matthew-ranford/matthew-ranford.github.io',
-    cover: '/cover-six.png',
+    cover: coverSix,
+    alt: 'Sixth project cover',
   },
 ]
 
 const projectsBeforeDev = [
   {
     title: 'Complete Building Solutions',
+    secondTitle: '(Click the laptop for a live version)',
     description:
       'Trying to improve my skills before study, completing one of my first design concepts for a family members business.',
     tech: [SiHtml5, SiCss3, SiJavascript],
     link: 'https://matthew-ranford.github.io/complete-building-solutions-website-concept/',
     sourceCode:
       'https://github.com/matthew-ranford/complete-building-solutions-website-concept',
-    cover: '/cover-seven.png',
+    cover: coverSeven,
+    alt: 'Seventh project cover',
   },
   {
     title: 'Free Code Camp Portfolio',
+    secondTitle: '(Click the laptop for a live version)',
     description:
       'One of my first ever projects completed through FreeCodeCamp.',
     tech: [SiHtml5, SiCss3],
     link: 'https://matthew-ranford.github.io/freecodecamp-personal-portfolio-webpage/',
     sourceCode:
       'https://github.com/matthew-ranford/freecodecamp-personal-portfolio-webpage',
-    cover: '/cover-eight.png',
+    cover: coverEight,
+    alt: 'Eighth project cover',
   },
 ]
 
@@ -118,11 +146,11 @@ export default function page() {
       <MainHeaderNav />
       <section className="py-10 p-5 sm:p-0">
         <Image
-          src="/projects-image-test.png"
+          src={projectsImage}
           width="2732"
           height="1536"
-          alt=""
-          className="projects-image "
+          alt="Main page image of Matt"
+          className="projects-image"
         />
         <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-24 2xl:pt-80 3xl:pt-72 4xl:pt-64 5xl:pt-72 6xl:pt-60 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
           Life after Dev Academy...
@@ -139,17 +167,21 @@ export default function page() {
                 <div className="p-1 md:p-5 rounded-2xl">
                   <DirectionAwareHover
                     imageUrl={project.cover}
+                    alt={project.alt}
                     className="w-full space-y-5 cursor-pointer"
                   >
                     <div className="space-y-2 md:space-y-5 2xl:space-y-8 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
                       <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
                         <div className={handlee.className}>{project.title}</div>
+                        <div className="text-xs sm:text-sm ps-2">
+                          {project.secondTitle}
+                        </div>
                       </h1>
                       <p className="text-sm md:text-lg 2xl:text-2xl">
                         {project.description}
                       </p>
                       <Link href={project.sourceCode} target="_blank">
-                        <p className="pt-2 text-sm md:text-lg text-zinc-400 dark:hover:text-orange-300 hover:text-cyan-700">
+                        <p className="pt-2 text-sm md:text-lg dark:text-zinc-400 text-zinc-600 dark:hover:text-orange-300 hover:text-cyan-700">
                           Source Code ↗️
                         </p>
                       </Link>
@@ -178,7 +210,7 @@ export default function page() {
             My first time studying starts..
           </div>
         </h2>
-        <h3 className="pt-4 text-center text-xs 2xl:text-sm dark:text-orange-800 text-cyan-800">
+        <h3 className="pt-4 text-center text-xs 2xl:text-sm dark:text-orange-500 text-cyan-800">
           (More projects were completed within this time & the source code is
           available on github..)
         </h3>
@@ -189,17 +221,21 @@ export default function page() {
                 <div className="p-1 md:p-5 rounded-2xl">
                   <DirectionAwareHover
                     imageUrl={project.cover}
+                    alt={project.alt}
                     className="w-full space-y-5 cursor-pointer"
                   >
                     <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
                       <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
                         <div className={handlee.className}>{project.title}</div>
+                        <div className="text-xs sm:text-sm ps-2">
+                          {project.secondTitle}
+                        </div>
                       </h1>
                       <p className="text-sm md:text-lg 2xl:text-2xl">
                         {project.description}
                       </p>
                       <Link href={project.sourceCode} target="_blank">
-                        <p className="pt-2 text-sm md:text-lg text-zinc-400 dark:hover:text-orange-300 hover:text-cyan-700">
+                        <p className="pt-2 text-sm md:text-lg dark:text-zinc-400 text-zinc-600 dark:hover:text-orange-300 hover:text-cyan-700">
                           Source Code ↗️
                         </p>
                       </Link>
@@ -235,17 +271,21 @@ export default function page() {
                 <div className="p-1 md:p-5 rounded-2xl">
                   <DirectionAwareHover
                     imageUrl={project.cover}
+                    alt={project.alt}
                     className="w-full space-y-5 cursor-pointer"
                   >
                     <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
                       <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
                         <div className={handlee.className}>{project.title}</div>
+                        <div className="text-xs sm:text-sm ps-2">
+                          {project.secondTitle}
+                        </div>
                       </h1>
                       <p className="text-sm md:text-lg 2xl:text-2xl">
                         {project.description}
                       </p>
                       <Link href={project.sourceCode} target="_blank">
-                        <p className="pt-2 text-sm md:text-lg text-zinc-400 dark:hover:text-orange-300 hover:text-cyan-700">
+                        <p className="pt-2 text-sm md:text-lg dark:text-zinc-400 text-zinc-600 dark:hover:text-orange-300 hover:text-cyan-700">
                           Source Code ↗️
                         </p>
                       </Link>

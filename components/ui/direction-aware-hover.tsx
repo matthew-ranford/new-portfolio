@@ -1,18 +1,20 @@
 'use client'
 
 import { useRef, useState } from 'react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 export const DirectionAwareHover = ({
   imageUrl,
+  alt,
   children,
   childrenClassName,
   imageClassName,
   className,
 }: {
-  imageUrl: string
+  imageUrl: StaticImageData
+  alt: string
   children: React.ReactNode | string
   childrenClassName?: string
   imageClassName?: string
@@ -89,7 +91,7 @@ export const DirectionAwareHover = ({
             }}
           >
             <Image
-              alt="image"
+              alt={alt}
               className={cn(
                 'h-full w-full object-cover scale-[1.15]',
                 imageClassName
