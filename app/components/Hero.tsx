@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { handlee } from '@/fonts'
 import { motion } from 'framer-motion'
 
+import heroImage from '../../public/images/hero-image.png'
+
 // Components
 import MainHeaderNav from './MainHeaderNav'
 import { Highlight } from '@/components/ui/hero-highlight'
@@ -34,10 +36,10 @@ export default function Hero() {
           animate={{ opacity: 1 }}
         >
           <Image
-            src="/hero-image-test.png"
+            src={heroImage}
             width="2732"
             height="1536"
-            alt=""
+            alt="Hero image of Matt on lake with hockey stick"
             className="hero-image"
           />
           <div className={handlee.className}>
