@@ -43,17 +43,21 @@ const projectsAfterDev = [
       'Testing out NextJS on a wesbite revamp, using Acernity UI, Tailwind, & Framer-motion - in progress, awaiting further information.',
     tech: [SiNextdotjs, SiTailwindcss, SiFramer, SiTypescript],
     link: 'https://matthew-ranford.github.io/mclauchlan-electrical/',
+    linkText:
+      'Preview McLauchlan Electrical project live version & source code',
     sourceCode: 'https://github.com/matthew-ranford/mclauchlan-electrical',
     cover: coverOne,
     alt: 'First project cover',
   },
   {
-    title: 'Attention To Detail - Painting services',
+    title: 'Attention To Detail - Painting Services',
     secondTitle: '(Click the laptop for a live version)',
     description:
       'Trying to improve my ReactJS skills on a wesbite revamp, using Bootstrap, Tailwind, & Framer-motion - now live! My first ever live website for a friend.',
     tech: [SiReact, SiBootstrap, SiTailwindcss, SiFramer, SiTypescript],
     link: 'https://atd-decorators.co.nz/',
+    linkText:
+      'Preview Attention To Detail - Painting Services project live version & source code',
     sourceCode: 'https://github.com/matthew-ranford/attention-to-detail',
     cover: coverTwo,
     alt: 'Second project cover',
@@ -65,6 +69,8 @@ const projectsAfterDev = [
       'Trying to improve my ReactJS skills straight out of Dev Academy on a first-time website, using Bootstrap, & Framer-motion - not complete; never received further information, photos etc.',
     tech: [SiReact, SiBootstrap, SiFramer, SiTypescript],
     link: 'https://matthew-ranford.github.io/fresh-and-faded/',
+    linkText:
+      'Preview Fresh & Faded Barbershop project live version & source code',
     sourceCode: 'https://github.com/matthew-ranford/fresh-and-faded',
     cover: coverThree,
     alt: 'Third project cover',
@@ -82,6 +88,8 @@ const projectsAfterDev = [
       SiTypescript,
     ],
     link: 'https://github.com/matthew-ranford/item-tracker/tree/date-picker',
+    linkText: 'Preview Item Tracker project source code',
+
     sourceCode:
       'https://github.com/matthew-ranford/item-tracker/tree/date-picker',
     cover: coverFour,
@@ -96,6 +104,7 @@ const projectsDevAcademy = [
       'Final group project at Dev Academy, a friend booking application where you can view when you/your friends are available for a catch up - I spent a big role trying to make the app responsive.',
     tech: [SiReact, SiSqlite, SiCss3, SiTypescript],
     link: 'https://github.com/matthew-ranford/friend-booking',
+    linkText: 'Preview Friend Booking project source code',
     sourceCode: 'https://github.com/matthew-ranford/friend-booking',
     cover: coverFive,
     alt: 'Fifth project cover',
@@ -107,6 +116,7 @@ const projectsDevAcademy = [
       'Start of my learning Journey at Dev Academy, starting with the basics of HTML, CSS, & JavaScript.',
     tech: [SiHtml5, SiCss3, SiJavascript],
     link: 'https://matthew-ranford.github.io/',
+    linkText: 'Preview Foundations Blog project live version & source code',
     sourceCode: 'https://github.com/matthew-ranford/matthew-ranford.github.io',
     cover: coverSix,
     alt: 'Sixth project cover',
@@ -121,6 +131,8 @@ const projectsBeforeDev = [
       'Trying to improve my skills before study, completing one of my first design concepts for a family members business.',
     tech: [SiHtml5, SiCss3, SiJavascript],
     link: 'https://matthew-ranford.github.io/complete-building-solutions-website-concept/',
+    linkText:
+      'Preview Complete Building Solutions project live version & source code',
     sourceCode:
       'https://github.com/matthew-ranford/complete-building-solutions-website-concept',
     cover: coverSeven,
@@ -133,6 +145,8 @@ const projectsBeforeDev = [
       'One of my first ever projects completed through FreeCodeCamp.',
     tech: [SiHtml5, SiCss3],
     link: 'https://matthew-ranford.github.io/freecodecamp-personal-portfolio-webpage/',
+    linkText:
+      'Preview Free Code Camp Portfolio project live version & source code',
     sourceCode:
       'https://github.com/matthew-ranford/freecodecamp-personal-portfolio-webpage',
     cover: coverEight,
@@ -163,7 +177,12 @@ export default function page() {
         <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-5 px-2 md:px-10 2xl:px-32">
           {projectsAfterDev.map((project, index) => {
             return (
-              <Link href={project.link} key={index} target="_blank">
+              <Link
+                href={project.link}
+                key={index}
+                target="_blank"
+                aria-label={project.linkText}
+              >
                 <div className="p-1 md:p-5 rounded-2xl">
                   <DirectionAwareHover
                     imageUrl={project.cover}
@@ -217,7 +236,12 @@ export default function page() {
         <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
           {projectsDevAcademy.map((project, index) => {
             return (
-              <Link href={project.link} key={index} target="_blank">
+              <Link
+                href={project.link}
+                key={index}
+                target="_blank"
+                aria-label={project.linkText}
+              >
                 <div className="p-1 md:p-5 rounded-2xl">
                   <DirectionAwareHover
                     imageUrl={project.cover}
@@ -267,7 +291,12 @@ export default function page() {
         <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
           {projectsBeforeDev.map((project, index) => {
             return (
-              <Link href={project.link} key={index} target="_blank">
+              <Link
+                href={project.link}
+                key={index}
+                target="_blank"
+                aria-label={project.linkText}
+              >
                 <div className="p-1 md:p-5 rounded-2xl">
                   <DirectionAwareHover
                     imageUrl={project.cover}

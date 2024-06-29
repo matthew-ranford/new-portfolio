@@ -16,6 +16,7 @@ interface NavLink {
   text: string
   target?: string
   className?: string
+  ariaLabel?: string
 }
 
 export default function Navbar() {
@@ -25,7 +26,12 @@ export default function Navbar() {
     { href: '/', text: 'Home' },
     { href: 'about', text: 'About' },
     { href: 'projects', text: 'Projects' },
-    { href: '/matt-software-dev-cv.pdf', text: 'Résumé', target: '_blank' },
+    {
+      href: '/matt-software-dev-cv.pdf',
+      text: 'Résumé',
+      target: '_blank',
+      ariaLabel: 'View my résumé in pdf format',
+    },
     {
       href: 'mailto:matt.ranford16@gmail.com',
       text: 'Contact',
@@ -90,6 +96,7 @@ export default function Navbar() {
                 key={index}
                 target={link.target ? link.target : undefined}
                 className={link.className || ''}
+                aria-label={link.ariaLabel || undefined}
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <li
