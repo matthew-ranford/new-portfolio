@@ -31,7 +31,8 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           transition={{
-            duration: 1,
+            duration: 1.5,
+            delay: 4,
             ease: 'easeInOut',
           }}
           animate={{ opacity: 1 }}
@@ -58,8 +59,30 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
+
         <h2 className="ps-2 md:ps-6 pe-2 pt-10 2xl:pt-28 4xl:pt-16 5xl:pt-40 6xl:pt-36 text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] text-center md:text-left dark:text-orange-300 text-cyan-700 font-bold">
-          <Highlight>FULL-STACK DEVELOPER</Highlight>
+          <motion.span
+            initial={{ opacity: 0 }}
+            transition={{
+              delay: 2.5,
+              duration: 1.5,
+              ease: 'easeInOut',
+            }}
+            animate={{ opacity: 1 }}
+          >
+            FULL-STACK
+          </motion.span>{' '}
+          <motion.span
+            initial={{ opacity: 0 }}
+            transition={{
+              delay: 3,
+              duration: 1.5,
+              ease: 'easeInOut',
+            }}
+            animate={{ opacity: 1 }}
+          >
+            DEVELOPER
+          </motion.span>
         </h2>
       </main>
     </>
