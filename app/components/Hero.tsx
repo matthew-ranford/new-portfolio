@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { handlee } from '@/fonts'
 import { motion } from 'framer-motion'
 
+// Main page image
 import heroImage from '../../public/images/hero-image.png'
 
 // Components

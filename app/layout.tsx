@@ -11,7 +11,7 @@ import Navbar from './components/Navbar'
 import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
-  title: 'Matthew | Developer Portfolio',
+  title: 'Matthew Ranford | Developer Portfolio',
   description:
     "Matthew Ranford's Fullstack Developer Portfolio showcasing skills and recent projects",
 }
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="shortcut icon" type="image/x-icon" href="/logo.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="/images/logo.png" />
       </head>
       <body className={anton.className}>
         <ThemeProvider

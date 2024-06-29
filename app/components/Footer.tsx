@@ -1,11 +1,17 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
-//TypeScript
+// Images
+import gmail from '../../public/images/footer-icons/gmail-icon.png'
+import linkedIn from '../../public/images/footer-icons/linkedin-icon.png'
+import github from '../../public/images/footer-icons/github-icon.png'
+import instagram from '../../public/images/footer-icons/instagram-icon.png'
+
+// TypeScript
 interface Socials {
   link: string
   label: string
-  icon: string
+  icon: StaticImageData
 }
 
 export default function Footer() {
@@ -13,22 +19,22 @@ export default function Footer() {
     {
       link: 'mailto:matt.ranford16@gmail.com',
       label: 'Email',
-      icon: '/gmail-icon.png',
+      icon: gmail,
     },
     {
       link: 'https://www.linkedin.com/in/matthew-ranford-23b759261/',
       label: 'LinkedIn',
-      icon: '/linkedin-icon.png',
+      icon: linkedIn,
     },
     {
       link: 'https://github.com/matthew-ranford',
       label: 'GitHub',
-      icon: '/github-icon.png',
+      icon: github,
     },
     {
       link: 'https://www.instagram.com/mattranny/',
       label: 'Instagram',
-      icon: '/instagram-icon.png',
+      icon: instagram,
     },
   ]
   return (
@@ -42,7 +48,7 @@ export default function Footer() {
                 className="w-8 h-8 my-4 md:my-0 hover:scale-125"
                 width={48}
                 height={48}
-                alt=""
+                alt={social.label}
               />
             </Link>
           )
