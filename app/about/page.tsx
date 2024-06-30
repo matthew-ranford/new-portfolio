@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { handlee } from '@/fonts'
+import { motion } from 'framer-motion'
 
 // Components
 import MainHeaderNav from '../components/MainHeaderNav'
@@ -192,7 +193,6 @@ import aboutImage5 from '../../public/images/about-images/about-image-5.jpg'
 import aboutImage6 from '../../public/images/about-images/about-image-6.jpg'
 import aboutImage7 from '../../public/images/about-images/about-image-7.jpg'
 import aboutImage8 from '../../public/images/about-images/about-image-8.jpg'
-import { motion } from 'framer-motion'
 
 // LayoutGrid
 const cards = [

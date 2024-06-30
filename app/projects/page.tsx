@@ -1,6 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { handlee } from '@/fonts'
+import { motion } from 'framer-motion'
 
 // Components
 import MainHeaderNav from '../components/MainHeaderNav'
@@ -157,8 +160,14 @@ const projectsBeforeDev = [
 export default function page() {
   return (
     <>
-      <MainHeaderNav />
-      <section className="py-10 p-5 sm:p-0">
+      <motion.section
+        className="py-10 p-5 sm:p-0"
+        initial={{ opacity: 0, y: 5 }}
+        transition={{ delay: 0.3, duration: 1, ease: 'easeInOut' }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <MainHeaderNav />
+
         <Image
           src={projectsImage}
           width="2732"
@@ -339,7 +348,7 @@ export default function page() {
         <Link href="/projects">
           <div className="text-center text-5xl pt-4 pb-4">🔝</div>
         </Link>
-      </section>
+      </motion.section>
     </>
   )
 }
