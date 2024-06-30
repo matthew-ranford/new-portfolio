@@ -3,7 +3,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { handlee } from '@/fonts'
-import { motion } from 'framer-motion'
+import { motion, animate, stagger, useInView } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 
 // Components
 import MainHeaderNav from '../components/MainHeaderNav'
@@ -157,11 +158,79 @@ const projectsBeforeDev = [
   },
 ]
 
-export default function page() {
+export default function Projects() {
+  const projectImagesAfterDev = useRef(null)
+  const imagesInView = useInView(projectImagesAfterDev)
+
+  useEffect(() => {
+    if (imagesInView) {
+      animate(
+        '.animate-project-images',
+        { opacity: 1, x: 0 },
+        {
+          duration: 0.5,
+          delay: stagger(0.35, { startDelay: 0.1 }),
+          ease: 'circOut',
+        }
+      )
+    } else {
+      animate(
+        '.animate-project-images',
+        { opacity: 0, x: -10 },
+        { duration: 0 }
+      )
+    }
+  }, [imagesInView])
+
+  const projectImagesDev = useRef(null)
+  const imagesInView0 = useInView(projectImagesDev)
+
+  useEffect(() => {
+    if (imagesInView0) {
+      animate(
+        '.animate-project-images-0',
+        { opacity: 1, x: 0 },
+        {
+          duration: 0.5,
+          delay: stagger(0.35, { startDelay: 0.1 }),
+          ease: 'circOut',
+        }
+      )
+    } else {
+      animate(
+        '.animate-project-images-0',
+        { opacity: 0, x: -10 },
+        { duration: 0 }
+      )
+    }
+  }, [imagesInView0])
+
+  const projectImagesBeforeDev = useRef(null)
+  const imagesInView1 = useInView(projectImagesBeforeDev)
+
+  useEffect(() => {
+    if (imagesInView1) {
+      animate(
+        '.animate-project-images-1',
+        { opacity: 1, x: 0 },
+        {
+          duration: 0.5,
+          delay: stagger(0.35, { startDelay: 0.1 }),
+          ease: 'circOut',
+        }
+      )
+    } else {
+      animate(
+        '.animate-project-images-1',
+        { opacity: 0, x: -10 },
+        { duration: 0 }
+      )
+    }
+  }, [imagesInView1])
+
   return (
     <>
       <motion.section
-        className="py-10 p-5 sm:p-0"
         initial={{ opacity: 0, y: 5 }}
         transition={{ delay: 0.3, duration: 1, ease: 'easeInOut' }}
         animate={{ opacity: 1, y: 0 }}
@@ -175,61 +244,65 @@ export default function page() {
           alt="Main page image of Matt"
           className="projects-image"
         />
-        <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-24 2xl:pt-80 3xl:pt-72 4xl:pt-64 5xl:pt-72 6xl:pt-60 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
+        <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-24 2xl:pt-80 3xl:pt-72 4xl:pt-64 5xl:pt-72 6xl:pt-72 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
           Life after Dev Academy...
         </h1>
-        <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 dark:text-orange-300 text-cyan-700">
+        <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 6xl:pt-20 dark:text-orange-300 text-cyan-700">
           <div className={handlee.className}>
             My self guided learning journey continues..
           </div>
         </h2>
-        <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-5 px-2 md:px-10 2xl:px-32">
-          {projectsAfterDev.map((project, index) => {
-            return (
-              <Link
-                href={project.link}
-                key={index}
-                target="_blank"
-                aria-label={project.linkText}
-              >
-                <div className="p-1 md:p-5 rounded-2xl">
-                  <DirectionAwareHover
-                    imageUrl={project.cover}
-                    alt={project.alt}
-                    className="w-full space-y-5 cursor-pointer"
-                  >
-                    <div className="space-y-2 md:space-y-5 2xl:space-y-8 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
-                      <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
-                        <div className={handlee.className}>{project.title}</div>
-                        <div className="text-xs sm:text-sm ps-2">
-                          {project.secondTitle}
-                        </div>
-                      </h1>
-                      <p className="text-sm md:text-lg 2xl:text-2xl">
-                        {project.description}
-                      </p>
-                      <Link href={project.sourceCode} target="_blank">
-                        <p className="pt-2 text-sm md:text-lg dark:text-zinc-400 text-zinc-600 dark:hover:text-orange-300 hover:text-cyan-700">
-                          Source Code ↗️
+        <motion.div ref={projectImagesAfterDev}>
+          <div className="pt-12 6xl:pt-20 grid grid-cols-1 lg:grid-cols-2 gap-5 px-2 md:px-10 2xl:px-32">
+            {projectsAfterDev.map((project, index) => {
+              return (
+                <Link
+                  href={project.link}
+                  key={index}
+                  target="_blank"
+                  aria-label={project.linkText}
+                >
+                  <div className="p-1 md:p-5 rounded-2xl">
+                    <DirectionAwareHover
+                      imageUrl={project.cover}
+                      alt={project.alt}
+                      className="w-full space-y-5 cursor-pointer animate-project-images"
+                    >
+                      <div className="space-y-2 md:space-y-5 2xl:space-y-8 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
+                        <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
+                          <div className={handlee.className}>
+                            {project.title}
+                          </div>
+                          <div className="text-xs sm:text-sm ps-2">
+                            {project.secondTitle}
+                          </div>
+                        </h1>
+                        <p className="text-sm md:text-lg 2xl:text-2xl">
+                          {project.description}
                         </p>
-                      </Link>
-                      <div className="flex items-center gap-5">
-                        {project.tech.map((Icon, index) => {
-                          return (
-                            <Icon
-                              key={index}
-                              className="w-6 h-6 md:w-8 md:h-8 2xl:w-10 2xl:h-10"
-                            />
-                          )
-                        })}
+                        <Link href={project.sourceCode} target="_blank">
+                          <p className="pt-2 text-sm md:text-lg dark:text-zinc-400 text-zinc-600 dark:hover:text-orange-300 hover:text-cyan-700">
+                            Source Code ↗️
+                          </p>
+                        </Link>
+                        <div className="flex items-center gap-5">
+                          {project.tech.map((Icon, index) => {
+                            return (
+                              <Icon
+                                key={index}
+                                className="w-6 h-6 md:w-8 md:h-8 2xl:w-10 2xl:h-10"
+                              />
+                            )
+                          })}
+                        </div>
                       </div>
-                    </div>
-                  </DirectionAwareHover>
-                </div>
-              </Link>
-            )
-          })}
-        </div>
+                    </DirectionAwareHover>
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        </motion.div>
         <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-20 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
           Dev Academy...
         </h1>
@@ -242,53 +315,58 @@ export default function page() {
           (More projects were completed within this time & the source code is
           available on github..)
         </h3>
-        <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
-          {projectsDevAcademy.map((project, index) => {
-            return (
-              <Link
-                href={project.link}
-                key={index}
-                target="_blank"
-                aria-label={project.linkText}
-              >
-                <div className="p-1 md:p-5 rounded-2xl">
-                  <DirectionAwareHover
-                    imageUrl={project.cover}
-                    alt={project.alt}
-                    className="w-full space-y-5 cursor-pointer"
-                  >
-                    <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
-                      <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
-                        <div className={handlee.className}>{project.title}</div>
-                        <div className="text-xs sm:text-sm ps-2">
-                          {project.secondTitle}
-                        </div>
-                      </h1>
-                      <p className="text-sm md:text-lg 2xl:text-2xl">
-                        {project.description}
-                      </p>
-                      <Link href={project.sourceCode} target="_blank">
-                        <p className="pt-2 text-sm md:text-lg dark:text-zinc-400 text-zinc-600 dark:hover:text-orange-300 hover:text-cyan-700">
-                          Source Code ↗️
+        <motion.div ref={projectImagesDev}>
+          <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
+            {projectsDevAcademy.map((project, index) => {
+              return (
+                <Link
+                  href={project.link}
+                  key={index}
+                  target="_blank"
+                  aria-label={project.linkText}
+                >
+                  <div className="p-1 md:p-5 rounded-2xl">
+                    <DirectionAwareHover
+                      imageUrl={project.cover}
+                      alt={project.alt}
+                      className="w-full space-y-5 cursor-pointer animate-project-images-0"
+                    >
+                      <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
+                        <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
+                          <div className={handlee.className}>
+                            {project.title}
+                          </div>
+                          <div className="text-xs sm:text-sm ps-2">
+                            {project.secondTitle}
+                          </div>
+                        </h1>
+                        <p className="text-sm md:text-lg 2xl:text-2xl">
+                          {project.description}
                         </p>
-                      </Link>
-                      <div className="flex items-center gap-5">
-                        {project.tech.map((Icon, index) => {
-                          return (
-                            <Icon
-                              key={index}
-                              className="w-6 h-6 md:w-8 md:h-8 2xl:w-10 2xl:h-10"
-                            />
-                          )
-                        })}
+                        <Link href={project.sourceCode} target="_blank">
+                          <p className="pt-2 text-sm md:text-lg dark:text-zinc-400 text-zinc-600 dark:hover:text-orange-300 hover:text-cyan-700">
+                            Source Code ↗️
+                          </p>
+                        </Link>
+                        <div className="flex items-center gap-5">
+                          {project.tech.map((Icon, index) => {
+                            return (
+                              <Icon
+                                key={index}
+                                className="w-6 h-6 md:w-8 md:h-8 2xl:w-10 2xl:h-10"
+                              />
+                            )
+                          })}
+                        </div>
                       </div>
-                    </div>
-                  </DirectionAwareHover>
-                </div>
-              </Link>
-            )
-          })}
-        </div>
+                    </DirectionAwareHover>
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        </motion.div>
+
         <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-20 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
           Life before Dev Academy...
         </h1>
@@ -297,53 +375,57 @@ export default function page() {
             My self guided learning journey starts..
           </div>
         </h2>
-        <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
-          {projectsBeforeDev.map((project, index) => {
-            return (
-              <Link
-                href={project.link}
-                key={index}
-                target="_blank"
-                aria-label={project.linkText}
-              >
-                <div className="p-1 md:p-5 rounded-2xl">
-                  <DirectionAwareHover
-                    imageUrl={project.cover}
-                    alt={project.alt}
-                    className="w-full space-y-5 cursor-pointer"
-                  >
-                    <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
-                      <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
-                        <div className={handlee.className}>{project.title}</div>
-                        <div className="text-xs sm:text-sm ps-2">
-                          {project.secondTitle}
-                        </div>
-                      </h1>
-                      <p className="text-sm md:text-lg 2xl:text-2xl">
-                        {project.description}
-                      </p>
-                      <Link href={project.sourceCode} target="_blank">
-                        <p className="pt-2 text-sm md:text-lg dark:text-zinc-400 text-zinc-600 dark:hover:text-orange-300 hover:text-cyan-700">
-                          Source Code ↗️
+        <motion.div ref={projectImagesBeforeDev}>
+          <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
+            {projectsBeforeDev.map((project, index) => {
+              return (
+                <Link
+                  href={project.link}
+                  key={index}
+                  target="_blank"
+                  aria-label={project.linkText}
+                >
+                  <div className="p-1 md:p-5 rounded-2xl">
+                    <DirectionAwareHover
+                      imageUrl={project.cover}
+                      alt={project.alt}
+                      className="w-full space-y-5 cursor-pointer animate-project-images-1"
+                    >
+                      <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
+                        <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
+                          <div className={handlee.className}>
+                            {project.title}
+                          </div>
+                          <div className="text-xs sm:text-sm ps-2">
+                            {project.secondTitle}
+                          </div>
+                        </h1>
+                        <p className="text-sm md:text-lg 2xl:text-2xl">
+                          {project.description}
                         </p>
-                      </Link>
-                      <div className="flex items-center gap-5">
-                        {project.tech.map((Icon, index) => {
-                          return (
-                            <Icon
-                              key={index}
-                              className="w-6 h-6 md:w-8 md:h-8 2xl:w-10 2xl:h-10"
-                            />
-                          )
-                        })}
+                        <Link href={project.sourceCode} target="_blank">
+                          <p className="pt-2 text-sm md:text-lg dark:text-zinc-400 text-zinc-600 dark:hover:text-orange-300 hover:text-cyan-700">
+                            Source Code ↗️
+                          </p>
+                        </Link>
+                        <div className="flex items-center gap-5">
+                          {project.tech.map((Icon, index) => {
+                            return (
+                              <Icon
+                                key={index}
+                                className="w-6 h-6 md:w-8 md:h-8 2xl:w-10 2xl:h-10"
+                              />
+                            )
+                          })}
+                        </div>
                       </div>
-                    </div>
-                  </DirectionAwareHover>
-                </div>
-              </Link>
-            )
-          })}
-        </div>
+                    </DirectionAwareHover>
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        </motion.div>
         <Footer />
         <Link href="/projects">
           <div className="text-center text-5xl pt-4 pb-4">🔝</div>
