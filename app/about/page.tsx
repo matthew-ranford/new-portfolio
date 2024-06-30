@@ -360,6 +360,7 @@ const humanSkills = [
 ]
 
 export default function About() {
+  // Main text
   const aboutText = useRef(null)
   const textInView = useInView(aboutText)
 
@@ -368,12 +369,28 @@ export default function About() {
       animate(
         '.animate-about-text',
         { opacity: 1, x: 0 },
-        { duration: 0.5, delay: stagger(0.2), ease: 'circOut' }
+        { duration: 1, delay: stagger(0.4), ease: 'circOut' }
       )
     } else {
-      animate('.animate-about-text', { opacity: 0, x: -200 }, { duration: 0 })
+      animate('.animate-about-text', { opacity: 0, x: -50 }, { duration: 0 })
     }
   }, [textInView])
+
+  // Main skills/human skills
+  const skillsText = useRef(null)
+  const skillsInView = useInView(skillsText)
+
+  useEffect(() => {
+    if (skillsInView) {
+      animate(
+        '.animate-skills',
+        { opacity: 1, x: 0 },
+        { duration: 1, delay: stagger(0.5), ease: 'circOut' }
+      )
+    } else {
+      animate('.animate-skills', { opacity: 0, x: 20 }, { duration: 0 })
+    }
+  }, [skillsInView])
 
   return (
     <>
@@ -454,15 +471,18 @@ export default function About() {
                 excited to see where a career in tech takes me!
               </p>
             </span>
-            <div className="max-w-2xl 2xl:max-w-3xl small:pt-4 smallAgain:pt-4 smallerAgain:pt-4 sm:pt-4 md:pt-8 lg:pt-20 xl:pt-0 pb-0 md:pb-10">
-              <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-2 sm:ps-2 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-2 sm:pt-2 md:pt-0 xl:pt-12">
+            <div
+              className="max-w-2xl 2xl:max-w-3xl small:pt-4 smallAgain:pt-4 smallerAgain:pt-4 sm:pt-4 md:pt-8 lg:pt-20 xl:pt-0 pb-0 md:pb-10"
+              ref={skillsText}
+            >
+              <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-2 sm:ps-2 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-2 sm:pt-2 md:pt-0 xl:pt-12 animate-skills">
                 <div className={handlee.className}>Experience with</div>
               </h2>
-              <HoverEffect items={techSkills} />
-              <h2 className="text-right md:text-center text-3xl  lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0 2xl:pt-4">
+              <HoverEffect items={techSkills} className="animate-skills" />
+              <h2 className="text-right md:text-center text-3xl  lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0 2xl:pt-4 animate-skills">
                 <div className={handlee.className}>Human skills</div>
               </h2>
-              <HoverEffect items={humanSkills} />
+              <HoverEffect items={humanSkills} className="animate-skills" />
             </div>
           </div>
         </div>
