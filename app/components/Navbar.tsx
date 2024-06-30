@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { handlee } from '@/fonts'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 // Light & Dark mode toggle
 import { ModeToggle } from './LightDarkToggle'
@@ -50,7 +51,12 @@ export default function Navbar() {
 
   return (
     <>
-      <div className={handlee.className}>
+      <motion.div
+        className={handlee.className}
+        initial={{ opacity: 0, y: 5 }}
+        transition={{ delay: 4, duration: 1.5, ease: 'easeInOut' }}
+        animate={{ opacity: 1, y: 0 }}
+      >
         <nav
           className={`lg:flex lg:justify-between navbar-container p-0 sm:p-4 lg:pe-10 text-stone-900 ${
             isOpen
@@ -112,7 +118,7 @@ export default function Navbar() {
             </div>
           </ul>
         </nav>
-      </div>
+      </motion.div>
     </>
   )
 }
