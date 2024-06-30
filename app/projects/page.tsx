@@ -159,6 +159,22 @@ const projectsBeforeDev = [
 ]
 
 export default function Projects() {
+  // Project section one
+  const projectsText = useRef(null)
+  const textInView = useInView(projectsText)
+
+  useEffect(() => {
+    if (textInView) {
+      animate(
+        '.animate-projects-text',
+        { opacity: 1, y: 0 },
+        { duration: 0.5, delay: stagger(0.2), ease: 'circOut' }
+      )
+    } else {
+      animate('.animate-projects-text', { opacity: 0, y: -20 }, { duration: 0 })
+    }
+  }, [textInView])
+
   const projectImagesAfterDev = useRef(null)
   const imagesInView = useInView(projectImagesAfterDev)
 
@@ -182,6 +198,26 @@ export default function Projects() {
     }
   }, [imagesInView])
 
+  // Project section two
+  const projectsText0 = useRef(null)
+  const textInView0 = useInView(projectsText0)
+
+  useEffect(() => {
+    if (textInView0) {
+      animate(
+        '.animate-projects-text-0',
+        { opacity: 1, y: 0 },
+        { duration: 0.5, delay: stagger(0.2), ease: 'circOut' }
+      )
+    } else {
+      animate(
+        '.animate-projects-text-0',
+        { opacity: 0, y: -20 },
+        { duration: 0 }
+      )
+    }
+  }, [textInView0])
+
   const projectImagesDev = useRef(null)
   const imagesInView0 = useInView(projectImagesDev)
 
@@ -204,6 +240,26 @@ export default function Projects() {
       )
     }
   }, [imagesInView0])
+
+  // Project section three
+  const projectsText1 = useRef(null)
+  const textInView1 = useInView(projectsText1)
+
+  useEffect(() => {
+    if (textInView1) {
+      animate(
+        '.animate-projects-text-1',
+        { opacity: 1, y: 0 },
+        { duration: 0.5, delay: stagger(0.2), ease: 'circOut' }
+      )
+    } else {
+      animate(
+        '.animate-projects-text-1',
+        { opacity: 0, y: -20 },
+        { duration: 0 }
+      )
+    }
+  }, [textInView1])
 
   const projectImagesBeforeDev = useRef(null)
   const imagesInView1 = useInView(projectImagesBeforeDev)
@@ -236,7 +292,6 @@ export default function Projects() {
         animate={{ opacity: 1, y: 0 }}
       >
         <MainHeaderNav />
-
         <Image
           src={projectsImage}
           width="2732"
@@ -247,11 +302,13 @@ export default function Projects() {
         <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-24 2xl:pt-80 3xl:pt-72 4xl:pt-64 5xl:pt-72 6xl:pt-72 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
           Life after Dev Academy...
         </h1>
-        <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 6xl:pt-20 dark:text-orange-300 text-cyan-700">
-          <div className={handlee.className}>
-            My self guided learning journey continues..
-          </div>
-        </h2>
+        <div ref={projectsText}>
+          <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 6xl:pt-20 dark:text-orange-300 text-cyan-700 animate-projects-text">
+            <div className={handlee.className}>
+              My self guided learning journey continues..
+            </div>
+          </h2>
+        </div>
         <motion.div ref={projectImagesAfterDev}>
           <div className="pt-12 6xl:pt-20 grid grid-cols-1 lg:grid-cols-2 gap-5 px-2 md:px-10 2xl:px-32">
             {projectsAfterDev.map((project, index) => {
@@ -306,15 +363,17 @@ export default function Projects() {
         <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-20 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
           Dev Academy...
         </h1>
-        <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 dark:text-orange-300 text-cyan-700">
-          <div className={handlee.className}>
-            My first time studying starts..
-          </div>
-        </h2>
-        <h3 className="pt-4 text-center text-xs 2xl:text-sm dark:text-orange-500 text-cyan-800">
-          (More projects were completed within this time & the source code is
-          available on github..)
-        </h3>
+        <div ref={projectsText0}>
+          <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 dark:text-orange-300 text-cyan-700 animate-projects-text-0">
+            <div className={handlee.className}>
+              My first time studying starts..
+            </div>
+          </h2>
+          <h3 className="pt-4 text-center text-xs 2xl:text-sm dark:text-orange-500 text-cyan-800 animate-projects-text-0">
+            (More projects were completed within this time & the source code is
+            available on github..)
+          </h3>
+        </div>
         <motion.div ref={projectImagesDev}>
           <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
             {projectsDevAcademy.map((project, index) => {
@@ -370,11 +429,13 @@ export default function Projects() {
         <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-20 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
           Life before Dev Academy...
         </h1>
-        <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 dark:text-orange-300 text-cyan-700">
-          <div className={handlee.className}>
-            My self guided learning journey starts..
-          </div>
-        </h2>
+        <div ref={projectsText1}>
+          <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 dark:text-orange-300 text-cyan-700 animate-projects-text-1">
+            <div className={handlee.className}>
+              My self guided learning journey starts..
+            </div>
+          </h2>
+        </div>
         <motion.div ref={projectImagesBeforeDev}>
           <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
             {projectsBeforeDev.map((project, index) => {
