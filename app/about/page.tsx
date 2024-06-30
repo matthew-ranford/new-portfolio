@@ -192,6 +192,7 @@ import aboutImage5 from '../../public/images/about-images/about-image-5.jpg'
 import aboutImage6 from '../../public/images/about-images/about-image-6.jpg'
 import aboutImage7 from '../../public/images/about-images/about-image-7.jpg'
 import aboutImage8 from '../../public/images/about-images/about-image-8.jpg'
+import { motion } from 'framer-motion'
 
 // LayoutGrid
 const cards = [
@@ -360,7 +361,12 @@ const humanSkills = [
 export default function About() {
   return (
     <>
-      <section className="md:max-w-full">
+      <motion.section
+        className="md:max-w-full"
+        initial={{ opacity: 0, y: 5 }}
+        transition={{ delay: 0.3, duration: 1, ease: 'easeInOut' }}
+        animate={{ opacity: 1, y: 0 }}
+      >
         <MainHeaderNav />
         <Image
           src={aboutImage}
@@ -457,7 +463,7 @@ export default function About() {
         <Link href="/about">
           <div className="text-center text-5xl pt-4 pb-4">🔝</div>
         </Link>
-      </section>
+      </motion.section>
     </>
   )
 }
