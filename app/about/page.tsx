@@ -392,6 +392,38 @@ export default function About() {
     }
   }, [skillsInView])
 
+  // LayoutGrid
+  const imageGrid = useRef(null)
+  const imageGridInView = useInView(imageGrid)
+
+  useEffect(() => {
+    if (imageGridInView) {
+      animate(
+        '.animate-image-grid',
+        { opacity: 1, y: 0 },
+        { duration: 1, delay: stagger(0.3), ease: 'circOut' }
+      )
+    } else {
+      animate('.animate-image-grid', { opacity: 0, y: -50 }, { duration: 0 })
+    }
+  }, [imageGridInView])
+
+  // Hobbies HoverEffect
+  const hobbiesText = useRef(null)
+  const hobbiesInView = useInView(hobbiesText)
+
+  useEffect(() => {
+    if (hobbiesInView) {
+      animate(
+        '.animate-hobbies',
+        { opacity: 1, y: 0 },
+        { duration: 1, delay: stagger(1), ease: 'circOut' }
+      )
+    } else {
+      animate('.animate-hobbies', { opacity: 0, y: -50 }, { duration: 0 })
+    }
+  }, [hobbiesInView])
+
   return (
     <>
       <motion.section
@@ -486,17 +518,20 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="h-screen w-full pb-20">
-          <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-6 pb-14">
+        <div className="h-screen w-full pb-20" ref={imageGrid}>
+          <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-6 pb-14 animate-image-grid">
             <div className={handlee.className}>A couple of highlights ...</div>
           </h2>
           <LayoutGrid cards={cards} />
         </div>
-        <div className="max-w-2xl 2xl:max-w-3xl pt-14 small:pt-8 smallAgain:pt-8 smallerAgain:pt-10 sm:pt-8 lg:pt-20 xl:pt-32 pb-0 md:pb-10 mx-auto ps-4 pe-4">
-          <h2 className="text-right md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0 pt-4 xl:pt-0">
+        <div
+          className="max-w-2xl 2xl:max-w-3xl pt-14 small:pt-8 smallAgain:pt-8 smallerAgain:pt-10 sm:pt-8 lg:pt-20 xl:pt-32 pb-0 md:pb-10 mx-auto ps-4 pe-4"
+          ref={hobbiesText}
+        >
+          <h2 className="text-right md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0 pt-4 sm:pt-14 xl:pt-0 animate-hobbies">
             <div className={handlee.className}>& some of my hobbies ..</div>
           </h2>
-          <HoverEffect items={hobbies} />
+          <HoverEffect items={hobbies} className="animate-hobbies" />
         </div>
         <Footer />
         <Link href="/about">

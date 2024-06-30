@@ -31,7 +31,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   return (
     <div className="w-full h-full p-2 grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-3 md:max-w-7xl 2xl:max-w-screen-2xl mx-auto gap-4 relative">
       {cards.map((card, i) => (
-        <div key={i} className={cn(card.className, '')}>
+        <div key={i} className={cn(card.className, 'animate-image-grid')}>
           <motion.div
             onClick={() => handleClick(card)}
             className={cn(
