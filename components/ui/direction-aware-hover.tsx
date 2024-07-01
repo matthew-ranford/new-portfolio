@@ -54,6 +54,38 @@ export const DirectionAwareHover = ({
     }
   }
 
+  const handleTouch = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (!ref.current) return
+
+    const touch = event.touches[0]
+    const mouseEvent = {
+      clientX: touch.clientX,
+      clientY: touch.clientY,
+    } as React.MouseEvent<HTMLDivElement, MouseEvent>
+
+    const direction = getDirection(mouseEvent, ref.current)
+    console.log('direction', direction)
+    switch (direction) {
+      ////////// ONLY USE LEFT DIRECTION FOR NOW ////////////
+
+      // case 0:
+      //   setDirection('top')
+      //   break
+      // case 1:
+      //   setDirection('right')
+      //   break
+      // case 2:
+      //   setDirection('bottom')
+      //   break
+      case 3:
+        setDirection('left')
+        break
+      default:
+        setDirection('left')
+        break
+    }
+  }
+
   const getDirection = (
     ev: React.MouseEvent<HTMLDivElement, MouseEvent>,
     obj: HTMLElement
@@ -68,6 +100,7 @@ export const DirectionAwareHover = ({
   return (
     <motion.div
       onMouseEnter={handleMouseEnter}
+      onTouchStart={handleTouch}
       ref={ref}
       className={cn(
         'bg-transparent rounded-2xl overflow-hidden group/card relative',
