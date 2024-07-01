@@ -59,7 +59,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        <h2 className="ps-2 sm:ps-8 xl:ps-6 pe-2 pt-10 2xl:pt-28 4xl:pt-16 5xl:pt-40 6xl:pt-44 text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] text-center sm:text-left dark:text-orange-300 text-cyan-700 font-bold">
+        <h2 className="ps-2 sm:ps-8 xl:ps-6 pe-2 pt-14 xl:pt-8 2xl:pt-28 4xl:pt-16 5xl:pt-40 6xl:pt-44 text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] text-center sm:text-left dark:text-orange-300 text-cyan-700 font-bold">
           <motion.span
             initial={{ opacity: 0 }}
             transition={{

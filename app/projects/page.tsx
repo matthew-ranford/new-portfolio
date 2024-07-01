@@ -323,7 +323,6 @@ export default function Projects() {
                     <DirectionAwareHover
                       imageUrl={project.cover}
                       alt={project.alt}
-                      linkUrl={project.link}
                       className="w-full space-y-5 cursor-pointer animate-project-images"
                     >
                       <div className="space-y-2 md:space-y-5 2xl:space-y-8 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
@@ -389,7 +388,6 @@ export default function Projects() {
                     <DirectionAwareHover
                       imageUrl={project.cover}
                       alt={project.alt}
-                      linkUrl={project.link}
                       className="w-full space-y-5 cursor-pointer animate-project-images-0"
                     >
                       <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
@@ -452,7 +450,6 @@ export default function Projects() {
                     <DirectionAwareHover
                       imageUrl={project.cover}
                       alt={project.alt}
-                      linkUrl={project.link}
                       className="w-full space-y-5 cursor-pointer animate-project-images-1"
                     >
                       <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
