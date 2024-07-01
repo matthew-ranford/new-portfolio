@@ -32,7 +32,7 @@ export function MovingBorderButton({
   return (
     <Component
       className={cn(
-        'bg-transparent relative text-xl h-16 w-40 sm:h-20 sm:w-44 5xl:h-24 5xl:w-56 6xl:h-28 6xl:w-56 p-[0.5px] overflow-hidden',
+        'bg-transparent relative text-xl h-16 w-44 sm:h-20 sm:w-44 5xl:h-24 5xl:w-56 6xl:h-28 6xl:w-60 p-[0.5px] overflow-hidden',
         containerClassName
       )}
       style={{
