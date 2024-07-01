@@ -10,7 +10,6 @@ import heroImage from '../../public/images/hero-image.png'
 
 // Components
 import MainHeaderNav from './MainHeaderNav'
-import { Highlight } from '@/components/ui/hero-highlight'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { MovingBorderButton } from '@/components/ui/moving-border'
 
@@ -38,7 +37,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
         >
           <Image
-            src="/images/hero-image-test-0.png"
+            src={heroImage}
             width="2732"
             height="1536"
             alt="Hero image of Matt on lake with hockey stick"
