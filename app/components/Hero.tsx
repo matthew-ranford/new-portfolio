@@ -24,7 +24,7 @@ export default function Hero() {
     <>
       <main id="home" className="relative overflow-hidden">
         <MainHeaderNav />
-        <div className="ps-10 xl:ps-8 pe-4 space-y-4 xl:space-y-10 2xl:space-y-8 5xl:space-y-24 6xl:space-y-32 pt-36 sm:pt-44 md:pt-56 lg:pt-20 xl:pt-8 2xl:pt-24 3xl:pt-36 4xl:pt-48 5xl:pt-40 6xl:pt-24 max-w-3xl lg:max-w-2xl xl:max-w-3xl 5xl:max-w-4xl 6xl:max-w-screen-2xl">
+        <div className="ps-10 xl:ps-8 pe-4 space-y-4 xl:space-y-10 2xl:space-y-8 5xl:space-y-24 6xl:space-y-36 pt-36 sm:pt-44 md:pt-56 lg:pt-20 xl:pt-8 2xl:pt-24 3xl:pt-36 4xl:pt-48 5xl:pt-40 6xl:pt-24 max-w-3xl lg:max-w-2xl xl:max-w-3xl 5xl:max-w-4xl 6xl:max-w-screen-2xl">
           <TextGenerateEffect words={firstLine} delay={4000} />
           <TextGenerateEffect words={secondLine} delay={5400} />
         </div>
@@ -45,7 +45,7 @@ export default function Hero() {
             className="hero-image"
           />
           <div className={handlee.className}>
-            <div className="absolute p-2 top-[22%] sm:top-[30%] md:top-[40%] lg:top-[58%] xl:top-[63%] 2xl:top-[55%] 3xl:top-[59%] 4xl:top-[60.8%] 5xl:top-[65%] 6xl:top-[58%] left-[5%] smallest:left-[2%] sm:left-[2%] md:left-[10%] lg:left-[60%] xl:left-[70%] 5xl:left-[70%] 6xl:left-[68%] space-x-2 xl:space-x-6 2xl:space-x-10 6xl:space-x-210 sm:rotate-6">
+            <div className="absolute p-2 top-[22%] sm:top-[30%] md:top-[40%] lg:top-[58%] xl:top-[63%] 2xl:top-[55%] 3xl:top-[59%] 4xl:top-[60.8%] 5xl:top-[65%] 6xl:top-[55%] left-[5%] smallest:left-[2%] sm:left-[2%] md:left-[10%] lg:left-[60%] xl:left-[70%] 5xl:left-[70%] 6xl:left-[68%] space-x-2 xl:space-x-6 2xl:space-x-10 6xl:space-x-210 sm:rotate-6">
               <Link href="projects">
                 <MovingBorderButton className="font-bold">
                   Recent Work!

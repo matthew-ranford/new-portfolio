@@ -60,14 +60,14 @@ const fourthLine = 'Contact me 📧 '
 const FrameOne = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-orange-300 text-cyan-700">
+      <h1 className="text-4xl dark:text-orange-300 text-cyan-500">
         <div className={handlee.className}>Invermere, BC, Canada.</div>
-      </p>
-      <p className="font-normal text-base my-4 max-w-xl text-zinc-200 ">
+      </h1>
+      <p className="font-normal text-base my-4 max-w-xl dark:text-zinc-200 text-zinc-900 ">
         Ice Skating & Ice Hockey on the longest skating trail in the world at
         Lake Windermere.
       </p>
-      <p className="font-normal text-base my-4 max-w-lg text-zinc-200 ">
+      <p className="font-normal text-base my-4 max-w-lg dark:text-zinc-200 text-zinc-900 ">
         I lived here for about two years.
       </p>
     </div>
@@ -77,12 +77,12 @@ const FrameOne = () => {
 const FrameTwo = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-orange-300 text-cyan-700">
+      <h1 className="text-4xl dark:text-orange-300 text-cyan-500">
         <div className={handlee.className}>
           Lower Bugaboo Falls, Spillimacheen, Canada.
         </div>
-      </p>
-      <p className="font-normal text-base my-4 max-w-xl text-zinc-200 ">
+      </h1>
+      <p className="font-normal text-base my-4 max-w-xl text-zinc-200">
         Hiking, exploring, sightseeing, & waterfalls.
       </p>
     </div>
