@@ -441,7 +441,7 @@ export default function About() {
           className="about-image"
         />
 
-        <div className="xl:pe-12 pe-4 sm:pe-8 pt-10 sm:pt-4 lg:pt-20 xl:pt-0 xl:-mt-24 2xl:-mt-28 space-y-2">
+        <div className="xl:pe-12 pe-4 sm:pe-8 pt-2 sm:pt-4 lg:pt-20 xl:pt-0 xl:-mt-24 2xl:-mt-28 space-y-2">
           <TextGenerateEffect
             words={firstLine}
             delay={3000}
@@ -467,20 +467,20 @@ export default function About() {
         </div>
 
         <div className="space-y-4 2xl:space-y-6">
-          <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-32 sm:pt-20 lg:pt-20 xl:pt-16 2xl:pt-36 3xl:pt-44 4xl:pt-52 5xl:pt-52 6xl:pt-56 font-bold dark:text-zinc-200 text-stone-900">
+          <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-24 sm:pt-20 lg:pt-20 xl:pt-16 2xl:pt-36 3xl:pt-44 4xl:pt-52 5xl:pt-52 6xl:pt-56 font-bold dark:text-zinc-200 text-stone-900">
             Who I Am <span>?</span>
           </h1>
           <h2
             id="about"
-            className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-4 2xl:pt-10 pb-10 6xl:pb-28 dark:text-orange-300 text-cyan-700"
+            className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-4 2xl:pt-10 pb-10 md:pb-10 6xl:pb-28 dark:text-orange-300 text-cyan-700"
           >
             <div className={handlee.className}>A little bit about me..</div>
           </h2>
           <div
-            className="dark:text-zinc-200 text-stone-900 flex items-center justify-center space-y-10 md:space-y-0 flex-wrap pt-4 smaller:pt-6 to-sm:pt-6 sm:pt-6 md:pt-4 lg:pt-6 xl:pt-0 2xl:pt-4 3xl:pt-14 4xl:pt-10 5xl:pt-40 6xl:pt-20 ps-4 sm:ps-6 lg:ps-8 pe-4 small:pe-3 sm:pe-4"
+            className="dark:text-zinc-200 text-stone-900 flex items-center justify-center space-y-10 md:space-y-0 flex-wrap pt-20 sm:pt-6 md:pt-4 lg:pt-6 xl:pt-0 2xl:pt-4 3xl:pt-14 4xl:pt-10 5xl:pt-40 6xl:pt-20 ps-4 sm:ps-6 lg:ps-8 pe-4 small:pe-3 sm:pe-4"
             ref={aboutText}
           >
-            <span className="max-w-2xl 2xl:max-w-4xl text-2xl sm:text-2xl lg:text-3xl 2xl:text-4xl first-letter:text-7xl first-letter:float-start text-left md:text-right 2xl:text-left px-0 md:px-4 2xl:px-10 animate-about-text">
+            <span className="max-w-2xl 2xl:max-w-4xl text-2xl sm:text-2xl lg:text-3xl 2xl:text-4xl first-letter:text-7xl first-letter:float-start text-left md:text-right 2xl:text-left px-0 md:px-4 2xl:px-10 ps-2 animate-about-text">
               I&apos;m a Full-Stack Developer who recently completed a 17-week
               intensive boot camp learning full-stack software development at
               Dev Academy in December 2023.
