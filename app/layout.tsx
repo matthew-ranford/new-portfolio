@@ -24,7 +24,28 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="shortcut icon" type="image/x-icon" href="/images/logo.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+        <link
+          rel="preload"
+          as="image"
+          href="images/hero-image.png"
+          fetchPriority="high"
+          type="image/png"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="images/about-image.png"
+          fetchPriority="high"
+          type="image/png"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="images/projects-image.png"
+          fetchPriority="high"
+          type="image/png"
+        />
       </head>
       <body className={anton.className}>
         <ThemeProvider
