@@ -12,6 +12,7 @@ export const DirectionAwareHover = ({
   childrenClassName,
   imageClassName,
   className,
+  linkUrl,
 }: {
   imageUrl: StaticImageData
   alt: string
@@ -19,12 +20,14 @@ export const DirectionAwareHover = ({
   childrenClassName?: string
   imageClassName?: string
   className?: string
+  linkUrl: string
 }) => {
   const ref = useRef<HTMLDivElement>(null)
 
   const [direction, setDirection] = useState<
     'top' | 'bottom' | 'left' | 'right' | string
   >('left')
+  const [infoShown, setInfoShown] = useState(false)
 
   const handleMouseEnter = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -86,6 +89,14 @@ export const DirectionAwareHover = ({
     }
   }
 
+  const handleClick = () => {
+    if (!infoShown) {
+      setInfoShown(true)
+    } else {
+      window.location.href = linkUrl
+    }
+  }
+
   const getDirection = (
     ev: React.MouseEvent<HTMLDivElement, MouseEvent>,
     obj: HTMLElement
@@ -101,6 +112,7 @@ export const DirectionAwareHover = ({
     <motion.div
       onMouseEnter={handleMouseEnter}
       onTouchStart={handleTouch}
+      onClick={handleClick}
       ref={ref}
       className={cn(
         'bg-transparent rounded-2xl overflow-hidden group/card relative',
