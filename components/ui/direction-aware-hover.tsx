@@ -25,6 +25,7 @@ export const DirectionAwareHover = ({
   const [direction, setDirection] = useState<
     'top' | 'bottom' | 'left' | 'right' | string
   >('left')
+  const [isActive, setIsActive] = useState(false)
 
   const handleMouseEnter = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -54,6 +55,14 @@ export const DirectionAwareHover = ({
     }
   }
 
+  const handleTouchStart = () => {
+    setIsActive(true)
+  }
+
+  const handleTouchEnd = () => {
+    setIsActive(false)
+  }
+
   const getDirection = (
     ev: React.MouseEvent<HTMLDivElement, MouseEvent>,
     obj: HTMLElement
@@ -68,6 +77,8 @@ export const DirectionAwareHover = ({
   return (
     <motion.div
       onMouseEnter={handleMouseEnter}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
       ref={ref}
       className={cn(
         'bg-transparent rounded-2xl overflow-hidden group/card relative',
@@ -81,7 +92,13 @@ export const DirectionAwareHover = ({
           whileHover={direction}
           exit="exit"
         >
-          <motion.div className="group-hover/card:block hidden absolute inset-0 w-full h-full z-10 transition duration-500" />
+          <motion.div
+            className={cn(
+              'group-hover/card:block hidden absolute inset-0 w-full h-full z-10 transition duration-500',
+              { block: isActive }
+            )}
+          />
+          <motion.div className="group-hover/card:block hidden absolute inset-0 w-full h-full z-10 transition duration-500 active:block" />
           <motion.div
             variants={variants}
             className="h-full w-full relative"
