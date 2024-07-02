@@ -435,10 +435,11 @@ export default function About() {
         <MainHeaderNav />
         <Image
           src={aboutImage}
-          width="2732"
-          height="1536"
+          width={2732}
+          height={1536}
           alt="Main page image of Matt"
           className="about-image"
+          priority={true}
         />
 
         <div className="xl:pe-12 pe-4 sm:pe-8 pt-2 sm:pt-4 lg:pt-20 xl:pt-0 xl:-mt-24 2xl:-mt-28 space-y-2">

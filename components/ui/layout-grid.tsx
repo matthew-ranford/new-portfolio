@@ -75,6 +75,7 @@ const BlurImage = ({ card }: { card: Card }) => {
         loaded ? 'blur-none' : 'blur-md'
       )}
       alt={card.alt}
+      loading="lazy"
     />
   )
 }

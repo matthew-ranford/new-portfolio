@@ -294,10 +294,11 @@ export default function Projects() {
         <MainHeaderNav />
         <Image
           src={projectsImage}
-          width="2732"
-          height="1536"
+          width={2732}
+          height={1536}
           alt="Main page image of Matt"
           className="projects-image"
+          priority={true}
         />
         <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-24 2xl:pt-80 3xl:pt-72 4xl:pt-64 5xl:pt-72 6xl:pt-72 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
           Life after Dev Academy...
