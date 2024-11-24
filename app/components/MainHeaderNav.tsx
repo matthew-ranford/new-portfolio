@@ -1,5 +1,5 @@
 import { TypewriterEffect } from '@/components/ui/typewriter-effect'
-import { handlee } from '@/fonts'
+import { titan } from '@/fonts'
 
 export default function MainHeaderNav() {
   // TypeWriterEffect
@@ -12,8 +12,8 @@ export default function MainHeaderNav() {
 
   return (
     <>
-      <div className={handlee.className}>
-        <h1 className="ps-4 sm:ps-6 lg:ps-8 pt-4 sm:pt-8 md:pt-6 lg:pt-4 xl:pt-2">
+      <div className={titan.className}>
+        <h1 className="ps-4 sm:ps-6 pt-2 sm:pt-4 md:pt-2">
           <TypewriterEffect words={mainHeader} />
         </h1>
       </div>

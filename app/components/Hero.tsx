@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { handlee } from '@/fonts'
+import { handlee, titan } from '@/fonts'
 import { motion } from 'framer-motion'
 
 // Main page image
@@ -23,11 +23,11 @@ export default function Hero() {
     <>
       <main id="home" className="relative overflow-hidden">
         <MainHeaderNav />
-        <div className="ps-10 xl:ps-8 pe-4 space-y-4 xl:space-y-12 2xl:space-y-8 5xl:space-y-24 6xl:space-y-36 pt-36 sm:pt-44 md:pt-44 lg:pt-20 xl:pt-8 2xl:pt-24 3xl:pt-36 4xl:pt-48 5xl:pt-40 6xl:pt-24 max-w-3xl lg:max-w-2xl xl:max-w-3xl 5xl:max-w-4xl 6xl:max-w-screen-2xl">
+        {/* <div className="ps-10 xl:ps-8 pe-4 space-y-4 xl:space-y-12 2xl:space-y-8 5xl:space-y-24 6xl:space-y-36 pt-36 sm:pt-44 md:pt-44 lg:pt-20 xl:pt-8 2xl:pt-24 3xl:pt-36 4xl:pt-48 5xl:pt-40 6xl:pt-24 max-w-3xl lg:max-w-2xl xl:max-w-3xl 5xl:max-w-4xl 6xl:max-w-screen-2xl">
           <TextGenerateEffect words={firstLine} delay={4000} />
           <TextGenerateEffect words={secondLine} delay={5400} />
-        </div>
-        <motion.div
+        </div> */}
+        {/* <motion.div
           initial={{ opacity: 0 }}
           transition={{
             duration: 1.5,
@@ -57,32 +57,33 @@ export default function Hero() {
               </Link>
             </div>
           </div>
-        </motion.div>
-
-        <h2 className="ps-2 sm:ps-8 xl:ps-6 pe-2 pt-14 xl:pt-8 2xl:pt-28 4xl:pt-16 5xl:pt-40 6xl:pt-44 text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] text-center sm:text-left dark:text-orange-300 text-cyan-700 font-bold">
-          <motion.span
-            initial={{ opacity: 0 }}
-            transition={{
-              delay: 3,
-              duration: 2.5,
-              ease: 'easeInOut',
-            }}
-            animate={{ opacity: 1 }}
-          >
-            FULL-STACK
-          </motion.span>{' '}
-          <motion.span
-            initial={{ opacity: 0 }}
-            transition={{
-              delay: 3.5,
-              duration: 2.5,
-              ease: 'easeInOut',
-            }}
-            animate={{ opacity: 1 }}
-          >
-            DEVELOPER
-          </motion.span>
-        </h2>
+        </motion.div> */}
+        {/* <div className={titan.className}>
+          <h2 className="ps-2 sm:ps-8 xl:ps-6 pe-2 pt-14 xl:pt-8 2xl:pt-28 4xl:pt-16 5xl:pt-40 6xl:pt-44 text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] text-center sm:text-left dark:text-orange-300 text-cyan-700 font-bold">
+            <motion.span
+              initial={{ opacity: 0 }}
+              transition={{
+                delay: 3,
+                duration: 2.5,
+                ease: 'easeInOut',
+              }}
+              animate={{ opacity: 1 }}
+            >
+              FULL-STACK
+            </motion.span>{' '}
+            <motion.span
+              initial={{ opacity: 0 }}
+              transition={{
+                delay: 3.5,
+                duration: 2.5,
+                ease: 'easeInOut',
+              }}
+              animate={{ opacity: 1 }}
+            >
+              DEVELOPER
+            </motion.span>
+          </h2>
+        </div> */}
       </main>
     </>
   )

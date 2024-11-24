@@ -36,8 +36,8 @@ export const TypewriterEffect = ({
           width: 'fit-content',
         },
         {
-          duration: 1.5,
-          delay: stagger(0.2),
+          duration: 0.35,
+          delay: stagger(0.1),
           ease: 'easeInOut',
         }
       )
@@ -74,7 +74,7 @@ export const TypewriterEffect = ({
   return (
     <div
       className={cn(
-        'text-6xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl 6xl:text-[10rem] font-bold tracking-wider',
+        'text-5xl sm:text-7xl md:text-7xl xl:text-8xl 2xl:text-9xl 6xl:text-[10rem] font-bold',
         className
       )}
     >
