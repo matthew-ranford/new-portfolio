@@ -1,13 +1,6 @@
-import { Anton, Handlee, Titan_One } from 'next/font/google'
+import { Anton, Handlee, Titan_One, Inter } from 'next/font/google'
 
 export const anton = Anton({
-  subsets: ['latin'],
-  weight: ['400'],
-  display: 'swap',
-  adjustFontFallback: false,
-})
-
-export const handlee = Handlee({
   subsets: ['latin'],
   weight: ['400'],
   display: 'swap',
@@ -20,3 +13,5 @@ export const titan = Titan_One({
   display: 'swap',
   adjustFontFallback: false,
 })
+
+export const inter = Inter({ subsets: ['latin'], weight: ['400'] })

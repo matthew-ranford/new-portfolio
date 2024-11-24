@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { handlee } from '@/fonts'
+import { inter, titan } from '@/fonts'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
@@ -52,13 +52,13 @@ export default function Navbar() {
   return (
     <>
       <motion.div
-        className={handlee.className}
-        initial={{ opacity: 0, y: 5 }}
-        transition={{ delay: 4, duration: 1.5, ease: 'easeInOut' }}
+        className={inter.className}
+        initial={{ opacity: 0, y: 0 }}
+        transition={{ delay: 1, duration: 1.5, ease: 'easeInOut' }}
         animate={{ opacity: 1, y: 0 }}
       >
         <nav
-          className={`lg:flex lg:justify-between navbar-container p-0 sm:p-4 lg:pe-10 text-stone-900 ${
+          className={`lg:flex lg:justify-between navbar-container p-0 sm:p-4 mt-0 lg:mt-4 text-stone-900 ${
             isOpen
               ? 'navbar-open navbar-full-height animate-slideIn'
               : 'navbar-closed animate-slideOut'
@@ -89,10 +89,9 @@ export default function Navbar() {
               </button>
             </span>
           </div>
-
           <ul
             id="navbar-dropdown-menu"
-            className={`lg:flex ps-2 gap-5 text-6xl lg:text-2xl xl:text-3xl 6xl:text-5xl pt-24 sm:pt-44 lg:pt-0 ${
+            className={`lg:flex ps-4 gap-5 text-6xl sm:text-6xl md:text-7xl lg:text-lg xl:text-xl 6xl:text-2xl pt-14 sm:pt-24 lg:pt-0 ${
               isOpen ? 'animate-slideIn' : 'hidden'
             }`}
           >
@@ -107,7 +106,9 @@ export default function Navbar() {
               >
                 <li
                   style={{ listStyle: 'none' }}
-                  className="dark:text-zinc-200 text-stone-900 my-6 lg:my-0 nav-link"
+                  className={`dark:text-zinc-300 text-stone-900 my-4 lg:my-0 nav-link  ${
+                    isOpen ? titan.className : ''
+                  }`}
                 >
                   {link.text}
                 </li>
