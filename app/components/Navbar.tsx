@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { inter, titan } from '@/fonts'
+import { anton, titan } from '@/fonts'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
@@ -18,6 +18,7 @@ interface NavLink {
   target?: string
   className?: string
   ariaLabel?: string
+  isButton?: boolean
 }
 
 export default function Navbar() {
@@ -35,9 +36,11 @@ export default function Navbar() {
     },
     {
       href: 'mailto:matt.ranford16@gmail.com',
-      text: 'Contact',
+      text: 'Contact me',
+      isButton: true,
       className:
-        'lg:border-4 dark:border-orange-300 border-cyan-700 lg:px-3 lg:py-1',
+        'px-4 py-1 lg:-mt-2 dark:bg-orange-300 dark:text-stone-900 bg-cyan-700 text-zinc-300 rounded-xl border-4 border-zinc-900 dark:hover:bg-orange-400 hover:bg-cyan-800 duration-1000',
+      ariaLabel: 'Contact button',
     },
   ]
 
@@ -49,10 +52,17 @@ export default function Navbar() {
     setIsOpen(false)
   }
 
+  const handleNavClick = (link: NavLink) => {
+    if (link.isButton) {
+      window.location.href = link.href
+    }
+    setIsOpen(false)
+  }
+
   return (
     <>
       <motion.div
-        className={inter.className}
+        className={anton.className}
         initial={{ opacity: 0, y: 0 }}
         transition={{ delay: 1, duration: 1.5, ease: 'easeInOut' }}
         animate={{ opacity: 1, y: 0 }}
@@ -91,30 +101,40 @@ export default function Navbar() {
           </div>
           <ul
             id="navbar-dropdown-menu"
-            className={`lg:flex ps-4 gap-5 text-6xl sm:text-6xl md:text-7xl lg:text-lg xl:text-xl 6xl:text-2xl pt-14 sm:pt-24 lg:pt-0 ${
+            className={`lg:flex ps-4 gap-5 text-6xl sm:text-6xl md:text-7xl lg:text-lg xl:text-xl 6xl:text-2xl pt-20 sm:pt-24 lg:pt-0 ${
               isOpen ? 'animate-slideIn' : 'hidden'
             }`}
           >
             {navLinks.map((link, index) => (
-              <Link
-                href={link.href}
+              <li
                 key={index}
-                target={link.target ? link.target : undefined}
-                className={link.className || ''}
-                aria-label={link.ariaLabel || undefined}
-                onClick={() => setIsOpen(!isOpen)}
+                style={{ listStyle: 'none' }}
+                className={`dark:text-zinc-300 text-stone-900 tracking-wider my-4 lg:my-0 nav-link ${
+                  isOpen ? titan.className : ''
+                }`}
               >
-                <li
-                  style={{ listStyle: 'none' }}
-                  className={`dark:text-zinc-300 text-stone-900 my-4 lg:my-0 nav-link  ${
-                    isOpen ? titan.className : ''
-                  }`}
-                >
-                  {link.text}
-                </li>
-              </Link>
+                {link.isButton ? (
+                  <button
+                    onClick={() => handleNavClick(link)}
+                    className={link.className}
+                    aria-label={link.ariaLabel}
+                  >
+                    {link.text}
+                  </button>
+                ) : (
+                  <Link
+                    href={link.href}
+                    target={link.target}
+                    className={link.className}
+                    aria-label={link.ariaLabel}
+                    onClick={() => handleNavClick(link)}
+                  >
+                    {link.text}
+                  </Link>
+                )}
+              </li>
             ))}
-            <div className="py-1">
+            <div className="-mt-1">
               <ModeToggle closeNavbar={closeNavbarOnThemeChange} />
             </div>
           </ul>

@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { handlee, titan } from '@/fonts'
+import { titan } from '@/fonts'
 import { motion } from 'framer-motion'
 
 // Main page image

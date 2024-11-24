@@ -95,7 +95,7 @@
   position: relative;
 }
 
-.nav-link::before {
+.nav-link:not(:has(button))::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -127,7 +127,7 @@
   }
 
   .navbar-open {
-    background-color: #5f5f5f;
+    background-color: #6f158a;
   }
 
   .navbar-closed {
