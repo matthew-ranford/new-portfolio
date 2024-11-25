@@ -6,7 +6,7 @@ import { titan } from '@/fonts'
 import { motion } from 'framer-motion'
 
 // Main page image
-import heroImage from '../../public/images/hero-image-new-test-9.png'
+import heroImage from '../../public/images/hero-image-new-test-11.png'
 
 // Components
 import MainHeaderNav from './MainHeaderNav'
