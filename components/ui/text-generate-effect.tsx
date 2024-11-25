@@ -19,11 +19,11 @@ export const TextGenerateEffect = ({
 
   const sizeClasses = {
     small: 'text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl',
-    medium: 'text-md sm:text-lg md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl',
+    medium: 'text-lg sm:text-xl md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl',
     large:
       'text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl',
     xlarge:
-      'text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl',
+      'text-[1.38rem] sm:text-[1.52rem] md:text-4xl lg:text-6xl xl:text-5xl 2xl:text-6xl 6xl:text-9xl',
   }
 
   useEffect(() => {

@@ -39,7 +39,7 @@ export default function Navbar() {
       text: 'Contact form',
       isButton: true,
       className:
-        'text-4xl sm:text-6xl md:text-7xl lg:text-lg xl:text-xl 6xl:text-2xl border-2 rounded-xl dark:bg-zinc-300 bg-zinc-950 dark:text-stone-900 text-[#00dd00] transition-all duration-1000 hover:bg-[#00dd00] dark:hover:bg-[#272727] dark:hover:text-[#00dd00] hover:text-zinc-900 py-3 px-3 sm:px-4 sm:py-4 lg:-mt-5',
+        'text-4xl sm:text-6xl md:text-7xl lg:text-lg xl:text-xl 6xl:text-2xl border-2 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-stone-900 text-[#00dd00] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-[#272727] dark:hover:text-[#00dd00] hover:text-stone-900 py-3 px-3 sm:px-4 sm:py-4 lg:-mt-5',
       ariaLabel: 'Contact form button',
     },
   ]
@@ -68,7 +68,7 @@ export default function Navbar() {
         animate={{ opacity: 1, y: 0 }}
       >
         <nav
-          className={`lg:flex lg:justify-between navbar-container p-0 sm:p-4 mt-0 lg:mt-4 6xl:mt-10 text-stone-900 ${
+          className={`lg:flex lg:justify-between navbar-container p-0 sm:p-2 mt-0 lg:mt-4 2xl:mt-6 6xl:mt-10 text-stone-800 ${
             isOpen
               ? 'navbar-open navbar-full-height animate-slideIn'
               : 'navbar-closed animate-slideOut'
@@ -109,7 +109,7 @@ export default function Navbar() {
               <li
                 key={index}
                 style={{ listStyle: 'none' }}
-                className={`dark:text-zinc-300 text-stone-900 tracking-wider my-4 lg:my-0 nav-link ${
+                className={`dark:text-zinc-300 text-stone-800 tracking-wider my-4 lg:my-0 nav-link ${
                   isOpen ? titan.className : ''
                 }`}
               >
