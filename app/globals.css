@@ -103,7 +103,7 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #d97706;
+  background-color: #00dd00;
   visibility: hidden;
   transition: 0.6s ease-in-out;
 }
@@ -127,7 +127,7 @@
   }
 
   .navbar-open {
-    background-color: #6f158a;
+    background-color: #00dd00;
   }
 
   .navbar-closed {
