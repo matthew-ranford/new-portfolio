@@ -7,16 +7,26 @@ export const TextGenerateEffect = ({
   words,
   className,
   delay = 0,
+  size = 'medium',
 }: {
   words: string
   className?: string
   delay?: number
+  size?: 'small' | 'medium' | 'large' | 'xlarge'
 }) => {
   const [scope, animate] = useAnimate()
   let wordsArray = words.split(' ')
 
+  const sizeClasses = {
+    small: 'text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl',
+    medium: 'text-md sm:text-lg md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl',
+    large:
+      'text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl',
+    xlarge:
+      'text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl',
+  }
+
   useEffect(() => {
-    // Adding a delay before starting the animation
     const delayStart = setTimeout(() => {
       animate(
         'span',
@@ -57,7 +67,12 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn('', className)}>
       <div className="">
-        <div className="text-md sm:text-lg md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl  dark:text-zinc-300 text-stone-900 leading-snug tracking-wide">
+        <div
+          className={cn(
+            sizeClasses[size],
+            'dark:text-zinc-300 text-stone-900 leading-snug tracking-wide'
+          )}
+        >
           {renderWords()}
         </div>
       </div>

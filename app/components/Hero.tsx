@@ -6,81 +6,88 @@ import { titan } from '@/fonts'
 import { motion } from 'framer-motion'
 
 // Main page image
-import heroImage from '../../public/images/hero-image-new-test-1.png'
+import heroImage from '../../public/images/hero-image-new-test-9.png'
 
 // Components
 import MainHeaderNav from './MainHeaderNav'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
-import { MovingBorderButton } from '@/components/ui/moving-border'
 
 // TextGenerateEffect
-const firstLine = 'Based in Wellington, New Zealand 🌎 '
-const secondLine =
+const firstLine = "Hi! I'm Matthew Ranford 👋"
+const secondLine = 'Based in Wellington, New Zealand 🌎'
+const thirdLine =
   "I'm a passionate Developer, with an interest in Front-End, Accessibility, & trying to optimize applications for the best practices & performance."
 
 export default function Hero() {
   return (
     <>
-      <main id="home" className="absolute overflow-hidden">
+      <main id="home" className="">
         <MainHeaderNav />
-        <div className="ps-5 sm:ps-7 space-y-3 2xl:space-y-4 pt-10 max-w-sm sm:max-w-md md:max-w-lg xl:max-w-xl 2xl:max-w-2xl  6xl:max-w-screen-lg">
-          <TextGenerateEffect words={firstLine} delay={1500} />
-          <TextGenerateEffect words={secondLine} delay={2400} />
+        <div className="pt-10 ps-5 sm:ps-7 xl:ps-6 space-y-3 2xl:space-y-4 max-w-sm sm:max-w-md md:max-w-lg xl:max-w-4xl 2xl:max-w-2xl 6xl:max-w-screen-lg z-index">
+          <div className={titan.className}>
+            <TextGenerateEffect words={firstLine} delay={500} size="xlarge" />
+          </div>
+          <TextGenerateEffect words={secondLine} delay={1000} size="medium" />
+          <TextGenerateEffect words={thirdLine} delay={1200} size="medium" />
+          <motion.div
+            initial={{ opacity: 0 }}
+            transition={{
+              delay: 1.2,
+              duration: 2.5,
+              ease: 'easeInOut',
+            }}
+            animate={{ opacity: 1 }}
+            className="pt-4"
+          >
+            <button className="border-2 rounded-xl bg-amber-500 transition-all duration-1000 dark:hover:bg-zinc-900 dark:hover:text-amber-500 hover:bg-zinc-200 text-zinc-950 hover:text-zinc-950 py-3 px-3 sm:px-4 sm:py-4">
+              <Link href="projects">Projects</Link>
+            </button>
+            <button className="border-2 rounded-xl dark:bg-zinc-300 bg-zinc-950 dark:text-stone-900 text-amber-500 transition-all duration-1000 hover:bg-zinc-200 dark:hover:bg-zinc-900 dark:hover:text-amber-500 hover:text-zinc-900 py-3 px-3 sm:px-4 sm:py-4 mx-2 lg:mx-4">
+              <Link href="mailto:matt.ranford16@gmail.com">Get in touch</Link>
+            </button>
+          </motion.div>
         </div>
         <motion.div
           initial={{ opacity: 0 }}
           transition={{
             duration: 1.5,
-            delay: 4,
+            delay: 2,
             ease: 'easeInOut',
           }}
           animate={{ opacity: 1 }}
         >
           <Image
             src={heroImage}
-            width="2732"
-            height="1536"
-            alt="Hero image of Matt on lake with hockey stick"
+            width={4098}
+            height={2304}
+            alt="Photo of Matt"
             className="hero-image"
           />
-          {/* 
-          <div className="absolute p-2 top-[22%] sm:top-[27%] md:top-[35%] lg:top-[58%] xl:top-[63%] 2xl:top-[55%] 3xl:top-[59%] 4xl:top-[60.8%] 5xl:top-[65%] 6xl:top-[55%] left-[5%] smallest:left-[2%] sm:left-[3%] md:left-[3%] lg:left-[60%] xl:left-[70%] 5xl:left-[70%] 6xl:left-[68%] space-x-2 md:space-x-4 xl:space-x-6 2xl:space-x-10 6xl:space-x-210 lg:rotate-6">
-            <Link href="projects">
-              <MovingBorderButton className="font-bold">
-                Recent Work!
-              </MovingBorderButton>
-            </Link>
-            <Link href="mailto:matt.ranford16@gmail.com">
-              <MovingBorderButton className="font-bold">
-                How Can I Help You?
-              </MovingBorderButton>
-            </Link>
-          </div> */}
         </motion.div>
 
         <div className={titan.className}>
-          <h2 className="ps-2 sm:ps-8 xl:ps-6 pe-2 pt-14 xl:pt-8 2xl:pt-28 4xl:pt-16 5xl:pt-40 6xl:pt-44 text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-9xl 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] text-center sm:text-left dark:text-orange-300 text-cyan-700 font-bold">
+          <h2 className="ps-2 sm:ps-8 xl:ps-6 pe-2 pt-14 xl:pt-4 2xl:pt-28 4xl:pt-16 5xl:pt-40 6xl:pt-44 text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.9rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] text-center sm:text-left dark:text-zinc-300 text-stone-900 font-bold z-index">
             <motion.span
               initial={{ opacity: 0 }}
               transition={{
-                delay: 3,
+                delay: 1.2,
                 duration: 2.5,
                 ease: 'easeInOut',
               }}
               animate={{ opacity: 1 }}
             >
-              FULL-STACK
+              Web
             </motion.span>{' '}
             <motion.span
               initial={{ opacity: 0 }}
               transition={{
-                delay: 3.5,
+                delay: 1.5,
                 duration: 2.5,
                 ease: 'easeInOut',
               }}
               animate={{ opacity: 1 }}
             >
-              DEVELOPER
+              Developer
             </motion.span>
           </h2>
         </div>

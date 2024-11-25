@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { anton } from '@/fonts'
+import { inter } from '@/fonts'
 import './globals.css'
 
 // Navbar toggle
@@ -26,7 +26,7 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
       </head>
-      <body className={anton.className}>
+      <body className={inter.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system" //Can change to dark etc.

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { anton, titan } from '@/fonts'
+import { inter, titan } from '@/fonts'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
@@ -36,11 +36,11 @@ export default function Navbar() {
     },
     {
       href: 'mailto:matt.ranford16@gmail.com',
-      text: 'Contact me',
+      text: 'Contact form',
       isButton: true,
       className:
-        'px-4 py-1 lg:-mt-2 dark:bg-orange-300 dark:text-stone-900 bg-cyan-700 text-zinc-300 rounded-xl border-4 border-zinc-900 dark:hover:bg-orange-400 hover:bg-cyan-800 duration-1000',
-      ariaLabel: 'Contact button',
+        'border-2 rounded-xl dark:bg-zinc-300 bg-zinc-950 dark:text-stone-900 text-amber-500 transition-all duration-1000 hover:bg-zinc-200 dark:hover:bg-zinc-900 dark:hover:text-amber-500 hover:text-zinc-900 py-3 px-3 sm:px-4 sm:py-4 lg:-mt-5',
+      ariaLabel: 'Contact form button',
     },
   ]
 
@@ -62,7 +62,7 @@ export default function Navbar() {
   return (
     <>
       <motion.div
-        className={anton.className}
+        className={inter.className}
         initial={{ opacity: 0, y: 0 }}
         transition={{ delay: 1, duration: 1.5, ease: 'easeInOut' }}
         animate={{ opacity: 1, y: 0 }}
