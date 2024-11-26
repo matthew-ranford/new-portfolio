@@ -55,10 +55,10 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             className="pt-4 text-center sm:text-left 6xl:text-3xl"
           >
-            <button className="border-2 rounded-xl bg-[#00dd00] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#00dd00] hover:bg-zinc-300 text-stone-800 hover:text-stone-800 py-3 px-3 sm:px-4 sm:py-4 6xl:px-8">
+            <button className="border-2 rounded-xl bg-[#00dd00] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#00dd00] hover:bg-zinc-300 text-stone-800 hover:text-stone-800 drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8">
               <Link href="projects">Projects</Link>
             </button>
-            <button className="border-2 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-stone-800 text-[#00dd00] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#00dd00] hover:text-zinc-800 py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 mx-2 lg:mx-4">
+            <button className="border-2 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-stone-800 text-[#00dd00] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#00dd00] hover:text-zinc-800 drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 mx-2 lg:mx-4">
               <Link href="mailto:matt.ranford16@gmail.com">Get in touch</Link>
             </button>
           </motion.div>
@@ -89,7 +89,7 @@ export default function Hero() {
         </motion.div>
 
         <div className={titan.className}>
-          <h2 className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] text-center sm:text-left dark:text-zinc-300 text-stone-800 font-bold z-index">
+          <h2 className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] text-center sm:text-left dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] font-bold z-index">
             <motion.span
               initial={{ opacity: 0 }}
               transition={{

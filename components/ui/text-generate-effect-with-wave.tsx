@@ -4,7 +4,7 @@ import { TextGenerateEffect } from './text-generate-effect'
 
 export const WavingEmoji = () => (
   <motion.span
-    className="text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl"
+    className="text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl drop-shadow-[4px_4px_0px_black]"
     initial={{ opacity: 0 }}
     animate={{
       rotate: [0, 14, -8, 14, -4, 10, 0],

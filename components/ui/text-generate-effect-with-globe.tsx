@@ -4,13 +4,13 @@ import { TextGenerateEffect } from './text-generate-effect'
 
 export const RotatingGlobeEmoji = () => (
   <motion.div
-    className="text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl inline-block"
+    className="text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl inline-block drop-shadow-[2px_2px_0px_black]"
     initial={{
       rotate: 0,
       opacity: 0,
     }}
     animate={{
-      rotate: 360,
+      rotate: -90,
       opacity: 1,
     }}
     transition={{
