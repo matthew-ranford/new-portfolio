@@ -14,12 +14,16 @@ import MainHeaderNav from './MainHeaderNav'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { TextGenerateEffectWithWave } from '@/components/ui/text-generate-effect-with-wave'
 import { TextGenerateEffectWithGlobe } from '@/components/ui/text-generate-effect-with-globe'
+import { FlipWords } from '@/components/ui/flip-words'
 
 // TextGenerateEffect
 const firstLine = "Hi! I'm Matthew Ranford"
 const secondLine = 'Based in Wellington, New Zealand'
 const thirdLine =
   "I'm a passionate Developer, with an interest in Front-End, Accessibility, & trying to optimize applications for the best practices & performance."
+
+// Flip words
+const words = ['Designer', 'Developer']
 
 export default function Hero() {
   return (
@@ -106,7 +110,7 @@ export default function Hero() {
               }}
               animate={{ opacity: 1 }}
             >
-              Developer
+              <FlipWords words={words} />
             </motion.span>
           </h2>
         </div>

@@ -68,7 +68,7 @@ export default function Navbar() {
         animate={{ opacity: 1, y: 0 }}
       >
         <nav
-          className={`lg:flex lg:justify-between navbar-container p-0 sm:p-2 mt-0 lg:mt-4 2xl:mt-6 6xl:mt-10 text-stone-800 ${
+          className={`lg:flex lg:justify-between navbar-container p-0 sm:p-2 mt-0 lg:mt-4 xl:mt-6 6xl:mt-10 text-stone-800 ${
             isOpen
               ? 'navbar-open navbar-full-height animate-slideIn'
               : 'navbar-closed animate-slideOut'
