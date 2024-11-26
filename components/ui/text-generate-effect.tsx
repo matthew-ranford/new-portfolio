@@ -70,7 +70,7 @@ export const TextGenerateEffect = ({
         <div
           className={cn(
             sizeClasses[size],
-            'dark:text-zinc-300 text-stone-900 leading-snug tracking-wide'
+            'dark:text-zinc-300 text-stone-800 leading-snug tracking-wide'
           )}
         >
           {renderWords()}

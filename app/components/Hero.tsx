@@ -12,10 +12,12 @@ import heroPhoneImage from '../../public/images/hero-image-phone-test.png'
 // Components
 import MainHeaderNav from './MainHeaderNav'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
+import { TextGenerateEffectWithWave } from '@/components/ui/text-generate-effect-with-wave'
+import { TextGenerateEffectWithGlobe } from '@/components/ui/text-generate-effect-with-globe'
 
 // TextGenerateEffect
-const firstLine = "Hi! I'm Matthew Ranford 👋"
-const secondLine = 'Based in Wellington, New Zealand 🌎'
+const firstLine = "Hi! I'm Matthew Ranford"
+const secondLine = 'Based in Wellington, New Zealand'
 const thirdLine =
   "I'm a passionate Developer, with an interest in Front-End, Accessibility, & trying to optimize applications for the best practices & performance."
 
@@ -25,26 +27,34 @@ export default function Hero() {
       <main id="home" className="">
         <MainHeaderNav />
         {/* TODO: might put on font bold to div */}
-        <div className="pt-40 sm:pt-16 lg:pt-10 xl:pt-14 2xl:pt-20 6xl:pt-44 text-center sm:text-left ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-5xl 6xl:max-w-screen-xl z-index">
+        <div className="pt-40 sm:pt-16 lg:pt-10 2xl:pt-20 6xl:pt-44 text-center sm:text-left ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-5xl 6xl:max-w-screen-xl z-index">
           <div className={titan.className}>
-            <TextGenerateEffect words={firstLine} delay={500} size="xlarge" />
+            <TextGenerateEffectWithWave
+              words={firstLine}
+              delay={1200}
+              size="xlarge"
+            />
           </div>
-          <TextGenerateEffect words={secondLine} delay={1000} size="medium" />
-          <TextGenerateEffect words={thirdLine} delay={1200} size="medium" />
+          <TextGenerateEffectWithGlobe
+            words={secondLine}
+            delay={1800}
+            size="medium"
+          />
+          <TextGenerateEffect words={thirdLine} delay={2200} size="medium" />
           <motion.div
             initial={{ opacity: 0 }}
             transition={{
-              delay: 1.2,
+              delay: 2.5,
               duration: 2.5,
               ease: 'easeInOut',
             }}
             animate={{ opacity: 1 }}
             className="pt-4 text-center sm:text-left 6xl:text-3xl"
           >
-            <button className="border-2 rounded-xl bg-[#00dd00] transition-all duration-1000 dark:hover:bg-zinc-800 dark:hover:text-[#00dd00] hover:bg-zinc-200 text-zinc-950 hover:text-zinc-950 py-3 px-3 sm:px-4 sm:py-4 6xl:px-8">
+            <button className="border-2 rounded-xl bg-[#00dd00] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#00dd00] hover:bg-zinc-300 text-stone-800 hover:text-stone-800 py-3 px-3 sm:px-4 sm:py-4 6xl:px-8">
               <Link href="projects">Projects</Link>
             </button>
-            <button className="border-2 rounded-xl dark:bg-zinc-300 bg-zinc-950 dark:text-stone-900 text-[#00dd00] transition-all duration-1000 hover:bg-zinc-200 dark:hover:bg-zinc-800 dark:hover:text-[#00dd00] hover:text-zinc-900 py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 mx-2 lg:mx-4">
+            <button className="border-2 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-stone-800 text-[#00dd00] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#00dd00] hover:text-zinc-800 py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 mx-2 lg:mx-4">
               <Link href="mailto:matt.ranford16@gmail.com">Get in touch</Link>
             </button>
           </motion.div>
@@ -75,11 +85,11 @@ export default function Hero() {
         </motion.div>
 
         <div className={titan.className}>
-          <h2 className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] text-center sm:text-left dark:text-zinc-300 text-stone-800 font-bold z-index">
+          <h2 className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] text-center sm:text-left dark:text-zinc-300 text-stone-800 font-bold z-index">
             <motion.span
               initial={{ opacity: 0 }}
               transition={{
-                delay: 1.2,
+                delay: 2.5,
                 duration: 2.5,
                 ease: 'easeInOut',
               }}
@@ -90,7 +100,7 @@ export default function Hero() {
             <motion.span
               initial={{ opacity: 0 }}
               transition={{
-                delay: 1.5,
+                delay: 2.7,
                 duration: 2.5,
                 ease: 'easeInOut',
               }}
