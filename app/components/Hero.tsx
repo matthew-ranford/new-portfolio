@@ -15,6 +15,7 @@ import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { TextGenerateEffectWithWave } from '@/components/ui/text-generate-effect-with-wave'
 import { TextGenerateEffectWithGlobe } from '@/components/ui/text-generate-effect-with-globe'
 import { FlipWords } from '@/components/ui/flip-words'
+import RecentProjects from './RecentProjects'
 
 // TextGenerateEffect
 const firstLine = "Hi! I'm Matthew Ranford"
@@ -30,8 +31,12 @@ export default function Hero() {
     <>
       <main id="home" className="">
         <MainHeaderNav />
-        {/* TODO: might put on font bold to div */}
-        <div className="pt-40 sm:pt-16 lg:pt-10 2xl:pt-20 6xl:pt-44 text-center sm:text-left ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-5xl 6xl:max-w-screen-xl z-index">
+        {/* TODO: 
+                  - Fix wave emoji on large and 6xl screens
+                  - Maybe do a contact form modal
+                  - Recent Projects on Hero Screen/change "projects" to recent projects button - view all projects button in Recent projects component
+         */}
+        <div className="pt-20 sm:pt-16 lg:pt-10 2xl:pt-20 6xl:pt-44 text-left ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-5xl 6xl:max-w-screen-xl font-normal dark:font-bold z-index">
           <div className={titan.className}>
             <TextGenerateEffectWithWave
               words={firstLine}
@@ -115,6 +120,7 @@ export default function Hero() {
           </h2>
         </div>
       </main>
+      <RecentProjects />
     </>
   )
 }
