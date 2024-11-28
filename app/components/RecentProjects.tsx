@@ -4,14 +4,13 @@ import Image from 'next/image'
 import {
   Card,
   CardHeader,
-  CardBody,
+  // CardBody,
   CardFooter,
   Image as NextUIImage,
   Button,
 } from '@nextui-org/react'
 
 import { TextGenerateEffectWhileInView } from '@/components/ui/text-generate-effect-while-in-view'
-import projectOne from '../../public/images/project-image-test.png'
 import divider from '../../public/images/divider.png'
 
 const header = 'Recent Projects'
@@ -59,55 +58,70 @@ export default function RecentProjects() {
         </div>
 
         <div className="max-w-[1200px] 6xl:max-w-[1500px] gap-4 grid grid-cols-12 grid-rows-2 px-8 mx-auto mt-10">
-          <Card className="col-span-12 sm:col-span-7 h-[300px] xl:h-[400px] 6xl:h-[500px] bg-transparent/80 ">
+          <Card className="col-span-12 sm:col-span-7 h-[300px] xl:h-[400px] 6xl:h-[500px] dark:bg-transparent/80 bg-transparent/20">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-              <p className="text-tiny text-white/60 uppercase font-bold">
+              <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
                 Web Design & Development
               </p>
-              <h4 className="text-zinc-300 font-bold text-large">
+              <h4 className="dark:text-zinc-300 text-stone-800 dark:font-bold text-large">
                 Strictly Paper
               </h4>
             </CardHeader>
             <NextUIImage
               removeWrapper
-              alt="Card background"
+              alt="Project one card background"
               className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-0"
               src="/images/project-image-test.png"
             />
             <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
               <div className="flex flex-grow gap-2 items-center">
-                <NextUIImage
-                  alt="Breathing app icon"
-                  className="rounded-full w-10 h-11 bg-black"
-                  src="https://nextui.org/images/breathing-app-icon.jpeg"
-                />
                 <div className="flex flex-col">
-                  <p className="text-tiny text-white/60">Breathing App</p>
-                  <p className="text-tiny text-white/60">
-                    Get a good night's sleep.
+                  <p className="text-tiny dark:text-white/60 text-white/100">
+                    Wallpapering Website
+                  </p>
+                  <p className="text-tiny dark:text-white/60 text-white/100">
+                    Created from scratch with NextJS.
                   </p>
                 </div>
               </div>
-              <Button radius="full" size="sm">
-                Get App
-              </Button>
+              <a href="https://strictly-paper.nz/" target="_blank">
+                <Button
+                  radius="full"
+                  size="sm"
+                  className="dark:bg-zinc-300 dark:text-stone-800 bg-stone-800 text-zinc-300"
+                >
+                  View live
+                </Button>
+              </a>
             </CardFooter>
           </Card>
-          <Card className="col-span-12 sm:col-span-5 h-[300px] xl:h-[400px] bg-transparent/80 p-4">
+          <Card className="col-span-12 sm:col-span-5 h-[300px] xl:h-[350px] 6xl:h-[450px] dark:bg-transparent/80 bg-transparent/20 hover:overflow-visible">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-              <p className="text-tiny text-white/60 uppercase font-bold">
-                Plant a tree
+              <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
+                Logo & Business Card Design
               </p>
-              <h4 className="text-black font-medium text-large">
-                Contribute to the planet
+              <h4 className="dark:text-zinc-300 text-stone-800 dark:font-bold text-large">
+                Attention to Detail Decorators
               </h4>
             </CardHeader>
             <NextUIImage
               removeWrapper
               alt="Card background"
-              className="z-0 w-full h-full object-cover hover:scale-150"
+              className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-6 hover:scale-[2] hover:z-10 hover:backdrop-blur-sm hover:-translate-x-2/3 hover:transition hover:ease-in hover:duration-1000"
               src="/images/atd-business-card.png"
             />
+            <CardFooter className=" bg-black/40 bottom-0 border-t-1 border-default-600 dark:border-default-100">
+              <div className="flex flex-grow gap-2 items-center">
+                <div className="flex flex-col">
+                  <p className="text-tiny dark:text-white/60 text-white/100">
+                    Hover for a better look
+                  </p>
+                  <p className="text-tiny dark:text-white/60 text-white/100">
+                    Created in Canva.
+                  </p>
+                </div>
+              </div>
+            </CardFooter>
           </Card>
           {/* <Card className="col-span-12 sm:col-span-4 h-[300px]">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
