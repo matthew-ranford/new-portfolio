@@ -12,6 +12,7 @@ import {
 
 import { TextGenerateEffectWhileInView } from '@/components/ui/text-generate-effect-while-in-view'
 import divider from '../../public/images/divider.png'
+import Link from 'next/link'
 
 const header = 'Recent Projects'
 
@@ -56,9 +57,8 @@ export default function RecentProjects() {
             </motion.div>
           </div>
         </div>
-
-        <div className="max-w-[1200px] 6xl:max-w-[1500px] gap-4 grid grid-cols-12 grid-rows-2 px-8 mx-auto mt-10">
-          <Card className="col-span-12 sm:col-span-7 h-[300px] xl:h-[400px] 6xl:h-[500px] dark:bg-transparent/80 bg-transparent/20">
+        <div className="max-w-[1200px] xl:max-w-screen-2xl 6xl:max-w-[2500px] gap-4 grid grid-cols-12 grid-rows-2 px-6 mx-auto mt-10 pb-6">
+          <Card className="col-span-12 sm:col-span-7 h-[300px] xl:h-[400px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
               <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
                 Web Design & Development
@@ -77,14 +77,18 @@ export default function RecentProjects() {
               <div className="flex flex-grow gap-2 items-center">
                 <div className="flex flex-col">
                   <p className="text-tiny dark:text-white/60 text-white/100">
-                    Wallpapering Website
+                    Wallpapering company website
                   </p>
                   <p className="text-tiny dark:text-white/60 text-white/100">
                     Created from scratch with NextJS.
                   </p>
                 </div>
               </div>
-              <a href="https://strictly-paper.nz/" target="_blank">
+              <a
+                href="https://strictly-paper.nz/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   radius="full"
                   size="sm"
@@ -95,7 +99,7 @@ export default function RecentProjects() {
               </a>
             </CardFooter>
           </Card>
-          <Card className="col-span-12 sm:col-span-5 h-[300px] xl:h-[350px] 6xl:h-[450px] dark:bg-transparent/80 bg-transparent/20 hover:overflow-visible">
+          <Card className="col-span-12 sm:col-span-5 h-[300px] xl:h-[400px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20 hover:overflow-visible">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
               <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
                 Logo & Business Card Design
@@ -107,10 +111,11 @@ export default function RecentProjects() {
             <NextUIImage
               removeWrapper
               alt="Card background"
-              className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-6 hover:scale-[2] hover:z-10 hover:backdrop-blur-sm hover:-translate-x-2/3 hover:transition hover:ease-in hover:duration-1000"
+              className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover"
+              // hover:scale-[2] hover:z-10 hover:backdrop-blur-sm hover:-translate-x-2/3 hover:transition hover:ease-in hover:duration-1000
               src="/images/atd-business-card.png"
             />
-            <CardFooter className=" bg-black/40 bottom-0 border-t-1 border-default-600 dark:border-default-100">
+            <CardFooter className="absolute bg-black/40 bottom-0 border-t-1 border-default-600 dark:border-default-100">
               <div className="flex flex-grow gap-2 items-center">
                 <div className="flex flex-col">
                   <p className="text-tiny dark:text-white/60 text-white/100">
@@ -123,88 +128,93 @@ export default function RecentProjects() {
               </div>
             </CardFooter>
           </Card>
-          {/* <Card className="col-span-12 sm:col-span-4 h-[300px]">
+          <Card className="col-span-12 sm:col-span-6 h-[300px] xl:h-[400px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-              <p className="text-tiny text-white/60 uppercase font-bold">
-                Supercharged
+              <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
+                Web Design & Development
               </p>
-              <h4 className="text-white font-medium text-large">
-                Creates beauty like a beast
+              <h4 className="dark:text-zinc-300 text-stone-800 dark:font-bold text-large">
+                McLauchlan Electrical
               </h4>
             </CardHeader>
             <NextUIImage
               removeWrapper
-              alt="Card background"
-              className="z-0 w-full h-full object-cover"
-              src="https://nextui.org/images/card-example-2.jpeg"
-            />
-          </Card>
-          <Card
-            isFooterBlurred
-            className="w-full h-[300px] col-span-12 sm:col-span-5"
-          >
-            <CardHeader className="absolute z-10 top-1 flex-col items-start">
-              <p className="text-tiny text-white/60 uppercase font-bold">New</p>
-              <h4 className="text-black font-medium text-2xl">Acme camera</h4>
-            </CardHeader>
-            <NextUIImage
-              removeWrapper
-              alt="Card example background"
-              className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
-              src="https://nextui.org/images/card-example-6.jpeg"
-            />
-            <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-              <div>
-                <p className="text-black text-tiny">Available soon.</p>
-                <p className="text-black text-tiny">Get notified.</p>
-              </div>
-              <Button
-                className="text-tiny"
-                color="primary"
-                radius="full"
-                size="sm"
-              >
-                Notify Me
-              </Button>
-            </CardFooter>
-          </Card>
-          <Card
-            isFooterBlurred
-            className="w-full h-[300px] col-span-12 sm:col-span-7"
-          >
-            <CardHeader className="absolute z-10 top-1 flex-col items-start">
-              <p className="text-tiny text-white/60 uppercase font-bold">
-                Your day your way
-              </p>
-              <h4 className="text-white/90 font-medium text-xl">
-                Your checklist for better sleep
-              </h4>
-            </CardHeader>
-            <NextUIImage
-              removeWrapper
-              alt="Relaxing app background"
-              className="z-0 w-full h-full object-cover"
-              src="https://nextui.org/images/card-example-5.jpeg"
+              alt="Project one card background"
+              className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-0"
+              src="/images/project-image-test-1.png"
             />
             <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
               <div className="flex flex-grow gap-2 items-center">
-                <NextUIImage
-                  alt="Breathing app icon"
-                  className="rounded-full w-10 h-11 bg-black"
-                  src="https://nextui.org/images/breathing-app-icon.jpeg"
-                />
                 <div className="flex flex-col">
-                  <p className="text-tiny text-white/60">Breathing App</p>
-                  <p className="text-tiny text-white/60">
-                    Get a good night's sleep.
+                  <p className="text-tiny dark:text-white/60 text-white/100">
+                    Prototype for an electrical company website
+                  </p>
+                  <p className="text-tiny dark:text-white/60 text-white/100">
+                    Created from scratch with NextJS.
                   </p>
                 </div>
               </div>
-              <Button radius="full" size="sm">
-                Get App
-              </Button>
+              <a
+                href="https://matthew-ranford.github.io/mclauchlan-electrical/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  radius="full"
+                  size="sm"
+                  className="dark:bg-zinc-300 dark:text-stone-800 bg-stone-800 text-zinc-300"
+                >
+                  View live
+                </Button>
+              </a>
             </CardFooter>
-          </Card> */}
+          </Card>
+          <Card className="col-span-12 sm:col-span-6 h-[300px] xl:h-[400px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20">
+            <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+              <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
+                Web Design & Development
+              </p>
+              <h4 className="dark:text-zinc-300 text-stone-800 dark:font-bold text-large">
+                Attention to Detail Decorators
+              </h4>
+            </CardHeader>
+            <NextUIImage
+              removeWrapper
+              alt="Project one card background"
+              className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-0"
+              src="/images/project-image-test-2.png"
+            />
+            <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+              <div className="flex flex-grow gap-2 items-center">
+                <div className="flex flex-col">
+                  <p className="text-tiny dark:text-white/60 text-white/100">
+                    Painting & decorating company website
+                  </p>
+                  <p className="text-tiny dark:text-white/60 text-white/100">
+                    Created from scratch with React.
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://atd-decorators.co.nz/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  radius="full"
+                  size="sm"
+                  className="dark:bg-zinc-300 dark:text-stone-800 bg-stone-800 text-zinc-300"
+                >
+                  View live
+                </Button>
+              </a>
+            </CardFooter>
+          </Card>
+        </div>
+        <div className="pb-10 text-center font-normal dark:font-bold">
+          <button className="border-2 rounded-xl bg-[#00dd00] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#00dd00] hover:bg-zinc-300 text-stone-800 hover:text-stone-800 drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8">
+            <Link href="projects">View all projects</Link>
+          </button>
         </div>
       </main>
     </>
