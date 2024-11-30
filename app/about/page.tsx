@@ -55,7 +55,7 @@ import {
 const FrameOne = () => {
   return (
     <div>
-      <h1 className="text-4xl dark:text-orange-300 text-cyan-300">
+      <h1 className="text-4xl dark:text-zinc-300 text-[#00dd00]">
         <div className={titan.className}>Invermere, BC, Canada.</div>
       </h1>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
@@ -72,7 +72,7 @@ const FrameOne = () => {
 const FrameTwo = () => {
   return (
     <div>
-      <h1 className="text-4xl dark:text-orange-300 text-cyan-300">
+      <h1 className="text-4xl dark:text-zinc-300 text-[#00dd00]">
         <div className={titan.className}>
           Lower Bugaboo Falls, Spillimacheen, Canada.
         </div>
@@ -87,7 +87,7 @@ const FrameTwo = () => {
 const FrameThree = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-orange-300 text-cyan-300">
+      <p className="text-4xl dark:text-zinc-300 text-[#00dd00]">
         <div className={titan.className}>
           Welsh Lakes, East Kootenay, Canada.
         </div>
@@ -102,7 +102,7 @@ const FrameThree = () => {
 const FrameFour = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-orange-300 text-cyan-300">
+      <p className="text-4xl dark:text-zinc-300 text-[#00dd00]">
         <div className={titan.className}>Lethbridge, AB, Canada.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
@@ -119,7 +119,7 @@ const FrameFour = () => {
 const FrameFive = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-orange-300 text-cyan-300">
+      <p className="text-4xl dark:text-zinc-300 text-[#00dd00]">
         <div className={titan.className}>Chiang Mai, Thailand.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
@@ -133,7 +133,7 @@ const FrameFive = () => {
 const FrameSix = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-orange-300 text-cyan-300">
+      <p className="text-4xl dark:text-zinc-300 text-[#00dd00]">
         <div className={titan.className}>Wellington, NZ.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
@@ -150,7 +150,7 @@ const FrameSix = () => {
 const FrameSeven = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-orange-300 text-cyan-300">
+      <p className="text-4xl dark:text-zinc-300 text-[#00dd00]">
         <div className={titan.className}>Chiang Mai, Thailand.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
@@ -166,7 +166,7 @@ const FrameSeven = () => {
 const FrameEight = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-orange-300 text-cyan-300">
+      <p className="text-4xl dark:text-zinc-300 text-[#00dd00]">
         <div className={titan.className}>Fairmont, BC, Canada.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
@@ -407,10 +407,10 @@ export default function About() {
           </div>
         </div>
         <div
-          className="dark:text-zinc-300 text-stone-800 flex flex-col md:flex-row items-start  md:space-y-0 md:space-x-10 pt-10"
+          className="dark:text-zinc-300 text-stone-800 flex flex-col md:flex-row items-start md:space-y-0 md:space-x-10 pt-10"
           ref={aboutText}
         >
-          <div className="max-w-2xl text-lg sm:text-xl md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl first-letter:text-4xl text-left ps-8 animate-about-text z-index">
+          <div className="max-w-3xl text-lg sm:text-xl md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl first-letter:text-4xl text-left ps-8 animate-about-text z-index">
             I&apos;m a Full-Stack Developer who recently completed a 17-week
             intensive boot camp learning full-stack software development at Dev
             Academy in December 2023.
@@ -431,25 +431,36 @@ export default function About() {
               diving into the unknown. I still have a lot to learn, & I&apos;m
               excited to see where a career in tech takes me!
             </p> */}
+            <div className="h-screen w-full" ref={imageGrid}>
+              <h2 className="text-left md:text-center text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[3px_3px_0px_black] dark:drop-shadow-[6px_6px_0px_black] xl:pt-2 animate-image-grid">
+                <div className={titan.className}>
+                  A couple of highlights ...
+                </div>
+              </h2>
+              <LayoutGrid cards={cards} />
+            </div>
           </div>
         </div>
-        <div className="flex flex-col items-end pe-8" ref={skillsText}>
+        <div
+          className="-mt-[37rem] flex flex-col items-end dark:text-zinc-300 text-stone-800 pe-6"
+          ref={skillsText}
+        >
           <h2 className="text-center text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[3px_3px_0px_black] dark:drop-shadow-[6px_6px_0px_black] animate-skills">
             <div className={titan.className}>Experience with</div>
           </h2>
           <HoverEffect items={techSkills} className="animate-skills" />
-          <h2 className="text-center text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[3px_3px_0px_black] dark:drop-shadow-[6px_6px_0px_black] animate-skills">
+          <h2 className="mt-12 text-center text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[3px_3px_0px_black] dark:drop-shadow-[6px_6px_0px_black] animate-skills">
             <div className={titan.className}>Human skills</div>
           </h2>
           <HoverEffect items={humanSkills} className="animate-skills" />
         </div>
 
-        <div className="h-screen w-full pb-20" ref={imageGrid}>
-          <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-6 pb-14 animate-image-grid">
+        {/* <div className="h-screen w-1/2 pb-20" ref={imageGrid}>
+          <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-zinc-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-6 pb-14 animate-image-grid">
             <div className={titan.className}>A couple of highlights ...</div>
           </h2>
           <LayoutGrid cards={cards} />
-        </div>
+        </div> */}
         <Footer />
         <Link href="/about">
           <div className="text-center text-5xl pt-4 pb-4">🔝</div>
