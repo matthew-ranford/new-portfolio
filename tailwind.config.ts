@@ -8,11 +8,11 @@ import tailwindcssAnimate from 'tailwindcss-animate'
 const config: Config = {
   darkMode: ['class'],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|card|divider|image|link|ripple|spinner).js"
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+    './node_modules/@nextui-org/theme/dist/components/(button|card|divider|image|link|ripple|spinner).js',
   ],
   theme: {
     container: {

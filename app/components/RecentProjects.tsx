@@ -23,7 +23,7 @@ const header = 'Recent Projects'
 export default function RecentProjects() {
   return (
     <>
-      <main className="relative md:pb-14 lg:pb-64">
+      <main className="relative pb-10 md:pb-14 xl:pb-52 2xl:pb-96">
         <Image
           src={divider}
           width={4098}
@@ -74,7 +74,7 @@ export default function RecentProjects() {
           </div>
         </div>
         <div className="max-w-[1200px] xl:max-w-screen-2xl 6xl:max-w-[2500px] gap-4 grid grid-cols-12 grid-rows-2 px-6 mx-auto mt-10 pb-6">
-          <Card className="col-span-12 sm:col-span-7 h-[300px] xl:h-[400px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20">
+          <Card className="col-span-12 lg:col-span-7 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[400px] 2xl:h-[500px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
               <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
                 Web Design & Development
@@ -93,7 +93,7 @@ export default function RecentProjects() {
               <div className="flex flex-grow gap-2 items-center">
                 <div className="flex flex-col">
                   <p className="text-tiny dark:text-white/60 text-white/100">
-                    Wallpapering company website
+                    Wallpapering company
                   </p>
                   <p className="text-tiny dark:text-white/60 text-white/100">
                     Created from scratch with NextJS.
@@ -115,7 +115,7 @@ export default function RecentProjects() {
               </a>
             </CardFooter>
           </Card>
-          <Card className="col-span-12 sm:col-span-5 h-[300px] xl:h-[400px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20 hover:overflow-visible">
+          <Card className="col-span-12 lg:col-span-5 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[400px] 2xl:h-[500px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20 hover:overflow-visible">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
               <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
                 Logo & Business Card Design
@@ -127,7 +127,7 @@ export default function RecentProjects() {
             <NextUIImage
               removeWrapper
               alt="Card background"
-              className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover"
+              className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14"
               // hover:scale-[2] hover:z-10 hover:backdrop-blur-sm hover:-translate-x-2/3 hover:transition hover:ease-in hover:duration-1000
               src="/images/atd-business-card.png"
             />
@@ -144,7 +144,7 @@ export default function RecentProjects() {
               </div>
             </CardFooter>
           </Card>
-          <Card className="col-span-12 sm:col-span-6 h-[300px] xl:h-[400px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20">
+          <Card className="col-span-12 lg:col-span-6 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[400px] 2xl:h-[500px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
               <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
                 Web Design & Development
@@ -163,7 +163,7 @@ export default function RecentProjects() {
               <div className="flex flex-grow gap-2 items-center">
                 <div className="flex flex-col">
                   <p className="text-tiny dark:text-white/60 text-white/100">
-                    Prototype for an electrical company website
+                    Prototype for an electrical company
                   </p>
                   <p className="text-tiny dark:text-white/60 text-white/100">
                     Created from scratch with NextJS.
@@ -185,7 +185,7 @@ export default function RecentProjects() {
               </a>
             </CardFooter>
           </Card>
-          <Card className="col-span-12 sm:col-span-6 h-[300px] xl:h-[400px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20">
+          <Card className="col-span-12 lg:col-span-6 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[400px] 2xl:h-[500px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
               <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
                 Web Design & Development
@@ -204,7 +204,7 @@ export default function RecentProjects() {
               <div className="flex flex-grow gap-2 items-center">
                 <div className="flex flex-col">
                   <p className="text-tiny dark:text-white/60 text-white/100">
-                    Painting & decorating company website
+                    Painting & decorating company
                   </p>
                   <p className="text-tiny dark:text-white/60 text-white/100">
                     Created from scratch with React.
@@ -227,7 +227,7 @@ export default function RecentProjects() {
             </CardFooter>
           </Card>
         </div>
-        <div className="pb-10 text-center font-normal dark:font-bold">
+        <div className="pt-6 text-center font-normal dark:font-bold">
           <button className="border-2 rounded-xl bg-[#00dd00] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#00dd00] hover:bg-zinc-300 text-stone-800 hover:text-stone-800 drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8">
             <Link href="projects">View all projects</Link>
           </button>
