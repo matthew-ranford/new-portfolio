@@ -21,13 +21,13 @@ const header = 'Recent Projects'
 export default function RecentProjects() {
   return (
     <>
-      <main className="mt-10 relative">
+      <main className="pb-16 relative">
         <Image
           src={divider}
           width={4098}
           height={2304}
           alt="Photo of Matt"
-          className="absolute top-0 left-0 w-full z-0"
+          className="absolute top-0 left-0 w-full h-auto object-cover z-0"
         />
         <div className={`${titan.className} relative z-10`}>
           <div className="relative w-full overflow-hidden">
@@ -45,7 +45,7 @@ export default function RecentProjects() {
               {[...Array(5)].map((_, index) => (
                 <h1
                   key={index}
-                  className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 sm:mb-4 2xl:mb-6 text-center sm:text-left dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] font-bold z-index mt-10 xl:mt-32"
+                  className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 sm:mb-4 2xl:mb-6 text-center sm:text-left dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] font-bold z-index mt-10 xl:mt-52"
                 >
                   <TextGenerateEffectWhileInView
                     words={header}
