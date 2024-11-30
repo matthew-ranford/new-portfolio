@@ -35,6 +35,7 @@ export default function Hero() {
                   - Fix wave emoji on large and 6xl screens
                   - Maybe do a contact form modal
                   - Recent Projects on Hero Screen/change "projects" to recent projects button - view all projects button in Recent projects component
+                  - Make flip words a little smaller for mobile screens
          */}
         <div className="pt-20 sm:pt-16 lg:pt-10 2xl:pt-20 6xl:pt-44 text-left ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-5xl 6xl:max-w-screen-xl font-normal dark:font-bold z-index">
           <div className={titan.className}>
@@ -82,14 +83,14 @@ export default function Hero() {
             width={4098}
             height={2304}
             alt="Photo of Matt"
-            className="hero-image hidden lg:block"
+            className="hero-image hidden sm:block"
           />
           <Image
             src={heroPhoneImage}
             width={1080}
             height={1920}
             alt="Photo of Matt"
-            className="hero-image lg:hidden"
+            className="hero-image sm:hidden"
           />
         </motion.div>
 

@@ -12,6 +12,8 @@ import {
 
 import { TextGenerateEffectWhileInView } from '@/components/ui/text-generate-effect-while-in-view'
 import divider from '../../public/images/divider.png'
+import phoneDivider from '../../public/images/hero-image-divider-test.png'
+import phoneDividerOne from '../../public/images/hero-image-divider-1-test.png'
 import Link from 'next/link'
 
 const header = 'Recent Projects'
@@ -21,13 +23,27 @@ const header = 'Recent Projects'
 export default function RecentProjects() {
   return (
     <>
-      <main className="pb-16 relative">
+      <main className="relative md:pb-14 lg:pb-64">
         <Image
           src={divider}
           width={4098}
           height={2304}
           alt="Photo of Matt"
-          className="absolute top-0 left-0 w-full h-auto object-cover z-0"
+          className="absolute top-0 left-0 w-full h-auto object-cover z-0 hidden sm:block"
+        />
+        <Image
+          src={phoneDivider}
+          width={1080}
+          height={1920}
+          alt="Photo of Matt"
+          className="absolute top-0 left-0 w-full h-auto object-cover z-0 sm:hidden"
+        />
+        <Image
+          src={phoneDividerOne}
+          width={1080}
+          height={1920}
+          alt="Photo of Matt"
+          className="absolute top-[40rem] left-0 w-full h-auto object-cover z-0 sm:hidden"
         />
         <div className={`${titan.className} relative z-10`}>
           <div className="relative w-full overflow-hidden">
@@ -45,7 +61,7 @@ export default function RecentProjects() {
               {[...Array(5)].map((_, index) => (
                 <h1
                   key={index}
-                  className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 sm:mb-4 2xl:mb-6 text-center sm:text-left dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] font-bold z-index mt-10 xl:mt-52"
+                  className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 sm:mb-4 2xl:mb-6 text-center sm:text-left dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] font-bold z-index mt-24 lg:mt-32 xl:mt-52"
                 >
                   <TextGenerateEffectWhileInView
                     words={header}
