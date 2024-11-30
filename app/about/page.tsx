@@ -11,10 +11,11 @@ import MainHeaderNav from '../components/MainHeaderNav'
 import Footer from '../components/Footer'
 import { LayoutGrid } from '@/components/ui/layout-grid'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
-import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
+import { FlipWords } from '@/components/ui/flip-words'
 
 // Main page image
-import aboutImage from '../../public/images/about-image.png'
+// import aboutImage from '../../public/images/about-image.png'
+import aboutImage from '../../public/images/about-image-new-test.png'
 
 // Icons
 import {
@@ -49,12 +50,6 @@ import {
   SiTypescript,
   SiVeepee,
 } from 'react-icons/si'
-
-// TextGenerateEffect
-const firstLine = 'Wellington, New Zealand 🌎 '
-const secondLine = 'Coffee? On me! ☕'
-const thirdLine = 'Looking for work 💼 '
-const fourthLine = 'Contact me 📧 '
 
 // LayoutGrid
 const FrameOne = () => {
@@ -256,33 +251,6 @@ const cards = [
 ]
 
 // HoverEffect
-const hobbies = [
-  {
-    text: 'Reading',
-    icon: FcReading,
-  },
-  {
-    text: 'Travel',
-    icon: FcGlobe,
-  },
-  {
-    text: 'Exercise',
-    icon: FcSportsMode,
-  },
-  {
-    text: 'Marvel',
-    icon: FcFilmReel,
-  },
-  {
-    text: 'Greenhouse',
-    icon: FcLandscape,
-  },
-  {
-    text: 'Mindfulness',
-    icon: FcIdea,
-  },
-]
-
 const techSkills = [
   // {
   //   text: 'HTML',
@@ -337,7 +305,7 @@ const techSkills = [
     icon: SiSqlite,
   },
   {
-    text: 'Framer-motion',
+    text: 'Framer',
     icon: SiFramer,
   },
   {
@@ -358,6 +326,10 @@ const humanSkills = [
   { text: 'Collaboration', icon: SiJabber },
   { text: 'Feedback', icon: SiTeamspeak },
 ]
+
+// Flip words
+const wordsHeader = ['Who am I?', 'Who are you?']
+const wordsSubHeader = ['tell', 'show']
 
 export default function About() {
   // Main text
@@ -408,131 +380,75 @@ export default function About() {
     }
   }, [imageGridInView])
 
-  // Hobbies HoverEffect
-  const hobbiesText = useRef(null)
-  const hobbiesInView = useInView(hobbiesText)
-
-  useEffect(() => {
-    if (hobbiesInView) {
-      animate(
-        '.animate-hobbies',
-        { opacity: 1, y: 0 },
-        { duration: 1, delay: stagger(1), ease: 'circOut' }
-      )
-    } else {
-      animate('.animate-hobbies', { opacity: 0, y: -50 }, { duration: 0 })
-    }
-  }, [hobbiesInView])
-
   return (
     <>
+      <MainHeaderNav />
       <motion.section
         className="md:max-w-full"
         initial={{ opacity: 0, y: 5 }}
         transition={{ delay: 0.3, duration: 1, ease: 'easeInOut' }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <MainHeaderNav />
         <Image
           src={aboutImage}
-          width={2732}
-          height={1536}
-          alt="Main page image of Matt"
-          className="about-image"
-          priority={true}
+          width={4098}
+          height={2304}
+          alt="Photo of Matt"
+          className="hero-image hidden sm:block"
         />
-
-        <div className="xl:pe-12 pe-4 sm:pe-8 pt-2 sm:pt-4 lg:pt-20 xl:pt-0 xl:-mt-24 2xl:-mt-28 space-y-2">
-          <TextGenerateEffect
-            words={firstLine}
-            delay={3000}
-            className="text-right"
-          />
-          <TextGenerateEffect
-            words={secondLine}
-            delay={4200}
-            className="text-right"
-          />
-          <TextGenerateEffect
-            words={thirdLine}
-            delay={4700}
-            className="text-right"
-          />
-          <Link href="mailto:matt.ranford16@gmail.com" className="relative">
-            <TextGenerateEffect
-              words={fourthLine}
-              delay={5500}
-              className="text-right pt-2"
-            />
-          </Link>
-        </div>
-
-        <div className="space-y-4 2xl:space-y-6">
-          <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-20 sm:pt-20 lg:pt-20 xl:pt-16 2xl:pt-36 3xl:pt-44 4xl:pt-52 5xl:pt-52 6xl:pt-56 font-bold dark:text-zinc-200 text-stone-900">
-            Who I Am <span>?</span>
-          </h1>
-          <h2
-            id="about"
-            className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-4 2xl:pt-10 pb-10 md:pb-10 6xl:pb-28 dark:text-orange-300 text-cyan-700"
-          >
-            <div className={titan.className}>A little bit about me..</div>
-          </h2>
-          <div
-            className="dark:text-zinc-200 text-stone-900 flex items-center justify-center space-y-10 md:space-y-0 flex-wrap pt-4 sm:pt-6 md:pt-4 lg:pt-6 xl:pt-0 2xl:pt-4 3xl:pt-14 4xl:pt-10 5xl:pt-40 6xl:pt-20 ps-4 sm:ps-6 lg:ps-8 pe-4 small:pe-3 sm:pe-4"
-            ref={aboutText}
-          >
-            <span className="max-w-2xl 2xl:max-w-4xl text-2xl sm:text-2xl lg:text-3xl 2xl:text-4xl first-letter:text-7xl first-letter:float-start text-left md:text-right 2xl:text-left px-0 md:px-4 2xl:px-10 ps-2 animate-about-text">
-              I&apos;m a Full-Stack Developer who recently completed a 17-week
-              intensive boot camp learning full-stack software development at
-              Dev Academy in December 2023.
-              <p className="py-2 mt-4 animate-about-text">
-                Although I don&apos;t have a degree in design, I&apos;ve
-                realized that I have a passion for Front-End, Accessibility &
-                using the WAVE tool to optimize my applications for the best
-                practices & performance, while also designing & creating
-                anything I want to when starting with a blank canvas.
-              </p>
-              <p className="py-2 mt-4 animate-about-text">
-                It&apos;s exciting, & frustrating, but have found much joy in
-                the process of trying to be creative with a lot of
-                problem-solving!
-              </p>
-              <p className="py-2 mt-4 animate-about-text">
-                I&apos;ve tried various roles in my life, & none of them have
-                stuck, so this was one of the biggest challenges of my life,
-                diving into the unknown. I still have a lot to learn, & I&apos;m
-                excited to see where a career in tech takes me!
-              </p>
-            </span>
-            <div
-              className="max-w-2xl 2xl:max-w-3xl small:pt-4 smallAgain:pt-4 smallerAgain:pt-4 sm:pt-4 md:pt-8 lg:pt-20 xl:pt-0 pb-0 md:pb-10"
-              ref={skillsText}
-            >
-              <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-2 sm:ps-2 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-2 sm:pt-2 md:pt-0 xl:pt-12 animate-skills">
-                <div className={titan.className}>Experience with</div>
-              </h2>
-              <HoverEffect items={techSkills} className="animate-skills" />
-              <h2 className="text-right md:text-center text-3xl  lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0 2xl:pt-4 animate-skills">
-                <div className={titan.className}>Human skills</div>
-              </h2>
-              <HoverEffect items={humanSkills} className="animate-skills" />
-            </div>
+        <div className={titan.className} id="about">
+          <div className="pt-20 sm:pt-16 lg:pt-10 2xl:pt-20 6xl:pt-44 text-left ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 font-bold dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] z-index">
+            <h1 className="text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] text-center sm:text-left">
+              <FlipWords words={wordsHeader} />
+            </h1>
+            <h2 className="ps-8 text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl">
+              Let me <FlipWords words={wordsSubHeader} /> you..
+            </h2>
           </div>
         </div>
+        <div
+          className="dark:text-zinc-300 text-stone-800 flex flex-col md:flex-row items-start  md:space-y-0 md:space-x-10 pt-10"
+          ref={aboutText}
+        >
+          <div className="max-w-2xl text-lg sm:text-xl md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl first-letter:text-4xl text-left ps-8 animate-about-text z-index">
+            I&apos;m a Full-Stack Developer who recently completed a 17-week
+            intensive boot camp learning full-stack software development at Dev
+            Academy in December 2023.
+            <p className="py-2 mt-4 animate-about-text">
+              Although I don&apos;t have a degree in design, I&apos;ve realized
+              that I have a passion for Front-End, Accessibility & using the
+              WAVE tool to optimize my applications for the best practices &
+              performance, while also designing & creating anything I want to
+              when starting with a blank canvas.
+            </p>
+            <p className="py-2 mt-4 animate-about-text">
+              It&apos;s exciting, & frustrating, but have found much joy in the
+              process of trying to be creative with a lot of problem-solving!
+            </p>
+            {/* <p className="py-2 mt-4 animate-about-text">
+              I&apos;ve tried various roles in my life, & none of them have
+              stuck, so this was one of the biggest challenges of my life,
+              diving into the unknown. I still have a lot to learn, & I&apos;m
+              excited to see where a career in tech takes me!
+            </p> */}
+          </div>
+        </div>
+        <div className="flex flex-col items-end pe-8" ref={skillsText}>
+          <h2 className="text-center text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[3px_3px_0px_black] dark:drop-shadow-[6px_6px_0px_black] animate-skills">
+            <div className={titan.className}>Experience with</div>
+          </h2>
+          <HoverEffect items={techSkills} className="animate-skills" />
+          <h2 className="text-center text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[3px_3px_0px_black] dark:drop-shadow-[6px_6px_0px_black] animate-skills">
+            <div className={titan.className}>Human skills</div>
+          </h2>
+          <HoverEffect items={humanSkills} className="animate-skills" />
+        </div>
+
         <div className="h-screen w-full pb-20" ref={imageGrid}>
           <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-6 pb-14 animate-image-grid">
             <div className={titan.className}>A couple of highlights ...</div>
           </h2>
           <LayoutGrid cards={cards} />
-        </div>
-        <div
-          className="max-w-2xl 2xl:max-w-3xl pt-14 small:pt-8 smallAgain:pt-8 smallerAgain:pt-10 sm:pt-8 lg:pt-20 xl:pt-32 pb-0 md:pb-10 mx-auto ps-4 pe-4"
-          ref={hobbiesText}
-        >
-          <h2 className="text-right md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0 pt-4 sm:pt-14 xl:pt-0 animate-hobbies">
-            <div className={titan.className}>& some of my hobbies ..</div>
-          </h2>
-          <HoverEffect items={hobbies} className="animate-hobbies" />
         </div>
         <Footer />
         <Link href="/about">

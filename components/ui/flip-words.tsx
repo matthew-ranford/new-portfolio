@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils'
 
 export const FlipWords = ({
   words,
-  duration = 1500,
+  duration = 3000,
   className,
 }: {
   words: string[]
@@ -15,7 +15,6 @@ export const FlipWords = ({
   const [currentWord, setCurrentWord] = useState(words[0])
   const [isAnimating, setIsAnimating] = useState<boolean>(false)
 
-  // thanks for the fix Julian - https://github.com/Julian-AT
   const startAnimation = useCallback(() => {
     const word = words[words.indexOf(currentWord) + 1] || words[0]
     setCurrentWord(word)
@@ -36,14 +35,8 @@ export const FlipWords = ({
       }}
     >
       <motion.div
-        initial={{
-          opacity: 0,
-          y: 10,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{
           type: 'spring',
           stiffness: 100,
@@ -63,19 +56,36 @@ export const FlipWords = ({
         )}
         key={currentWord}
       >
-        {currentWord.split('').map((letter, index) => (
-          <motion.span
-            key={currentWord + index}
-            initial={{ opacity: 0, y: 10, filter: 'blur(8px)' }}
-            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-            transition={{
-              delay: index * 0.08,
-              duration: 0.4,
-            }}
-            className="inline-block"
-          >
-            {letter}
-          </motion.span>
+        {currentWord.split(' ').map((word, wordIndex, wordArray) => (
+          <React.Fragment key={word + wordIndex}>
+            {word.split('').map((letter, letterIndex) => (
+              <motion.span
+                key={word + letterIndex}
+                initial={{
+                  opacity: 0,
+                  y: 50,
+                  rotateX: 90,
+                  scale: 0.8,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  rotateX: 0,
+                  scale: 1,
+                }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 300,
+                  damping: 20,
+                  delay: wordIndex * 0.2 + letterIndex * 0.05, // More staggered timing
+                }}
+                className="inline-block origin-bottom"
+              >
+                {letter}
+              </motion.span>
+            ))}
+            {wordIndex < wordArray.length - 1 && <span> </span>}
+          </React.Fragment>
         ))}
       </motion.div>
     </AnimatePresence>

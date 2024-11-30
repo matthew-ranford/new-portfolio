@@ -1,4 +1,4 @@
-import { Anton, Titan_One, Inter } from 'next/font/google'
+import { Anton, Titan_One, Inter, Handlee } from 'next/font/google'
 
 export const anton = Anton({
   subsets: ['latin'],
