@@ -18,8 +18,6 @@ import Link from 'next/link'
 
 const header = 'Recent Projects'
 
-// TODO: - Divider between hero and recent projects, take green out of project images and just have a background, business cards in projects (possibly mclauchlan eletrical)
-
 export default function RecentProjects() {
   return (
     <>
@@ -28,21 +26,21 @@ export default function RecentProjects() {
           src={divider}
           width={4098}
           height={2304}
-          alt="Photo of Matt"
+          alt="divider and background"
           className="absolute top-0 left-0 w-full h-auto object-cover z-0 hidden sm:block"
         />
         <Image
           src={phoneDivider}
           width={1080}
           height={1920}
-          alt="Photo of Matt"
+          alt="mobile divider and background"
           className="absolute top-0 left-0 w-full h-auto object-cover z-0 sm:hidden"
         />
         <Image
           src={phoneDividerOne}
           width={1080}
           height={1920}
-          alt="Photo of Matt"
+          alt="second mobile divider and background"
           className="absolute top-[40rem] left-0 w-full h-auto object-cover z-0 sm:hidden"
         />
         <div className={`${titan.className} relative z-10`}>
@@ -61,7 +59,7 @@ export default function RecentProjects() {
               {[...Array(5)].map((_, index) => (
                 <h1
                   key={index}
-                  className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 sm:mb-4 2xl:mb-6 text-center sm:text-left dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] font-bold z-index mt-24 lg:mt-32 xl:mt-52"
+                  className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 sm:mb-4 2xl:mb-6 text-center sm:text-left dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] font-bold z-index mt-24 lg:mt-32 xl:mt-52 6xl:mt-[26rem]"
                 >
                   <TextGenerateEffectWhileInView
                     words={header}
@@ -74,18 +72,18 @@ export default function RecentProjects() {
           </div>
         </div>
         <div className="max-w-[1200px] xl:max-w-screen-2xl 6xl:max-w-[2500px] gap-4 grid grid-cols-12 grid-rows-2 px-6 mx-auto mt-10 pb-6">
-          <Card className="col-span-12 lg:col-span-7 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[400px] 2xl:h-[500px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20">
+          <Card className="col-span-12 lg:col-span-7 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[400px] 2xl:h-[500px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/70">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-              <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
+              <p className="text-tiny dark:text-white/60 text-white/80 uppercase dark:font-bold">
                 Web Design & Development
               </p>
-              <h4 className="dark:text-zinc-300 text-stone-800 dark:font-bold text-large">
+              <h1 className="text-zinc-300 font-bold text-large">
                 Strictly Paper
-              </h4>
+              </h1>
             </CardHeader>
             <NextUIImage
               removeWrapper
-              alt="Project one card background"
+              alt="Latest website project"
               className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-0"
               src="/images/project-image-test.png"
             />
@@ -108,27 +106,26 @@ export default function RecentProjects() {
                 <Button
                   radius="full"
                   size="sm"
-                  className="dark:bg-zinc-300 dark:text-stone-800 bg-stone-800 text-zinc-300"
+                  className="dark:bg-zinc-300 dark:text-stone-800 bg-[#8b00c4] text-zinc-300"
                 >
                   View live
                 </Button>
               </a>
             </CardFooter>
           </Card>
-          <Card className="col-span-12 lg:col-span-5 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[400px] 2xl:h-[500px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20 hover:overflow-visible">
+          <Card className="col-span-12 lg:col-span-5 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[400px] 2xl:h-[500px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/70 hover:overflow-visible">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-              <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
+              <p className="text-tiny dark:text-white/60 text-white/80 uppercase dark:font-bold">
                 Logo & Business Card Design
               </p>
-              <h4 className="dark:text-zinc-300 text-stone-800 dark:font-bold text-large">
+              <h1 className="text-zinc-300 font-bold text-large">
                 Attention to Detail Decorators
-              </h4>
+              </h1>
             </CardHeader>
             <NextUIImage
               removeWrapper
-              alt="Card background"
-              className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14"
-              // hover:scale-[2] hover:z-10 hover:backdrop-blur-sm hover:-translate-x-2/3 hover:transition hover:ease-in hover:duration-1000
+              alt="Business card project"
+              className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 hover:scale-[1.5] hover:z-20 hover:backdrop-blur-sm hover:-translate-x-2/3 hover:transition hover:ease-in hover:duration-1000"
               src="/images/atd-business-card.png"
             />
             <CardFooter className="absolute bg-black/40 bottom-0 border-t-1 border-default-600 dark:border-default-100">
@@ -144,18 +141,18 @@ export default function RecentProjects() {
               </div>
             </CardFooter>
           </Card>
-          <Card className="col-span-12 lg:col-span-6 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[400px] 2xl:h-[500px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20">
+          <Card className="col-span-12 lg:col-span-6 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[400px] 2xl:h-[500px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/70">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-              <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
+              <p className="text-tiny dark:text-white/60 text-white/80 uppercase dark:font-bold">
                 Web Design & Development
               </p>
-              <h4 className="dark:text-zinc-300 text-stone-800 dark:font-bold text-large">
+              <h1 className="text-zinc-300 font-bold text-large">
                 McLauchlan Electrical
-              </h4>
+              </h1>
             </CardHeader>
             <NextUIImage
               removeWrapper
-              alt="Project one card background"
+              alt="Second website project prototype"
               className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-0"
               src="/images/project-image-test-1.png"
             />
@@ -178,25 +175,25 @@ export default function RecentProjects() {
                 <Button
                   radius="full"
                   size="sm"
-                  className="dark:bg-zinc-300 dark:text-stone-800 bg-stone-800 text-zinc-300"
+                  className="dark:bg-zinc-300 dark:text-stone-800 bg-[#8b00c4] text-zinc-300"
                 >
                   View live
                 </Button>
               </a>
             </CardFooter>
           </Card>
-          <Card className="col-span-12 lg:col-span-6 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[400px] 2xl:h-[500px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/20">
+          <Card className="col-span-12 lg:col-span-6 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[400px] 2xl:h-[500px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/70">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-              <p className="text-tiny dark:text-white/60 text-white/100 uppercase dark:font-bold">
+              <p className="text-tiny dark:text-white/60 text-white/80 uppercase dark:font-bold">
                 Web Design & Development
               </p>
-              <h4 className="dark:text-zinc-300 text-stone-800 dark:font-bold text-large">
+              <h1 className="text-zinc-300 font-bold text-large">
                 Attention to Detail Decorators
-              </h4>
+              </h1>
             </CardHeader>
             <NextUIImage
               removeWrapper
-              alt="Project one card background"
+              alt="First website project"
               className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-0"
               src="/images/project-image-test-2.png"
             />
@@ -219,7 +216,7 @@ export default function RecentProjects() {
                 <Button
                   radius="full"
                   size="sm"
-                  className="dark:bg-zinc-300 dark:text-stone-800 bg-stone-800 text-zinc-300"
+                  className="dark:bg-zinc-300 dark:text-stone-800 bg-[#8b00c4] text-zinc-300"
                 >
                   View live
                 </Button>
@@ -227,7 +224,7 @@ export default function RecentProjects() {
             </CardFooter>
           </Card>
         </div>
-        <div className="pt-6 text-center font-normal dark:font-bold">
+        <div className="pt-6 text-center font-normal dark:font-bold 6xl:text-3xl">
           <button className="border-2 rounded-xl bg-[#00dd00] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#00dd00] hover:bg-zinc-300 text-stone-800 hover:text-stone-800 drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8">
             <Link href="projects">View all projects</Link>
           </button>

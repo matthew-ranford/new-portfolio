@@ -36,6 +36,7 @@ export default function Hero() {
                   - Maybe do a contact form modal
                   - Recent Projects on Hero Screen/change "projects" to recent projects button - view all projects button in Recent projects component
                   - Make flip words a little smaller for mobile screens
+                  - look at putting in a breadcrumb for the navbar at the bottom of the hero page
          */}
         <div className="pt-20 sm:pt-16 lg:pt-10 2xl:pt-20 6xl:pt-44 text-left ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-5xl 6xl:max-w-screen-xl font-normal dark:font-bold z-index">
           <div className={titan.className}>
@@ -61,10 +62,10 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             className="pt-4 text-center sm:text-left 6xl:text-3xl"
           >
-            <button className="border-2 rounded-xl bg-[#00dd00] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#00dd00] hover:bg-zinc-300 text-stone-800 hover:text-stone-800 drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8">
+            <button className="border-2 rounded-xl bg-[#00dd00] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#00dd00] hover:bg-zinc-300 text-stone-800 hover:text-[#8b00c4] drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8">
               <Link href="projects">Projects</Link>
             </button>
-            <button className="border-2 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-stone-800 text-[#00dd00] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#00dd00] hover:text-zinc-800 drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 mx-2 lg:mx-4">
+            <button className="border-2 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#8b00c4] text-[#00dd00] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#00dd00] hover:text-[#8b00c4] drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 mx-2 lg:mx-4">
               <Link href="mailto:matt.ranford16@gmail.com">Get in touch</Link>
             </button>
           </motion.div>

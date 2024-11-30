@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { handlee } from '@/fonts'
+import { titan } from '@/fonts'
 import { motion, animate, stagger, useInView } from 'framer-motion'
 
 // Components
@@ -61,7 +61,7 @@ const FrameOne = () => {
   return (
     <div>
       <h1 className="text-4xl dark:text-orange-300 text-cyan-300">
-        <div className={handlee.className}>Invermere, BC, Canada.</div>
+        <div className={titan.className}>Invermere, BC, Canada.</div>
       </h1>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
         Ice Skating & Ice Hockey on the longest skating trail in the world at
@@ -78,7 +78,7 @@ const FrameTwo = () => {
   return (
     <div>
       <h1 className="text-4xl dark:text-orange-300 text-cyan-300">
-        <div className={handlee.className}>
+        <div className={titan.className}>
           Lower Bugaboo Falls, Spillimacheen, Canada.
         </div>
       </h1>
@@ -93,7 +93,7 @@ const FrameThree = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-300">
-        <div className={handlee.className}>
+        <div className={titan.className}>
           Welsh Lakes, East Kootenay, Canada.
         </div>
       </p>
@@ -108,7 +108,7 @@ const FrameFour = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-300">
-        <div className={handlee.className}>Lethbridge, AB, Canada.</div>
+        <div className={titan.className}>Lethbridge, AB, Canada.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
         Worked as a groundskeeper to maintain University grounds & snow-removal
@@ -125,7 +125,7 @@ const FrameFive = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-300">
-        <div className={handlee.className}>Chiang Mai, Thailand.</div>
+        <div className={titan.className}>Chiang Mai, Thailand.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
         Visting an elephant sanctuary with some friends, where we were able to
@@ -139,7 +139,7 @@ const FrameSix = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-300">
-        <div className={handlee.className}>Wellington, NZ.</div>
+        <div className={titan.className}>Wellington, NZ.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
         I spent about five years at Immigration New Zealand. I finished as a
@@ -156,7 +156,7 @@ const FrameSeven = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-300">
-        <div className={handlee.className}>Chiang Mai, Thailand.</div>
+        <div className={titan.className}>Chiang Mai, Thailand.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
         Cooking class with some friends.. along with our mentor for the day.
@@ -172,7 +172,7 @@ const FrameEight = () => {
   return (
     <div>
       <p className="text-4xl dark:text-orange-300 text-cyan-300">
-        <div className={handlee.className}>Fairmont, BC, Canada.</div>
+        <div className={titan.className}>Fairmont, BC, Canada.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
         Dislocated my shoulder the first month living in Canada, working on
@@ -475,7 +475,7 @@ export default function About() {
             id="about"
             className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-4 2xl:pt-10 pb-10 md:pb-10 6xl:pb-28 dark:text-orange-300 text-cyan-700"
           >
-            <div className={handlee.className}>A little bit about me..</div>
+            <div className={titan.className}>A little bit about me..</div>
           </h2>
           <div
             className="dark:text-zinc-200 text-stone-900 flex items-center justify-center space-y-10 md:space-y-0 flex-wrap pt-4 sm:pt-6 md:pt-4 lg:pt-6 xl:pt-0 2xl:pt-4 3xl:pt-14 4xl:pt-10 5xl:pt-40 6xl:pt-20 ps-4 sm:ps-6 lg:ps-8 pe-4 small:pe-3 sm:pe-4"
@@ -509,11 +509,11 @@ export default function About() {
               ref={skillsText}
             >
               <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-2 sm:ps-2 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-2 sm:pt-2 md:pt-0 xl:pt-12 animate-skills">
-                <div className={handlee.className}>Experience with</div>
+                <div className={titan.className}>Experience with</div>
               </h2>
               <HoverEffect items={techSkills} className="animate-skills" />
               <h2 className="text-right md:text-center text-3xl  lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0 2xl:pt-4 animate-skills">
-                <div className={handlee.className}>Human skills</div>
+                <div className={titan.className}>Human skills</div>
               </h2>
               <HoverEffect items={humanSkills} className="animate-skills" />
             </div>
@@ -521,7 +521,7 @@ export default function About() {
         </div>
         <div className="h-screen w-full pb-20" ref={imageGrid}>
           <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-6 pb-14 animate-image-grid">
-            <div className={handlee.className}>A couple of highlights ...</div>
+            <div className={titan.className}>A couple of highlights ...</div>
           </h2>
           <LayoutGrid cards={cards} />
         </div>
@@ -530,7 +530,7 @@ export default function About() {
           ref={hobbiesText}
         >
           <h2 className="text-right md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-orange-300 text-cyan-700 ps-5 sm:ps-6 lg:ps-8 pe-3 sm:pe-0 pt-4 sm:pt-14 xl:pt-0 animate-hobbies">
-            <div className={handlee.className}>& some of my hobbies ..</div>
+            <div className={titan.className}>& some of my hobbies ..</div>
           </h2>
           <HoverEffect items={hobbies} className="animate-hobbies" />
         </div>

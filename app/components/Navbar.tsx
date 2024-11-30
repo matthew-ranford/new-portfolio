@@ -39,7 +39,7 @@ export default function Navbar() {
       text: 'Contact form',
       isButton: true,
       className:
-        'text-4xl sm:text-6xl md:text-7xl lg:text-lg xl:text-xl 6xl:text-2xl border-2 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-stone-900 text-[#00dd00] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-[#272727] dark:hover:text-[#00dd00] hover:text-stone-900 drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 lg:-mt-5',
+        'text-4xl sm:text-6xl md:text-7xl lg:text-lg xl:text-xl 6xl:text-2xl border-2 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#8b00c4] text-[#00dd00] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-[#272727] dark:hover:text-[#00dd00] hover:text-[#8b00c4] drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 lg:-mt-5',
       ariaLabel: 'Contact form button',
     },
   ]
