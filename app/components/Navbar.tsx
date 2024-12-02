@@ -39,7 +39,7 @@ export default function Navbar() {
       text: 'Contact form',
       isButton: true,
       className:
-        'text-4xl sm:text-6xl md:text-7xl lg:text-lg xl:text-xl 6xl:text-2xl border-2 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#8b00c4] text-[#00dd00] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-[#272727] dark:hover:text-[#00dd00] hover:text-[#8b00c4] drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 lg:-mt-5',
+        'text-4xl sm:text-6xl md:text-7xl lg:text-lg xl:text-xl 6xl:text-2xl border-3 border-stone-800 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#004aad] text-[#004aad] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-[#272727] dark:hover:text-[#004aad] hover:text-[#004aad] drop-shadow-[5px_5px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 lg:-mt-5 font-bold',
       ariaLabel: 'Contact form button',
     },
   ]
@@ -68,7 +68,7 @@ export default function Navbar() {
         animate={{ opacity: 1, y: 0 }}
       >
         <nav
-          className={`lg:flex lg:justify-between navbar-container p-0 sm:p-2 mt-0 lg:mt-4 xl:mt-6 6xl:mt-10 text-stone-800 ${
+          className={`lg:flex lg:justify-between navbar-container p-0 sm:p-2 mt-0 lg:mt-4 xl:mt-6 6xl:mt-10 xl:pe-10 text-stone-800 ${
             isOpen
               ? 'navbar-open navbar-full-height animate-slideIn'
               : 'navbar-closed animate-slideOut'
@@ -109,7 +109,7 @@ export default function Navbar() {
               <li
                 key={index}
                 style={{ listStyle: 'none' }}
-                className={`dark:text-zinc-300 text-stone-800 drop-shadow-[1px_1px_2px_black] dark:drop-shadow-[3px_3px_0px_black] tracking-wider my-4 lg:my-0 nav-link ${
+                className={`dark:text-zinc-300 text-stone-800 drop-shadow-[1px_1px_2px_#292524] dark:drop-shadow-[2px_2px_0px_#292524] tracking-wider my-4 lg:my-0 nav-link ${
                   isOpen ? titan.className : ''
                 }`}
               >

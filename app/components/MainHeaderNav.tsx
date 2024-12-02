@@ -12,7 +12,7 @@ export default function MainHeaderNav() {
   return (
     <>
       <div className={titan.className}>
-        <h1 className="ps-4 sm:ps-6 pt-2 sm:pt-4 xl:pt-0 z-index">
+        <h1 className="ps-4 sm:ps-6 xl:ps-10 pt-2 sm:pt-4 xl:pt-0 z-index">
           <TypewriterEffect words={mainHeader} />
         </h1>
       </div>

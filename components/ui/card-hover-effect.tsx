@@ -17,7 +17,7 @@ export const HoverEffect = ({
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <div className={cn('grid grid-cols-2 lg:grid-cols-3 py-6', className)}>
+    <div className={cn('grid grid-cols-2 md:grid-cols-3 py-6', className)}>
       {items.map((item, idx) => {
         const Icons = item.icon
 
@@ -31,7 +31,7 @@ export const HoverEffect = ({
             <AnimatePresence>
               {hoveredIndex === idx && (
                 <motion.span
-                  className="absolute inset-0 h-full w-full dark:bg-orange-300 bg-cyan-700 block rounded-lg"
+                  className="absolute inset-0 h-full w-full dark:bg-[#8b00c4] bg-[#00dd00] block rounded-lg"
                   layoutId="hoverBackground"
                   initial={{ opacity: 0 }}
                   animate={{
@@ -45,10 +45,10 @@ export const HoverEffect = ({
                 />
               )}
             </AnimatePresence>
-            <div className="rounded-md w-full p-4 overflow-hidden  group-hover:ring-2 dark:ring-stone-900 ring-zinc-200 dark:hover:text-stone-900 hover:text-zinc-200 relative z-20 transition-all duration-500">
+            <div className="rounded-md w-full p-4 overflow-hidden group-hover:ring-2 dark:ring-stone-900 ring-zinc-200 dark:hover:text-stone-900 hover:text-zinc-200 relative z-20 transition-all duration-500">
               <div className="py-4 z-50 relative space-y-5">
                 <Icons className="w-8 h-8 mx-auto" />
-                <h1 className="text-2xl text-center dark:text-zinc-200 dark:group-hover:text-stone-900 group-hover:text-zinc-200 text-stone-900">
+                <h1 className="text-sm md:text-xl lg:text-2xl 2xl:text-xl 6xl:text-2xl text-center dark:text-zinc-200 dark:group-hover:text-stone-900 group-hover:text-zinc-200 text-stone-900">
                   {item.text}
                 </h1>
               </div>

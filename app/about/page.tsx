@@ -10,7 +10,6 @@ import { motion, animate, stagger, useInView } from 'framer-motion'
 import MainHeaderNav from '../components/MainHeaderNav'
 import Footer from '../components/Footer'
 import { LayoutGrid } from '@/components/ui/layout-grid'
-import { HoverEffect } from '@/components/ui/card-hover-effect'
 import { FlipWords } from '@/components/ui/flip-words'
 
 // Main page image
@@ -250,83 +249,6 @@ const cards = [
   },
 ]
 
-// HoverEffect
-const techSkills = [
-  // {
-  //   text: 'HTML',
-  //   icon: SiHtml5,
-  // },
-  // {
-  //   text: 'CSS',
-  //   icon: SiCss3,
-  // },
-  // {
-  //   text: 'JavaScript',
-  //   icon: SiJavascript,
-  // },
-  {
-    text: 'React',
-    icon: SiReact,
-  },
-  {
-    text: 'Next.js',
-    icon: SiNextdotjs,
-  },
-  {
-    text: 'Tailwind',
-    icon: SiTailwindcss,
-  },
-  {
-    text: 'TypeScript',
-    icon: SiTypescript,
-  },
-  // {
-  //   text: 'Node',
-  //   icon: SiNodedotjs,
-  // },
-  // {
-  //   text: 'Git',
-  //   icon: SiGit,
-  // },
-  // {
-  //   text: 'GitHub',
-  //   icon: SiGithub,
-  // },
-  {
-    text: 'Express',
-    icon: SiExpress,
-  },
-  // {
-  //   text: 'Knex',
-  //   icon: SiKnexdotjs,
-  // },
-  {
-    text: 'SQLite3',
-    icon: SiSqlite,
-  },
-  {
-    text: 'Framer',
-    icon: SiFramer,
-  },
-  {
-    text: 'Bootstrap',
-    icon: SiBootstrap,
-  },
-  {
-    text: 'Canva',
-    icon: SiCanva,
-  },
-]
-
-const humanSkills = [
-  { text: 'Empathy', icon: SiPayhip },
-  { text: 'Well-being', icon: SiVeepee },
-  { text: 'Teamwork', icon: SiCrowdsource },
-  { text: 'Communication', icon: SiKakaotalk },
-  { text: 'Collaboration', icon: SiJabber },
-  { text: 'Feedback', icon: SiTeamspeak },
-]
-
 // Flip words
 const wordsHeader = ['Who am I?', 'Who are you?']
 const wordsSubHeader = ['tell', 'show']
@@ -348,123 +270,81 @@ export default function About() {
     }
   }, [textInView])
 
-  // Main skills/human skills
-  const skillsText = useRef(null)
-  const skillsInView = useInView(skillsText)
-
-  useEffect(() => {
-    if (skillsInView) {
-      animate(
-        '.animate-skills',
-        { opacity: 1, x: 0 },
-        { duration: 1, delay: stagger(0.5), ease: 'circOut' }
-      )
-    } else {
-      animate('.animate-skills', { opacity: 0, x: 20 }, { duration: 0 })
-    }
-  }, [skillsInView])
-
   // LayoutGrid
-  const imageGrid = useRef(null)
-  const imageGridInView = useInView(imageGrid)
+  // const imageGrid = useRef(null)
+  // const imageGridInView = useInView(imageGrid)
 
-  useEffect(() => {
-    if (imageGridInView) {
-      animate(
-        '.animate-image-grid',
-        { opacity: 1, y: 0 },
-        { duration: 1, delay: stagger(0.3), ease: 'circOut' }
-      )
-    } else {
-      animate('.animate-image-grid', { opacity: 0, y: -50 }, { duration: 0 })
-    }
-  }, [imageGridInView])
+  // useEffect(() => {
+  //   if (imageGridInView) {
+  //     animate(
+  //       '.animate-image-grid',
+  //       { opacity: 1, y: 0 },
+  //       { duration: 1, delay: stagger(0.3), ease: 'circOut' }
+  //     )
+  //   } else {
+  //     animate('.animate-image-grid', { opacity: 0, y: -50 }, { duration: 0 })
+  //   }
+  // }, [imageGridInView])
 
   return (
     <>
       <MainHeaderNav />
+      <Image
+        src={aboutImage}
+        width={4098}
+        height={2304}
+        alt="Photo of Matt"
+        className="hero-image "
+      />
       <motion.section
         className="md:max-w-full"
         initial={{ opacity: 0, y: 5 }}
         transition={{ delay: 0.3, duration: 1, ease: 'easeInOut' }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <Image
-          src={aboutImage}
-          width={4098}
-          height={2304}
-          alt="Photo of Matt"
-          className="hero-image hidden sm:block"
-        />
         <div className={titan.className} id="about">
-          <div className="pt-20 sm:pt-16 lg:pt-10 2xl:pt-20 6xl:pt-44 text-left ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 font-bold dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] z-index">
-            <h1 className="text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] text-center sm:text-left">
+          <div className="pt-20 sm:pt-16 lg:pt-10 2xl:pt-20 6xl:pt-64 text-center sm:text-left ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 font-bold dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] z-index">
+            <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem]">
               <FlipWords words={wordsHeader} />
             </h1>
-            <h2 className="ps-8 text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl">
+            <h2 className="sm:ps-4 xl:ps-8 text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl">
               Let me <FlipWords words={wordsSubHeader} /> you..
             </h2>
           </div>
         </div>
         <div
-          className="dark:text-zinc-300 text-stone-800 flex flex-col md:flex-row items-start md:space-y-0 md:space-x-10 pt-10"
+          className="dark:text-zinc-300 text-stone-800 flex flex-col md:flex-row items-center md:space-y-0 md:space-x-10 pt-6 xl:pt-10"
           ref={aboutText}
         >
-          <div className="max-w-3xl text-lg sm:text-xl md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl first-letter:text-4xl text-left ps-8 animate-about-text z-index">
-            I&apos;m a Full-Stack Developer who recently completed a 17-week
-            intensive boot camp learning full-stack software development at Dev
-            Academy in December 2023.
-            <p className="py-2 mt-4 animate-about-text">
-              Although I don&apos;t have a degree in design, I&apos;ve realized
-              that I have a passion for Front-End, Accessibility & using the
-              WAVE tool to optimize my applications for the best practices &
-              performance, while also designing & creating anything I want to
-              when starting with a blank canvas.
+          <div className="max-w-3xl md:max-w-4xl xl:max-w-2xl 2xl:max-w-4xl 6xl:max-w-7xl text-lg sm:text-xl md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl first-letter:text-4xl text-center sm:text-left ps-4 sm:ps-10 xl:ps-8 pe-4 sm:pe-8 animate-about-text z-index">
+            <p className="first-letter:text-4xl animate-about-text">
+              I&apos;m passionate about helping individuals and small businesses
+              take their first steps online. Building a website can be
+              overwhelming, especially for those just starting out.
             </p>
-            <p className="py-2 mt-4 animate-about-text">
-              It&apos;s exciting, & frustrating, but have found much joy in the
-              process of trying to be creative with a lot of problem-solving!
+            <p className="mt-4 animate-about-text">
+              What truly excites me is starting with a blank canvas —
+              transforming ideas into engaging, user-friendly websites. Whether
+              it&apos;s crafting intuitive user experiences, fine-tuning
+              responsive layouts, or ensuring seamless accessibility.
             </p>
-            {/* <p className="py-2 mt-4 animate-about-text">
-              I&apos;ve tried various roles in my life, & none of them have
-              stuck, so this was one of the biggest challenges of my life,
-              diving into the unknown. I still have a lot to learn, & I&apos;m
-              excited to see where a career in tech takes me!
-            </p> */}
-            <div className="h-screen w-full" ref={imageGrid}>
-              <h2 className="text-left md:text-center text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[3px_3px_0px_black] dark:drop-shadow-[6px_6px_0px_black] xl:pt-2 animate-image-grid">
-                <div className={titan.className}>
-                  A couple of highlights ...
-                </div>
-              </h2>
-              <LayoutGrid cards={cards} />
-            </div>
+            <p className="mt-4 animate-about-text">
+              I&apos;m here to make the process as smooth and enjoyable as
+              possible.
+            </p>
           </div>
         </div>
-        <div
-          className="-mt-[37rem] flex flex-col items-end dark:text-zinc-300 text-stone-800 pe-6"
-          ref={skillsText}
-        >
-          <h2 className="text-center text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[3px_3px_0px_black] dark:drop-shadow-[6px_6px_0px_black] animate-skills">
-            <div className={titan.className}>Experience with</div>
-          </h2>
-          <HoverEffect items={techSkills} className="animate-skills" />
-          <h2 className="mt-12 text-center text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[3px_3px_0px_black] dark:drop-shadow-[6px_6px_0px_black] animate-skills">
-            <div className={titan.className}>Human skills</div>
-          </h2>
-          <HoverEffect items={humanSkills} className="animate-skills" />
-        </div>
-
-        {/* <div className="h-screen w-1/2 pb-20" ref={imageGrid}>
-          <h2 className="text-left md:text-center text-3xl lg:text-4xl 2xl:text-6xl dark:text-zinc-300 text-cyan-700 ps-7 sm:ps-6 lg:ps-8 pe-4 sm:pe-0 small:pt-8 smallAgain:pt-8 smallerAgain:pt-8 sm:pt-8 md:pt-0 xl:pt-6 pb-14 animate-image-grid">
+        {/* <div className="h-screen w-full" ref={imageGrid}>
+          <h2 className="text-center text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[3px_3px_0px_black] dark:drop-shadow-[6px_6px_0px_black] pt-4 xl:pt-2 6xl:pt-44 animate-image-grid">
             <div className={titan.className}>A couple of highlights ...</div>
           </h2>
           <LayoutGrid cards={cards} />
         </div> */}
-        <Footer />
+
+        {/* <Footer />
         <Link href="/about">
           <div className="text-center text-5xl pt-4 pb-4">🔝</div>
-        </Link>
+        </Link> */}
       </motion.section>
     </>
   )

@@ -11,17 +11,19 @@ import {
 } from '@nextui-org/react'
 
 import { TextGenerateEffectWhileInView } from '@/components/ui/text-generate-effect-while-in-view'
-import divider from '../../public/images/divider.png'
+import divider from '../../public/images/divider-test.png'
 import phoneDivider from '../../public/images/hero-image-divider-test.png'
 import phoneDividerOne from '../../public/images/hero-image-divider-1-test.png'
 import Link from 'next/link'
 
 const header = 'Recent Projects'
 
+// TODO: Fix hover scale for medium screens etc
+
 export default function RecentProjects() {
   return (
     <>
-      <main className="relative pb-10 md:pb-14 xl:pb-52 2xl:pb-96">
+      <main className="relative pb-10 md:pb-14 xl:pb-48 2xl:pb-96">
         <Image
           src={divider}
           width={4098}
@@ -59,7 +61,8 @@ export default function RecentProjects() {
               {[...Array(5)].map((_, index) => (
                 <h1
                   key={index}
-                  className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 sm:mb-4 2xl:mb-6 text-center sm:text-left dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] font-bold z-index mt-24 lg:mt-32 xl:mt-52 6xl:mt-[26rem]"
+                  className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 sm:mb-4 2xl:mb-6 text-center sm:text-left dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] font-bold z-index mt-24 6xl:mt-56"
+                  id="recent-projects"
                 >
                   <TextGenerateEffectWhileInView
                     words={header}

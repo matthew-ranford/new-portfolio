@@ -6,7 +6,7 @@ import { titan } from '@/fonts'
 import { motion } from 'framer-motion'
 
 // Main page image
-import heroImage from '../../public/images/hero-image-new-test-13.png'
+import heroImage from '../../public/images/hero-image-new-test-14.png'
 import heroPhoneImage from '../../public/images/hero-image-phone-test.png'
 
 // Components
@@ -20,8 +20,8 @@ import RecentProjects from './RecentProjects'
 // TextGenerateEffect
 const firstLine = "Hi! I'm Matthew Ranford"
 const secondLine = 'Based in Wellington, New Zealand'
-const thirdLine =
-  "I'm a passionate Developer, with an interest in Front-End, Accessibility, & trying to optimize applications for the best practices & performance."
+// const thirdLine =
+//   'I&apos;m passionate about helping individuals and small businesses take their first steps online. Building a website can be overwhelming, especially for those just starting out.'
 
 // Flip words
 const words = ['Designer', 'Developer']
@@ -38,7 +38,7 @@ export default function Hero() {
                   - Make flip words a little smaller for mobile screens
                   - look at putting in a breadcrumb for the navbar at the bottom of the hero page
          */}
-        <div className="pt-20 sm:pt-16 lg:pt-10 2xl:pt-20 6xl:pt-44 text-left ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-5xl 6xl:max-w-screen-xl font-normal dark:font-bold z-index">
+        <div className="pt-20 sm:pt-16 lg:pt-32 2xl:pt-20 6xl:pt-44 xl:max-w-6xl 2xl:max-w-full space-y-3 2xl:space-y-4 flex flex-col items-center justify-center font-normal dark:font-bold z-index">
           <div className={titan.className}>
             <TextGenerateEffectWithWave
               words={firstLine}
@@ -51,7 +51,7 @@ export default function Hero() {
             delay={1800}
             size="medium"
           />
-          <TextGenerateEffect words={thirdLine} delay={2200} size="medium" />
+          {/* <TextGenerateEffect words={thirdLine} delay={2200} size="medium" /> */}
           <motion.div
             initial={{ opacity: 0 }}
             transition={{
@@ -62,11 +62,13 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             className="pt-4 text-center sm:text-left 6xl:text-3xl"
           >
-            <button className="border-2 rounded-xl bg-[#00dd00] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#00dd00] hover:bg-zinc-300 text-stone-800 hover:text-[#8b00c4] drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8">
-              <Link href="projects">Projects</Link>
+            <button className="border-3 border-stone-800 rounded-xl bg-[#004aad] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#004aad] hover:bg-zinc-300 dark:text-zinc-300 text-stone-800 hover:text-[#004aad] drop-shadow-[4px_4px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 font-bold">
+              <Link href="#recent-projects">Check recent projects</Link>
             </button>
-            <button className="border-2 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#8b00c4] text-[#00dd00] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#00dd00] hover:text-[#8b00c4] drop-shadow-[4px_4px_0px_black] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 mx-2 lg:mx-4">
-              <Link href="mailto:matt.ranford16@gmail.com">Get in touch</Link>
+            <button className="border-3 border-stone-800 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#004aad] text-[#004aad] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#004aad] hover:text-[#004aad] drop-shadow-[5px_5px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 mx-2 lg:mx-4 font-bold">
+              <Link href="mailto:matt.ranford16@gmail.com">
+                Direct email message
+              </Link>
             </button>
           </motion.div>
         </div>
@@ -96,7 +98,7 @@ export default function Hero() {
         </motion.div>
 
         <div className={titan.className}>
-          <h2 className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] text-center sm:text-left dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] font-bold z-index">
+          <h2 className="ps-2 sm:ps-8 xl:ps-14 pe-4 pt-4 sm:pt-6 xl:pt-2 text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] text-center sm:text-left dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_#004aad] font-bold z-index">
             <motion.span
               initial={{ opacity: 0 }}
               transition={{

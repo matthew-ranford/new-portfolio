@@ -30,7 +30,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   // Maybe look at changing the grid-cols to 2 for mobile
 
   return (
-    <div className="w-full h-full p-2 grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-3 md:max-w-7xl 2xl:max-w-screen-2xl mx-auto mt-4 gap-4 relative">
+    <div className="w-full h-full p-2 grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-3 md:max-w-7xl 2xl:max-w-screen-2xl mx-auto mt-4 gap-4 drop-shadow-[6px_6px_2px_black] relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, 'animate-image-grid')}>
           <motion.div
@@ -39,7 +39,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               card.className,
               'relative overflow-hidden',
               selected?.id === card.id
-                ? 'rounded-xl absolute inset-0 h-2/3 sm:h-full md:h-[87%] 2xl:h-5/6 5xl:h-3/4 6xl:h-3/4 w-full sm:w-11/12 md:w-11/12 lg:w-full 2xl:w-3/4 3xl:w-11/12 4xl:w-11/12 5xl:w-11/12 6xl:w-11/12 m-auto sm:my-10 md:my-20 2xl:my-28 3xl:my-32 5xl:my-44 6xl:my-48 z-50 flex justify-center items-center flex-wrap flex-col'
+                ? 'rounded-xl absolute inset-0 w-full h-[87%] md:h-[87%] m-auto my-24 6xl:my-44 z-50 flex justify-center items-center flex-wrap flex-col'
                 : lastSelected?.id === card.id
                 ? 'z-40 rounded-xl h-full w-full cursor-pointer'
                 : 'rounded-xl h-full w-full cursor-pointer'
@@ -54,7 +54,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
       <motion.div
         onClick={handleOutsideClick}
         className={cn(
-          'absolute h-full w-full sm:h-svh left-0 top-0 dark:bg-[#8b00c4] bg-[#00dd00] drop-shadow-[8px_8px_0px_black] opacity-0 z-10 rounded-2xl cursor-pointer',
+          'absolute h-full w-full sm:h-svh left-0 top-0 dark:bg-[#8b00c4] bg-[#00dd00] opacity-0 z-10 rounded-2xl cursor-pointer',
           selected?.id ? 'pointer-events-auto' : 'pointer-events-none'
         )}
         animate={{ opacity: selected?.id ? 0.95 : 0 }}
