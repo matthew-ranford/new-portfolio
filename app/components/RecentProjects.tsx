@@ -11,40 +11,34 @@ import {
 } from '@nextui-org/react'
 
 import { TextGenerateEffectWhileInView } from '@/components/ui/text-generate-effect-while-in-view'
-import divider from '../../public/images/divider-test.png'
-import phoneDivider from '../../public/images/hero-image-divider-test.png'
-import phoneDividerOne from '../../public/images/hero-image-divider-1-test.png'
+import divider from '../../public/images/divider-test-1.png'
+import phoneDivider from '../../public/images/hero-image-divider-1-test.png'
 import Link from 'next/link'
 
 const header = 'Recent Projects'
 
 // TODO: Fix hover scale for medium screens etc
+// Put on animation for projects
 
 export default function RecentProjects() {
   return (
     <>
-      <main className="relative pb-10 md:pb-14 xl:pb-48 2xl:pb-96">
+      <main className="relative pb-10 sm:pb-0">
         <Image
           src={divider}
           width={4098}
           height={2304}
           alt="divider and background"
-          className="absolute top-0 left-0 w-full h-auto object-cover z-0 hidden sm:block"
+          className="absolute top-0 left-0 w-full h-auto object-cover z-0"
         />
-        <Image
+
+        {/* <Image
           src={phoneDivider}
           width={1080}
           height={1920}
-          alt="mobile divider and background"
-          className="absolute top-0 left-0 w-full h-auto object-cover z-0 sm:hidden"
-        />
-        <Image
-          src={phoneDividerOne}
-          width={1080}
-          height={1920}
           alt="second mobile divider and background"
-          className="absolute top-[40rem] left-0 w-full h-auto object-cover z-0 sm:hidden"
-        />
+          className="absolute top-[35rem] sm:top-[45rem] md:top-[50rem] left-0 w-full h-auto object-cover z-0 lg:hidden"
+        /> */}
         <div className={`${titan.className} relative z-10`}>
           <div className="relative w-full overflow-hidden">
             <motion.div
@@ -61,7 +55,7 @@ export default function RecentProjects() {
               {[...Array(5)].map((_, index) => (
                 <h1
                   key={index}
-                  className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 sm:mb-4 2xl:mb-6 text-center sm:text-left dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_#004aad] drop-shadow-[6px_6px_0px_#66045f] font-bold z-index mt-24 xl:mt-32 6xl:mt-56"
+                  className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 sm:mb-4 2xl:mb-6 text-center sm:text-left dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_#004aad] drop-shadow-[6px_6px_0px_#66045f] font-bold z-index mt-10 xl:mt-24 6xl:mt-56"
                   id="recent-projects"
                 >
                   <TextGenerateEffectWhileInView
@@ -74,7 +68,7 @@ export default function RecentProjects() {
             </motion.div>
           </div>
         </div>
-        <div className="max-w-[1200px] xl:max-w-screen-2xl 6xl:max-w-[2500px] gap-4 grid grid-cols-12 grid-rows-2 px-6 mx-auto mt-10 xl:mt-32 pb-6">
+        <div className="max-w-[1200px] xl:max-w-screen-2xl 6xl:max-w-[2500px] gap-4 grid grid-cols-12 grid-rows-2 px-6 mx-auto mt-10 xl:mt-14 pb-6">
           <Card className="col-span-12 lg:col-span-7 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[400px] 2xl:h-[500px] 6xl:h-[800px] dark:bg-transparent/80 bg-transparent/70">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
               <p className="text-tiny dark:text-white/60 text-white/80 uppercase dark:font-bold">
@@ -109,7 +103,7 @@ export default function RecentProjects() {
                 <Button
                   radius="full"
                   size="sm"
-                  className="dark:bg-zinc-300 dark:text-stone-800 bg-[#8b00c4] text-zinc-300"
+                  className="dark:bg-zinc-300 dark:text-stone-800 bg-[#66045f] text-zinc-300"
                 >
                   View live
                 </Button>
@@ -178,7 +172,7 @@ export default function RecentProjects() {
                 <Button
                   radius="full"
                   size="sm"
-                  className="dark:bg-zinc-300 dark:text-stone-800 bg-[#8b00c4] text-zinc-300"
+                  className="dark:bg-zinc-300 dark:text-stone-800 bg-[#66045f] text-zinc-300"
                 >
                   View live
                 </Button>
@@ -219,7 +213,7 @@ export default function RecentProjects() {
                 <Button
                   radius="full"
                   size="sm"
-                  className="dark:bg-zinc-300 dark:text-stone-800 bg-[#8b00c4] text-zinc-300"
+                  className="dark:bg-zinc-300 dark:text-stone-800 bg-[#66045f] text-zinc-300"
                 >
                   View live
                 </Button>

@@ -82,7 +82,7 @@ export default function Navbar() {
             <MainHeaderNav />
           </div>
           <div className="flex justify-end">
-            <span className="lg:hidden pt-2 md:pt-0 pe-2 sm:pe-4">
+            <span className="lg:hidden pe-2 sm:pe-4">
               <button
                 className={`hamburger hamburger--collapse ${
                   isOpen ? 'is-active' : ''
