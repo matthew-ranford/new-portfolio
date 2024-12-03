@@ -103,7 +103,7 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #00dd00;
+  background-color: #66045f;
 
   visibility: hidden;
   transition: 0.6s ease-in-out;

@@ -14,7 +14,7 @@ import { FlipWords } from '@/components/ui/flip-words'
 
 // Main page image
 // import aboutImage from '../../public/images/about-image.png'
-import aboutImage from '../../public/images/about-image-new-test.png'
+import aboutImage from '../../public/images/about-image-new-test-1.png'
 
 // Icons
 import {
@@ -294,44 +294,58 @@ export default function About() {
         width={4098}
         height={2304}
         alt="Photo of Matt"
-        className="hero-image "
+        className="hero-image"
       />
       <motion.section
-        className="md:max-w-full"
+        className=""
         initial={{ opacity: 0, y: 5 }}
         transition={{ delay: 0.3, duration: 1, ease: 'easeInOut' }}
         animate={{ opacity: 1, y: 0 }}
       >
         <div className={titan.className} id="about">
-          <div className="pt-20 sm:pt-16 lg:pt-10 2xl:pt-20 6xl:pt-64 text-center sm:text-left ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 font-bold dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] z-index">
-            <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem]">
+          <div className="pt-20 sm:pt-16 lg:pt-20 2xl:pt-20 6xl:pt-64 text-center ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 font-bold dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] z-index">
+            <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] dark:drop-shadow-[6px_6px_0px_#004aad] drop-shadow-[6px_6px_0px_#66045f]">
               <FlipWords words={wordsHeader} />
             </h1>
-            <h2 className="sm:ps-4 xl:ps-8 text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl">
+            <h2 className="sm:ps-4 xl:ps-8 text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl dark:drop-shadow-[6px_6px_0px_#004aad] drop-shadow-[6px_6px_0px_#66045f]">
               Let me <FlipWords words={wordsSubHeader} /> you..
             </h2>
           </div>
         </div>
         <div
-          className="dark:text-zinc-300 text-stone-800 flex flex-col md:flex-row items-center md:space-y-0 md:space-x-10 pt-6 xl:pt-10"
+          className="dark:text-zinc-300 text-stone-800 flex flex-col items-center justify-center md:space-y-0 md:space-x-10 pt-6 lg:pt-14 xl:pt-36 2xl:pt-44"
           ref={aboutText}
         >
-          <div className="max-w-3xl md:max-w-4xl xl:max-w-2xl 2xl:max-w-4xl 6xl:max-w-7xl text-lg sm:text-xl md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl first-letter:text-4xl text-center sm:text-left ps-4 sm:ps-10 xl:ps-8 pe-4 sm:pe-8 animate-about-text z-index">
-            <p className="first-letter:text-4xl animate-about-text">
-              I&apos;m passionate about helping individuals and small businesses
-              take their first steps online. Building a website can be
-              overwhelming, especially for those just starting out.
+          <div className="ps-4 pe-4 sm:ps-0 sm:pe-0 max-w-md md:max-w-xl 2xl:max-w-3xl text-lg sm:text-xl 2xl:text-2xl text-center md:text-left animate-about-text z-index">
+            <div className={titan.className}>
+              <p className="first-letter:text-4xl xl:text-2xl 2xl:text-3xl animate-about-text">
+                I&apos;m passionate about helping individuals and small
+                businesses take their first steps online.
+              </p>
+            </div>
+            <p className="mt-4 animate-about-text">
+              Building a website can be overwhelming, especially for those just
+              starting out.
             </p>
             <p className="mt-4 animate-about-text">
               What truly excites me is starting with a blank canvas —
-              transforming ideas into engaging, user-friendly websites. Whether
-              it&apos;s crafting intuitive user experiences, fine-tuning
+              transforming ideas into engaging, user-friendly websites.
+            </p>
+            <p className="mt-4 animate-about-text">
+              Whether it&apos;s crafting intuitive user experiences, fine-tuning
               responsive layouts, or ensuring seamless accessibility.
             </p>
             <p className="mt-4 animate-about-text">
-              I&apos;m here to make the process as smooth and enjoyable as
-              possible.
+              By keeping your identity at the heart of my approach, my goal is
+              to find the simplest solution to meet your needs.
             </p>
+          </div>
+        </div>
+        <div className={titan.className}>
+          <div className="dark:text-zinc-300 text-stone-800 dark:drop-shadow-[5px_5px_4px_#004aad] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-4 sm:ps-6 xl:ps-10">
+            <h1 className="text-[1.38rem] sm:text-[1.52rem] md:text-4xl lg:text-6xl xl:text-5xl 2xl:text-6xl 6xl:text-7xl">
+              What I can do for you:{' '}
+            </h1>
           </div>
         </div>
         {/* <div className="h-screen w-full" ref={imageGrid}>

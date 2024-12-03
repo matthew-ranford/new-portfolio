@@ -85,30 +85,32 @@ export default function Hero() {
           />
         </motion.div>
         <div className={titan.className}>
-          <h2 className="ps-2 sm:ps-8 xl:ps-14 pe-4 pt-4 sm:pt-6 xl:pt-2 6xl:pt-32 text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[18rem] text-center sm:text-left dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_#004aad] drop-shadow-[6px_6px_0px_#66045f] font-bold z-index">
-            <motion.span
-              initial={{ opacity: 0 }}
-              transition={{
-                delay: 2.5,
-                duration: 2.5,
-                ease: 'easeInOut',
-              }}
-              animate={{ opacity: 1 }}
-            >
-              Web
-            </motion.span>{' '}
-            <motion.span
-              initial={{ opacity: 0 }}
-              transition={{
-                delay: 2.7,
-                duration: 2.5,
-                ease: 'easeInOut',
-              }}
-              animate={{ opacity: 1 }}
-            >
-              <FlipWords words={words} />
-            </motion.span>
-          </h2>
+          <div className="drop-shadow-[6px_6px_0px_black]">
+            <h2 className="ps-2 sm:ps-8 xl:ps-14 pe-4 pt-4 sm:pt-6 xl:pt-2 6xl:pt-32 text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[18rem] text-center sm:text-left dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_#004aad] drop-shadow-[6px_6px_0px_#66045f] font-bold z-index">
+              <motion.span
+                initial={{ opacity: 0 }}
+                transition={{
+                  delay: 2.5,
+                  duration: 2.5,
+                  ease: 'easeInOut',
+                }}
+                animate={{ opacity: 1 }}
+              >
+                Web
+              </motion.span>{' '}
+              <motion.span
+                initial={{ opacity: 0 }}
+                transition={{
+                  delay: 2.7,
+                  duration: 2.5,
+                  ease: 'easeInOut',
+                }}
+                animate={{ opacity: 1 }}
+              >
+                <FlipWords words={words} />
+              </motion.span>
+            </h2>
+          </div>
         </div>
       </main>
       <RecentProjects />
