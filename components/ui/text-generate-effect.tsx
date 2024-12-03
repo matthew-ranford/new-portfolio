@@ -23,7 +23,7 @@ export const TextGenerateEffect = ({
     large:
       'text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl',
     xlarge:
-      'text-[1.38rem] sm:text-[1.52rem] md:text-4xl lg:text-6xl xl:text-5xl 2xl:text-6xl 6xl:text-9xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[3px_3px_0px_black] dark:drop-shadow-[5px_5px_4px_#292524]',
+      'text-[1.38rem] sm:text-[1.52rem] md:text-4xl lg:text-6xl xl:text-5xl 2xl:text-6xl 6xl:text-9xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[5px_5px_4px_#66045f] dark:drop-shadow-[5px_5px_4px_#292524]',
   }
 
   useEffect(() => {

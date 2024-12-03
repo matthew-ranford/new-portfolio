@@ -20,8 +20,7 @@ import RecentProjects from './RecentProjects'
 // TextGenerateEffect
 const firstLine = "Hi! I'm Matthew Ranford"
 const secondLine = 'Based in Wellington, New Zealand'
-// const thirdLine =
-//   'I&apos;m passionate about helping individuals and small businesses take their first steps online. Building a website can be overwhelming, especially for those just starting out.'
+const thirdLine = 'Need a website? - Let me help you!'
 
 // Flip words
 const words = ['Designer', 'Developer']
@@ -38,7 +37,7 @@ export default function Hero() {
                   - Make flip words a little smaller for mobile screens
                   - look at putting in a breadcrumb for the navbar at the bottom of the hero page
          */}
-        <div className="pt-20 sm:pt-16 lg:pt-32 2xl:pt-20 6xl:pt-44 xl:max-w-6xl 2xl:max-w-full space-y-3 2xl:space-y-4 flex flex-col items-center justify-center font-normal dark:font-bold z-index">
+        <div className="pt-20 sm:pt-16 lg:pt-20 2xl:pt-20 6xl:pt-44 xl:max-w-6xl 2xl:max-w-full space-y-3 2xl:space-y-4 flex flex-col items-center justify-center font-normal dark:font-bold z-index">
           <div className={titan.className}>
             <TextGenerateEffectWithWave
               words={firstLine}
@@ -51,7 +50,7 @@ export default function Hero() {
             delay={1800}
             size="medium"
           />
-          {/* <TextGenerateEffect words={thirdLine} delay={2200} size="medium" /> */}
+          <TextGenerateEffect words={thirdLine} delay={2400} size="medium" />
           <motion.div
             initial={{ opacity: 0 }}
             transition={{
@@ -62,7 +61,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             className="pt-4 text-center sm:text-left 6xl:text-3xl"
           >
-            <button className="border-3 border-stone-800 rounded-xl bg-[#004aad] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#004aad] hover:bg-zinc-300 dark:text-zinc-300 text-stone-800 hover:text-[#004aad] drop-shadow-[4px_4px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 font-bold">
+            <button className="border-3 border-stone-800 rounded-xl bg-[#66045f] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#004aad] hover:bg-zinc-300 dark:text-zinc-300 text-stone-900 hover:text-[#004aad] drop-shadow-[4px_4px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 font-bold">
               <Link href="#recent-projects">Check recent projects</Link>
             </button>
             <button className="border-3 border-stone-800 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#004aad] text-[#004aad] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#004aad] hover:text-[#004aad] drop-shadow-[5px_5px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 mx-2 lg:mx-4 font-bold">
@@ -98,7 +97,7 @@ export default function Hero() {
         </motion.div>
 
         <div className={titan.className}>
-          <h2 className="ps-2 sm:ps-8 xl:ps-14 pe-4 pt-4 sm:pt-6 xl:pt-2 text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] text-center sm:text-left dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_#004aad] font-bold z-index">
+          <h2 className="ps-2 sm:ps-8 xl:ps-14 pe-4 pt-4 sm:pt-6 xl:pt-2 text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] text-center sm:text-left dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_#004aad] drop-shadow-[6px_6px_0px_#66045f] font-bold z-index">
             <motion.span
               initial={{ opacity: 0 }}
               transition={{
