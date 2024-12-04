@@ -14,6 +14,7 @@ import {
   Divider,
   Link as LinkNextUI,
   Image as NextUIImage,
+  Button,
 } from '@nextui-org/react'
 
 // Components
@@ -25,6 +26,7 @@ import { FlipWords } from '@/components/ui/flip-words'
 // Main page image
 // import aboutImage from '../../public/images/about-image.png'
 import aboutImage from '../../public/images/about-image-new-test-1.png'
+import aboutImagePhone from '../../public/images/about-image-phone-test.png'
 
 // Icons
 import {
@@ -273,10 +275,10 @@ export default function About() {
       animate(
         '.animate-about-text',
         { opacity: 1, x: 0 },
-        { duration: 1, delay: stagger(0.4), ease: 'circOut' }
+        { duration: 1, delay: stagger(0.3), ease: 'circOut' }
       )
     } else {
-      animate('.animate-about-text', { opacity: 0, x: -50 }, { duration: 0 })
+      animate('.animate-about-text', { opacity: 0, x: -30 }, { duration: 0 })
     }
   }, [textInView])
 
@@ -289,10 +291,10 @@ export default function About() {
       animate(
         '.animate-image-grid',
         { opacity: 1, y: 0 },
-        { duration: 1, delay: stagger(0.3), ease: 'circOut' }
+        { duration: 1, delay: stagger(0.2), ease: 'circOut' }
       )
     } else {
-      animate('.animate-image-grid', { opacity: 0, y: -50 }, { duration: 0 })
+      animate('.animate-image-grid', { opacity: 0, y: -30 }, { duration: 0 })
     }
   }, [imageGridInView])
 
@@ -304,29 +306,36 @@ export default function About() {
         width={4098}
         height={2304}
         alt="Photo of Matt"
-        className="hero-image"
+        className="about-image hidden sm:block"
+      />
+      <Image
+        src={aboutImagePhone}
+        width={1080}
+        height={1920}
+        alt="Photo of Matt"
+        className="about-image sm:hidden"
       />
       <motion.section
-        className="pb-44"
+        className=""
         initial={{ opacity: 0, y: 5 }}
         transition={{ delay: 0.3, duration: 1, ease: 'easeInOut' }}
         animate={{ opacity: 1, y: 0 }}
       >
         <div className={titan.className} id="about">
-          <div className="pt-20 sm:pt-16 lg:pt-20 2xl:pt-20 6xl:pt-64 text-center ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 font-bold dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_0px_black] z-index">
-            <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] dark:drop-shadow-[6px_6px_0px_#004aad] drop-shadow-[6px_6px_0px_#66045f]">
+          <div className="pt-28 sm:pt-16 lg:pt-20 2xl:pt-20 6xl:pt-64 text-center ps-3 sm:ps-7 xl:ps-8 space-y-3 2xl:space-y-4 font-bold dark:text-zinc-300 text-stone-800 drop-shadow-[3px_3px_0px_black] z-index">
+            <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] dark:drop-shadow-[2px_2px_0px_#004aad] drop-shadow-[2px_2px_0px_#66045f]">
               <FlipWords words={wordsHeader} />
             </h1>
-            <h2 className="sm:ps-4 xl:ps-8 text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl dark:drop-shadow-[6px_6px_0px_#004aad] drop-shadow-[6px_6px_0px_#66045f]">
+            <h2 className="sm:ps-4 xl:ps-8 text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl dark:drop-shadow-[2px_2px_0px_#004aad] drop-shadow-[2px_2px_0px_#66045f]">
               Let me <FlipWords words={wordsSubHeader} /> you..
             </h2>
           </div>
         </div>
         <div
-          className="dark:text-zinc-300 text-stone-800 flex flex-col items-center justify-center md:space-y-0 md:space-x-10 pt-6 lg:pt-14 xl:pt-36 2xl:pt-44"
+          className="dark:text-zinc-300 text-stone-800 flex flex-col items-center justify-center md:space-y-0 md:space-x-10 pt-6 lg:pt-14 xl:pt-36 2xl:pt-44 pb-10"
           ref={aboutText}
         >
-          <div className="ps-4 pe-4 sm:ps-0 sm:pe-0 max-w-md md:max-w-xl 2xl:max-w-3xl text-lg sm:text-xl 2xl:text-2xl text-center md:text-left animate-about-text z-index">
+          <div className="ps-6 pe-6 sm:ps-0 sm:pe-0 max-w-md md:max-w-xl 2xl:max-w-3xl text-lg sm:text-xl 2xl:text-2xl text-left animate-about-text z-index">
             <div className={titan.className}>
               <p className="first-letter:text-4xl xl:text-2xl 2xl:text-3xl animate-about-text">
                 I&apos;m passionate about helping individuals and small
@@ -352,14 +361,14 @@ export default function About() {
           </div>
         </div>
         <div className={titan.className}>
-          <div className="dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_black] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-4 sm:ps-6 xl:ps-10">
-            <h1 className="text-[1.38rem] sm:text-[1.52rem] md:text-4xl lg:text-6xl xl:text-5xl 2xl:text-6xl 6xl:text-7xl">
+          <div className="dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_black] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-6 xl:ps-10 pe-10 pb-10">
+            <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem]">
               What I can do for you:
             </h1>
           </div>
         </div>
-        <div className="max-w-[1200px] xl:max-w-screen-2xl 6xl:max-w-[2500px] gap-5 grid grid-cols-12 grid-rows-2 xl:pt-10 px-10 pb-10">
-          <Card className="ps-2 max-w-[420px] col-span-12 lg:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out">
+        <div className="max-w-[1200px] xl:max-w-screen-2xl 6xl:max-w-[4500px] gap-5 6xl:gap-10 grid grid-cols-12 grid-rows-2 place-items-center lg:place-items-start 2xl:place-items-center xl:pt-10 px-10 6xl:px-[35rem] pb-10">
+          <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-6 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out">
             <CardHeader className="flex gap-3">
               <NextUIImage
                 alt=""
@@ -371,17 +380,17 @@ export default function About() {
             </CardHeader>
             <CardBody>
               <div className={titan.className}>
-                <p className="text-3xl">
+                <p className="text-3xl 6xl:text-5xl">
                   Build a tailored & responsive website
                 </p>
               </div>
-              <p className="text-lg pt-4">
+              <p className="text-lg 6xl:text-xl pt-4">
                 Built from the ground up using React/NextJS to create a unique
                 single or multi page website personalised for you.
               </p>
             </CardBody>
           </Card>
-          <Card className="ps-2 max-w-[420px] col-span-12 lg:col-span-4 drop-shadow-[3px_3px_4px_#66045f] hover:scale-[0.95] hover:bg-[#66045f] hover:transition-all hover:duration-1000 hover:ease-in-out">
+          <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl  col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-6 drop-shadow-[3px_3px_4px_#66045f] hover:scale-[0.95] hover:bg-[#66045f] hover:transition-all hover:duration-1000 hover:ease-in-out">
             <CardHeader className="flex gap-3">
               <NextUIImage
                 alt=""
@@ -393,15 +402,17 @@ export default function About() {
             </CardHeader>
             <CardBody>
               <div className={titan.className}>
-                <p className="text-3xl">SEO & Performance optimization</p>
+                <p className="text-3xl 6xl:text-5xl">
+                  SEO & Performance optimization
+                </p>
               </div>
-              <p className="text-lg pt-4">
+              <p className="text-lg 6xl:text-xl pt-4">
                 I will optimize your website for search engines while
                 maintaining perfomance to ensure fast load times.
               </p>
             </CardBody>
           </Card>
-          <Card className="ps-2 max-w-[420px] col-span-12 lg:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out">
+          <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out">
             <CardHeader className="flex gap-3">
               <NextUIImage
                 alt=""
@@ -413,16 +424,16 @@ export default function About() {
             </CardHeader>
             <CardBody>
               <div className={titan.className}>
-                <p className="text-3xl">Design in Canva</p>
+                <p className="text-3xl 6xl:text-5xl">Design in Canva</p>
               </div>
-              <p className="text-lg pt-12">
+              <p className="text-lg 6xl:text-xl pt-4 xl:pt-12">
                 From website images to business cards or a logo, I will work
                 with you to make sure you have a product you can be proud to
                 share.
               </p>
             </CardBody>
           </Card>
-          <Card className="ps-2 max-w-[420px] col-span-12 lg:col-span-4 drop-shadow-[3px_3px_4px_#66045f] hover:scale-[0.95] hover:bg-[#66045f] hover:transition-all hover:duration-1000 hover:ease-in-out">
+          <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-4 drop-shadow-[3px_3px_4px_#66045f] hover:scale-[0.95] hover:bg-[#66045f] hover:transition-all hover:duration-1000 hover:ease-in-out">
             <CardHeader className="flex gap-3">
               <NextUIImage
                 alt=""
@@ -434,15 +445,15 @@ export default function About() {
             </CardHeader>
             <CardBody>
               <div className={titan.className}>
-                <p className="text-3xl">Communication</p>
+                <p className="text-3xl 6xl:text-5xl">Communication</p>
               </div>
-              <p className="text-lg pt-12">
+              <p className="text-lg 6xl:text-xl pt-4 xl:pt-12">
                 I pride myself on communication and responding in a timely
                 manner so you won&apos;t have to wonder what is happening.
               </p>
             </CardBody>
           </Card>
-          <Card className="ps-2 max-w-[420px] col-span-12 lg:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out">
+          <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out">
             <CardHeader className="flex gap-3">
               <NextUIImage
                 alt=""
@@ -454,9 +465,9 @@ export default function About() {
             </CardHeader>
             <CardBody>
               <div className={titan.className}>
-                <p className="text-3xl">Frequent updates</p>
+                <p className="text-3xl 6xl:text-5xl">Updates</p>
               </div>
-              <p className="text-lg pt-12">
+              <p className="text-lg 6xl:text-xl pt-4 xl:pt-12">
                 I will send you a link where you can view changes as if the
                 website is live, so you can see how it&apos;s progressing.
               </p>
@@ -472,10 +483,35 @@ export default function About() {
           <LayoutGrid cards={cards} />
         </div>
 
-        {/* <Footer />
-        <Link href="/about">
-          <div className="text-center text-5xl pt-4 pb-4">🔝</div>
-        </Link> */}
+        <div className="mt-32 xl:pt-10 px-10 pb-10 flex justify-center items-center">
+          <Card className="max-w-7xl max-h-screen drop-shadow-[5px_5px_4px_black]">
+            <CardBody className="absolute z-10 xl:top-[20%] flex-col items-start w-full ps-10">
+              <div className={titan.className}>
+                <h1 className="text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[18rem] dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_4px_black] uppercase">
+                  Let&apos;s talk!
+                </h1>
+              </div>
+              <div className="pt-4 text-center ps-4 pe-4 sm:ps-0 sm:pe-0 6xl:text-3xl">
+                <button className="border-3 border-stone-800 rounded-xl bg-[#66045f] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#004aad] hover:bg-zinc-300 dark:text-zinc-300 text-stone-900 hover:text-[#004aad] drop-shadow-[4px_4px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 6xl:py-6 font-bold">
+                  <Link href="mailto:matt.ranford16@gmail.com">
+                    Direct email message
+                  </Link>
+                </button>
+                <button className="border-3 border-stone-800 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#004aad] text-[#004aad] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#004aad] hover:text-[#004aad] drop-shadow-[5px_5px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 6xl:py-6 mx-2 lg:mx-4 my-4 sm:my-0 font-bold">
+                  <Link href="mailto:matt.ranford16@gmail.com">
+                    Contact form
+                  </Link>
+                </button>
+              </div>
+            </CardBody>
+            <NextUIImage
+              removeWrapper
+              alt="Latest website project"
+              className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover"
+              src="/images/about-page-image-test.png"
+            />
+          </Card>
+        </div>
       </motion.section>
     </>
   )

@@ -80,17 +80,18 @@ export default function RecentProjects() {
               }}
             >
               {[...Array(5)].map((_, index) => (
-                <h1
-                  key={index}
-                  className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 sm:mb-4 2xl:mb-6 text-center sm:text-left dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_#004aad] drop-shadow-[6px_6px_0px_#66045f] font-bold z-index mt-10 xl:mt-24 6xl:mt-56"
-                  id="recent-projects"
-                >
-                  <TextGenerateEffectWhileInView
-                    words={header}
-                    delay={500}
-                    size="xlarge"
-                  />
-                </h1>
+                <div className="drop-shadow-[6px_6px_0px_black]" key={index}>
+                  <h1
+                    className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 pb-4 sm:mb-4 2xl:mb-6 text-center sm:text-left dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_#004aad] drop-shadow-[6px_6px_0px_#66045f] font-bold z-index mt-10 xl:mt-24 6xl:mt-56"
+                    id="recent-projects"
+                  >
+                    <TextGenerateEffectWhileInView
+                      words={header}
+                      delay={500}
+                      size="xlarge"
+                    />
+                  </h1>
+                </div>
               ))}
             </motion.div>
           </div>
