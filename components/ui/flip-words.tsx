@@ -47,7 +47,7 @@ export const FlipWords = ({
           y: -40,
           x: 40,
           filter: 'blur(8px)',
-          scale: 1.2,
+          scale: 0.5,
           position: 'absolute',
         }}
         className={cn(

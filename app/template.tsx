@@ -11,7 +11,7 @@ export default function Template({ children }: TemplateProps) {
   return (
     <>
       <motion.div
-        initial={{ x: '-5vw', opacity: 0 }}
+        initial={{ x: '-1vw', opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: '100vw', opacity: 0 }}
         transition={{

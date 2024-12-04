@@ -6,6 +6,16 @@ import Link from 'next/link'
 import { titan } from '@/fonts'
 import { motion, animate, stagger, useInView } from 'framer-motion'
 
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Divider,
+  Link as LinkNextUI,
+  Image as NextUIImage,
+} from '@nextui-org/react'
+
 // Components
 import MainHeaderNav from '../components/MainHeaderNav'
 import Footer from '../components/Footer'
@@ -271,20 +281,20 @@ export default function About() {
   }, [textInView])
 
   // LayoutGrid
-  // const imageGrid = useRef(null)
-  // const imageGridInView = useInView(imageGrid)
+  const imageGrid = useRef(null)
+  const imageGridInView = useInView(imageGrid)
 
-  // useEffect(() => {
-  //   if (imageGridInView) {
-  //     animate(
-  //       '.animate-image-grid',
-  //       { opacity: 1, y: 0 },
-  //       { duration: 1, delay: stagger(0.3), ease: 'circOut' }
-  //     )
-  //   } else {
-  //     animate('.animate-image-grid', { opacity: 0, y: -50 }, { duration: 0 })
-  //   }
-  // }, [imageGridInView])
+  useEffect(() => {
+    if (imageGridInView) {
+      animate(
+        '.animate-image-grid',
+        { opacity: 1, y: 0 },
+        { duration: 1, delay: stagger(0.3), ease: 'circOut' }
+      )
+    } else {
+      animate('.animate-image-grid', { opacity: 0, y: -50 }, { duration: 0 })
+    }
+  }, [imageGridInView])
 
   return (
     <>
@@ -297,7 +307,7 @@ export default function About() {
         className="hero-image"
       />
       <motion.section
-        className=""
+        className="pb-44"
         initial={{ opacity: 0, y: 5 }}
         transition={{ delay: 0.3, duration: 1, ease: 'easeInOut' }}
         animate={{ opacity: 1, y: 0 }}
@@ -342,18 +352,125 @@ export default function About() {
           </div>
         </div>
         <div className={titan.className}>
-          <div className="dark:text-zinc-300 text-stone-800 dark:drop-shadow-[5px_5px_4px_#004aad] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-4 sm:ps-6 xl:ps-10">
+          <div className="dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_black] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-4 sm:ps-6 xl:ps-10">
             <h1 className="text-[1.38rem] sm:text-[1.52rem] md:text-4xl lg:text-6xl xl:text-5xl 2xl:text-6xl 6xl:text-7xl">
-              What I can do for you:{' '}
+              What I can do for you:
             </h1>
           </div>
         </div>
-        {/* <div className="h-screen w-full" ref={imageGrid}>
-          <h2 className="text-center text-4xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[3px_3px_0px_black] dark:drop-shadow-[6px_6px_0px_black] pt-4 xl:pt-2 6xl:pt-44 animate-image-grid">
-            <div className={titan.className}>A couple of highlights ...</div>
+        <div className="max-w-[1200px] xl:max-w-screen-2xl 6xl:max-w-[2500px] gap-5 grid grid-cols-12 grid-rows-2 xl:pt-10 px-10 pb-10">
+          <Card className="ps-2 max-w-[420px] col-span-12 lg:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out">
+            <CardHeader className="flex gap-3">
+              <NextUIImage
+                alt=""
+                height={40}
+                radius="sm"
+                src="/images/about-card-one.png"
+                width={40}
+              />
+            </CardHeader>
+            <CardBody>
+              <div className={titan.className}>
+                <p className="text-3xl">
+                  Build a tailored & responsive website
+                </p>
+              </div>
+              <p className="text-lg pt-4">
+                Built from the ground up using React/NextJS to create a unique
+                single or multi page website personalised for you.
+              </p>
+            </CardBody>
+          </Card>
+          <Card className="ps-2 max-w-[420px] col-span-12 lg:col-span-4 drop-shadow-[3px_3px_4px_#66045f] hover:scale-[0.95] hover:bg-[#66045f] hover:transition-all hover:duration-1000 hover:ease-in-out">
+            <CardHeader className="flex gap-3">
+              <NextUIImage
+                alt=""
+                height={40}
+                radius="sm"
+                src="/images/about-card-five.png"
+                width={40}
+              />
+            </CardHeader>
+            <CardBody>
+              <div className={titan.className}>
+                <p className="text-3xl">SEO & Performance optimization</p>
+              </div>
+              <p className="text-lg pt-4">
+                I will optimize your website for search engines while
+                maintaining perfomance to ensure fast load times.
+              </p>
+            </CardBody>
+          </Card>
+          <Card className="ps-2 max-w-[420px] col-span-12 lg:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out">
+            <CardHeader className="flex gap-3">
+              <NextUIImage
+                alt=""
+                height={40}
+                radius="sm"
+                src="/images/about-card-two.png"
+                width={40}
+              />
+            </CardHeader>
+            <CardBody>
+              <div className={titan.className}>
+                <p className="text-3xl">Design in Canva</p>
+              </div>
+              <p className="text-lg pt-12">
+                From website images to business cards or a logo, I will work
+                with you to make sure you have a product you can be proud to
+                share.
+              </p>
+            </CardBody>
+          </Card>
+          <Card className="ps-2 max-w-[420px] col-span-12 lg:col-span-4 drop-shadow-[3px_3px_4px_#66045f] hover:scale-[0.95] hover:bg-[#66045f] hover:transition-all hover:duration-1000 hover:ease-in-out">
+            <CardHeader className="flex gap-3">
+              <NextUIImage
+                alt=""
+                height={40}
+                radius="sm"
+                src="/images/about-card-three.png"
+                width={40}
+              />
+            </CardHeader>
+            <CardBody>
+              <div className={titan.className}>
+                <p className="text-3xl">Communication</p>
+              </div>
+              <p className="text-lg pt-12">
+                I pride myself on communication and responding in a timely
+                manner so you won&apos;t have to wonder what is happening.
+              </p>
+            </CardBody>
+          </Card>
+          <Card className="ps-2 max-w-[420px] col-span-12 lg:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out">
+            <CardHeader className="flex gap-3">
+              <NextUIImage
+                alt=""
+                height={40}
+                radius="sm"
+                src="/images/about-card-four.png"
+                width={40}
+              />
+            </CardHeader>
+            <CardBody>
+              <div className={titan.className}>
+                <p className="text-3xl">Frequent updates</p>
+              </div>
+              <p className="text-lg pt-12">
+                I will send you a link where you can view changes as if the
+                website is live, so you can see how it&apos;s progressing.
+              </p>
+            </CardBody>
+          </Card>
+        </div>
+        <div className="h-screen w-full" ref={imageGrid}>
+          <h2 className="dark:text-zinc-300 text-stone-800 text-left text-[1.38rem] sm:text-[1.52rem] md:text-4xl lg:text-6xl xl:text-5xl 2xl:text-6xl 6xl:text-7xl drop-shadow-[2px_2px_0px_black] md:drop-shadow-[5px_5px_4px_#66045f] dark:drop-shadow-[6px_6px_0px_black] xl:ps-10 pt-4 6xl:pt-44 pb-10 animate-image-grid">
+            <div className={titan.className}>
+              A couple of personal highlights ...
+            </div>
           </h2>
           <LayoutGrid cards={cards} />
-        </div> */}
+        </div>
 
         {/* <Footer />
         <Link href="/about">
