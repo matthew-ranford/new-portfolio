@@ -30,7 +30,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   // Maybe look at changing the grid-cols to 2 for mobile
 
   return (
-    <div className="w-full h-full p-2 grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-3 md:max-w-5xl 2xl:max-w-screen-2xl mx-auto px-6 xl:px-0 6xl:pt-10 gap-4 drop-shadow-[6px_6px_2px_black] relative">
+    <div className="w-full h-full p-2 grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-3 md:max-w-5xl 2xl:max-w-screen-2xl mx-auto px-6 2xl:px-10 xl:px-0 6xl:pt-10 gap-4 drop-shadow-[6px_6px_2px_black] relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, 'animate-image-grid')}>
           <motion.div

@@ -483,21 +483,27 @@ export default function About() {
           <LayoutGrid cards={cards} />
         </div>
 
-        <div className="xl:mt-[37rem] 6xl:mt-[55rem] xl:pt-10 px-10 pb-10 flex justify-center items-center">
-          <Card className="max-w-7xl max-h-screen drop-shadow-[5px_5px_4px_black]">
-            <CardBody className="absolute z-10 xl:top-[20%] flex-col items-start w-full ps-10">
+        <div className="mt-48 sm:mt-72 md:mt-[22rem] lg:mt-[27rem] xl:mt-[37rem] 2xl:mt-[42rem] 6xl:mt-[60rem] xl:pt-10 px-10 pb-10 flex justify-center items-center">
+          <Card className="max-w-7xl 2xl:max-w-full max-h-screen drop-shadow-[5px_5px_4px_black]">
+            <CardBody className="absolute z-10 md:top-[15%] lg:top-[20%] flex-col items-start w-full xl:ps-10">
               <div className={titan.className}>
-                <h1 className="text-6xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[18rem] dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_4px_black] uppercase">
+                <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[18rem] dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_4px_black] uppercase">
                   Let&apos;s talk!
                 </h1>
               </div>
-              <div className="pt-4 text-center ps-4 pe-4 sm:ps-0 sm:pe-0 6xl:text-3xl">
+              <div className="text-stone-800 max-w-xs sm:max-w-md ps-2 pt-4 md:pt-10 sm:text-xl 2xl:text-2xl hidden sm:inline-flex">
+                <p>
+                  Get in touch, and we can discuss your project, your issues and
+                  how to solve them.
+                </p>
+              </div>
+              <div className="pt-4 sm:pt-6 text-left md:text-center 6xl:text-3xl sm:space-y-6">
                 <button className="border-3 border-stone-800 rounded-xl bg-[#66045f] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#004aad] hover:bg-zinc-300 dark:text-zinc-300 text-stone-900 hover:text-[#004aad] drop-shadow-[4px_4px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 6xl:py-6 font-bold">
                   <Link href="mailto:matt.ranford16@gmail.com">
                     Direct email message
                   </Link>
                 </button>
-                <button className="border-3 border-stone-800 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#004aad] text-[#004aad] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#004aad] hover:text-[#004aad] drop-shadow-[5px_5px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 6xl:py-6 mx-2 lg:mx-4 my-4 sm:my-0 font-bold">
+                <button className="border-3 border-stone-800 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#004aad] text-[#004aad] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#004aad] hover:text-[#004aad] drop-shadow-[5px_5px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 6xl:py-6 md:mx-4 my-4 sm:my-0 font-bold hidden sm:block md:inline-flex">
                   <Link href="mailto:matt.ranford16@gmail.com">
                     Contact form
                   </Link>
