@@ -30,7 +30,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   // Maybe look at changing the grid-cols to 2 for mobile
 
   return (
-    <div className="w-full h-full p-2 grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-3 md:max-w-5xl 2xl:max-w-screen-2xl mx-auto mt-4 gap-4 drop-shadow-[6px_6px_2px_black] relative">
+    <div className="w-full h-full p-2 grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-3 md:max-w-5xl 2xl:max-w-screen-2xl mx-auto px-6 xl:px-0 6xl:pt-10 gap-4 drop-shadow-[6px_6px_2px_black] relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, 'animate-image-grid')}>
           <motion.div
@@ -54,7 +54,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
       <motion.div
         onClick={handleOutsideClick}
         className={cn(
-          'absolute h-full w-full sm:h-svh left-0 top-0 dark:bg-[#8b00c4] bg-[#00dd00] opacity-0 z-10 rounded-2xl cursor-pointer',
+          'absolute h-full w-full sm:h-svh left-0 top-0 dark:bg-[#66045f] bg-[#004aad] opacity-0 z-10 rounded-2xl cursor-pointer',
           selected?.id ? 'pointer-events-auto' : 'pointer-events-none'
         )}
         animate={{ opacity: selected?.id ? 0.95 : 0 }}

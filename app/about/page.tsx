@@ -66,7 +66,7 @@ import {
 const FrameOne = () => {
   return (
     <div>
-      <h1 className="text-4xl dark:text-zinc-300 text-[#00dd00]">
+      <h1 className="text-4xl dark:text-zinc-300 text-[#004aad]">
         <div className={titan.className}>Invermere, BC, Canada.</div>
       </h1>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
@@ -83,7 +83,7 @@ const FrameOne = () => {
 const FrameTwo = () => {
   return (
     <div>
-      <h1 className="text-4xl dark:text-zinc-300 text-[#00dd00]">
+      <h1 className="text-4xl dark:text-zinc-300 text-[#004aad]">
         <div className={titan.className}>
           Lower Bugaboo Falls, Spillimacheen, Canada.
         </div>
@@ -98,7 +98,7 @@ const FrameTwo = () => {
 const FrameThree = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-zinc-300 text-[#00dd00]">
+      <p className="text-4xl dark:text-zinc-300 text-[#004aad]">
         <div className={titan.className}>
           Welsh Lakes, East Kootenay, Canada.
         </div>
@@ -113,7 +113,7 @@ const FrameThree = () => {
 const FrameFour = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-zinc-300 text-[#00dd00]">
+      <p className="text-4xl dark:text-zinc-300 text-[#004aad]">
         <div className={titan.className}>Lethbridge, AB, Canada.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
@@ -130,7 +130,7 @@ const FrameFour = () => {
 const FrameFive = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-zinc-300 text-[#00dd00]">
+      <p className="text-4xl dark:text-zinc-300 text-[#004aad]">
         <div className={titan.className}>Chiang Mai, Thailand.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
@@ -144,7 +144,7 @@ const FrameFive = () => {
 const FrameSix = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-zinc-300 text-[#00dd00]">
+      <p className="text-4xl dark:text-zinc-300 text-[#004aad]">
         <div className={titan.className}>Wellington, NZ.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
@@ -161,7 +161,7 @@ const FrameSix = () => {
 const FrameSeven = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-zinc-300 text-[#00dd00]">
+      <p className="text-4xl dark:text-zinc-300 text-[#004aad]">
         <div className={titan.className}>Chiang Mai, Thailand.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
@@ -177,7 +177,7 @@ const FrameSeven = () => {
 const FrameEight = () => {
   return (
     <div>
-      <p className="text-4xl dark:text-zinc-300 text-[#00dd00]">
+      <p className="text-4xl dark:text-zinc-300 text-[#004aad]">
         <div className={titan.className}>Fairmont, BC, Canada.</div>
       </p>
       <p className="font-normal text-base my-4 max-w-xl text-zinc-300 ">
@@ -475,7 +475,7 @@ export default function About() {
           </Card>
         </div>
         <div className="h-screen w-full" ref={imageGrid}>
-          <h2 className="dark:text-zinc-300 text-stone-800 text-left text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] drop-shadow-[2px_2px_0px_black] md:drop-shadow-[5px_5px_4px_#66045f] dark:drop-shadow-[6px_6px_0px_black] xl:ps-10 pt-4 6xl:pt-44 pb-10 animate-image-grid">
+          <h2 className="dark:text-zinc-300 text-stone-800 text-left text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] dark:drop-shadow-[6px_6px_0px_black] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-6 xl:ps-10 pe-10 pb-10 animate-image-grid">
             <div className={titan.className}>
               A couple of personal highlights ...
             </div>
@@ -483,7 +483,7 @@ export default function About() {
           <LayoutGrid cards={cards} />
         </div>
 
-        <div className="mt-[35rem] xl:pt-10 px-10 pb-10 flex justify-center items-center">
+        <div className="xl:mt-[37rem] 6xl:mt-[55rem] xl:pt-10 px-10 pb-10 flex justify-center items-center">
           <Card className="max-w-7xl max-h-screen drop-shadow-[5px_5px_4px_black]">
             <CardBody className="absolute z-10 xl:top-[20%] flex-col items-start w-full ps-10">
               <div className={titan.className}>
