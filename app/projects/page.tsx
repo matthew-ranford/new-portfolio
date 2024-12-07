@@ -348,18 +348,18 @@ export default function Projects() {
                       alt={project.alt}
                       className="w-full space-y-5 cursor-pointer animate-project-images"
                     >
-                      <div className="space-y-2 md:space-y-5 2xl:space-y-8 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
-                        <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
+                      <div className="space-y-2 md:space-y-5 2xl:space-y-8 dark:bg-stone-900 bg-zinc-300/90 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
+                        <h1 className="text-sm sm:text-lg md:text-2xl 2xl:text-4xl dark:text-[#004aad] text-[#66045f]">
                           <div className={titan.className}>{project.title}</div>
                           <div className="text-xs sm:text-sm ps-2">
                             {project.secondTitle}
                           </div>
                         </h1>
-                        <p className="text-sm md:text-lg 2xl:text-2xl">
+                        <p className="text-xs sm:text-sm md:text-lg 2xl:text-2xl">
                           {project.description}
                         </p>
                         <Link href={project.sourceCode} target="_blank">
-                          <p className="pt-2 text-sm md:text-lg dark:text-zinc-400 text-zinc-600 dark:hover:text-orange-300 hover:text-cyan-700">
+                          <p className="pt-2 text-xs md:text-lg dark:text-zinc-400 text-zinc-600 dark:hover:text-[#004aad] hover:text-[#66045f]">
                             Source Code ↗️
                           </p>
                         </Link>
@@ -413,14 +413,14 @@ export default function Projects() {
                       alt={project.alt}
                       className="w-full space-y-5 cursor-pointer animate-project-images-0"
                     >
-                      <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
-                        <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
+                      <div className="space-y-2 md:space-y-5 2xl:space-y-8 dark:bg-stone-900 bg-zinc-300/90 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
+                        <h1 className="text-sm sm:text-lg md:text-2xl 2xl:text-4xl dark:text-[#004aad] text-[#66045f]">
                           <div className={titan.className}>{project.title}</div>
                           <div className="text-xs sm:text-sm ps-2">
                             {project.secondTitle}
                           </div>
                         </h1>
-                        <p className="text-sm md:text-lg 2xl:text-2xl">
+                        <p className="text-xs sm:text-sm md:text-lg 2xl:text-2xl">
                           {project.description}
                         </p>
                         <Link href={project.sourceCode} target="_blank">
@@ -455,7 +455,7 @@ export default function Projects() {
           </div>
         </div>
         <div ref={projectsText1}>
-          <h2 className="dark:text-zinc-300 text-stone-800 pt-4 ps-6 pe-6 sm:ps-0 sm:pe-0 text-center text-lg sm:text-xl 2xl:text-2xl  animate-projects-text-1">
+          <h2 className="dark:text-zinc-300 text-stone-800 pt-4 6xl:pt-10 ps-6 pe-6 sm:ps-0 sm:pe-0 text-center text-lg sm:text-xl 2xl:text-2xl  animate-projects-text-1">
             My self guided learning journey starts..
           </h2>
         </div>
@@ -475,14 +475,14 @@ export default function Projects() {
                       alt={project.alt}
                       className="w-full space-y-5 cursor-pointer animate-project-images-1"
                     >
-                      <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
-                        <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
+                      <div className="space-y-2 md:space-y-5 2xl:space-y-8 dark:bg-stone-900 bg-zinc-300/90 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
+                        <h1 className="text-sm sm:text-lg md:text-2xl 2xl:text-4xl dark:text-[#004aad] text-[#66045f]">
                           <div className={titan.className}>{project.title}</div>
                           <div className="text-xs sm:text-sm ps-2">
                             {project.secondTitle}
                           </div>
                         </h1>
-                        <p className="text-sm md:text-lg 2xl:text-2xl">
+                        <p className="text-xs sm:text-sm md:text-lg 2xl:text-2xl">
                           {project.description}
                         </p>
                         <Link href={project.sourceCode} target="_blank">

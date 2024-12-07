@@ -26,25 +26,41 @@ export const DirectionAwareHover = ({
     'top' | 'bottom' | 'left' | 'right' | string
   >('left')
 
+  const [isHovered, setIsHovered] = useState(false)
+
+  const getDirection = (clientX: number, clientY: number, obj: HTMLElement) => {
+    const { width: w, height: h, left, top } = obj.getBoundingClientRect()
+    const x = clientX - left - (w / 2) * (w > h ? h / w : 1)
+    const y = clientY - top - (h / 2) * (h > w ? w / h : 1)
+    const d = Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4
+    return d
+  }
+
   const handleMouseEnter = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     if (!ref.current) return
 
-    const direction = getDirection(event, ref.current)
-    console.log('direction', direction)
-    switch (direction) {
-      ////////// ONLY USE LEFT DIRECTION FOR NOW ////////////
+    const direction = getDirection(event.clientX, event.clientY, ref.current)
+    setDirectionState(direction)
+    setIsHovered(true)
+  }
 
-      // case 0:
-      //   setDirection('top')
-      //   break
-      // case 1:
-      //   setDirection('right')
-      //   break
-      // case 2:
-      //   setDirection('bottom')
-      //   break
+  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (!ref.current) return
+
+    const touch = event.touches[0]
+    const direction = getDirection(touch.clientX, touch.clientY, ref.current)
+    setDirectionState(direction)
+    setIsHovered(true)
+  }
+
+  const handleMouseLeave = () => {
+    setIsHovered(false)
+  }
+
+  const setDirectionState = (directionIndex: number) => {
+    switch (directionIndex) {
       case 3:
         setDirection('left')
         break
@@ -54,23 +70,15 @@ export const DirectionAwareHover = ({
     }
   }
 
-  const getDirection = (
-    ev: React.MouseEvent<HTMLDivElement, MouseEvent>,
-    obj: HTMLElement
-  ) => {
-    const { width: w, height: h, left, top } = obj.getBoundingClientRect()
-    const x = ev.clientX - left - (w / 2) * (w > h ? h / w : 1)
-    const y = ev.clientY - top - (h / 2) * (h > w ? w / h : 1)
-    const d = Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4
-    return d
-  }
-
   return (
     <motion.div
       onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleMouseLeave}
       ref={ref}
       className={cn(
-        'bg-transparent rounded-2xl overflow-hidden group/card relative',
+        'bg-transparent rounded-2xl overflow-hidden group/card relative touch-none',
         className
       )}
     >
@@ -78,10 +86,16 @@ export const DirectionAwareHover = ({
         <motion.div
           className="relative h-full w-full"
           initial="initial"
-          whileHover={direction}
+          whileHover={isHovered ? direction : undefined}
+          animate={isHovered ? direction : 'initial'}
           exit="exit"
         >
-          <motion.div className="group-hover/card:block hidden absolute inset-0 w-full h-full z-10 transition duration-500" />
+          <motion.div
+            className={cn(
+              'group-hover/card:block hidden absolute inset-0 w-full h-full z-10 transition duration-500',
+              isHovered ? 'block' : 'hidden'
+            )}
+          />
           <motion.div
             variants={variants}
             className="h-full w-full relative"
@@ -124,7 +138,6 @@ const variants = {
   initial: {
     x: 0,
   },
-
   exit: {
     x: 0,
     y: 0,
