@@ -18,7 +18,7 @@ import {
 import { TextGenerateEffectWhileInView } from '@/components/ui/text-generate-effect-while-in-view'
 
 // Images
-import divider from '../../public/images/divider-test-1.png'
+import divider from '../../public/images/divider-test-2.png'
 import phoneDivider from '../../public/images/hero-image-divider-1-test.png'
 
 // Text Generate Effect
@@ -30,7 +30,7 @@ const header = 'Recent Projects'
 export default function RecentProjects() {
   // Project Animation
   const projectImages = useRef(null)
-  const imagesInView = useInView(projectImages)
+  const imagesInView = useInView(projectImages, { once: true })
 
   useEffect(() => {
     if (imagesInView) {
@@ -50,7 +50,7 @@ export default function RecentProjects() {
 
   return (
     <>
-      <main className="relative pb-10 sm:pb-0">
+      <main className="relative pb-10">
         <Image
           src={divider}
           width={4098}
@@ -80,7 +80,7 @@ export default function RecentProjects() {
               }}
             >
               {[...Array(5)].map((_, index) => (
-                <div className="drop-shadow-[6px_6px_0px_black]" key={index}>
+                <div className="drop-shadow-[3px_3px_0px_black]" key={index}>
                   <h1
                     className="ps-2 sm:ps-8 xl:ps-6 pe-4 pt-4 sm:pt-6 xl:pt-2 pb-4 sm:mb-4 2xl:mb-6 text-center sm:text-left dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_#004aad] drop-shadow-[6px_6px_0px_#66045f] font-bold z-index mt-10 xl:mt-24 6xl:mt-56"
                     id="recent-projects"

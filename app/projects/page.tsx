@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { handlee } from '@/fonts'
+import { titan } from '@/fonts'
 import { motion, animate, stagger, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
@@ -12,7 +12,8 @@ import Footer from '../components/Footer'
 import { DirectionAwareHover } from '@/components/ui/direction-aware-hover'
 
 // Main page image
-import projectsImage from '../../public/images/projects-image.png'
+import mainImage from '../../public/images/projects-main-image-test.png'
+import mainPhoneImage from '../../public/images/projects-image-phone-test.png'
 
 // Icons
 import {
@@ -29,6 +30,7 @@ import {
 } from 'react-icons/si'
 
 // DirectionAwareHoverImages
+import coverZero from '../../public/images/project-images/cover-zero.png'
 import coverOne from '../../public/images/project-images/cover-one.png'
 import coverTwo from '../../public/images/project-images/cover-two.png'
 import coverThree from '../../public/images/project-images/cover-three.png'
@@ -40,6 +42,18 @@ import coverEight from '../../public/images/project-images/cover-eight.png'
 
 // DirectionAwareHover
 const projectsAfterDev = [
+  {
+    title: 'Strictly Paper',
+    secondTitle: '(Click the laptop for a live version)',
+    description:
+      'Using NextJS on a brand new website, using Acernity UI, Tailwind, & Framer-motion - now live! My second ever live website for a friend.',
+    tech: [SiNextdotjs, SiTailwindcss, SiFramer, SiTypescript],
+    link: 'https://strictly-paper.nz',
+    linkText: 'Preview Strictly Paper project live version & source code',
+    sourceCode: 'https://github.com/matthew-ranford/strictly-paper',
+    cover: coverZero,
+    alt: 'Zero project cover',
+  },
   {
     title: 'McLauchlan Electrical',
     secondTitle: '(Click the laptop for a live version)',
@@ -161,7 +175,7 @@ const projectsBeforeDev = [
 export default function Projects() {
   // Project section one
   const projectsText = useRef(null)
-  const textInView = useInView(projectsText)
+  const textInView = useInView(projectsText, { once: true })
 
   useEffect(() => {
     if (textInView) {
@@ -176,7 +190,7 @@ export default function Projects() {
   }, [textInView])
 
   const projectImagesAfterDev = useRef(null)
-  const imagesInView = useInView(projectImagesAfterDev)
+  const imagesInView = useInView(projectImagesAfterDev, { once: true })
 
   useEffect(() => {
     if (imagesInView) {
@@ -185,7 +199,7 @@ export default function Projects() {
         { opacity: 1, x: 0 },
         {
           duration: 0.5,
-          delay: stagger(0.35, { startDelay: 0.1 }),
+          delay: stagger(0.5, { startDelay: 1.5 }),
           ease: 'circOut',
         }
       )
@@ -200,7 +214,7 @@ export default function Projects() {
 
   // Project section two
   const projectsText0 = useRef(null)
-  const textInView0 = useInView(projectsText0)
+  const textInView0 = useInView(projectsText0, { once: true })
 
   useEffect(() => {
     if (textInView0) {
@@ -219,7 +233,7 @@ export default function Projects() {
   }, [textInView0])
 
   const projectImagesDev = useRef(null)
-  const imagesInView0 = useInView(projectImagesDev)
+  const imagesInView0 = useInView(projectImagesDev, { once: true })
 
   useEffect(() => {
     if (imagesInView0) {
@@ -243,7 +257,7 @@ export default function Projects() {
 
   // Project section three
   const projectsText1 = useRef(null)
-  const textInView1 = useInView(projectsText1)
+  const textInView1 = useInView(projectsText1, { once: true })
 
   useEffect(() => {
     if (textInView1) {
@@ -262,7 +276,7 @@ export default function Projects() {
   }, [textInView1])
 
   const projectImagesBeforeDev = useRef(null)
-  const imagesInView1 = useInView(projectImagesBeforeDev)
+  const imagesInView1 = useInView(projectImagesBeforeDev, { once: true })
 
   useEffect(() => {
     if (imagesInView1) {
@@ -286,32 +300,40 @@ export default function Projects() {
 
   return (
     <>
+      <MainHeaderNav />
+      <Image
+        src={mainImage}
+        width={4098}
+        height={2304}
+        alt="Photo of Matt"
+        className="about-image hidden sm:block"
+      />
+      <Image
+        src={mainPhoneImage}
+        width={1080}
+        height={1920}
+        alt="Photo of Matt"
+        className="about-image sm:hidden"
+      />
       <motion.section
-        initial={{ opacity: 0, y: 5 }}
+        initial={{ opacity: 0, y: 2 }}
         transition={{ delay: 0.3, duration: 1, ease: 'easeInOut' }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <MainHeaderNav />
-        <Image
-          src={projectsImage}
-          width={2732}
-          height={1536}
-          alt="Main page image of Matt"
-          className="projects-image"
-          priority={true}
-        />
-        <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-24 2xl:pt-80 3xl:pt-72 4xl:pt-64 5xl:pt-72 6xl:pt-72 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
-          Life after Dev Academy...
-        </h1>
+        <div className={titan.className}>
+          <div className="pt-28 sm:pt-16 lg:pt-20 2xl:pt-20 6xl:pt-64 text-center ps-3 sm:ps-7 xl:ps-8 font-bold dark:text-zinc-300 text-stone-800 drop-shadow-[3px_3px_0px_black] z-index">
+            <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] dark:drop-shadow-[2px_2px_0px_#004aad] drop-shadow-[2px_2px_0px_#66045f]">
+              Life after Dev Academy ...
+            </h1>
+          </div>
+        </div>
         <div ref={projectsText}>
-          <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 6xl:pt-20 dark:text-orange-300 text-cyan-700 animate-projects-text">
-            <div className={handlee.className}>
-              My self guided learning journey continues..
-            </div>
+          <h2 className="dark:text-zinc-300 text-stone-800 pt-10 ps-6 pe-6 sm:ps-0 sm:pe-0 text-center text-lg sm:text-xl 2xl:text-2xl animate-projects-text z-index">
+            My self guided learning journey continues..
           </h2>
         </div>
         <motion.div ref={projectImagesAfterDev}>
-          <div className="pt-12 6xl:pt-20 grid grid-cols-1 lg:grid-cols-2 gap-5 px-2 md:px-10 2xl:px-32">
+          <div className="pt-6 6xl:pt-20 grid grid-cols-1 lg:grid-cols-2 gap-5 px-2 md:px-10 2xl:px-32">
             {projectsAfterDev.map((project, index) => {
               return (
                 <Link
@@ -328,9 +350,7 @@ export default function Projects() {
                     >
                       <div className="space-y-2 md:space-y-5 2xl:space-y-8 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
                         <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
-                          <div className={handlee.className}>
-                            {project.title}
-                          </div>
+                          <div className={titan.className}>{project.title}</div>
                           <div className="text-xs sm:text-sm ps-2">
                             {project.secondTitle}
                           </div>
@@ -361,22 +381,24 @@ export default function Projects() {
             })}
           </div>
         </motion.div>
-        <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-20 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
-          Dev Academy...
-        </h1>
+        <div className={titan.className}>
+          <div className="dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_black] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-6 xl:ps-10 pe-10 pb-4">
+            <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem]">
+              Dev Academy ...
+            </h1>
+          </div>
+        </div>
         <div ref={projectsText0}>
-          <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 dark:text-orange-300 text-cyan-700 animate-projects-text-0">
-            <div className={handlee.className}>
-              My first time studying starts..
-            </div>
+          <h2 className="dark:text-zinc-300 text-stone-800 pt-4 ps-6 pe-6 sm:ps-0 sm:pe-0 text-center text-lg sm:text-xl 2xl:text-2xl animate-projects-text-0">
+            My first time studying starts..
           </h2>
-          <h3 className="pt-4 text-center text-xs 2xl:text-sm dark:text-orange-500 text-cyan-800 animate-projects-text-0">
+          <h3 className="pt-4 ps-6 pe-8 sm:ps-0 sm:pe-0 text-center text-xs 2xl:text-sm dark:text-[#004aad] text-[#66045f] animate-projects-text-0">
             (More projects were completed within this time & the source code is
             available on github..)
           </h3>
         </div>
         <motion.div ref={projectImagesDev}>
-          <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
+          <div className="pt-6 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
             {projectsDevAcademy.map((project, index) => {
               return (
                 <Link
@@ -393,9 +415,7 @@ export default function Projects() {
                     >
                       <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
                         <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
-                          <div className={handlee.className}>
-                            {project.title}
-                          </div>
+                          <div className={titan.className}>{project.title}</div>
                           <div className="text-xs sm:text-sm ps-2">
                             {project.secondTitle}
                           </div>
@@ -427,18 +447,20 @@ export default function Projects() {
           </div>
         </motion.div>
 
-        <h1 className="text-center text-7xl sm:text-8xl md:text-[5.2rem] lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11rem] 3xl:text-[12.8rem] 4xl:text-[14.5rem] 5xl:text-[17.2rem] 6xl:text-[18.2rem] pt-12 lg:pt-20 xl:pt-20 2xl:ps-8 2xl:pe-4 font-bold dark:text-zinc-200 text-stone-900">
-          Life before Dev Academy...
-        </h1>
+        <div className={titan.className}>
+          <div className="dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_black] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-6 xl:ps-10 pe-10 pb-4">
+            <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem]">
+              Life before Dev Academy ...
+            </h1>
+          </div>
+        </div>
         <div ref={projectsText1}>
-          <h2 className="text-center text-3xl lg:text-4xl 2xl:text-6xl pt-12 dark:text-orange-300 text-cyan-700 animate-projects-text-1">
-            <div className={handlee.className}>
-              My self guided learning journey starts..
-            </div>
+          <h2 className="dark:text-zinc-300 text-stone-800 pt-4 ps-6 pe-6 sm:ps-0 sm:pe-0 text-center text-lg sm:text-xl 2xl:text-2xl  animate-projects-text-1">
+            My self guided learning journey starts..
           </h2>
         </div>
         <motion.div ref={projectImagesBeforeDev}>
-          <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
+          <div className="pt-6 grid grid-cols-1 lg:grid-cols-2 gap-7 px-2 md:px-10 2xl:px-32">
             {projectsBeforeDev.map((project, index) => {
               return (
                 <Link
@@ -455,9 +477,7 @@ export default function Projects() {
                     >
                       <div className="space-y-2 md:space-y-5 dark:bg-stone-900 bg-zinc-200 rounded-2xl max-w-72 md:max-w-sm 2xl:max-w-2xl p-2 2xl:p-8">
                         <h1 className="text-lg md:text-2xl 2xl:text-4xl dark:text-orange-300 text-cyan-700">
-                          <div className={handlee.className}>
-                            {project.title}
-                          </div>
+                          <div className={titan.className}>{project.title}</div>
                           <div className="text-xs sm:text-sm ps-2">
                             {project.secondTitle}
                           </div>
@@ -488,10 +508,10 @@ export default function Projects() {
             })}
           </div>
         </motion.div>
-        <Footer />
+        {/* <Footer />
         <Link href="/projects">
           <div className="text-center text-5xl pt-4 pb-4">🔝</div>
-        </Link>
+        </Link> */}
       </motion.section>
     </>
   )

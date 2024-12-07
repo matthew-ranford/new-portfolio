@@ -349,7 +349,7 @@ export default function About() {
       />
       <motion.section
         className=""
-        initial={{ opacity: 0, y: 5 }}
+        initial={{ opacity: 0, y: 2 }}
         transition={{ delay: 0.3, duration: 1, ease: 'easeInOut' }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -359,7 +359,7 @@ export default function About() {
               <FlipWords words={wordsHeader} />
             </h1>
             <h2 className="sm:ps-4 xl:ps-8 text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-6xl 6xl:text-7xl dark:drop-shadow-[2px_2px_0px_#004aad] drop-shadow-[2px_2px_0px_#66045f]">
-              Let me <FlipWords words={wordsSubHeader} /> you..
+              Let me <FlipWords words={wordsSubHeader} /> you ..
             </h2>
           </div>
         </div>
