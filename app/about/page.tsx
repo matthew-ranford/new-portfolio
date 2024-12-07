@@ -298,6 +298,38 @@ export default function About() {
     }
   }, [imageGridInView])
 
+  // What I can do for you cards
+  const cardGrid = useRef(null)
+  const cardGridInView = useInView(cardGrid, { once: true })
+
+  useEffect(() => {
+    if (cardGridInView) {
+      animate(
+        '.animate-card-grid',
+        { opacity: 1, x: 0 },
+        { duration: 1, delay: stagger(0.4), ease: 'circOut' }
+      )
+    } else {
+      animate('.animate-card-grid', { opacity: 0, x: -30 }, { duration: 0 })
+    }
+  }, [cardGridInView])
+
+  // Contact card
+  const contactCard = useRef(null)
+  const contactCardInView = useInView(contactCard, { once: true })
+
+  useEffect(() => {
+    if (contactCardInView) {
+      animate(
+        '.contact-card',
+        { opacity: 1, y: 0 },
+        { duration: 1, delay: stagger(0.3), ease: 'circOut' }
+      )
+    } else {
+      animate('.contact-card', { opacity: 0, y: -50 }, { duration: 0 })
+    }
+  }, [contactCardInView])
+
   return (
     <>
       <MainHeaderNav />
@@ -360,119 +392,121 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className={titan.className}>
-          <div className="dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_black] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-6 xl:ps-10 pe-10 pb-10">
-            <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem]">
-              What I can do for you:
-            </h1>
+        <div ref={cardGrid}>
+          <div className={titan.className}>
+            <div className="dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_black] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-6 xl:ps-10 pe-10 pb-10">
+              <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] animate-card-grid">
+                What I can do for you:
+              </h1>
+            </div>
           </div>
-        </div>
-        <div className="max-w-[1200px] xl:max-w-screen-2xl 6xl:max-w-[4500px] gap-5 6xl:gap-10 grid grid-cols-12 grid-rows-2 place-items-center lg:place-items-start 2xl:place-items-center xl:pt-10 px-10 6xl:px-[35rem] pb-10">
-          <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-6 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out">
-            <CardHeader className="flex gap-3">
-              <NextUIImage
-                alt=""
-                height={40}
-                radius="sm"
-                src="/images/about-card-one.png"
-                width={40}
-              />
-            </CardHeader>
-            <CardBody>
-              <div className={titan.className}>
-                <p className="text-3xl 6xl:text-5xl">
-                  Build a tailored & responsive website
+          <div className="max-w-[1200px] xl:max-w-screen-2xl 6xl:max-w-[4500px] gap-5 6xl:gap-10 grid grid-cols-12 grid-rows-2 place-items-center lg:place-items-start 2xl:place-items-center xl:pt-10 px-10 6xl:px-[35rem] pb-10">
+            <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-6 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out animate-card-grid">
+              <CardHeader className="flex gap-3">
+                <NextUIImage
+                  alt=""
+                  height={40}
+                  radius="sm"
+                  src="/images/about-card-one.png"
+                  width={40}
+                />
+              </CardHeader>
+              <CardBody>
+                <div className={titan.className}>
+                  <p className="text-3xl 6xl:text-5xl">
+                    Build a tailored & responsive website
+                  </p>
+                </div>
+                <p className="text-lg 6xl:text-xl pt-4">
+                  Built from the ground up using React/NextJS to create a unique
+                  single or multi page website personalised for you.
                 </p>
-              </div>
-              <p className="text-lg 6xl:text-xl pt-4">
-                Built from the ground up using React/NextJS to create a unique
-                single or multi page website personalised for you.
-              </p>
-            </CardBody>
-          </Card>
-          <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl  col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-6 drop-shadow-[3px_3px_4px_#66045f] hover:scale-[0.95] hover:bg-[#66045f] hover:transition-all hover:duration-1000 hover:ease-in-out">
-            <CardHeader className="flex gap-3">
-              <NextUIImage
-                alt=""
-                height={40}
-                radius="sm"
-                src="/images/about-card-five.png"
-                width={40}
-              />
-            </CardHeader>
-            <CardBody>
-              <div className={titan.className}>
-                <p className="text-3xl 6xl:text-5xl">
-                  SEO & Performance optimization
+              </CardBody>
+            </Card>
+            <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl  col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-6 drop-shadow-[3px_3px_4px_#66045f] hover:scale-[0.95] hover:bg-[#66045f] hover:transition-all hover:duration-1000 hover:ease-in-out animate-card-grid">
+              <CardHeader className="flex gap-3">
+                <NextUIImage
+                  alt=""
+                  height={40}
+                  radius="sm"
+                  src="/images/about-card-five.png"
+                  width={40}
+                />
+              </CardHeader>
+              <CardBody>
+                <div className={titan.className}>
+                  <p className="text-3xl 6xl:text-5xl">
+                    SEO & Performance optimization
+                  </p>
+                </div>
+                <p className="text-lg 6xl:text-xl pt-4">
+                  I will optimize your website for search engines while
+                  maintaining perfomance to ensure fast load times.
                 </p>
-              </div>
-              <p className="text-lg 6xl:text-xl pt-4">
-                I will optimize your website for search engines while
-                maintaining perfomance to ensure fast load times.
-              </p>
-            </CardBody>
-          </Card>
-          <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out">
-            <CardHeader className="flex gap-3">
-              <NextUIImage
-                alt=""
-                height={40}
-                radius="sm"
-                src="/images/about-card-two.png"
-                width={40}
-              />
-            </CardHeader>
-            <CardBody>
-              <div className={titan.className}>
-                <p className="text-3xl 6xl:text-5xl">Design in Canva</p>
-              </div>
-              <p className="text-lg 6xl:text-xl pt-4 xl:pt-12">
-                From website images to business cards or a logo, I will work
-                with you to make sure you have a product you can be proud to
-                share.
-              </p>
-            </CardBody>
-          </Card>
-          <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-4 drop-shadow-[3px_3px_4px_#66045f] hover:scale-[0.95] hover:bg-[#66045f] hover:transition-all hover:duration-1000 hover:ease-in-out">
-            <CardHeader className="flex gap-3">
-              <NextUIImage
-                alt=""
-                height={40}
-                radius="sm"
-                src="/images/about-card-three.png"
-                width={40}
-              />
-            </CardHeader>
-            <CardBody>
-              <div className={titan.className}>
-                <p className="text-3xl 6xl:text-5xl">Communication</p>
-              </div>
-              <p className="text-lg 6xl:text-xl pt-4 xl:pt-12">
-                I pride myself on communication and responding in a timely
-                manner so you won&apos;t have to wonder what is happening.
-              </p>
-            </CardBody>
-          </Card>
-          <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out">
-            <CardHeader className="flex gap-3">
-              <NextUIImage
-                alt=""
-                height={40}
-                radius="sm"
-                src="/images/about-card-four.png"
-                width={40}
-              />
-            </CardHeader>
-            <CardBody>
-              <div className={titan.className}>
-                <p className="text-3xl 6xl:text-5xl">Updates</p>
-              </div>
-              <p className="text-lg 6xl:text-xl pt-4 xl:pt-12">
-                I will send you a link where you can view changes as if the
-                website is live, so you can see how it&apos;s progressing.
-              </p>
-            </CardBody>
-          </Card>
+              </CardBody>
+            </Card>
+            <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out animate-card-grid">
+              <CardHeader className="flex gap-3">
+                <NextUIImage
+                  alt=""
+                  height={40}
+                  radius="sm"
+                  src="/images/about-card-two.png"
+                  width={40}
+                />
+              </CardHeader>
+              <CardBody>
+                <div className={titan.className}>
+                  <p className="text-3xl 6xl:text-5xl">Design in Canva</p>
+                </div>
+                <p className="text-lg 6xl:text-xl pt-4 xl:pt-12">
+                  From website images to business cards or a logo, I will work
+                  with you to make sure you have a product you can be proud to
+                  share.
+                </p>
+              </CardBody>
+            </Card>
+            <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-4 drop-shadow-[3px_3px_4px_#66045f] hover:scale-[0.95] hover:bg-[#66045f] hover:transition-all hover:duration-1000 hover:ease-in-out animate-card-grid">
+              <CardHeader className="flex gap-3">
+                <NextUIImage
+                  alt=""
+                  height={40}
+                  radius="sm"
+                  src="/images/about-card-three.png"
+                  width={40}
+                />
+              </CardHeader>
+              <CardBody>
+                <div className={titan.className}>
+                  <p className="text-3xl 6xl:text-5xl">Communication</p>
+                </div>
+                <p className="text-lg 6xl:text-xl pt-4 xl:pt-12">
+                  I pride myself on communication and responding in a timely
+                  manner so you won&apos;t have to wonder what is happening.
+                </p>
+              </CardBody>
+            </Card>
+            <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out animate-card-grid">
+              <CardHeader className="flex gap-3">
+                <NextUIImage
+                  alt=""
+                  height={40}
+                  radius="sm"
+                  src="/images/about-card-four.png"
+                  width={40}
+                />
+              </CardHeader>
+              <CardBody>
+                <div className={titan.className}>
+                  <p className="text-3xl 6xl:text-5xl">Updates</p>
+                </div>
+                <p className="text-lg 6xl:text-xl pt-4 xl:pt-12">
+                  I will send you a link where you can view changes as if the
+                  website is live, so you can see how it&apos;s progressing.
+                </p>
+              </CardBody>
+            </Card>
+          </div>
         </div>
         <div className="h-screen w-full" ref={imageGrid}>
           <h2 className="dark:text-zinc-300 text-stone-800 text-left text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] dark:drop-shadow-[6px_6px_0px_black] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-6 xl:ps-10 pe-10 pb-10 animate-image-grid">
@@ -483,21 +517,24 @@ export default function About() {
           <LayoutGrid cards={cards} />
         </div>
 
-        <div className="mt-48 sm:mt-72 md:mt-[22rem] lg:mt-[27rem] xl:mt-[37rem] 2xl:mt-[42rem] 6xl:mt-[60rem] xl:pt-10 px-10 pb-10 flex justify-center items-center">
-          <Card className="max-w-7xl 2xl:max-w-full max-h-screen drop-shadow-[5px_5px_4px_black]">
+        <div
+          className="mt-48 sm:mt-72 md:mt-[22rem] lg:mt-[27rem] xl:mt-[37rem] 2xl:mt-[42rem] 6xl:mt-[60rem] xl:pt-10 px-10 pb-10 flex justify-center items-center"
+          ref={contactCard}
+        >
+          <Card className="max-w-7xl 2xl:max-w-full max-h-screen drop-shadow-[5px_5px_4px_black] contact-card">
             <CardBody className="absolute z-10 md:top-[15%] lg:top-[20%] flex-col items-start w-full xl:ps-10">
               <div className={titan.className}>
-                <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[18rem] dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_4px_black] uppercase">
+                <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[18rem] dark:text-zinc-300 text-stone-800 drop-shadow-[6px_6px_4px_black] uppercase contact-card">
                   Let&apos;s talk!
                 </h1>
               </div>
-              <div className="text-stone-800 max-w-xs sm:max-w-md ps-2 pt-4 md:pt-10 sm:text-xl 2xl:text-2xl hidden sm:inline-flex">
+              <div className="text-stone-800 max-w-xs sm:max-w-md ps-2 pt-4 md:pt-10 sm:text-xl 2xl:text-2xl hidden sm:inline-flex contact-card">
                 <p>
                   Get in touch, and we can discuss your project, your issues and
                   how to solve them.
                 </p>
               </div>
-              <div className="pt-4 sm:pt-6 text-left md:text-center 6xl:text-3xl sm:space-y-6">
+              <div className="pt-4 sm:pt-6 text-left md:text-center 6xl:text-3xl sm:space-y-6 contact-card">
                 <button className="border-3 border-stone-800 rounded-xl bg-[#66045f] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#004aad] hover:bg-zinc-300 dark:text-zinc-300 text-stone-900 hover:text-[#004aad] drop-shadow-[4px_4px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 6xl:py-6 font-bold">
                   <Link href="mailto:matt.ranford16@gmail.com">
                     Direct email message
