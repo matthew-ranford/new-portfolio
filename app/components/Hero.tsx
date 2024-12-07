@@ -15,6 +15,7 @@ import { TextGenerateEffectWithWave } from '@/components/ui/text-generate-effect
 import { TextGenerateEffectWithGlobe } from '@/components/ui/text-generate-effect-with-globe'
 import { FlipWords } from '@/components/ui/flip-words'
 import RecentProjects from './RecentProjects'
+import Footer from './Footer'
 
 // TextGenerateEffect
 const firstLine = "Hi! I'm Matthew Ranford"
@@ -114,6 +115,7 @@ export default function Hero() {
         </div>
       </main>
       <RecentProjects />
+      <Footer />
     </>
   )
 }

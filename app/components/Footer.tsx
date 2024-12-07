@@ -1,5 +1,7 @@
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { Tabs, Tab } from '@nextui-org/react'
 
 // Images
 import gmail from '../../public/images/footer-icons/gmail-icon.png'
@@ -15,6 +17,8 @@ interface Socials {
 }
 
 export default function Footer() {
+  const pathname = usePathname()
+
   const socials: Socials[] = [
     {
       link: 'mailto:matt.ranford16@gmail.com',
@@ -37,23 +41,51 @@ export default function Footer() {
       icon: instagram,
     },
   ]
+
+  const tabsToShow = [
+    ...(pathname !== '/' ? [{ key: 'home', title: '⬅️ Home', href: '/' }] : []),
+    ...(pathname !== '/about'
+      ? [{ key: 'about', title: 'About ➡️', href: '/about' }]
+      : []),
+    ...(pathname !== '/projects'
+      ? [{ key: 'projects', title: 'Projects ➡️', href: '/projects' }]
+      : []),
+  ]
+
   return (
     <>
-      <div className="flex place-content-center gap-10 pt-20 pb-4">
-        {socials.map((social, index) => {
-          return (
-            <Link href={social.link} key={index} aria-label={social.label}>
-              <Image
-                src={social.icon}
-                className="w-8 h-8 my-4 md:my-0 hover:scale-125"
-                width={48}
-                height={48}
-                alt={social.label}
-              />
-            </Link>
-          )
-        })}
-      </div>
+      <main className="mt-10">
+        <div className="flex place-content-center">
+          <Tabs
+            aria-label="Options"
+            radius="sm"
+            classNames={{
+              tabList: 'dark:bg-stone-900/40 bg-zinc-400/40 ps-4 pe-4',
+              tab: 'hover:scale-[1.1] hover:dark:text-[#004aad] hover:text-[#66045f]',
+            }}
+            selectedKey={pathname}
+          >
+            {tabsToShow.map((tab) => (
+              <Tab key={tab.key} title={tab.title} href={tab.href} />
+            ))}
+          </Tabs>
+        </div>
+        <div className="flex place-content-center gap-10 pt-10 pb-4">
+          {socials.map((social, index) => {
+            return (
+              <Link href={social.link} key={index} aria-label={social.label}>
+                <Image
+                  src={social.icon}
+                  className="w-8 h-8 my-4 md:my-0 hover:scale-125"
+                  width={48}
+                  height={48}
+                  alt={social.label}
+                />
+              </Link>
+            )
+          })}
+        </div>
+      </main>
     </>
   )
 }
