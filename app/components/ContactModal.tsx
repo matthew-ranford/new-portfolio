@@ -80,13 +80,13 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       classNames={{
         closeButton: 'right-1 dark:hover:bg-[#66045f] hover:bg-[#004aad]',
         body: 'px-6',
-        base: 'my-6 max-w-2xl 6xl:max-w-5xl max-h-fit my-auto drop-shadow-[5px_5px_0px_#1c1917]',
+        base: 'mx-6 my-6 max-w-2xl 6xl:max-w-5xl max-h-fit my-auto drop-shadow-[5px_5px_0px_#1c1917] dark:text-zinc-300 text-stone-800',
       }}
     >
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className="flex flex-col gap-1 pt-2 text-2xl">
+            <ModalHeader className="flex flex-col gap-1 pt-2 text-2xl md:text-4xl 6xl:text-6xl">
               <div className={titan.className}>Contact Me</div>
             </ModalHeader>
             <ModalBody>
@@ -141,10 +141,14 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   />
                 </div>
                 <ModalFooter>
-                  <Button color="danger" variant="light" onPress={onClose}>
+                  <Button color="danger" onPress={onClose}>
                     Cancel
                   </Button>
-                  <Button color="primary" type="submit">
+                  <Button
+                    color="primary"
+                    className="dark:hover:bg-[#66045f] hover:bg-[#004aad] hover:text-stone-950 dark:hover:text-zinc-300 hover:transition-all hover:duration-1000 hover:ease-in-out"
+                    type="submit"
+                  >
                     Send Message
                   </Button>
                 </ModalFooter>
