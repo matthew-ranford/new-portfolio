@@ -12,8 +12,8 @@ import Footer from '../components/Footer'
 import { DirectionAwareHover } from '@/components/ui/direction-aware-hover'
 
 // Main page image
-import mainImage from '../../public/images/projects-main-image-test.png'
-import mainPhoneImage from '../../public/images/projects-image-phone-test.png'
+import projectsImage from '../../public/images/project-images/projects-main-image.png'
+import projectsPhoneImage from '../../public/images/project-images/projects-main-image-phone.png'
 
 // Icons
 import {
@@ -310,18 +310,18 @@ export default function Projects() {
     <>
       <MainHeaderNav />
       <Image
-        src={mainImage}
+        src={projectsImage}
         width={4098}
         height={2304}
         alt="Photo of Matt"
-        className="about-image hidden sm:block"
+        className="projects-image hidden sm:block"
       />
       <Image
-        src={mainPhoneImage}
+        src={projectsPhoneImage}
         width={1080}
         height={1920}
         alt="Photo of Matt"
-        className="about-image sm:hidden"
+        className="projects-image sm:hidden"
       />
       <motion.section
         initial={{ opacity: 0, y: 2 }}

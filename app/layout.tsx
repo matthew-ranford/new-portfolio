@@ -44,7 +44,6 @@ export default function RootLayout({
 }
 
 // TODO:
-// Tidy up image names and delete unwanted images
 // Look at putting logo in nav?
 // Look at hover state of recent projects card
 // Set up contact form modal - under construction for now?

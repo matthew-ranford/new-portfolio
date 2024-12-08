@@ -55,7 +55,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             className="pt-4 text-center ps-4 pe-4 sm:ps-0 sm:pe-0 6xl:text-3xl"
           >
-            <button className="border-3 border-stone-800 rounded-xl bg-[#66045f] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#004aad] hover:bg-zinc-300 dark:text-zinc-300 text-stone-900 hover:text-[#004aad] drop-shadow-[4px_4px_0px_#1c1917] hover:drop-shadow-none py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 6xl:py-6 font-bold">
+            <button className="border-3 border-stone-800 rounded-xl bg-[#66045f] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#004aad] hover:bg-zinc-300 dark:text-zinc-300 text-stone-900 hover:text-[#004aad] drop-shadow-[4px_4px_0px_#1c1917] hover:drop-shadow-none py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 6xl:py-6 lg:mx-4 font-bold">
               <Link href="#recent-projects">Check recent projects</Link>
             </button>
             <button className="border-3 border-stone-800 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#004aad] text-[#004aad] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#004aad] hover:text-[#004aad] drop-shadow-[5px_5px_0px_#1c1917] hover:drop-shadow-none py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 6xl:py-6 mx-2 lg:mx-4 my-4 sm:my-0 font-bold">

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { titan } from '@/fonts'
@@ -10,11 +10,7 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
-  Divider,
-  Link as LinkNextUI,
   Image as NextUIImage,
-  Button,
 } from '@nextui-org/react'
 
 // Components
@@ -24,43 +20,8 @@ import { LayoutGrid } from '@/components/ui/layout-grid'
 import { FlipWords } from '@/components/ui/flip-words'
 
 // Main page image
-// import aboutImage from '../../public/images/about-image.png'
-import aboutImage from '../../public/images/about-image-new-test-1.png'
-import aboutImagePhone from '../../public/images/about-image-phone-test.png'
-
-// Icons
-import {
-  FcReading,
-  FcGlobe,
-  FcSportsMode,
-  FcFilmReel,
-  FcIdea,
-  FcLandscape,
-} from 'react-icons/fc'
-import {
-  SiBootstrap,
-  SiCanva,
-  SiCrowdsource,
-  // SiCss3,
-  SiExpress,
-  SiFramer,
-  SiJabber,
-  SiKakaotalk,
-  // SiGit,
-  // SiGithub,
-  // SiHtml5,
-  // SiJavascript,
-  // SiKnexdotjs,
-  SiNextdotjs,
-  SiPayhip,
-  // SiNodedotjs,
-  SiReact,
-  SiSqlite,
-  SiTailwindcss,
-  SiTeamspeak,
-  SiTypescript,
-  SiVeepee,
-} from 'react-icons/si'
+import aboutImage from '../../public/images/about-images/about-image-main.png'
+import aboutImagePhone from '../../public/images/about-images/about-image-main-phone.png'
 
 // LayoutGrid
 const FrameOne = () => {
@@ -404,18 +365,18 @@ export default function About() {
             <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-6 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out animate-card-grid">
               <CardHeader className="flex gap-3">
                 <NextUIImage
-                  alt=""
+                  alt="logo icon one"
                   height={40}
                   radius="sm"
-                  src="/images/about-card-one.png"
+                  src="/images/about-images/about-card-one.png"
                   width={40}
                 />
               </CardHeader>
               <CardBody>
                 <div className={titan.className}>
-                  <p className="text-3xl 6xl:text-5xl">
+                  <h2 className="text-3xl 6xl:text-5xl">
                     Build a tailored & responsive website
-                  </p>
+                  </h2>
                 </div>
                 <p className="text-lg 6xl:text-xl pt-4">
                   Built from the ground up using React/NextJS to create a unique
@@ -426,18 +387,18 @@ export default function About() {
             <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl  col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-6 drop-shadow-[3px_3px_4px_#66045f] hover:scale-[0.95] hover:bg-[#66045f] hover:transition-all hover:duration-1000 hover:ease-in-out animate-card-grid">
               <CardHeader className="flex gap-3">
                 <NextUIImage
-                  alt=""
+                  alt="logo icon two"
                   height={40}
                   radius="sm"
-                  src="/images/about-card-five.png"
+                  src="/images/about-images/about-card-five.png"
                   width={40}
                 />
               </CardHeader>
               <CardBody>
                 <div className={titan.className}>
-                  <p className="text-3xl 6xl:text-5xl">
+                  <h2 className="text-3xl 6xl:text-5xl">
                     SEO & Performance optimization
-                  </p>
+                  </h2>
                 </div>
                 <p className="text-lg 6xl:text-xl pt-4">
                   I will optimize your website for search engines while
@@ -448,16 +409,16 @@ export default function About() {
             <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out animate-card-grid">
               <CardHeader className="flex gap-3">
                 <NextUIImage
-                  alt=""
+                  alt="logo icon three"
                   height={40}
                   radius="sm"
-                  src="/images/about-card-two.png"
+                  src="/images/about-images/about-card-two.png"
                   width={40}
                 />
               </CardHeader>
               <CardBody>
                 <div className={titan.className}>
-                  <p className="text-3xl 6xl:text-5xl">Design in Canva</p>
+                  <h2 className="text-3xl 6xl:text-5xl">Design in Canva</h2>
                 </div>
                 <p className="text-lg 6xl:text-xl pt-4 xl:pt-12">
                   From website images to business cards or a logo, I will work
@@ -469,16 +430,16 @@ export default function About() {
             <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-4 drop-shadow-[3px_3px_4px_#66045f] hover:scale-[0.95] hover:bg-[#66045f] hover:transition-all hover:duration-1000 hover:ease-in-out animate-card-grid">
               <CardHeader className="flex gap-3">
                 <NextUIImage
-                  alt=""
+                  alt="logo icon four"
                   height={40}
                   radius="sm"
-                  src="/images/about-card-three.png"
+                  src="/images/about-images/about-card-three.png"
                   width={40}
                 />
               </CardHeader>
               <CardBody>
                 <div className={titan.className}>
-                  <p className="text-3xl 6xl:text-5xl">Communication</p>
+                  <h2 className="text-3xl 6xl:text-5xl">Communication</h2>
                 </div>
                 <p className="text-lg 6xl:text-xl pt-4 xl:pt-12">
                   I pride myself on communication and responding in a timely
@@ -489,16 +450,16 @@ export default function About() {
             <Card className="place-self-center lg:place-self-start 2xl:place-self-center ps-2 max-w-[420px] 2xl:max-w-2xl 6xl:max-w-xl col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-6 6xl:col-span-4 drop-shadow-[3px_3px_4px_#004aad] hover:scale-[0.95] hover:bg-[#004aad] hover:transition-all hover:duration-1000 hover:ease-in-out animate-card-grid">
               <CardHeader className="flex gap-3">
                 <NextUIImage
-                  alt=""
+                  alt="logo icon five"
                   height={40}
                   radius="sm"
-                  src="/images/about-card-four.png"
+                  src="/images/about-images/about-card-four.png"
                   width={40}
                 />
               </CardHeader>
               <CardBody>
                 <div className={titan.className}>
-                  <p className="text-3xl 6xl:text-5xl">Updates</p>
+                  <h2 className="text-3xl 6xl:text-5xl">Updates</h2>
                 </div>
                 <p className="text-lg 6xl:text-xl pt-4 xl:pt-12">
                   I will send you a link where you can view changes as if the
@@ -541,17 +502,18 @@ export default function About() {
                   </Link>
                 </button>
                 <button className="border-3 border-stone-800 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#004aad] text-[#004aad] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#004aad] hover:text-[#004aad] drop-shadow-[5px_5px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 6xl:py-6 md:mx-4 my-4 sm:my-0 font-bold hidden sm:block md:inline-flex">
-                  <Link href="mailto:matt.ranford16@gmail.com">
-                    Contact form
-                  </Link>
+                  {/* <Link href="mailto:matt.ranford16@gmail.com"> */}
+                  Contact form
+                  {/* </Link> */}
                 </button>
               </div>
             </CardBody>
             <NextUIImage
               removeWrapper
-              alt="Latest website project"
+              alt="Photo of Matt"
               className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover"
-              src="/images/about-page-image-test.png"
+              src="/images/about-images/about-page-contact-card.png"
+              loading="lazy"
             />
           </Card>
         </div>

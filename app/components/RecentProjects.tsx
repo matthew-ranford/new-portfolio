@@ -56,6 +56,7 @@ export default function RecentProjects() {
           height={2304}
           alt="divider and background"
           className="absolute top-0 left-0 w-full h-auto object-cover z-0"
+          priority
         />
         <div className={`${titan.className} relative z-10`}>
           <div className="relative w-full overflow-hidden">

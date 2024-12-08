@@ -1,15 +1,19 @@
 'use client'
 
 import { useState } from 'react'
-import { inter, titan } from '@/fonts'
+import { titan } from '@/fonts'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { useDisclosure } from '@nextui-org/react'
 
 // Light & Dark mode toggle
 import { ModeToggle } from './LightDarkToggle'
 
 // Page title
 import MainHeaderNav from './MainHeaderNav'
+
+// Contact modal
+import ContactModal from './ContactModal'
 
 // TypeScript
 interface NavLink {
@@ -23,11 +27,16 @@ interface NavLink {
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const {
+    isOpen: isModalOpen,
+    onOpen: onModalOpen,
+    onClose: onModalClose,
+  } = useDisclosure()
 
   const navLinks: NavLink[] = [
-    { href: '/', text: 'Home' },
-    { href: 'about', text: 'About' },
-    { href: 'projects', text: 'Projects' },
+    { href: '/', text: 'Home', ariaLabel: 'Home button' },
+    { href: 'about', text: 'About', ariaLabel: 'About page button' },
+    { href: 'projects', text: 'Projects', ariaLabel: 'Projects page button' },
     {
       href: '/matt-software-dev-cv.pdf',
       text: 'Résumé',
@@ -35,7 +44,7 @@ export default function Navbar() {
       ariaLabel: 'View my résumé in pdf format',
     },
     {
-      href: 'mailto:matt.ranford16@gmail.com',
+      href: 'contact',
       text: 'Contact form',
       isButton: true,
       className:
@@ -44,17 +53,21 @@ export default function Navbar() {
     },
   ]
 
-  const toggleMenu = () => {
+  const toggleMobileMenu = () => {
     setIsOpen(!isOpen)
   }
 
-  const closeNavbarOnThemeChange = () => {
+  const closeMobileMenuOnThemeChange = () => {
     setIsOpen(false)
   }
 
-  const handleNavClick = (link: NavLink) => {
+  const handleNavButtonClick = (link: NavLink) => {
     if (link.isButton) {
-      window.location.href = link.href
+      if (link.text === 'Contact form') {
+        onModalOpen()
+      } else {
+        window.location.href = link.href
+      }
     }
     setIsOpen(false)
   }
@@ -62,13 +75,12 @@ export default function Navbar() {
   return (
     <>
       <motion.div
-        className={inter.className}
         initial={{ opacity: 0, y: 0 }}
         transition={{ delay: 1, duration: 1.5, ease: 'easeInOut' }}
         animate={{ opacity: 1, y: 0 }}
       >
         <nav
-          className={`lg:flex lg:justify-between navbar-container p-0 sm:p-2 mt-0 lg:mt-4 xl:mt-6 6xl:mt-10 xl:pe-10 text-stone-800 ${
+          className={`lg:flex lg:justify-between navbar-container p-0 sm:p-2 mt-0 lg:mt-4 xl:mt-6 6xl:mt-10 xl:pe-10 ${
             isOpen
               ? 'navbar-open navbar-full-height animate-slideIn'
               : 'navbar-closed animate-slideOut'
@@ -91,7 +103,7 @@ export default function Navbar() {
                 aria-controls="navbar-dropdown-menu"
                 aria-expanded={isOpen}
                 type="button"
-                onClick={toggleMenu}
+                onClick={toggleMobileMenu}
               >
                 <span className="hamburger-box">
                   <span className="hamburger-inner"></span>
@@ -115,7 +127,7 @@ export default function Navbar() {
               >
                 {link.isButton ? (
                   <button
-                    onClick={() => handleNavClick(link)}
+                    onClick={() => handleNavButtonClick(link)}
                     className={link.className}
                     aria-label={link.ariaLabel}
                   >
@@ -127,7 +139,7 @@ export default function Navbar() {
                     target={link.target}
                     className={link.className}
                     aria-label={link.ariaLabel}
-                    onClick={() => handleNavClick(link)}
+                    onClick={() => handleNavButtonClick(link)}
                   >
                     {link.text}
                   </Link>
@@ -135,11 +147,14 @@ export default function Navbar() {
               </li>
             ))}
             <div className="-mt-1">
-              <ModeToggle closeNavbar={closeNavbarOnThemeChange} />
+              <ModeToggle closeNavbar={closeMobileMenuOnThemeChange} />
             </div>
           </ul>
         </nav>
       </motion.div>
+
+      {/* Contact Modal */}
+      <ContactModal isOpen={isModalOpen} onClose={onModalClose} />
     </>
   )
 }
