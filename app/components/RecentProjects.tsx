@@ -8,7 +8,6 @@ import { useEffect, useRef } from 'react'
 import {
   Card,
   CardHeader,
-  // CardBody,
   CardFooter,
   Image as NextUIImage,
   Button,
@@ -18,14 +17,14 @@ import {
 import { TextGenerateEffectWhileInView } from '@/components/ui/text-generate-effect-while-in-view'
 
 // Images
-import divider from '../../public/images/divider-test-2.png'
-import phoneDivider from '../../public/images/hero-image-divider-1-test.png'
+import divider from '../../public/images/divider.png'
 
 // Text Generate Effect
 const header = 'Recent Projects'
 
-// TODO: Fix hover scale for medium screens etc
-// Put on animation for projects
+// TODO:
+// Look over hover state modal at bottom of component
+// Write better code for card section, too much repeating
 
 export default function RecentProjects() {
   // Project Animation
@@ -58,14 +57,6 @@ export default function RecentProjects() {
           alt="divider and background"
           className="absolute top-0 left-0 w-full h-auto object-cover z-0"
         />
-
-        {/* <Image
-          src={phoneDivider}
-          width={1080}
-          height={1920}
-          alt="second mobile divider and background"
-          className="absolute top-[35rem] sm:top-[45rem] md:top-[50rem] left-0 w-full h-auto object-cover z-0 lg:hidden"
-        /> */}
         <div className={`${titan.className} relative z-10`}>
           <div className="relative w-full overflow-hidden">
             <motion.div
@@ -111,7 +102,8 @@ export default function RecentProjects() {
                 removeWrapper
                 alt="Latest website project"
                 className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-0"
-                src="/images/project-image-test.png"
+                src="/images/recent-project-one.png"
+                loading="lazy"
               />
               <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
                 <div className="flex flex-grow gap-2 items-center">
@@ -133,6 +125,7 @@ export default function RecentProjects() {
                     radius="full"
                     size="sm"
                     className="dark:bg-zinc-300 dark:text-stone-800 bg-[#66045f] text-zinc-300"
+                    aria-label="button to view live version"
                   >
                     View live
                   </Button>
@@ -151,8 +144,9 @@ export default function RecentProjects() {
               <NextUIImage
                 removeWrapper
                 alt="Business card project"
-                className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 hover:scale-[1.5] hover:z-20 hover:backdrop-blur-sm hover:-translate-x-2/3 hover:transition hover:ease-in hover:duration-1000"
-                src="/images/atd-business-card.png"
+                className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 hover:scale-[1.5] lg:hover:scale-[2] hover:z-20 hover:backdrop-blur-sm lg:hover:-translate-x-2/3 hover:transition hover:ease-in hover:duration-1000"
+                src="/images/recent-project-two.png"
+                loading="lazy"
               />
               <CardFooter className="absolute bg-black/40 bottom-0 border-t-1 border-default-600 dark:border-default-100">
                 <div className="flex flex-grow gap-2 items-center">
@@ -180,7 +174,8 @@ export default function RecentProjects() {
                 removeWrapper
                 alt="Second website project prototype"
                 className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-0"
-                src="/images/project-image-test-1.png"
+                src="/images/recent-project-three.png"
+                loading="lazy"
               />
               <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
                 <div className="flex flex-grow gap-2 items-center">
@@ -202,6 +197,7 @@ export default function RecentProjects() {
                     radius="full"
                     size="sm"
                     className="dark:bg-zinc-300 dark:text-stone-800 bg-[#66045f] text-zinc-300"
+                    aria-label="button to view live version"
                   >
                     View live
                   </Button>
@@ -219,9 +215,10 @@ export default function RecentProjects() {
               </CardHeader>
               <NextUIImage
                 removeWrapper
-                alt="First website project"
+                alt="First ever website project"
                 className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-0"
-                src="/images/project-image-test-2.png"
+                src="/images/recent-project-four.png"
+                loading="lazy"
               />
               <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
                 <div className="flex flex-grow gap-2 items-center">
@@ -243,6 +240,7 @@ export default function RecentProjects() {
                     radius="full"
                     size="sm"
                     className="dark:bg-zinc-300 dark:text-stone-800 bg-[#66045f] text-zinc-300"
+                    aria-label="button to view live version"
                   >
                     View live
                   </Button>
@@ -252,7 +250,10 @@ export default function RecentProjects() {
           </div>
         </motion.div>
         <div className="pt-6 text-center font-normal dark:font-bold 6xl:text-3xl">
-          <button className="border-3 border-stone-800 rounded-xl bg-[#66045f] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#004aad] hover:bg-zinc-300 dark:text-zinc-300 text-stone-900 hover:text-[#004aad] drop-shadow-[4px_4px_0px_#1c1917] hover:drop-shadow-none py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 font-bold">
+          <button
+            className="border-3 border-stone-800 rounded-xl bg-[#66045f] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#004aad] hover:bg-zinc-300 dark:text-zinc-300 text-stone-900 hover:text-[#004aad] drop-shadow-[4px_4px_0px_#1c1917] hover:drop-shadow-none py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 font-bold"
+            aria-label="button to view all projects"
+          >
             <Link href="projects">View all projects</Link>
           </button>
         </div>
