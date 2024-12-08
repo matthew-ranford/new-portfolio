@@ -1,20 +1,22 @@
-import { TypewriterEffect } from '@/components/ui/typewriter-effect'
-import { titan } from '@/fonts'
+import Image from 'next/image'
+import { useTheme } from 'next-themes'
+import mainLogo from '../../public/images/logo-dark.png'
+import mainLogoLightMode from '../../public/images/logo-light.png'
 
 export default function MainHeaderNav() {
-  // TypeWriterEffect
-  const mainHeader = [
-    {
-      text: 'M.R',
-    },
-  ]
+  const { theme } = useTheme()
+  const logoSource = theme === 'light' ? mainLogo : mainLogoLightMode
 
   return (
     <>
-      <div className={titan.className}>
-        <h1 className="ps-4 sm:ps-6 xl:ps-10 sm:pt-4 xl:pt-0 drop-shadow-[6px_6px_0px_black] z-index">
-          <TypewriterEffect words={mainHeader} />
-        </h1>
+      <div className="ps-2 sm:ps-4 lg:ps-10">
+        <Image
+          src={logoSource}
+          alt="Website Logo"
+          width={500}
+          height={500}
+          className="6xl:w-1/3 6xl:h-1/3 z-index"
+        />
       </div>
     </>
   )

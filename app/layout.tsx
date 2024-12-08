@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system" //Can change to dark etc.
+          defaultTheme="dark" //Can change to dark etc.
           enableSystem
           disableTransitionOnChange
         >
@@ -46,4 +46,3 @@ export default function RootLayout({
 // TODO:
 // Look at putting logo in nav?
 // Look at hover state of recent projects card
-// Set up contact form modal - under construction for now?

@@ -31,7 +31,7 @@ export default function Hero() {
     <>
       <main id="home">
         <MainHeaderNav />
-        <div className="pt-32 sm:pt-16 lg:pt-20 6xl:pt-64 space-y-4 flex flex-col items-center justify-center  z-index">
+        <div className="pt-32 sm:pt-16 lg:pt-20 6xl:pt-80 space-y-4 flex flex-col items-center justify-center z-index">
           <div className={titan.className}>
             <TextGenerateEffectWithWave
               words={firstLine}
