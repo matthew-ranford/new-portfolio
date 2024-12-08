@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { titan } from '@/fonts'
@@ -18,6 +18,7 @@ import MainHeaderNav from '../components/MainHeaderNav'
 import Footer from '../components/Footer'
 import { LayoutGrid } from '@/components/ui/layout-grid'
 import { FlipWords } from '@/components/ui/flip-words'
+import ContactModal from '../components/ContactModal'
 
 // Main page image
 import aboutImage from '../../public/images/about-images/about-image-main.png'
@@ -227,6 +228,9 @@ const wordsHeader = ['Who am I?', 'Who are you?']
 const wordsSubHeader = ['tell', 'show']
 
 export default function About() {
+  // Contact modal
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false)
+
   // Main text
   const aboutText = useRef(null)
   const textInView = useInView(aboutText, { once: true })
@@ -501,10 +505,11 @@ export default function About() {
                     Direct email message
                   </Link>
                 </button>
-                <button className="border-3 border-stone-800 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#004aad] text-[#004aad] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#004aad] hover:text-[#004aad] drop-shadow-[5px_5px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 6xl:py-6 md:mx-4 my-4 sm:my-0 font-bold hidden sm:block md:inline-flex">
-                  {/* <Link href="mailto:matt.ranford16@gmail.com"> */}
+                <button
+                  onClick={() => setIsContactModalOpen(true)}
+                  className="border-3 border-stone-800 rounded-xl dark:bg-zinc-300 bg-stone-800 dark:text-[#004aad] text-[#004aad] transition-all duration-1000 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-[#004aad] hover:text-[#004aad] drop-shadow-[5px_5px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 6xl:py-6 md:mx-4 my-4 sm:my-0 font-bold hidden sm:block md:inline-flex"
+                >
                   Contact form
-                  {/* </Link> */}
                 </button>
               </div>
             </CardBody>
@@ -518,6 +523,10 @@ export default function About() {
           </Card>
         </div>
       </motion.section>
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
       <Footer />
     </>
   )
