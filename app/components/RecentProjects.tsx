@@ -252,7 +252,7 @@ export default function RecentProjects() {
           </div>
         </motion.div>
         <div className="pt-6 text-center font-normal dark:font-bold 6xl:text-3xl">
-          <button className="border-3 border-stone-800 rounded-xl bg-[#66045f] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#004aad] hover:bg-zinc-300 dark:text-zinc-300 text-stone-900 hover:text-[#004aad] drop-shadow-[4px_4px_0px_#1c1917] py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 font-bold">
+          <button className="border-3 border-stone-800 rounded-xl bg-[#66045f] transition-all duration-1000 dark:hover:bg-stone-800 dark:hover:text-[#004aad] hover:bg-zinc-300 dark:text-zinc-300 text-stone-900 hover:text-[#004aad] drop-shadow-[4px_4px_0px_#1c1917] hover:drop-shadow-none py-3 px-3 sm:px-4 sm:py-4 6xl:px-8 font-bold">
             <Link href="projects">View all projects</Link>
           </button>
         </div>

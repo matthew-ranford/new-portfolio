@@ -221,7 +221,11 @@ export default function Projects() {
       animate(
         '.animate-projects-text-0',
         { opacity: 1, y: 0 },
-        { duration: 0.5, delay: stagger(0.2), ease: 'circOut' }
+        {
+          duration: 0.5,
+          delay: stagger(0.2, { startDelay: 1 }),
+          ease: 'circOut',
+        }
       )
     } else {
       animate(
@@ -242,7 +246,7 @@ export default function Projects() {
         { opacity: 1, x: 0 },
         {
           duration: 0.5,
-          delay: stagger(0.35, { startDelay: 0.1 }),
+          delay: stagger(0.35, { startDelay: 1 }),
           ease: 'circOut',
         }
       )
@@ -264,7 +268,11 @@ export default function Projects() {
       animate(
         '.animate-projects-text-1',
         { opacity: 1, y: 0 },
-        { duration: 0.5, delay: stagger(0.2), ease: 'circOut' }
+        {
+          duration: 0.5,
+          delay: stagger(0.2, { startDelay: 1 }),
+          ease: 'circOut',
+        }
       )
     } else {
       animate(
@@ -285,7 +293,7 @@ export default function Projects() {
         { opacity: 1, x: 0 },
         {
           duration: 0.5,
-          delay: stagger(0.35, { startDelay: 0.1 }),
+          delay: stagger(0.35, { startDelay: 1 }),
           ease: 'circOut',
         }
       )
@@ -320,14 +328,14 @@ export default function Projects() {
         transition={{ delay: 0.3, duration: 1, ease: 'easeInOut' }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <div className={titan.className}>
-          <div className="pt-28 sm:pt-16 lg:pt-20 2xl:pt-20 6xl:pt-64 text-center ps-3 sm:ps-7 xl:ps-8 font-bold dark:text-zinc-300 text-stone-800 drop-shadow-[3px_3px_0px_black] z-index">
-            <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] dark:drop-shadow-[2px_2px_0px_#004aad] drop-shadow-[2px_2px_0px_#66045f]">
-              Life after Dev Academy ...
-            </h1>
-          </div>
-        </div>
         <div ref={projectsText}>
+          <div className={titan.className}>
+            <div className="pt-28 sm:pt-16 lg:pt-20 2xl:pt-20 6xl:pt-64 text-center ps-3 sm:ps-7 xl:ps-8 font-bold dark:text-zinc-300 text-stone-800 drop-shadow-[3px_3px_0px_black] z-index">
+              <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] dark:drop-shadow-[2px_2px_0px_#004aad] drop-shadow-[2px_2px_0px_#66045f] animate-projects-text">
+                Life after Dev Academy ...
+              </h1>
+            </div>
+          </div>
           <h2 className="dark:text-zinc-300 text-stone-800 pt-10 ps-6 pe-6 sm:ps-0 sm:pe-0 text-center text-lg sm:text-xl 2xl:text-2xl animate-projects-text z-index">
             My self guided learning journey continues..
           </h2>
@@ -381,14 +389,14 @@ export default function Projects() {
             })}
           </div>
         </motion.div>
-        <div className={titan.className}>
-          <div className="dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_black] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-6 xl:ps-10 pe-10 pb-4">
-            <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem]">
-              Dev Academy ...
-            </h1>
-          </div>
-        </div>
         <div ref={projectsText0}>
+          <div className={titan.className}>
+            <div className="dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_black] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-6 xl:ps-10 pe-10 pb-4">
+              <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] animate-projects-text-0">
+                Dev Academy ...
+              </h1>
+            </div>
+          </div>
           <h2 className="dark:text-zinc-300 text-stone-800 pt-4 ps-6 pe-6 sm:ps-0 sm:pe-0 text-center text-lg sm:text-xl 2xl:text-2xl animate-projects-text-0">
             My first time studying starts..
           </h2>
@@ -447,14 +455,14 @@ export default function Projects() {
           </div>
         </motion.div>
 
-        <div className={titan.className}>
-          <div className="dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_black] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-6 xl:ps-10 pe-10 pb-4">
-            <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem]">
-              Life before Dev Academy ...
-            </h1>
-          </div>
-        </div>
         <div ref={projectsText1}>
+          <div className={titan.className}>
+            <div className="dark:text-zinc-300 text-stone-800 dark:drop-shadow-[6px_6px_0px_black] drop-shadow-[5px_5px_4px_#66045f] xl:pt-10 ps-6 xl:ps-10 pe-10 pb-4">
+              <h1 className="text-4xl sm:text-7xl md:text-[5.3rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[10.5rem] 6xl:text-[16rem] animate-projects-text-1">
+                Life before Dev Academy ...
+              </h1>
+            </div>
+          </div>
           <h2 className="dark:text-zinc-300 text-stone-800 pt-4 6xl:pt-10 ps-6 pe-6 sm:ps-0 sm:pe-0 text-center text-lg sm:text-xl 2xl:text-2xl  animate-projects-text-1">
             My self guided learning journey starts..
           </h2>

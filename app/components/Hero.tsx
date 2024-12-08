@@ -6,21 +6,22 @@ import { titan } from '@/fonts'
 import { motion } from 'framer-motion'
 
 // Main page image
-import heroImage from '../../public/images/hero-image-new-test-14.png'
+import heroImage from '../../public/images/hero-image-main.png'
+import heroImagePhone from '../../public/images/hero-image-main-phone.png'
 
 // Components
 import MainHeaderNav from './MainHeaderNav'
+import RecentProjects from './RecentProjects'
+import Footer from './Footer'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { TextGenerateEffectWithWave } from '@/components/ui/text-generate-effect-with-wave'
 import { TextGenerateEffectWithGlobe } from '@/components/ui/text-generate-effect-with-globe'
 import { FlipWords } from '@/components/ui/flip-words'
-import RecentProjects from './RecentProjects'
-import Footer from './Footer'
 
 // TextGenerateEffect
 const firstLine = "Hi! I'm Matthew Ranford"
 const secondLine = 'Based in Wellington, New Zealand'
-const thirdLine = 'Need a website? - Let me help you!'
+const thirdLine = 'Let me help you with a new website!'
 
 // Flip words
 const words = ['Designer', 'Developer']
@@ -28,13 +29,9 @@ const words = ['Designer', 'Developer']
 export default function Hero() {
   return (
     <>
-      {/* TODO: 
-                  - Maybe do a contact form modal
-                  - look at putting in a breadcrumb for the navbar at the bottom of the hero page
-         */}
       <main id="home">
         <MainHeaderNav />
-        <div className="pt-20 sm:pt-16 lg:pt-20 6xl:pt-64 space-y-4 flex flex-col items-center justify-center  z-index">
+        <div className="pt-32 sm:pt-16 lg:pt-20 6xl:pt-64 space-y-4 flex flex-col items-center justify-center  z-index">
           <div className={titan.className}>
             <TextGenerateEffectWithWave
               words={firstLine}
@@ -82,7 +79,14 @@ export default function Hero() {
             width={4098}
             height={2304}
             alt="Photo of Matt"
-            className="hero-image "
+            className="hero-image hidden sm:block"
+          />
+          <Image
+            src={heroImagePhone}
+            width={4098}
+            height={2304}
+            alt="Photo of Matt"
+            className="hero-image sm:hidden"
           />
         </motion.div>
         <div className={titan.className}>

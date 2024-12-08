@@ -13,7 +13,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 export const metadata: Metadata = {
   title: 'Matthew Ranford | Developer Portfolio',
   description:
-    "Matthew Ranford's Fullstack Developer Portfolio showcasing skills and recent projects",
+    "Matthew Ranford's web developer portfolio showcasing skills and recent projects",
 }
 
 export default function RootLayout({
@@ -42,3 +42,9 @@ export default function RootLayout({
     </html>
   )
 }
+
+// TODO:
+// Tidy up image names and delete unwanted images
+// Look at putting logo in nav?
+// Look at hover state of recent projects card
+// Set up contact form modal - under construction for now?
