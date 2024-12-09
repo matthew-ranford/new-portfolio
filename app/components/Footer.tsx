@@ -8,6 +8,7 @@ import gmail from '../../public/images/footer-icons/gmail-icon.png'
 import linkedIn from '../../public/images/footer-icons/linkedin-icon.png'
 import github from '../../public/images/footer-icons/github-icon.png'
 import instagram from '../../public/images/footer-icons/instagram-icon.png'
+import MainHeaderNav from './MainHeaderNav'
 
 // TypeScript
 interface Socials {
@@ -54,14 +55,14 @@ export default function Footer() {
 
   return (
     <>
-      <main className="mt-10">
+      <main className="mt-10 md:mt-24">
         <div className="flex place-content-center">
           <Tabs
             aria-label="Options"
             radius="sm"
             classNames={{
               tabList: 'dark:bg-stone-900/40 bg-zinc-400/40 ps-4 pe-4',
-              tab: 'hover:scale-[1.1] hover:dark:text-[#004aad] hover:text-[#66045f]',
+              tab: 'hover:scale-[1.1] hover:dark:text-[#004aad] hover:text-[#66045f] md:text-lg 6xl:text-xl',
             }}
             selectedKey={pathname}
           >
@@ -70,7 +71,7 @@ export default function Footer() {
             ))}
           </Tabs>
         </div>
-        <div className="flex place-content-center gap-10 pt-10 pb-4">
+        <div className="flex place-content-center gap-10 pt-10">
           {socials.map((social, index) => {
             return (
               <Link href={social.link} key={index} aria-label={social.label}>
@@ -85,6 +86,7 @@ export default function Footer() {
             )
           })}
         </div>
+        <MainHeaderNav />
       </main>
     </>
   )
