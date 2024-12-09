@@ -23,6 +23,12 @@ import ContactModal from '../components/ContactModal'
 // Main page image
 import aboutImage from '../../public/images/about-images/about-image-main.png'
 import aboutImagePhone from '../../public/images/about-images/about-image-main-phone.png'
+import contactCardImage from '../../public/images/about-images/about-page-contact-card.png'
+import aboutCardOneImage from '../../public/images/about-images/about-card-one.png'
+import aboutCardTwoImage from '../../public/images/about-images/about-card-two.png'
+import aboutCardThreeImage from '../../public/images/about-images/about-card-three.png'
+import aboutCardFourImage from '../../public/images/about-images/about-card-four.png'
+import aboutCardFiveImage from '../../public/images/about-images/about-card-five.png'
 
 // LayoutGrid
 const FrameOne = () => {
@@ -372,7 +378,7 @@ export default function About() {
                   alt="logo icon one"
                   height={40}
                   radius="sm"
-                  src="/images/about-images/about-card-one.png"
+                  src={aboutCardOneImage.src}
                   width={40}
                 />
               </CardHeader>
@@ -394,7 +400,7 @@ export default function About() {
                   alt="logo icon two"
                   height={40}
                   radius="sm"
-                  src="/images/about-images/about-card-five.png"
+                  src={aboutCardFiveImage.src}
                   width={40}
                 />
               </CardHeader>
@@ -416,7 +422,7 @@ export default function About() {
                   alt="logo icon three"
                   height={40}
                   radius="sm"
-                  src="/images/about-images/about-card-two.png"
+                  src={aboutCardTwoImage.src}
                   width={40}
                 />
               </CardHeader>
@@ -437,7 +443,7 @@ export default function About() {
                   alt="logo icon four"
                   height={40}
                   radius="sm"
-                  src="/images/about-images/about-card-three.png"
+                  src={aboutCardThreeImage.src}
                   width={40}
                 />
               </CardHeader>
@@ -457,7 +463,7 @@ export default function About() {
                   alt="logo icon five"
                   height={40}
                   radius="sm"
-                  src="/images/about-images/about-card-four.png"
+                  src={aboutCardFourImage.src}
                   width={40}
                 />
               </CardHeader>
@@ -517,7 +523,7 @@ export default function About() {
               removeWrapper
               alt="Photo of Matt"
               className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover"
-              src="/images/about-images/about-page-contact-card.png"
+              src={contactCardImage.src}
               loading="lazy"
             />
           </Card>
