@@ -46,10 +46,10 @@ export default function Footer() {
   const tabsToShow = [
     ...(pathname !== '/' ? [{ key: 'home', title: '⬅️ Home', href: '/' }] : []),
     ...(pathname !== '/about'
-      ? [{ key: 'about', title: 'About ➡️', href: '/about' }]
+      ? [{ key: 'about', title: 'About ➡️', href: 'about' }]
       : []),
     ...(pathname !== '/projects'
-      ? [{ key: 'projects', title: 'Projects ➡️', href: '/projects' }]
+      ? [{ key: 'projects', title: 'Projects ➡️', href: 'projects' }]
       : []),
   ]
 
