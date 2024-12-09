@@ -223,7 +223,7 @@ export default function Projects() {
         { opacity: 1, y: 0 },
         {
           duration: 0.5,
-          delay: stagger(0.2, { startDelay: 1 }),
+          delay: stagger(0.2, { startDelay: 0.5 }),
           ease: 'circOut',
         }
       )
@@ -246,7 +246,7 @@ export default function Projects() {
         { opacity: 1, x: 0 },
         {
           duration: 0.5,
-          delay: stagger(0.35, { startDelay: 1 }),
+          delay: stagger(0.35, { startDelay: 0.5 }),
           ease: 'circOut',
         }
       )
@@ -270,7 +270,7 @@ export default function Projects() {
         { opacity: 1, y: 0 },
         {
           duration: 0.5,
-          delay: stagger(0.2, { startDelay: 1 }),
+          delay: stagger(0.2, { startDelay: 0.5 }),
           ease: 'circOut',
         }
       )
@@ -293,7 +293,7 @@ export default function Projects() {
         { opacity: 1, x: 0 },
         {
           duration: 0.5,
-          delay: stagger(0.35, { startDelay: 1 }),
+          delay: stagger(0.35, { startDelay: 0.5 }),
           ease: 'circOut',
         }
       )

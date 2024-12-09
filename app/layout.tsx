@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { inter } from '@/fonts'
+import { openSans } from '@/fonts'
 import './globals.css'
 
 // Navbar toggle
@@ -26,7 +26,7 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
       </head>
-      <body className={inter.className}>
+      <body className={openSans.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark" //Can change to dark etc.
@@ -44,5 +44,4 @@ export default function RootLayout({
 }
 
 // TODO:
-// Look at putting logo in nav?
 // Look at hover state of recent projects card

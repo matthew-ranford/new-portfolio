@@ -121,7 +121,7 @@ export default function Navbar() {
               <li
                 key={index}
                 style={{ listStyle: 'none' }}
-                className={`dark:text-zinc-300 text-stone-800 drop-shadow-[1px_1px_2px_#292524] dark:drop-shadow-[2px_2px_0px_#292524] tracking-wider my-4 lg:my-0 nav-link ${
+                className={`dark:text-zinc-300 text-stone-800 drop-shadow-[1px_1px_2px_#292524] dark:drop-shadow-[1px_1px_2px_#292524] tracking-wider my-4 lg:my-0 nav-link ${
                   isOpen ? titan.className : ''
                 }`}
               >

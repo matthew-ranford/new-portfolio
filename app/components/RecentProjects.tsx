@@ -109,10 +109,10 @@ export default function RecentProjects() {
               <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
                 <div className="flex flex-grow gap-2 items-center">
                   <div className="flex flex-col">
-                    <p className="text-tiny dark:text-white/60 text-white/100">
+                    <p className="text-sm dark:text-white/80 text-white/100">
                       Wallpapering company
                     </p>
-                    <p className="text-tiny dark:text-white/60 text-white/100">
+                    <p className="text-sm dark:text-white/80 text-white/100">
                       Created from scratch with NextJS.
                     </p>
                   </div>
@@ -152,10 +152,10 @@ export default function RecentProjects() {
               <CardFooter className="absolute bg-black/40 bottom-0 border-t-1 border-default-600 dark:border-default-100">
                 <div className="flex flex-grow gap-2 items-center">
                   <div className="flex flex-col">
-                    <p className="text-tiny dark:text-white/60 text-white/100">
+                    <p className="text-sm dark:text-white/80 text-white/100">
                       Hover for a better look
                     </p>
-                    <p className="text-tiny dark:text-white/60 text-white/100">
+                    <p className="text-sm dark:text-white/80 text-white/100">
                       Created in Canva.
                     </p>
                   </div>
@@ -181,10 +181,10 @@ export default function RecentProjects() {
               <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
                 <div className="flex flex-grow gap-2 items-center">
                   <div className="flex flex-col">
-                    <p className="text-tiny dark:text-white/60 text-white/100">
+                    <p className="text-sm dark:text-white/80 text-white/100">
                       Prototype for an electrical company
                     </p>
-                    <p className="text-tiny dark:text-white/60 text-white/100">
+                    <p className="text-sm dark:text-white/80 text-white/100">
                       Created from scratch with NextJS.
                     </p>
                   </div>
@@ -224,10 +224,10 @@ export default function RecentProjects() {
               <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
                 <div className="flex flex-grow gap-2 items-center">
                   <div className="flex flex-col">
-                    <p className="text-tiny dark:text-white/60 text-white/100">
+                    <p className="text-sm dark:text-white/80 text-white/100">
                       Painting & decorating company
                     </p>
-                    <p className="text-tiny dark:text-white/60 text-white/100">
+                    <p className="text-sm dark:text-white/80 text-white/100">
                       Created from scratch with React.
                     </p>
                   </div>
