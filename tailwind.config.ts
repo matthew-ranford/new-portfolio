@@ -109,7 +109,7 @@ const config: Config = {
   plugins: [
     tailwindcssAnimate,
     addVariablesForColors,
-    function ({ matchUtilities, theme }) {
+    function ({ matchUtilities, theme }: any) {
       matchUtilities(
         {
           'bg-dot-thick': (value: any) => ({
