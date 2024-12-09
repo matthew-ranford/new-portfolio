@@ -45,3 +45,8 @@ export default function RootLayout({
 
 // TODO:
 // Look at hover state of recent projects card
+
+// Recent project images arent working
+// Footer tab not working, going to matthew-ranford.github.io/about - missing the /new-portfolio
+// Contact card image not showing
+// Logo images in what can i do for you not showing

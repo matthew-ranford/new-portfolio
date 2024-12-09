@@ -18,6 +18,10 @@ import { TextGenerateEffectWhileInView } from '@/components/ui/text-generate-eff
 
 // Images
 import divider from '../../public/images/divider.png'
+import recentProjectOne from '../../public/images/recent-project-one.png'
+import recentProjectTwo from '../../public/images/recent-project-two.png'
+import recentProjectThree from '../../public/images/recent-project-three.png'
+import recentProjectFour from '../../public/images/recent-project-four.png'
 
 // Text Generate Effect
 const header = 'Recent Projects'
@@ -103,7 +107,7 @@ export default function RecentProjects() {
                 removeWrapper
                 alt="Latest website project"
                 className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-0"
-                src="/images/recent-project-one.png"
+                src={recentProjectOne.src}
                 loading="lazy"
               />
               <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
@@ -146,7 +150,7 @@ export default function RecentProjects() {
                 removeWrapper
                 alt="Business card project"
                 className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 hover:scale-[1.5] lg:hover:scale-[2] hover:z-20 hover:backdrop-blur-sm lg:hover:-translate-x-2/3 hover:transition hover:ease-in hover:duration-1000"
-                src="/images/recent-project-two.png"
+                src={recentProjectTwo.src}
                 loading="lazy"
               />
               <CardFooter className="absolute bg-black/40 bottom-0 border-t-1 border-default-600 dark:border-default-100">
@@ -175,7 +179,7 @@ export default function RecentProjects() {
                 removeWrapper
                 alt="Second website project prototype"
                 className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-0"
-                src="/images/recent-project-three.png"
+                src={recentProjectThree.src}
                 loading="lazy"
               />
               <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
@@ -218,7 +222,7 @@ export default function RecentProjects() {
                 removeWrapper
                 alt="First ever website project"
                 className="z-0 w-auto h-auto xl:w-full xl:h-full object-cover mt-14 xl:mt-0"
-                src="/images/recent-project-four.png"
+                src={recentProjectFour.src}
                 loading="lazy"
               />
               <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
