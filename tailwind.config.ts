@@ -1,9 +1,12 @@
 import { nextui } from '@nextui-org/theme'
 import type { Config } from 'tailwindcss'
 import svgToDataUri from 'mini-svg-data-uri'
-import colors from 'tailwindcss/colors'
-import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
 import tailwindcssAnimate from 'tailwindcss-animate'
+
+const colors = require('tailwindcss/colors')
+const {
+  default: flattenColorPalette,
+} = require('tailwindcss/lib/util/flattenColorPalette')
 
 const config: Config = {
   darkMode: ['class'],
